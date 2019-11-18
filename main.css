@@ -5,6 +5,29 @@ img {
 #cama {
     right: 50%;
 }
+/*MENU_PLANTA*/
+img {
+    position: absolute;
+}
+#planta1 {
+    position: fixed;
+    top: -10%;
+    left: -2%;
+    width: 75%;
+    height: auto;
+    transform: rotate(-30deg);
+}
+
+/*.caixa:hover {
+    position:absolute;
+    top:67.5%;
+    left:7.5%;
+    background: aqua;
+    height: 100px;
+    width: 70px;
+    transform: rotate(-30deg);
+}*/
+
 
 /*SALA*/
 
