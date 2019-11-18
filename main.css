@@ -17,19 +17,15 @@ img.sala:first-child {
 }
 
 img.sala:nth-child(2){
-    height: 75vh;
-    width: auto;
-    top: 10.5vh;
-    left: 51.77vw;
-}
-
-img.sala:nth-child(3){
     height: 48.6vh;
     width: auto;
     top: 48vh;
     left: 23.9vw;
 }
 
-img.sala:nth-child(4){
-
+img.sala:nth-child(3){
+    height: 79.9vh;
+    width: auto;
+    top: 5.74vh;
+    left: 62vw;
 }
