@@ -64,3 +64,30 @@ img.sala:nth-child(4){  /*comando*/
     top: 58vh;
     left: 30.15vw;
 }
+
+/*QUARTO*/
+
+img.quarto:first-child {  /*cortina da esquerda*/
+    height: 550px;
+    width: auto;
+    left: 18%
+
+}
+img.quarto:nth-child(2){  /*cortina da direita*/
+    height: 550px;
+    width: auto;
+    left:33%;
+}
+img.quarto:nth-child(3){  /*cama*/
+    height: 300px;
+    width: auto;
+    left:12%;
+    top: 50%
+}
+img.quarto:nth-child(4){  /*relógio*/
+    height: 200px;
+    width: auto;
+    left: 75%;
+    top:5%;
+
+}
