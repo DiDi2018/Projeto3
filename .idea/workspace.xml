@@ -33,7 +33,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../META 4/p3_project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -70,7 +70,7 @@
       <workItem from="1574080759898" duration="291000" />
       <workItem from="1574090193429" duration="1093000" />
       <workItem from="1574206289606" duration="1432000" />
-      <workItem from="1574437596372" duration="2247000" />
+      <workItem from="1574437596372" duration="3521000" />
     </task>
     <servers />
   </component>
