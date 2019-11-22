@@ -6,9 +6,37 @@ img {
     right: 50%;
 }
 
+/*MENU_PLANTA*/
+
+#planta1 {
+    position: fixed;
+    top: -10%;
+    left: -2%;
+    width: 75%;
+    height: auto;
+    transform: rotate(-30deg);
+}
+
+/*.caixa:hover {
+    position:absolute;
+    top:67.5%;
+    left:7.5%;
+    background: aqua;
+    height: 100px;
+    width: 70px;
+    transform: rotate(-30deg);
+}*/
+
 /*SALA*/
 
-img.sala:first-child {  /*sofá*/
+img.sala:first-child {  /*gato*/
+    height: 30vh;
+    width: auto;
+    top: 32vh;
+    left: 15vw;
+}
+
+img.sala:nth-child(2) {  /*sofá*/
     transform: rotate(-0.8deg);
     height: 38vh;
     width: auto;
@@ -16,21 +44,21 @@ img.sala:first-child {  /*sofá*/
     left: 6.92vw;
 }
 
-img.sala:nth-child(2){  /*mesa*/
+img.sala:nth-child(3){  /*mesa*/
     height: 48.6vh;
     width: auto;
     top: 48vh;
     left: 23.9vw;
 }
 
-img.sala:nth-child(3){  /*candeeiro*/
+img.sala:nth-child(4){  /*candeeiro*/
     height: 79.9vh;
     width: auto;
     top: 5.74vh;
     left: 62vw;
 }
 
-img.sala:nth-child(4){  /*comando*/
+img.sala:nth-child(5){  /*comando*/
     transform: rotate(23deg);
     height: 34.26vh;
     width: auto;
