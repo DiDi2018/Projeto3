@@ -1,9 +1,11 @@
 let gato = document.querySelector(".sala:first-child");
 
-gato.addEventListener("mouseover", function(){
-    gato.src = "images/sala/gato_cor.png"
-});
+function hover(){
+    gato.src = "images/sala/gato_cor.png";
+    console.log("dit it");
+}
 
-gato.addEventListener("mouseout", function(){
-    gato.src = "images/sala/gato.png"
-});
+function nothover(){
+    gato.src = "images/sala/gato.png";
+    console.log("dit it");
+}
