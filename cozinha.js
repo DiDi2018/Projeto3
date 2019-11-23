@@ -1,17 +1,19 @@
-var clicar=0;
 var carta=  document.getElementById('carta');
+var monstro2 = document.getElementById("monstro2"); // works
+var audio = document.getElementById('audio');
 
 
 carta.addEventListener("click", ShowLetter);
 
     function ShowLetter() {
-        clicar++;
         n =  new Date();
         y = n.getFullYear();
         m = n.getMonth() + 1;
         d = n.getDate();
         document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
         document.getElementById("texto").style.display="block";
+        audio.pause();
+        audio.currentTime = 0;
     }
 
 let cruz = document.getElementById("cruz");
@@ -31,9 +33,6 @@ function fecharfora(evt) {
         return sair();
     }
 }
-
-var monstro2 = document.getElementById("monstro2"); // works
-
 function mouseOverMonstro1() {
     var monstro1 = document.querySelector("#monstro1"); // works
     monstro1.src = "images/cozinha/Monstro1.1.png";
@@ -52,9 +51,6 @@ function mouseLeftMonstro2() {
     monstro2.src = "images/cozinha/Monstro2.png";
 }
 
-
-
-var audio = document.getElementById('audio');
 function play() {
     if (audio.paused) {
         audio.play();
