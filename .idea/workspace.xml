@@ -4,10 +4,12 @@
     <list default="true" id="f33b34d5-2f08-4902-b947-a9e54e93735e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cozinha.html" beforeDir="false" afterPath="$PROJECT_DIR$/cozinha.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cozinha.js" beforeDir="false" afterPath="$PROJECT_DIR$/cozinha.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cozinha/Monstro1.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/MenuPlanta/Planta-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/MenuPlanta/Untitled-1-01.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/cozinha/Monstro2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/cozinha/Monstro2.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/planta.html" beforeDir="false" afterPath="$PROJECT_DIR$/planta.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planta.js" beforeDir="false" afterPath="$PROJECT_DIR$/planta.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +79,7 @@
       <workItem from="1574466097249" duration="2021000" />
       <workItem from="1574502818939" duration="2155000" />
       <workItem from="1574505879433" duration="243000" />
-      <workItem from="1574506343557" duration="1357000" />
+      <workItem from="1574506343557" duration="5439000" />
     </task>
     <servers />
   </component>

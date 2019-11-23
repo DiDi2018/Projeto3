@@ -1,8 +1,9 @@
-
-function mouseOverImage() {
-    document.getElementById("planta1").src = "images/MenuPlanta/planta1.1.png";
-}
-
-function mouseOutImage() {
-    document.getElementById("planta1").src = "images/MenuPlanta/planta1.png";
+function mouseOverImage(quadrado) {
+    quadrado = document.querySelector("#planta1").getSVGDocument().querySelector("rect");
+    quadrado.addEventListener('mouseover', function() {
+        quadrado.setAttribute("fill", "red");
+    });
+    quadrado.addEventListener('mouseout', function() {
+        quadrado.setAttribute("fill", "green");
+    });
 }
