@@ -31,7 +31,7 @@ function fecharfora(evt) {
     }
 }
 
-    if (clicar>0){
+
         function mouseOverMonstro1() {
             var monstro1 = document.querySelector("#monstro1"); // works
             monstro1.src = "images/cozinha/Monstro1.1.png";
@@ -49,4 +49,4 @@ function fecharfora(evt) {
             var monstro2 = document.querySelector("#monstro2"); // works
             monstro2.src = "images/cozinha/Monstro2.png";
         }
-    }
+    
