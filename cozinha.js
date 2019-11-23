@@ -43,7 +43,9 @@ function mouseOverMonstro1() {
 }
 function mouseLeftMonstro1() {
     var monstro1 = document.querySelector("#monstro1"); // works
-    monstro1.src = "images/cozinha/Monstro1.png";
+    if(audio1.ended || audio1.paused){
+        monstro1.src = "images/cozinha/Monstro1.png";
+    }
 }
 
 function mouseOverMonstro2() {
@@ -72,7 +74,11 @@ function playaudio1() {
 function playaudio2() {
     if (audio2.paused) {
         audio2.play();
-    } else {
+    }else if(audio2.paused && !(audio1.paused)) {
+        audio1.pause();
+        audio2.play();
+    }
+    else {
         audio2.pause();
         audio2.currentTime = 0;
     }
@@ -82,10 +88,16 @@ function playaudio2() {
 monstro2.addEventListener("mouseenter", mouseOverMonstro2);
 monstro2.addEventListener("mouseleave", mouseLeftMonstro2);
 monstro2.addEventListener("click", playaudio2);
+monstro1.addEventListener("mouseenter", mouseOverMonstro1);
+monstro1.addEventListener("mouseleave", mouseLeftMonstro1);
 monstro1.addEventListener("click", playaudio1);
 
 audio2.addEventListener("ended", function(){
     monstro2.src = "images/cozinha/Monstro2.png";
+});
+
+audio1.addEventListener("ended", function(){
+    monstro1.src = "images/cozinha/Monstro1.png";
 });
 
 
