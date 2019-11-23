@@ -52,17 +52,19 @@ function mouseOverMonstro2() {
 }
 function mouseLeftMonstro2() {
     var monstro2 = document.querySelector("#monstro2"); // works
-    monstro2.src = "images/cozinha/Monstro2.png";
+    if(audio2.ended || audio2.paused){
+        monstro2.src = "images/cozinha/Monstro2.png";
+    }
 }
 
 function playaudio1() {
     if (audio1.paused && audio2.paused) {
         audio1.play();
     } else if(audio1.paused && !(audio2.paused)) {
-        audio2.paused;
+        audio2.pause();
         audio1.play();
     }
-    else if{
+    else {
         audio1.pause();
         audio1.currentTime = 0;
     }
@@ -82,7 +84,9 @@ monstro2.addEventListener("mouseleave", mouseLeftMonstro2);
 monstro2.addEventListener("click", playaudio2);
 monstro1.addEventListener("click", playaudio1);
 
-
+audio2.addEventListener("ended", function(){
+    monstro2.src = "images/cozinha/Monstro2.png";
+});
 
 
 

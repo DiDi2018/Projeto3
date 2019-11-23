@@ -10,14 +10,14 @@ imageMapResize();
 
 let text1Lydia = "Umm... There's something missing in here. Why don't you try to find it?";
 let i1 = 0;
-let speed = 50;
+let speed = 65;
+let audios = document.querySelectorAll("audio");
 
 function typeWriter1(){
-    let audios = document.querySelectorAll("audio");
     if (i1 === 0){
         audios[0].play();
     }
-    if (i1 >= 39 && !audios[0].onplaying){
+    if (i1 >= 39 && audios[0].ended){
         audios[1].play();
     }
     if (i1 < text1Lydia.length){
@@ -27,4 +27,4 @@ function typeWriter1(){
     }
 }
 
-typeWriter1();
+Promise.all(audios).then(typeWriter1);
