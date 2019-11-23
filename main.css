@@ -91,28 +91,29 @@ img.quarto:nth-child(4){  /*relógio*/
     top:5%;
 
 }
-
 /*COZINHA*/
-#monstro1{
+#monstro2{
     width:40%;
     height:auto;
     position:fixed;
     bottom:6%;
     right:18%;
-    z-index: -20;
+    z-index: -9;
 }
-#monstro2 {
+#monstro1 {
     width:42%;
     height:auto;
     position: absolute;
     bottom:35%;
     left:7%;
+    z-index: -10;
 }
 #cadeira1{
     position:fixed;
     bottom:3%;
     width:25%;
     height:auto;
+    z-index: -8;
 }
 #cadeira2{
     width:15%;
@@ -121,6 +122,7 @@ img.quarto:nth-child(4){  /*relógio*/
     position:fixed;
     bottom:8%;
     left:35%;
+    z-index: -8;
 }
 
 #mesa{
@@ -129,6 +131,7 @@ img.quarto:nth-child(4){  /*relógio*/
       left:16%;
       width:30%;
       height:auto;
+      z-index: -7;
 }
 #carta{
     position:fixed;
@@ -136,6 +139,7 @@ img.quarto:nth-child(4){  /*relógio*/
     left:28%;
     width:8%;
     height:auto;
+    z-index: -6;
 }
 #carta:hover{
     width:10%;
@@ -144,17 +148,41 @@ img.quarto:nth-child(4){  /*relógio*/
    
 }
 #papel{
-    height:95%;
+    height:auto;
     position:fixed;
     top:3%;
-    left:20%;
+    left:34%;
+    z-index: -2;
+    width:40%;
 
 }
 
 #fundo{
+    transition:all 1s ease 0s;
     background-color:black;
     opacity:80%;
     width: 100%;
     height:100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: -3;
 }
 
+#textoPsicologo {
+    position: fixed;
+    top: 3%;
+    left: 34%;
+    z-index: -2;
+    width:40%;
+    height: auto;
+
+}
+#date, #assinado{
+    float:right;
+}
+#textoPsicologo p{
+      padding:4%;
+      font-size: 1em;
+      font-family: "Source Code Pro", regular, sans-serif;
+}
