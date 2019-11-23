@@ -93,7 +93,7 @@ img.quarto:nth-child(4){  /*relógio*/
 }
 
 /*COZINHA*/
-.monstro2{
+#monstro2{
     width:auto;
     height:60%;
     position: absolute;
@@ -101,6 +101,7 @@ img.quarto:nth-child(4){  /*relógio*/
     left: 20%;
 }
 
-.monstro2 :hover {
-    filter: blur(5px);
-}
+
+
+
+
