@@ -178,10 +178,10 @@ img.quarto:nth-child(4){  /*relógio*/
 #papel{
     height:auto;
     position:fixed;
-    top:3%;
-    left:34%;
+    top:4%;
+    left:32%;
     z-index: -2;
-    width:40%;
+    width:32%;
 
 }
 
@@ -200,17 +200,17 @@ img.quarto:nth-child(4){  /*relógio*/
 #textoPsicologo {
     position: fixed;
     top: 3%;
-    left: 34%;
+    left: 32%;
     z-index: -2;
-    width:40%;
-    height: auto;
+    width:32%;
+    height:auto;
 
 }
 #date, #assinado{
     float:right;
 }
 #textoPsicologo p{
-      padding:4%;
+      padding:6%;
       font-size: 1em;
       font-family: "Source Code Pro", regular, sans-serif;
 }
