@@ -4,8 +4,10 @@
     <list default="true" id="f33b34d5-2f08-4902-b947-a9e54e93735e" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/images/sala/gato.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozinha.html" beforeDir="false" afterPath="$PROJECT_DIR$/cozinha.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cozinha.js" beforeDir="false" afterPath="$PROJECT_DIR$/cozinha.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/cozinha/Monstro1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/cozinha/Monstro1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sala.html" beforeDir="false" afterPath="$PROJECT_DIR$/sala.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +36,13 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TesteBocaTamanhoImagem" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../META 4/p3_project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -64,7 +72,13 @@
       <workItem from="1574078736240" duration="1134000" />
       <workItem from="1574080759898" duration="291000" />
       <workItem from="1574090193429" duration="1093000" />
-      <workItem from="1574447402121" duration="608000" />
+      <workItem from="1574206289606" duration="1432000" />
+      <workItem from="1574437596372" duration="3683000" />
+      <workItem from="1574466097249" duration="2021000" />
+      <workItem from="1574502818939" duration="2155000" />
+      <workItem from="1574505879433" duration="243000" />
+      <workItem from="1574506343557" duration="5439000" />
+      <workItem from="1574512781449" duration="7062000" />
     </task>
     <servers />
   </component>

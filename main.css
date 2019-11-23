@@ -5,6 +5,33 @@ img {
 #cama {
     right: 50%;
 }
+/*MENU_PLANTA*/
+img {
+    position: absolute;
+}
+#planta1 {
+    position: fixed;
+    top: -10%;
+    left: -2%;
+    width: 75%;
+    height: auto;
+    transform: rotate(-30deg);
+}
+.lydia{
+    position:fixed;
+    float: right;
+    width:15%;
+    height:auto;
+    bottom: -25px;
+    right: 0;
+}
+.caixa{
+    background: red;
+    position: fixed;
+    top: 50%;
+    width:10%;
+    height: 10%;
+}
 
 /*MENU_PLANTA*/
 
@@ -65,3 +92,97 @@ img.sala:nth-child(5){  /*comando*/
     top: 58vh;
     left: 30.15vw;
 }
+
+/*QUARTO*/
+
+img.quarto:first-child {  /*cortina da esquerda*/
+    height: 550px;
+    width: auto;
+    left: 18%
+
+}
+img.quarto:nth-child(2){  /*cortina da direita*/
+    height: 550px;
+    width: auto;
+    left:33%;
+}
+img.quarto:nth-child(3){  /*cama*/
+    height: 300px;
+    width: auto;
+    left:12%;
+    top: 50%
+}
+img.quarto:nth-child(4){  /*relógio*/
+    height: 200px;
+    width: auto;
+    left: 75%;
+    top:5%;
+
+}
+
+/*COZINHA*/
+#monstro1{
+    width:40%;
+    height:auto;
+    position:fixed;
+    bottom:6%;
+    right:18%;
+    z-index: -20;
+}
+#monstro2 {
+    width:42%;
+    height:auto;
+    position: absolute;
+    bottom:35%;
+    left:7%;
+}
+#cadeira1{
+    position:fixed;
+    bottom:3%;
+    width:25%;
+    height:auto;
+}
+#cadeira2{
+    width:15%;
+    height:auto;
+    transform: scaleX(-1);
+    position:fixed;
+    bottom:8%;
+    left:35%;
+}
+
+#mesa{
+      position:fixed;
+      bottom:-5%;
+      left:16%;
+      width:30%;
+      height:auto;
+}
+#carta{
+    position:fixed;
+    bottom:18%;
+    left:28%;
+    width:8%;
+    height:auto;
+}
+#carta:hover{
+    width:10%;
+    bottom:16%;
+    left:27%;
+   
+}
+#papel{
+    height:95%;
+    position:fixed;
+    top:3%;
+    left:20%;
+
+}
+
+#fundo{
+    background-color:black;
+    opacity:80%;
+    width: 100%;
+    height:100%;
+}
+
