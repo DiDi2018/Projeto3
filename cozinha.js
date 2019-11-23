@@ -1,6 +1,7 @@
 var clicar=0;
 var carta=  document.getElementById('carta');
 
+
 carta.addEventListener("click", ShowLetter);
 
     function ShowLetter() {
@@ -31,22 +32,51 @@ function fecharfora(evt) {
     }
 }
 
+var monstro2 = document.getElementById("monstro2"); // works
 
-        function mouseOverMonstro1() {
-            var monstro1 = document.querySelector("#monstro1"); // works
-            monstro1.src = "images/cozinha/Monstro1.1.png";
-        }
-        function mouseLeftMonstro1() {
-            var monstro1 = document.querySelector("#monstro1"); // works
-            monstro1.src = "images/cozinha/Monstro1.png";
-        }
+function mouseOverMonstro1() {
+    var monstro1 = document.querySelector("#monstro1"); // works
+    monstro1.src = "images/cozinha/Monstro1.1.png";
+}
+function mouseLeftMonstro1() {
+    var monstro1 = document.querySelector("#monstro1"); // works
+    monstro1.src = "images/cozinha/Monstro1.png";
+}
 
-        function mouseOverMonstro2() {
-            var monstro2 = document.querySelector("#monstro2"); // works
-            monstro2.src = "images/cozinha/Monstro2.1.png";
-        }
-        function mouseLeftMonstro2() {
-            var monstro2 = document.querySelector("#monstro2"); // works
-            monstro2.src = "images/cozinha/Monstro2.png";
-        }
-    
+function mouseOverMonstro2() {
+    var monstro2 = document.querySelector("#monstro2"); // works
+    monstro2.src = "images/cozinha/Monstro2.1.png";
+}
+function mouseLeftMonstro2() {
+    var monstro2 = document.querySelector("#monstro2"); // works
+    monstro2.src = "images/cozinha/Monstro2.png";
+}
+
+
+
+var audio = document.getElementById('audio');
+function play() {
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+        audio.currentTime = 0;
+    }
+}
+    monstro2.addEventListener("mouseenter", mouseOverMonstro2);
+monstro2.addEventListener("mouseleave", mouseLeftMonstro2);
+
+
+
+/*monstro2.addEventListener("mouseleave",mouseLeftMonstro2 );*/
+
+        /*
+
+
+        function azul() {
+                monstro2.src = "images/cozinha/Monstro2.1.png"
+        }*/
+
+
+
+
