@@ -1,3 +1,5 @@
+//hover gato
+
 let gato = document.querySelector(".sala:first-child");
 
 function hover(){
@@ -7,6 +9,8 @@ function nothover(){
     gato.src = "images/sala/gato.png";
 }
 imageMapResize();
+
+//texto lydia
 
 let text1Lydia = "Umm... There's something missing in here. Why don't you try to find it?";
 let i1 = 0;
@@ -28,3 +32,15 @@ function typeWriter1(){
 }
 
 Promise.all(audios).then(typeWriter1);
+
+//clicar gato
+
+function gatoclick(){
+    document.querySelector(".lydiaTexto p").innerHTML = "";
+
+}
+
+audios[1].addEventListener("ended",function(){
+    gato.addEventListener("click", gatoclick);
+});
+
