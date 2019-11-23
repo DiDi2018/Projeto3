@@ -1,6 +1,8 @@
 var carta=  document.getElementById('carta');
+var monstro1 = document.getElementById("monstro1"); // works
 var monstro2 = document.getElementById("monstro2"); // works
-var audio = document.getElementById('audio');
+var audio1 = document.getElementById('audio1');
+var audio2 = document.getElementById('audio2');
 
 
 carta.addEventListener("click", ShowLetter);
@@ -12,8 +14,10 @@ carta.addEventListener("click", ShowLetter);
         d = n.getDate();
         document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
         document.getElementById("texto").style.display="block";
-        audio.pause();
-        audio.currentTime = 0;
+        audio2.pause();
+        audio2.currentTime = 0;
+        audio1.pause();
+        audio1.currentTime = 0;
     }
 
 let cruz = document.getElementById("cruz");
@@ -51,16 +55,36 @@ function mouseLeftMonstro2() {
     monstro2.src = "images/cozinha/Monstro2.png";
 }
 
-function play() {
-    if (audio.paused) {
-        audio.play();
-    } else {
-        audio.pause();
-        audio.currentTime = 0;
+function playaudio1() {
+    if (audio1.paused && audio2.paused) {
+        audio1.play();
+    } else if(audio1.paused && !(audio2.paused)) {
+        audio2.paused;
+        audio1.play();
+    }
+    else if{
+        audio1.pause();
+        audio1.currentTime = 0;
     }
 }
-    monstro2.addEventListener("mouseenter", mouseOverMonstro2);
+function playaudio2() {
+    if (audio2.paused) {
+        audio2.play();
+    } else {
+        audio2.pause();
+        audio2.currentTime = 0;
+    }
+}
+
+
+monstro2.addEventListener("mouseenter", mouseOverMonstro2);
 monstro2.addEventListener("mouseleave", mouseLeftMonstro2);
+monstro2.addEventListener("click", playaudio2);
+monstro1.addEventListener("click", playaudio1);
+
+
+
+
 
 
 
