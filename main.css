@@ -196,6 +196,9 @@ img.quarto:nth-child(4){  /*relógio*/
     left: 0;
     z-index: -3;
 }
+#texto{
+    display: none;
+}
 
 #textoPsicologo {
     position: fixed;
@@ -213,4 +216,10 @@ img.quarto:nth-child(4){  /*relógio*/
       padding:6%;
       font-size: 1em;
       font-family: "Source Code Pro", regular, sans-serif;
+}
+#cruz{
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    width: 4%;
 }
