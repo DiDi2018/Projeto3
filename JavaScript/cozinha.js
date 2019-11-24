@@ -114,24 +114,20 @@ audio1.addEventListener("ended", function(){
 
 let text1Lydia = "This room has the best instruments that you could ever dream of. You will never ever have to worry about dinner anymore, as soon as you get home you’ll have warm food on the table. Go ahead and take a look!";
 let i1 = 0;
-let speed = 80;
-/*let audios = document.querySelectorAll("audio");*/
+let speed = 50;
+let apresentacao = document.getElementById("apresentacao");
+let lydia= document.querySelector(".lydia");
 
 function aparecerTexto(){
-   /* if (i1 === 0){
-        audios[0].play();
-    }
-    if (i1 >= 39 && audios[0].ended){
-        audios[1].play();
-    }*/
     if (i1 < text1Lydia.length){
         document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
         i1++;
         setTimeout(aparecerTexto, speed);
     }
-
+    apresentacao.play();
 }
-aparecerTexto();
+lydia.addEventListener("click", aparecerTexto);
+
 /*Promise.all(audios).then(aparecerTexto);*/
 
 
