@@ -1,3 +1,7 @@
+* {
+    font-family: 'Source Code Pro', monospace;
+}
+
 img {
     position: absolute;
 }
@@ -6,9 +10,7 @@ img {
     right: 50%;
 }
 /*MENU_PLANTA*/
-img {
-    position: absolute;
-}
+
 #planta1 {
     position: fixed;
     top: -10%;
@@ -35,7 +37,23 @@ img {
 
 /*SALA*/
 
-img.sala:first-child {  /*sofá*/
+.lydiaTexto {
+    width: calc(100%/8);
+    position: fixed;
+    bottom: 20vh;
+    right: 0.5%;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+img.sala:first-child {  /*gato*/
+    height: 30vh;
+    width: auto;
+    top: 32vh;
+    left: 15vw;
+}
+
+img.sala:nth-child(2) {  /*sofá*/
     transform: rotate(-0.8deg);
     height: 38vh;
     width: auto;
@@ -43,21 +61,21 @@ img.sala:first-child {  /*sofá*/
     left: 6.92vw;
 }
 
-img.sala:nth-child(2){  /*mesa*/
+img.sala:nth-child(3){  /*mesa*/
     height: 48.6vh;
     width: auto;
     top: 48vh;
     left: 23.9vw;
 }
 
-img.sala:nth-child(3){  /*candeeiro*/
+img.sala:nth-child(4){  /*candeeiro*/
     height: 79.9vh;
     width: auto;
     top: 5.74vh;
     left: 62vw;
 }
 
-img.sala:nth-child(4){  /*comando*/
+img.sala:nth-child(5){  /*comando*/
     transform: rotate(23deg);
     height: 34.26vh;
     width: auto;
@@ -91,20 +109,107 @@ img.quarto:nth-child(4){  /*relógio*/
     top:5%;
 
 }
-
 /*COZINHA*/
-#monstro2 {
-    width:auto;
-    height:60%;
+#monstro2{
+    width:40%;
+    height:auto;
+    position:fixed;
+    bottom:6%;
+    right:18%;
+    z-index: -9;
+}
+#monstro1 {
+    width:42%;
+    height:auto;
     position: absolute;
-    top:5%;
-    left: 20%;
+    bottom:35%;
+    left:7%;
+    z-index: -10;
 }
-#Monstro1{
-    filter: blur(5px);
+#cadeira1{
+    position:fixed;
+    bottom:3%;
+    width:25%;
+    height:auto;
+    z-index: -8;
+}
+#cadeira2{
+    width:15%;
+    height:auto;
+    transform: scaleX(-1);
+    position:fixed;
+    bottom:8%;
+    left:35%;
+    z-index: -8;
 }
 
+#mesa{
+      position:fixed;
+      bottom:-5%;
+      left:16%;
+      width:30%;
+      height:auto;
+      z-index: -7;
+}
+#carta{
+    position:fixed;
+    bottom:18%;
+    left:28%;
+    width:8%;
+    height:auto;
+    z-index: -6;
+}
+#carta:hover{
+    width:10%;
+    bottom:16%;
+    left:27%;
+   
+}
+#papel{
+    height:auto;
+    position:fixed;
+    top:4%;
+    left:32%;
+    z-index: -2;
+    width:32%;
 
+}
 
+#fundo{
+    transition:all 1s ease 0s;
+    background-color:black;
+    opacity:80%;
+    width: 100%;
+    height:100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: -3;
+}
+#texto{
+    display: none;
+}
 
+#textoPsicologo {
+    position: fixed;
+    top: 3%;
+    left: 32%;
+    z-index: -2;
+    width:32%;
+    height:auto;
 
+}
+#date, #assinado{
+    float:right;
+}
+#textoPsicologo p{
+      padding:6%;
+      font-size: 1em;
+      font-family: "Source Code Pro", regular, sans-serif;
+}
+#cruz{
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    width: 4%;
+}
