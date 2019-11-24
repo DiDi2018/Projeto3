@@ -13,7 +13,7 @@ function playaudio_q1() {
 
 //texto lydia
 
-let text1Lydia = "This is the bedroom. It’s completely automatic so does everything for you. To open the curtains you just need to raise your eyebrows.";
+let text1Lydia = "This is the bedroom. It’s completely automatic so it does everything for you. To open the curtains you just need to raise your eyebrows.";
 let i1 = 0;
 let speed = 80;
 /*let audios = document.querySelectorAll("audio");*/
