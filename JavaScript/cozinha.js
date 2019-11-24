@@ -37,8 +37,11 @@ function fecharfora(evt) {
         return sair();
     }
 }
+
+
+
 function mouseOverMonstro1() {
-    var monstro1 = document.querySelector("#monstro1"); // works
+    var monstro1 = document.querySelector("#monstro1");
     monstro1.src = "images/cozinha/Monstro1.1.png";
 }
 function mouseLeftMonstro1() {
@@ -64,7 +67,9 @@ function playaudio1() {
         audio1.play();
     } else if(audio1.paused && !(audio2.paused)) {
         audio2.pause();
+        audio2.currentTime = 0;
         audio1.play();
+        monstro2.src = "images/cozinha/Monstro2.png";
     }
     else {
         audio1.pause();
@@ -72,11 +77,13 @@ function playaudio1() {
     }
 }
 function playaudio2() {
-    if (audio2.paused) {
+    if (audio2.paused && audio1.paused) {
         audio2.play();
     }else if(audio2.paused && !(audio1.paused)) {
         audio1.pause();
+        audio1.currentTime = 0;
         audio2.play();
+        monstro1.src = "images/cozinha/Monstro1.png";
     }
     else {
         audio2.pause();
