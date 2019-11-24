@@ -16,8 +16,10 @@ carta.addEventListener("click", ShowLetter);
         document.getElementById("texto").style.display="block";
         audio2.pause();
         audio2.currentTime = 0;
+        monstro2.src = "images/cozinha/Monstro2.png";
         audio1.pause();
         audio1.currentTime = 0;
+        monstro1.src = "images/cozinha/Monstro1.png";
     }
 
 let cruz = document.getElementById("cruz");
@@ -108,17 +110,30 @@ audio1.addEventListener("ended", function(){
 });
 
 
+//texto lydia
 
+let text1Lydia = "This room has the best instruments that you could ever dream of. You will never ever have to worry about dinner anymore, as soon as you get home you’ll have warm food on the table. Go ahead and take a look!";
+let i1 = 0;
+let speed = 80;
+/*let audios = document.querySelectorAll("audio");*/
 
+function aparecerTexto(){
+   /* if (i1 === 0){
+        audios[0].play();
+    }
+    if (i1 >= 39 && audios[0].ended){
+        audios[1].play();
+    }*/
+    if (i1 < text1Lydia.length){
+        document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
+        i1++;
+        setTimeout(aparecerTexto, speed);
+    }
 
-/*monstro2.addEventListener("mouseleave",mouseLeftMonstro2 );*/
+}
+aparecerTexto();
+/*Promise.all(audios).then(aparecerTexto);*/
 
-        /*
-
-
-        function azul() {
-                monstro2.src = "images/cozinha/Monstro2.1.png"
-        }*/
 
 
 

@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaScript/cozinha.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/cozinha.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cozinha.html" beforeDir="false" afterPath="$PROJECT_DIR$/cozinha.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +85,9 @@
       <workItem from="1574526039248" duration="674000" />
       <workItem from="1574527225733" duration="10167000" />
       <workItem from="1574543764377" duration="537000" />
+      <workItem from="1574593487552" duration="593000" />
+      <workItem from="1574605498659" duration="842000" />
+      <workItem from="1574607808688" duration="589000" />
     </task>
     <servers />
   </component>
