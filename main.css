@@ -10,19 +10,17 @@ img {
     position: absolute;
 }
 
-/*Lydia*/
-
-#kitchen, #livingroom{
+/* PLANTAS MENUS*/
+#kitchen, #livingroom, #bedroom, #nursery{
     position: fixed;
-    top: -10%;
+    top: -8%;
     left: -2%;
     width: 75%;
     height: auto;
     transform: rotate(-30deg);
 }
 
-
-
+/*Lydia*/
 .lydia{
     z-index: -1;
     position:fixed;
@@ -30,15 +28,15 @@ img {
     width:15%;
     height:auto;
     bottom: -25px;
-    right: 0;
+    right: 1%;
 }
 
 .lydiaTexto {
     z-index: -1;
-    width: calc(100%/8);
+    width: calc(100%/9);
     position: fixed;
     bottom: 20vh;
-    right: 1%;
+    right: 2.5%;
     font-weight: normal;
     font-size: 18px;
 }
@@ -184,7 +182,8 @@ img.quarto:nth-child(4){  /*relógio*/
 #cadeira1{
     position:fixed;
     bottom:3%;
-    width:25%;
+    left:2%;
+    width:20%;
     height:auto;
     z-index: -8;
 }
@@ -202,7 +201,7 @@ img.quarto:nth-child(4){  /*relógio*/
 #mesa{
     position:fixed;
     bottom:-5%;
-    left:16%;
+    left:14%;
     width:30%;
     height:auto;
     z-index: -7;
@@ -211,16 +210,17 @@ img.quarto:nth-child(4){  /*relógio*/
 #carta{
     position:fixed;
     bottom:18%;
-    left:28%;
+    left:25%;
     width:8%;
     height:auto;
     z-index: -6;
+    transform: rotate(15deg);
 }
 
 #carta:hover{
     width:10%;
     bottom:16%;
-    left:27%;
+    left:24%;
 }
 
 #papel{
