@@ -43,7 +43,7 @@ img {
     bottom: 20vh;
     right: 0.5%;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 img.sala:first-child {  /*gato*/
@@ -106,7 +106,6 @@ img.quarto:nth-child(4){  /*relógio*/
     height: 200px;
     width: auto;
     left: 75%;
-    top:5%;
 
 }
 /*COZINHA*/

@@ -125,6 +125,8 @@ function aparecerTexto(){
         setTimeout(aparecerTexto, speed);
     }
     apresentacao.play();
+    if(audio1.ended)
+        audio1.paused();
 }
 lydia.addEventListener("click", aparecerTexto);
 
