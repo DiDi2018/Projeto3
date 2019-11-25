@@ -26,18 +26,13 @@ function aparecerTexto(){
 lydia.addEventListener("click", aparecerTexto);
 
 //CAMA
-function alterar_cama(){
-    document.getElementById('cama').src = "images/quarto/cama_azul.png"
-    audio_cama.play();
-}
-
-//SOM CAMA
 
 var audio_cama = document.getElementById('audio_cama');
 
-function playaudio_cama() {
-    if (audio_cama.paused) {
+function alterar_cama() {
+        document.getElementById('cama').src = "images/quarto/cama_azul.png";
+        document.getElementById("cama").classList.add("cama_azul");
         audio_cama.play();
-    }
 }
+
 

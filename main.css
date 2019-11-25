@@ -21,8 +21,6 @@ img {
     transform: rotate(-30deg);
 }
 
-
-
 .lydia{
     z-index: -1;
     position:fixed;
@@ -123,25 +121,28 @@ img.sala:nth-child(5){  /*comando*/
 
 /*QUARTO*/
 
-img.quarto:first-child {  /*cortina da esquerda*/
+#cortina_esq {  /*cortina da esquerda*/
     height: 550px;
     width: auto;
     left: 18%
 }
 
-img.quarto:nth-child(2){  /*cortina da direita*/
+#cortina_dir{  /*cortina da direita*/
     height: 550px;
     width: auto;
     left:33%;
 }
 
-img.quarto:nth-child(3){  /*cama*/
+#cama { /*cama*/
     height: 300px;
     width: auto;
-    left:12%;
+    left: 12%;
     top: 50%;
-    position: absolute;
-    margin:-60px 0 0 -60px;
+    position: fixed;
+}
+
+.cama_azul {
+
     -webkit-animation:spin 4s linear infinite;
     -moz-animation:spin 4s linear infinite;
     animation:spin 4s linear infinite;
@@ -150,10 +151,11 @@ img.quarto:nth-child(3){  /*cama*/
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-img.quarto:nth-child(4){  /*relógio*/
+#relogio{  /*relógio*/
     height: 200px;
     width: auto;
-    left: 75%;
+    left: 73%;
+    position: fixed;
 }
 
 /*COZINHA*/
