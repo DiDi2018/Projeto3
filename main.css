@@ -11,7 +11,7 @@ img {
 }
 /*MENU_PLANTA*/
 
-#planta1 {
+#kitchen{
     position: fixed;
     top: -10%;
     left: -2%;
@@ -27,13 +27,6 @@ img {
     bottom: -25px;
     right: 0;
 }
-.caixa{
-    background: red;
-    position: fixed;
-    top: 50%;
-    width:10%;
-    height: 10%;
-}
 
 /*SALA*/
 
@@ -43,7 +36,7 @@ img {
     bottom: 20vh;
     right: 0.5%;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 img.sala:first-child {  /*gato*/
