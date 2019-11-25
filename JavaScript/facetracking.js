@@ -1,6 +1,3 @@
-// https://kylemcdonald.github.io/cv-examples/
-// https://github.com/kylemcdonald/AppropriatingNewTechnologies/wiki/Week-2
-
 var capture;
 var tracker
 var w = 640,
