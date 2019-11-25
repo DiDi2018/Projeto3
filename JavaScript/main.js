@@ -1,6 +1,7 @@
 function winLetra(x){
-    let back = document.querySelector(".win");
-    back.style.display = "block";
+    let win = document.querySelector(".win");
+    win.style.display = "flex";
+    let div = document.querySelector(".win div");
 
     let p1 = document.createElement("p");
     let text1 = document.createTextNode("YOU WON");
@@ -13,14 +14,14 @@ function winLetra(x){
     p3.appendChild(text3);
 
     let image1 = new Image();
-    back.appendChild(image1);
+    win.appendChild(image1);
 
     image1.onload = function(){
-        back.appendChild(p1);
-        back.appendChild(p2);
-        back.appendChild(p3);
+        div.appendChild(p1);
+        div.appendChild(p2);
+        div.appendChild(p3);
     };
 
 
-    image1.src = "images/paper-claro.png";
+    image1.src = "images/paper_claro.png";
 }
