@@ -1,5 +1,5 @@
+//Som Lydia
 var audio_q1 = document.getElementById('audio_q1');
-
 
 function playaudio_q1() {
     if (audio_q1.paused) {
@@ -12,7 +12,6 @@ function playaudio_q1() {
 }
 
 //texto lydia
-
 let text1Lydia = "This is the bedroom. It’s completely automatic so it does everything for you. To open the curtains you just need to raise your eyebrows.";
 let i1 = 0;
 let speed = 80;
@@ -30,7 +29,11 @@ function aparecerTexto(){
         i1++;
         setTimeout(aparecerTexto, speed);
     }
-
 }
 aparecerTexto();
 /*Promise.all(audios).then(aparecerTexto);*/
+
+//CAMA
+function alterar_cama(){
+    document.getElementById('cama').src = "images/quarto/cama_azul.png"
+}
