@@ -2,14 +2,15 @@
     font-family: 'Source Code Pro', monospace;
 }
 
+body {
+    margin: 0;
+}
+
 img {
     position: absolute;
 }
 
-#cama {
-    right: 50%;
-}
-/*MENU_PLANTA*/
+/*Lydia*/
 
 #kitchen, #livingroom{
     position: fixed;
@@ -21,7 +22,9 @@ img {
 }
 
 
+
 .lydia{
+    z-index: -1;
     position:fixed;
     float: right;
     width:15%;
@@ -30,15 +33,60 @@ img {
     right: 0;
 }
 
-/*SALA*/
-
 .lydiaTexto {
+    z-index: -1;
     width: calc(100%/8);
     position: fixed;
     bottom: 20vh;
-    right: 0.5%;
+    right: 1%;
     font-weight: normal;
     font-size: 18px;
+}
+/*ganhar letra*/
+
+.win {
+    display: none;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0,0,0,0.8);
+}
+
+.win img:first-child{
+    margin: 25vh 25%;
+    width: 50%;
+    height: 50vh;
+}
+
+.win p {
+    position: absolute;
+    text-align: center;
+    line-height: 60px;
+    font-size: 35px;
+    width: 20%;
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+translateX(-50%);
+translateY(-50%);
+}
+
+/*MENU_PLANTA*/
+
+#kitchen {
+    position: fixed;
+    top: -10%;
+    left: -2%;
+    width: 75%;
+    height: auto;
+    transform: rotate(-30deg);
+}
+
+/*SALA*/
+
+img.sala {
+    z-index: -2;
 }
 
 img.sala:first-child {  /*gato*/
@@ -84,27 +132,37 @@ img.quarto:first-child {  /*cortina da esquerda*/
     height: 550px;
     width: auto;
     left: 18%
-
 }
+
 img.quarto:nth-child(2){  /*cortina da direita*/
     height: 550px;
     width: auto;
     left:33%;
 }
+
 img.quarto:nth-child(3){  /*cama*/
     height: 300px;
     width: auto;
     left:12%;
-    top: 50%
+    top: 50%;
+    position: absolute;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
 }
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
 img.quarto:nth-child(4){  /*relógio*/
     height: 200px;
     width: auto;
     left: 75%;
-    top:5%;
-
 }
+
 /*COZINHA*/
+
 #monstro2{
     width:40%;
     height:auto;
@@ -113,6 +171,7 @@ img.quarto:nth-child(4){  /*relógio*/
     right:18%;
     z-index: -9;
 }
+
 #monstro1 {
     width:42%;
     height:auto;
@@ -121,6 +180,7 @@ img.quarto:nth-child(4){  /*relógio*/
     left:7%;
     z-index: -10;
 }
+
 #cadeira1{
     position:fixed;
     bottom:3%;
@@ -128,6 +188,7 @@ img.quarto:nth-child(4){  /*relógio*/
     height:auto;
     z-index: -8;
 }
+
 #cadeira2{
     width:15%;
     height:auto;
@@ -139,13 +200,14 @@ img.quarto:nth-child(4){  /*relógio*/
 }
 
 #mesa{
-      position:fixed;
-      bottom:-5%;
-      left:16%;
-      width:30%;
-      height:auto;
-      z-index: -7;
+    position:fixed;
+    bottom:-5%;
+    left:16%;
+    width:30%;
+    height:auto;
+    z-index: -7;
 }
+
 #carta{
     position:fixed;
     bottom:18%;
@@ -154,12 +216,13 @@ img.quarto:nth-child(4){  /*relógio*/
     height:auto;
     z-index: -6;
 }
+
 #carta:hover{
     width:10%;
     bottom:16%;
     left:27%;
-   
 }
+
 #papel{
     height:auto;
     position:fixed;
@@ -167,7 +230,6 @@ img.quarto:nth-child(4){  /*relógio*/
     left:32%;
     z-index: -2;
     width:32%;
-
 }
 
 #fundo{
@@ -181,6 +243,7 @@ img.quarto:nth-child(4){  /*relógio*/
     left: 0;
     z-index: -3;
 }
+
 #texto{
     display: none;
 }
@@ -194,14 +257,17 @@ img.quarto:nth-child(4){  /*relógio*/
     height:auto;
 
 }
+
 #date, #assinado{
     float:right;
 }
+
 #textoPsicologo p{
-      padding:6%;
-      font-size: 1em;
-      font-family: "Source Code Pro", regular, sans-serif;
+    padding:6%;
+    font-size: 1em;
+    font-family: "Source Code Pro", regular, sans-serif;
 }
+
 #cruz{
     position: fixed;
     top: 2%;
