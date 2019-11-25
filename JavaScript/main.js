@@ -1,26 +1,26 @@
 function winLetra(x){
-    let back = document.querySelector(".win");
-    back.style.display = "block";
+    let win = document.querySelector(".win");
+    win.style.display = "flex";
+    let div = document.querySelector(".win div");
+    let image2 = document.querySelector(".win img:first-of-type");
 
     let p1 = document.createElement("p");
-    let text1 = document.createTextNode("YOU WON");
+    let text1 = document.createTextNode("YOU WON THE LETTER");
     p1.appendChild(text1);
-    let p2 = document.createElement("p");
-    let text2 = document.createTextNode("THE LETTER");
-    p2.appendChild(text2);
     let p3 = document.createElement("p");
     let text3 = document.createTextNode(x);
     p3.appendChild(text3);
 
     let image1 = new Image();
-    back.appendChild(image1);
+    win.appendChild(image1);
 
     image1.onload = function(){
-        back.appendChild(p1);
-        back.appendChild(p2);
-        back.appendChild(p3);
+        div.appendChild(p1);
+        div.appendChild(p3);
+        image2.style.display = "block";
     };
 
-
-    image1.src = "images/paper-claro.png";
+    image1.src = "images/paper_claro.png";
 }
+
+imageMapResize();

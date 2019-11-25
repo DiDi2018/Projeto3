@@ -13,8 +13,6 @@ function nothover(){
     }
 }
 
-imageMapResize();
-
 //texto lydia
 
 let text1Lydia = "Umm... There's something missing in here. Why don't you try to find it?";
@@ -50,11 +48,12 @@ function typeWriter2(){
         document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i2);
         i2++;
         setTimeout(typeWriter2, speed);
-        if (i2 === 42){
-            winLetra("l");
-        }
     }
 }
+
+audios[2].addEventListener("ended", function(){
+    winLetra("l")
+});
 
 //clicar gato
 
