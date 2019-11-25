@@ -13,7 +13,7 @@ img {
 /* PLANTAS MENUS*/
 #kitchen, #livingroom, #bedroom, #nursery{
     position: fixed;
-    top: -8%;
+    top: -6%;
     left: -2%;
     width: 75%;
     height: auto;
@@ -88,17 +88,6 @@ img {
 
 area {
     cursor: pointer;
-}
-
-/*MENU_PLANTA*/
-
-#kitchen, #livingroom{
-    position: fixed;
-    top: -10%;
-    left: -2%;
-    width: 75%;
-    height: auto;
-    transform: rotate(-30deg);
 }
 
 /*SALA*/
