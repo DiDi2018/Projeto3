@@ -13,8 +13,6 @@ function nothover(){
     }
 }
 
-imageMapResize();
-
 //texto lydia
 
 let text1Lydia = "Umm... There's something missing in here. Why don't you try to find it?";

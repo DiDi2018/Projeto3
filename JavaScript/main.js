@@ -2,6 +2,7 @@ function winLetra(x){
     let win = document.querySelector(".win");
     win.style.display = "flex";
     let div = document.querySelector(".win div");
+    let image2 = document.querySelector(".win img:first-of-type");
 
     let p1 = document.createElement("p");
     let text1 = document.createTextNode("YOU WON THE LETTER");
@@ -16,8 +17,10 @@ function winLetra(x){
     image1.onload = function(){
         div.appendChild(p1);
         div.appendChild(p3);
+        image2.style.display = "block";
     };
-
 
     image1.src = "images/paper_claro.png";
 }
+
+imageMapResize();

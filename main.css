@@ -12,17 +12,6 @@ img {
 
 /*Lydia*/
 
-#kitchen, #livingroom{
-    position: fixed;
-    top: -10%;
-    left: -2%;
-    width: 75%;
-    height: auto;
-    transform: rotate(-30deg);
-}
-
-
-
 .lydia{
     z-index: -1;
     position:fixed;
@@ -61,25 +50,38 @@ img {
     height: 40vh;
 }
 
+.win img:first-of-type {
+    display: none;
+    width: 12vh;
+    height: auto;
+    margin-left: 40%;
+    margin-top: 20vh;
+    z-index: 2;
+}
+
 .win div {
     z-index: 1;
 }
 
 .win p {
     line-height: 60px;
-    font-size: 2vw;
+    font-size: 3vh;
     text-align: center;
     margin-top: 0;
 }
 
 .win p:last-child {
-    font-size: 7vw;
+    font-size: 9vh;
     margin-bottom: 0;
+}
+
+area {
+    cursor: pointer;
 }
 
 /*MENU_PLANTA*/
 
-#kitchen {
+#kitchen, #livingroom{
     position: fixed;
     top: -10%;
     left: -2%;
