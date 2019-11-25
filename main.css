@@ -10,16 +10,18 @@ img {
     position: absolute;
 }
 
-/*Lydia*/
-
-#kitchen, #livingroom{
+/* PLANTAS MENUS*/
+#kitchen, #livingroom, #bedroom, #nursery{
     position: fixed;
-    top: -10%;
+    top: -6%;
     left: -2%;
     width: 75%;
     height: auto;
     transform: rotate(-30deg);
 }
+
+/*Lydia*/
+
 
 .lydia{
     z-index: -1;
@@ -28,15 +30,15 @@ img {
     width:15%;
     height:auto;
     bottom: -25px;
-    right: 0;
+    right: 1%;
 }
 
 .lydiaTexto {
     z-index: -1;
-    width: calc(100%/8);
+    width: calc(100%/9);
     position: fixed;
     bottom: 20vh;
-    right: 1%;
+    right: 2.5%;
     font-weight: normal;
     font-size: 18px;
 }
@@ -53,27 +55,39 @@ img {
     flex-direction: column;
 }
 
-.win img{
-    width: 50%;
+.win img {
+    position: fixed;
+    width: 110%;
+    height: 40vh;
+}
+
+.win img:first-of-type {
+    display: none;
+    width: 12vh;
     height: auto;
+    margin-left: 40%;
+    margin-top: 20vh;
+    z-index: 2;
+}
+
+.win div {
+    z-index: 1;
 }
 
 .win p {
-    z-index: 1;
     line-height: 60px;
-    font-size: 2vw;
-    width: 20%;
+    font-size: 3vh;
+    text-align: center;
+    margin-top: 0;
 }
 
-/*MENU_PLANTA*/
+.win p:last-child {
+    font-size: 9vh;
+    margin-bottom: 0;
+}
 
-#kitchen {
-    position: fixed;
-    top: -10%;
-    left: -2%;
-    width: 75%;
-    height: auto;
-    transform: rotate(-30deg);
+area {
+    cursor: pointer;
 }
 
 /*SALA*/
@@ -181,7 +195,8 @@ img.sala:nth-child(5){  /*comando*/
 #cadeira1{
     position:fixed;
     bottom:3%;
-    width:25%;
+    left:2%;
+    width:20%;
     height:auto;
     z-index: -8;
 }
@@ -199,7 +214,7 @@ img.sala:nth-child(5){  /*comando*/
 #mesa{
     position:fixed;
     bottom:-5%;
-    left:16%;
+    left:14%;
     width:30%;
     height:auto;
     z-index: -7;
@@ -208,16 +223,17 @@ img.sala:nth-child(5){  /*comando*/
 #carta{
     position:fixed;
     bottom:18%;
-    left:28%;
+    left:25%;
     width:8%;
     height:auto;
     z-index: -6;
+    transform: rotate(15deg);
 }
 
 #carta:hover{
     width:10%;
     bottom:16%;
-    left:27%;
+    left:24%;
 }
 
 #papel{

@@ -81,4 +81,6 @@ function draw() {
         img.width= open*20;
     }
 }
+
+
  
