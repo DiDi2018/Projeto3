@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f33b34d5-2f08-4902-b947-a9e54e93735e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScript/cozinha.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/cozinha.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cozinha.html" beforeDir="false" afterPath="$PROJECT_DIR$/cozinha.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScript/planta.js" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScript/planta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/planta.html" beforeDir="false" afterPath="$PROJECT_DIR$/planta.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +34,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TesteBocaTamanhoImagem" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -87,9 +88,8 @@
       <workItem from="1574593487552" duration="593000" />
       <workItem from="1574605498659" duration="842000" />
       <workItem from="1574607808688" duration="589000" />
-      <workItem from="1574624541417" duration="2096000" />
-      <workItem from="1574675324825" duration="1430000" />
-      <workItem from="1574677014021" duration="270000" />
+      <workItem from="1574624541417" duration="2595000" />
+      <workItem from="1574680487499" duration="1331000" />
     </task>
     <servers />
   </component>

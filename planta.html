@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="main.css">
+    <script src="JavaScript/imageMapResizer.min.js"></script>
+
 </head>
 <body>
 <main>
 
-        <object onmouseover = "mouseOverImage()" id="planta1" data="images/MenuPlanta/planta.svg" ></object>
+    <img id="kitchen" src="images/MenuPlanta/planta1.png" alt="planta1" height="1359" width="1833" usemap="#planta1"/>
+    <map name="planta1">
+        <area shape="poly" alt="image" href="" onmouseover="hover()" onmouseout="nothover()"
+              coords="186,390,458,390,461,760,189,761">
+    </map>
 
-
-        <!--<img id="planta1" src="images/MenuPlanta/planta1.png" height="1359" width="1833"/>
-        <div class="caixa" onmouseover = "mouseOverImage()"  onmouseout="mouseOutImage()"/></div>-->
-
-
-        <img class="lydia" src="images/Lydia1.png" height="1000" width="1000"/></div>
+    <img class="lydia" alt="lydia" src="images/Lydia1.png" height="1000" width="1000"/></div>
 </main>
 <script src="JavaScript/planta.js"></script>
 

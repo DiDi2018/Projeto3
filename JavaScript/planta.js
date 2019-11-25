@@ -1,9 +1,9 @@
-function mouseOverImage(quadrado) {
-    quadrado = document.querySelector("#planta1").getSVGDocument().querySelector("rect");
-    quadrado.addEventListener('mouseover', function() {
-        quadrado.setAttribute("fill", "red");
-    });
-    quadrado.addEventListener('mouseout', function() {
-        quadrado.setAttribute("fill", "green");
-    });
+let kitchen = document.querySelector("#kitchen");
+
+function hover(){
+    kitchen.src = "images/MenuPlanta/planta1.1.png";
 }
+function nothover() {
+    kitchen.src = "images/MenuPlanta/planta1.png";
+}
+imageMapResize();
