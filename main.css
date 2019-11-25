@@ -11,7 +11,7 @@ img {
 }
 /*MENU_PLANTA*/
 
-#kitchen{
+#kitchen, #livingroom{
     position: fixed;
     top: -10%;
     left: -2%;
@@ -19,6 +19,8 @@ img {
     height: auto;
     transform: rotate(-30deg);
 }
+
+
 .lydia{
     position:fixed;
     float: right;
