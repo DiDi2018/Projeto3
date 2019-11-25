@@ -4,11 +4,8 @@ function winLetra(x){
     let div = document.querySelector(".win div");
 
     let p1 = document.createElement("p");
-    let text1 = document.createTextNode("YOU WON");
+    let text1 = document.createTextNode("YOU WON THE LETTER");
     p1.appendChild(text1);
-    let p2 = document.createElement("p");
-    let text2 = document.createTextNode("THE LETTER");
-    p2.appendChild(text2);
     let p3 = document.createElement("p");
     let text3 = document.createTextNode(x);
     p3.appendChild(text3);
@@ -18,7 +15,6 @@ function winLetra(x){
 
     image1.onload = function(){
         div.appendChild(p1);
-        div.appendChild(p2);
         div.appendChild(p3);
     };
 

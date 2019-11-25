@@ -55,16 +55,26 @@ img {
     flex-direction: column;
 }
 
-.win img{
-    width: 50%;
-    height: auto;
+.win img {
+    position: fixed;
+    width: 110%;
+    height: 40vh;
+}
+
+.win div {
+    z-index: 1;
 }
 
 .win p {
-    z-index: 1;
     line-height: 60px;
     font-size: 2vw;
-    width: 20%;
+    text-align: center;
+    margin-top: 0;
+}
+
+.win p:last-child {
+    font-size: 7vw;
+    margin-bottom: 0;
 }
 
 /*MENU_PLANTA*/
