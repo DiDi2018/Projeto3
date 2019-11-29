@@ -1,5 +1,5 @@
 var capture;
-var tracker;
+var tracker
 var w = 640,
     h = 480;
 
@@ -65,7 +65,7 @@ function draw() {
 
     }
     var img= document.getElementById("img");
-   // img.width= smile;
+    // img.width= smile;
     if(open<=10){
         img.height=200;
         img.width=200;
@@ -81,6 +81,3 @@ function draw() {
         img.width= open*20;
     }
 }
-
-
- 
