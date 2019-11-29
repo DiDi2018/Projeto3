@@ -94,7 +94,7 @@ var horas = document.getElementById("horas");
 
 function mouseOverRelogio() {
     relogio.src = "images/quarto/relogio_azul.png";
-    document.getElementById("horas").style.color = "darkblue";
+    document.getElementById("horas").style.color = "blue";
 }
 
 function mouseLeftRelogio() {
