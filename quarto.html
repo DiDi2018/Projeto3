@@ -9,19 +9,20 @@
     <link rel="stylesheet" href="main.css">
 
 </head>
-<body>
+<body onload="startTime()">
 <main>
     <!--Objetos quarto-->
     <img id="cortina_esq" alt="cortina_esq" src="images/quarto/cortina_esq.png" height="2312" width="1230"/>
-<img id="cortina_dir" alt="cortina_dir" src="images/quarto/cortina_dir.png" height="2312" width="1230"/>
-<img id="cama" alt="cama" src="images/quarto/cama.png" height="1366" width="3029"/>
-<img id="relogio" alt="relogio" src="images/quarto/relogio.png" height="230" width="460"/>
+    <img id="cortina_dir" alt="cortina_dir" src="images/quarto/cortina_dir.png" height="2312" width="1230"/>
+    <img id="cama" alt="cama" src="images/quarto/cama.png" height="1366" width="3029"/>
+    <img class="relogio" alt="relogio" src="images/quarto/relogio.png" height="230" width="460"/>
+    <div class="relogio" id="horas"></div>
 
     <!--Sons quarto-->
-    <audio id="audio_cama" src="sons/quarto/audio_cama.mp3" ></audio>
+    <audio id="audio_cama" src="sons/quarto/audio_cama.mp3"></audio>
 
     <!--Lydia-->
- <audio id="audio_q1" src="sons/quarto/audio_1.mp3"></audio>
+    <audio id="audio_q1" src="sons/quarto/audio_1.mp3"></audio>
     <img class="lydia" src="images/Lydia1.png" alt="lydia" height="1000" width="1000"/>
     <div class="lydiaTexto">
         <p></p>

@@ -165,11 +165,18 @@ img.sala:nth-child(5){  /*comando*/
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-#relogio{  /*relógio*/
+.relogio{  /*relógio*/
     height: 200px;
     width: auto;
     left: 73%;
     position: fixed;
+}
+#horas{
+    color: white;
+    font-size: 42px;
+    margin-top: 7%;
+    left: 76%;
+    transform: rotate(1deg);
 }
 
 /*COZINHA*/
