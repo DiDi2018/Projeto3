@@ -13,16 +13,17 @@ let text1Lydia = "This is the bedroom. It’s completely automatic so it does ev
     "To open the curtains you just need to raise your eyebrows.";
 let i1 = 0;
 let speed = 50;
-let lydia= document.querySelector(".lydia");
+let lydia = document.querySelector(".lydia");
 
-function aparecerTexto(){
-    if (i1 < text1Lydia.length){
+function aparecerTexto() {
+    if (i1 < text1Lydia.length) {
         document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
         i1++;
         setTimeout(aparecerTexto, speed);
     }
     audio_q1.play();
 }
+
 lydia.addEventListener("click", aparecerTexto);
 
 
@@ -31,12 +32,13 @@ var audio_cama = document.getElementById('audio_cama');
 var cama = document.getElementById("cama");
 
 function mouseOverCama() {
-    var cama = document.getElementById("cama");
+    //var cama = document.getElementById("cama");
     cama.src = "images/quarto/cama_azul.png";
 }
+
 function mouseLeftCama() {
-    var cama = document.getElementById("cama");
-    if(audio_cama.ended || audio_cama.paused){
+    //var cama = document.getElementById("cama");
+    if (audio_cama.ended || audio_cama.paused) {
         cama.src = "images/quarto/cama.png";
     }
 }
@@ -45,13 +47,12 @@ function audio_cama_f() {
     if (audio_cama.paused && audio_q1.paused) {
         audio_cama.play();
         document.getElementById("cama").classList.add("cama_azul");
-    } else if(audio_cama.paused && !(audio_q1.paused)) {
+    } else if (audio_cama.paused && !(audio_q1.paused)) {
         audio_q1.pause();
         audio_q1.currentTime = 0;
         audio_cama.play();
         document.getElementById("cama").classList.add("cama_azul");
-    }
-    else {
+    } else {
         audio_cama.pause();
         audio_cama.currentTime = 0;
         document.getElementById("cama").classList.remove("cama_azul");
@@ -62,9 +63,10 @@ cama.addEventListener("mouseenter", mouseOverCama);
 cama.addEventListener("mouseleave", mouseLeftCama);
 cama.addEventListener("click", audio_cama_f);
 
-audio_cama.addEventListener("ended", function(){
-    cama.src = "images/quarto/cama.png";
-});
+audio_cama.addEventListener("ended", function () {
+        cama.src = "images/quarto/cama.png";
+    }
+);
 
 //RELÓGIO
 function startTime() {
@@ -78,7 +80,29 @@ function startTime() {
         h + ":" + m + ":" + s;
     var t = setTimeout(startTime, 500);
 }
+
 function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    if (i < 10) {
+        i = "0" + i
+    }
+    ;  // add zero in front of numbers < 10
     return i;
 }
+
+var relogio = document.getElementById("relogio");
+var horas = document.getElementById("horas");
+
+function mouseOverRelogio() {
+    relogio.src = "images/quarto/relogio_azul.png";
+    document.getElementById("horas").style.color = "darkblue";
+}
+
+function mouseLeftRelogio() {
+    relogio.src = "images/quarto/relogio.png";
+    document.getElementById("horas").style.color = "lightgrey";
+}
+
+relogio.addEventListener("mouseenter", mouseOverRelogio);
+relogio.addEventListener("mouseleave", mouseLeftRelogio);
+horas.addEventListener("mouseenter", mouseOverRelogio);
+horas.addEventListener("mouseleave", mouseLeftRelogio);
