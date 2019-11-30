@@ -1,22 +1,17 @@
-let count1 = false;
-let count2 = false;
-var count3 = false;
+let count0=false;
+let count1=false;
+let count2=false;
+let count3=false;
+let count4=false;
 
 //Som Lydia
 var audio_q1 = document.getElementById('audio_q1');
-
-function playaudio_q1() {
-    if (audio_q1.paused) {
-        audio_q1.play();
-    }
-}
-
 
 //texto lydia
 let text1Lydia = "This is the bedroom. It’s completely automatic so it does everything for you. " +
     "To open the curtains you just need to raise your eyebrows.";
 let i1 = 0;
-let speed = 50;
+let speed = 40;
 let lydia = document.querySelector(".lydia");
 
 function aparecerTexto() {
@@ -26,121 +21,12 @@ function aparecerTexto() {
         setTimeout(aparecerTexto, speed);
     }
     audio_q1.play();
+    count0=true;
 }
-
-lydia.addEventListener("click", aparecerTexto);
-
-
-//CAMA
-var audio_cama = document.getElementById('audio_cama');
-var cama = document.getElementById("cama");
-
-function mouseOverCama() {
-    cama.src = "images/quarto/cama_azul.png";
-}
-
-function mouseLeftCama() {
-    if (audio_cama.ended || audio_cama.paused) {
-        cama.src = "images/quarto/cama.png";
-    }
-}
-
-function audio_cama_f() {
-    if (audio_cama.paused && audio_q1.paused) {
-        audio_cama.play();
-        document.getElementById("cama").classList.add("cama_azul");
-    } else if (audio_cama.paused && !(audio_q1.paused)) {
-        audio_q1.pause();
-        audio_q1.currentTime = 0;
-        audio_cama.play();
-        document.getElementById("cama").classList.add("cama_azul");
-    } else {
-        audio_cama.pause();
-        audio_cama.currentTime = 0;
-        document.getElementById("cama").classList.remove("cama_azul");
-    }
-}
-
-cama.addEventListener("mouseenter", mouseOverCama);
-cama.addEventListener("mouseleave", mouseLeftCama);
-cama.addEventListener("click", audio_cama_f);
-
-audio_cama.addEventListener("ended", function () {
-        cama.src = "images/quarto/cama.png";
-    }
-);
-
-//RELÓGIO
-function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('horas').innerHTML =
-        h + ":" + m + ":" + s;
-    var t = setTimeout(startTime, 500);
-}
-
-function checkTime(i) {
-    if (i < 10) {
-        i = "0" + i
-    } // add zero in front of numbers < 10
-    return i;
-}
-
-var audio_relogio = document.getElementById('audio_relogio');
-var relogio = document.getElementById("relogio");
-var horas = document.getElementById("horas");
-
-function mouseOverRelogio() {
-    relogio.src = "images/quarto/relogio_azul.png";
-    document.getElementById("horas").style.color = "blue";
-}
-
-function mouseLeftRelogio() {
-    if (audio_cama.ended || audio_cama.paused) {
-        relogio.src = "images/quarto/relogio.png";
-        document.getElementById("horas").style.color = "lightgrey";
-    }
-}
-
-function audio_relogio_f() {
-    if (audio_relogio.paused && audio_q1.paused) {
-        audio_relogio.play();
-        document.getElementById("horas").style.color = "blue";
-        relogio.src = "images/quarto/relogio_azul.png";
-    } else if (audio_relogio.paused && !(audio_q1.paused)) {
-        audio_q1.pause();
-        audio_q1.currentTime = 0;
-        audio_relogio.play();
-        document.getElementById("horas").style.color = "blue";
-        relogio.src = "images/quarto/relogio_azul.png";
-    } else {
-        audio_relogio.pause();
-        audio_relogio.currentTime = 0;
-        document.getElementById("horas").style.color = "lightgrey";
-        relogio.src = "images/quarto/relogio.png";
-    }
-}
-
-relogio.addEventListener("mouseenter", mouseOverRelogio);
-relogio.addEventListener("mouseleave", mouseLeftRelogio);
-horas.addEventListener("mouseenter", mouseOverRelogio);
-horas.addEventListener("mouseleave", mouseLeftRelogio);
-
-relogio.addEventListener("click", audio_relogio_f);
-horas.addEventListener("click", audio_relogio_f);
-
-audio_relogio.addEventListener("ended", function () {
-        relogio.src = "images/quarto/relogio.png";
-        document.getElementById("horas").style.color = "lightgrey";
-    }
-);
+aparecerTexto();
 
 
-//CORTINA
+//CORTINAS
 var audio_cortina = document.getElementById('audio_cortina');
 var cortina_esq = document.getElementById("cortina_esq");
 var cortina_dir = document.getElementById("cortina_dir");
@@ -180,41 +66,195 @@ var myVar;
 
 
 function draw() {
+    if (count0===true) {
+        // image(capture, 0, 0, w, h);
+        var positions = tracker.getCurrentPosition();
 
-    // image(capture, 0, 0, w, h);
-    var positions = tracker.getCurrentPosition();
-
-    //distância entre sobrancelha e olho
-    if (positions.length > 0) {
-        var sobrancelha = createVector(positions[20][0], positions[20][1]);
-        var olho = createVector(positions[24][0], positions[24][1]);
-        var open = sobrancelha.dist(olho);
-    }
-
-    if ((open >= 35)) {
-        if(correr===0) {
-            audio_cortina.play();
-            document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
-            document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
-            cortina_esq.src = "images/quarto/cortina_azul_esq.png";
-            cortina_dir.src = "images/quarto/cortina_azul_dir.png";
-            document.getElementById("quadrado").style.background = "lightyellow";
-            document.getElementById("quadrado").style.zIndex = "-10";
-            myVar = setInterval(alertFunc, 2000);
-            function alertFunc() {
-                cortina_esq.src = "images/quarto/cortina_esq.png";
-                cortina_dir.src = "images/quarto/cortina_dir.png";
-            }
+        //distância entre sobrancelha e olho
+        if (positions.length > 0) {
+            var sobrancelha = createVector(positions[20][0], positions[20][1]);
+            var olho = createVector(positions[24][0], positions[24][1]);
+            var open = sobrancelha.dist(olho);
         }
-        correr = 1;
 
-    }
-    else if (correr === 0) {
-        cortina_esq.src = "images/quarto/cortina_esq.png";
-        cortina_dir.src = "images/quarto/cortina_dir.png";
-        document.getElementById("cortina_esq").classList.remove("cortina_esq_azul");
-        document.getElementById("cortina_dir").classList.remove("cortina_dir_azul");
-        document.getElementById("quadrado").style.background = "black";
-        document.getElementById("quadrado").style.zIndex = "1";
+        if ((open >= 35)) {
+            if (correr === 0) {
+                audio_cortina.play();
+                document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
+                document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
+                cortina_esq.src = "images/quarto/cortina_azul_esq.png";
+                cortina_dir.src = "images/quarto/cortina_azul_dir.png";
+                document.getElementById("quadrado").style.background = "lightyellow";
+                document.getElementById("quadrado").style.zIndex = "-10";
+                myVar = setInterval(alertFunc, 2000);
+
+                function alertFunc() {
+                    cortina_esq.src = "images/quarto/cortina_esq.png";
+                    cortina_dir.src = "images/quarto/cortina_dir.png";
+                }
+            }
+            correr = 1;
+            count1 = true;
+
+        } else if (correr === 0) {
+            cortina_esq.src = "images/quarto/cortina_esq.png";
+            cortina_dir.src = "images/quarto/cortina_dir.png";
+            document.getElementById("cortina_esq").classList.remove("cortina_esq_azul");
+            document.getElementById("cortina_dir").classList.remove("cortina_dir_azul");
+            document.getElementById("quadrado").style.background = "black";
+            document.getElementById("quadrado").style.zIndex = "1";
+        }
     }
 }
+
+//TEXTO LYDIA 2
+var audio_q2 = document.getElementById('audio_q2');
+
+function texto2() {
+    if (count0===true && count1===true && audio_cortina.pause && audio_q1.pause) {
+        let text2Lydia = "Explore the rest of the wonders of the bedroom";
+        let i1 = 0;
+        let speed = 50;
+        document.querySelector(".lydiaTexto p").innerHTML = "";
+        count2 = true;
+
+        function b() {
+            if (i1 < text2Lydia.length) {
+                document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i1);
+                i1++;
+                setTimeout(b, speed);
+            }
+        }
+        audio_q2.play();
+    }
+    b();
+}
+texto2();
+
+
+//CAMA
+var audio_cama = document.getElementById('audio_cama');
+var cama = document.getElementById("cama");
+
+function mouseOverCama() {
+    if(audio_q1.paused && count2===true) {
+        cama.src = "images/quarto/cama_azul.png";
+    }
+}
+
+function mouseLeftCama() {
+    if (audio_q1.paused && count2===true) {
+        cama.src = "images/quarto/cama.png";
+    }
+}
+
+function audio_cama_f() {
+    if (audio_q1.paused && count2===true) {
+        if (audio_cama.paused) {
+            audio_cama.play();
+            document.getElementById("cama").classList.add("cama_azul");
+            count3 = true;
+        } else if (audio_cama.paused && !(audio_q1.paused)) {
+            audio_q1.pause();
+            audio_q1.currentTime = 0;
+            audio_cama.play();
+            document.getElementById("cama").classList.add("cama_azul");
+            count3 = true;
+        } else {
+            audio_cama.pause();
+            audio_cama.currentTime = 0;
+            document.getElementById("cama").classList.remove("cama_azul");
+        }
+    }
+}
+
+cama.addEventListener("mouseenter", mouseOverCama);
+cama.addEventListener("mouseleave", mouseLeftCama);
+cama.addEventListener("click", audio_cama_f);
+
+audio_cama.addEventListener("ended", function () {
+        cama.src = "images/quarto/cama.png";
+    }
+);
+
+//RELÓGIO
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('horas').innerHTML =
+        h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i
+    } // add zero in front of numbers < 10
+    return i;
+}
+
+var audio_relogio = document.getElementById('audio_relogio');
+var relogio = document.getElementById("relogio");
+var horas = document.getElementById("horas");
+
+function mouseOverRelogio() {
+    if (audio_q1.paused && audio_cama.paused && count2===true && count3===true) {
+        relogio.src = "images/quarto/relogio_azul.png";
+        document.getElementById("horas").style.color = "blue";
+    }
+}
+
+function mouseLeftRelogio() {
+    if (audio_q1.paused && audio_cama.paused && count2===true && count3===true) {
+        relogio.src = "images/quarto/relogio.png";
+        document.getElementById("horas").style.color = "lightgrey";
+    }
+}
+
+function audio_relogio_f() {
+    if (audio_q1.paused && audio_cama.paused && count2===true && count3===true) {
+        audio_relogio.play();
+        document.getElementById("horas").style.color = "blue";
+        relogio.src = "images/quarto/relogio_azul.png";
+        count4 = true;
+    } else if (audio_relogio.paused && !(audio_q1.paused) && count2===true && count3===true) {
+        audio_q1.pause();
+        audio_q1.currentTime = 0;
+        audio_relogio.play();
+        document.getElementById("horas").style.color = "blue";
+        relogio.src = "images/quarto/relogio_azul.png";
+        count4 = true;
+    } else {
+        audio_relogio.pause();
+        audio_relogio.currentTime = 0;
+        document.getElementById("horas").style.color = "lightgrey";
+        relogio.src = "images/quarto/relogio.png";
+    }
+}
+
+relogio.addEventListener("mouseenter", mouseOverRelogio);
+relogio.addEventListener("mouseleave", mouseLeftRelogio);
+horas.addEventListener("mouseenter", mouseOverRelogio);
+horas.addEventListener("mouseleave", mouseLeftRelogio);
+
+relogio.addEventListener("click", audio_relogio_f);
+horas.addEventListener("click", audio_relogio_f);
+
+audio_relogio.addEventListener("ended", function () {
+        relogio.src = "images/quarto/relogio.png";
+        document.getElementById("horas").style.color = "lightgrey";
+    }
+);
+
+
+//GANHAR
+if(count1===true && count2===true && count3===true && count4===true){
+    winLetra("l")
+}
+
+
+
