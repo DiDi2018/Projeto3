@@ -141,18 +141,9 @@ img.sala:nth-child(5){  /*comando*/
     left: 18%
 }
 .cortina_esq_azul{
-    -webkit-animation: slide 0.5s forwards;
-    -webkit-animation-delay: 4s;
-    animation: slide 0.5s forwards;
-    animation-delay: 1s;
-}
-
-@-webkit-keyframes slide {
-    100% { left: 0; }
-}
-
-@keyframes slide {
-    100% { left: 0; }
+    transform: translateX(-80%);
+    transition: all 1s ease-out;
+    transition-delay: 1s;
 }
 
 #cortina_dir{  /*cortina da direita*/
@@ -162,20 +153,10 @@ img.sala:nth-child(5){  /*comando*/
 }
 
 .cortina_dir_azul{
-    -webkit-animation: slide 0.5s forwards;
-    -webkit-animation-delay: 4s;
-    animation: slide 0.5s forwards;
-    animation-delay: 1s;
+    transform: translateX(80%);
+    transition: all 1s ease-out;
+    transition-delay: 1s;
 }
-
-@-webkit-keyframes slide {
-    100% { right: 0; }
-}
-
-@keyframes slide {
-    100% { right: 0; }
-}
-
 
 #cama { /*cama*/
     height: 300px;

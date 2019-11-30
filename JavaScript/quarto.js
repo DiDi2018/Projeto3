@@ -133,7 +133,7 @@ function audio_cortina_f() {
         audio_q1.pause();
         audio_q1.currentTime = 0;
         audio_cortina.play();
-        document.getElementById("ccortina_esq").classList.add("cortina_esq_azul");
+        document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
         document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
     } else {
         audio_cortina.pause();
@@ -147,6 +147,7 @@ cortina_esq.addEventListener("mouseenter", mouseOverCortinas);
 cortina_esq.addEventListener("mouseleave", mouseLeftCortinas);
 cortina_dir.addEventListener("mouseenter", mouseOverCortinas);
 cortina_dir.addEventListener("mouseleave", mouseLeftCortinas);
+
 cortina_esq.addEventListener("click", audio_cortina_f);
 cortina_dir.addEventListener("click", audio_cortina_f);
 
