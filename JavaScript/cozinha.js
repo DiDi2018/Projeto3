@@ -4,8 +4,8 @@ var monstro2 = document.getElementById("monstro2"); // works
 var audio1 = document.getElementById('audio1');
 var audio2 = document.getElementById('audio2');
 var psicologo=document.getElementById('psicologo');
-var count1=false;
-var count2=false;
+let count1=false;
+let count2=false;
 var count3=false;
 
 
@@ -33,7 +33,6 @@ function sair() {
     document.getElementById('texto').style.display = "none";
     psicologo.pause();
     psicologo.currentTime = 0;
-    count1=true;
 }
 cruz.addEventListener("click", sair);
 document.addEventListener("click", fecharfora);
@@ -85,6 +84,11 @@ function playaudio1() {
         audio1.pause();
         audio1.currentTime = 0;
     }
+    count1=true;
+
+    if (count1 && count2){
+       document.getElementById('won').style.display = "block";
+    }
 }
 
 function playaudio2() {
@@ -100,17 +104,20 @@ function playaudio2() {
         audio2.pause();
         audio2.currentTime = 0;
     }
+    count2=true;
+
+    if (count1 && count2){
+        document.getElementById('won').style.display = "block";
+    }
 }
 
 
 monstro2.addEventListener("mouseenter", mouseOverMonstro2);
 monstro2.addEventListener("mouseleave", mouseLeftMonstro2);
 monstro2.addEventListener("click", playaudio2);
-count2=true;
 monstro1.addEventListener("mouseenter", mouseOverMonstro1);
 monstro1.addEventListener("mouseleave", mouseLeftMonstro1);
 monstro1.addEventListener("click", playaudio1);
-count1=true;
 
 audio2.addEventListener("ended", function(){
     monstro2.src = "images/cozinha/Monstro2.png";
@@ -150,10 +157,6 @@ function desaparecerTexto() {
 
 aparecerTexto();
 //desaparecerTexto();
-
-if( count1===true && count2===true && count3===true){
-    document.getElementById('won').style.display = "block";
-}
 
 
 

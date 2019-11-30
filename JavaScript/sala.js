@@ -62,4 +62,3 @@ function gatoclick(){
     document.querySelector(".lydiaTexto p").innerHTML = "";
     typeWriter2();
 }
-
