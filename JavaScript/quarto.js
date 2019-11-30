@@ -1,3 +1,7 @@
+let count1 = false;
+let count2 = false;
+var count3 = false;
+
 //Som Lydia
 var audio_q1 = document.getElementById('audio_q1');
 
@@ -32,12 +36,10 @@ var audio_cama = document.getElementById('audio_cama');
 var cama = document.getElementById("cama");
 
 function mouseOverCama() {
-    //var cama = document.getElementById("cama");
     cama.src = "images/quarto/cama_azul.png";
 }
 
 function mouseLeftCama() {
-    //var cama = document.getElementById("cama");
     if (audio_cama.ended || audio_cama.paused) {
         cama.src = "images/quarto/cama.png";
     }
@@ -88,6 +90,7 @@ function checkTime(i) {
     return i;
 }
 
+var audio_relogio = document.getElementById('audio_relogio');
 var relogio = document.getElementById("relogio");
 var horas = document.getElementById("horas");
 
@@ -97,14 +100,44 @@ function mouseOverRelogio() {
 }
 
 function mouseLeftRelogio() {
-    relogio.src = "images/quarto/relogio.png";
-    document.getElementById("horas").style.color = "lightgrey";
+    if (audio_cama.ended || audio_cama.paused) {
+        relogio.src = "images/quarto/relogio.png";
+        document.getElementById("horas").style.color = "lightgrey";
+    }
+}
+
+function audio_relogio_f() {
+    if (audio_relogio.paused && audio_q1.paused) {
+        audio_relogio.play();
+        document.getElementById("horas").style.color = "blue";
+        relogio.src = "images/quarto/relogio_azul.png";
+    } else if (audio_relogio.paused && !(audio_q1.paused)) {
+        audio_q1.pause();
+        audio_q1.currentTime = 0;
+        audio_relogio.play();
+        document.getElementById("horas").style.color = "blue";
+        relogio.src = "images/quarto/relogio_azul.png";
+    } else {
+        audio_relogio.pause();
+        audio_relogio.currentTime = 0;
+        document.getElementById("horas").style.color = "lightgrey";
+        relogio.src = "images/quarto/relogio.png";
+    }
 }
 
 relogio.addEventListener("mouseenter", mouseOverRelogio);
 relogio.addEventListener("mouseleave", mouseLeftRelogio);
 horas.addEventListener("mouseenter", mouseOverRelogio);
 horas.addEventListener("mouseleave", mouseLeftRelogio);
+
+relogio.addEventListener("click", audio_relogio_f);
+horas.addEventListener("click", audio_relogio_f);
+
+audio_relogio.addEventListener("ended", function () {
+        relogio.src = "images/quarto/relogio.png";
+        document.getElementById("horas").style.color = "lightgrey";
+    }
+);
 
 
 //CORTINA
@@ -126,7 +159,7 @@ function setup() {
             width: w,
             height: h
         }
-    }, function() {
+    }, function () {
         console.log('capture ready.')
     });
     capture.elt.setAttribute('playsinline', '');
@@ -141,8 +174,14 @@ function setup() {
     tracker.start(capture.elt);
 }
 
+var correr = 0;
+
+var myVar;
+
+
 function draw() {
-   // image(capture, 0, 0, w, h);
+
+    // image(capture, 0, 0, w, h);
     var positions = tracker.getCurrentPosition();
 
     //distância entre sobrancelha e olho
@@ -152,18 +191,25 @@ function draw() {
         var open = sobrancelha.dist(olho);
     }
 
-    if ((open>=35)) {
-        audio_cortina.play();
-        cortina_esq.src = "images/quarto/cortina_azul_esq.png";
-        cortina_dir.src = "images/quarto/cortina_azul_dir.png";
-        document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
-        document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
-        document.getElementById("quadrado").style.background = "lightyellow";
-        document.getElementById("quadrado").style.zIndex = "-3";
+    if ((open >= 35)) {
+        if(correr===0) {
+            audio_cortina.play();
+            document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
+            document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
+            cortina_esq.src = "images/quarto/cortina_azul_esq.png";
+            cortina_dir.src = "images/quarto/cortina_azul_dir.png";
+            document.getElementById("quadrado").style.background = "lightyellow";
+            document.getElementById("quadrado").style.zIndex = "-10";
+            myVar = setInterval(alertFunc, 2000);
+            function alertFunc() {
+                cortina_esq.src = "images/quarto/cortina_esq.png";
+                cortina_dir.src = "images/quarto/cortina_dir.png";
+            }
+        }
+        correr = 1;
+
     }
-    else {
-        audio_cortina.pause();
-        audio_cortina.currentTime = 0;
+    else if (correr === 0) {
         cortina_esq.src = "images/quarto/cortina_esq.png";
         cortina_dir.src = "images/quarto/cortina_dir.png";
         document.getElementById("cortina_esq").classList.remove("cortina_esq_azul");
@@ -172,10 +218,3 @@ function draw() {
         document.getElementById("quadrado").style.zIndex = "1";
     }
 }
-
-audio_cortina.addEventListener("ended", function () {
-        cortina_esq.src = "images/quarto/cortina_esq.png";
-        cortina_dir.src = "images/quarto/cortina_dir.png";
-
-    }
-);
