@@ -299,3 +299,7 @@ img.sala:nth-child(5){  /*comando*/
     right: 2%;
     width: 4%;
 }
+
+#won{
+    display:none;
+}
