@@ -85,6 +85,10 @@ function playaudio1() {
         audio1.currentTime = 0;
     }
     count1=true;
+
+    if (count1 && count2){
+       document.getElementById('won').style.display = "block";
+    }
 }
 
 function playaudio2() {
@@ -101,6 +105,10 @@ function playaudio2() {
         audio2.currentTime = 0;
     }
     count2=true;
+
+    if (count1 && count2){
+        document.getElementById('won').style.display = "block";
+    }
 }
 
 
@@ -149,12 +157,6 @@ function desaparecerTexto() {
 
 aparecerTexto();
 //desaparecerTexto();
-
-console.log(count1);
-
-if(count2===true && count1===true){
-   document.getElementById('won').style.display = "block";
-}
 
 
 
