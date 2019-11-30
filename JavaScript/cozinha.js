@@ -5,6 +5,7 @@ var audio1 = document.getElementById('audio1');
 var audio2 = document.getElementById('audio2');
 var psicologo=document.getElementById('psicologo');
 let apresentacao = document.getElementById("apresentacao");
+let smile=document.getElementById("smile");
 let count1=false;
 let count2=false;
 var count3=false;
@@ -189,9 +190,26 @@ function playaudio2() {
     });
 
     function lydiaSmile(){
-         if (count1 && count2 && count3) {
-                     document.getElementById('won').style.display = "block";
+     if (count1 && count2 && count3 && audio1.paused && audio2.paused) {
+           let text3Lydia = "Wait a second! Why are you not smiling? You just won this amazing House, so Smile!";
+           let i1 = 0;
+           let speed = 50;
+            //document.getElementById('won').style.display = "block";
+            document.querySelector(".lydiaTexto p").innerHTML ="";
+
+             function a() {
+                 if (i1 < text3Lydia.length){
+                     document.querySelector(".lydiaTexto p").innerHTML += text3Lydia.charAt(i1);
+                        i1++;
+                     setTimeout(a, speed);
+                  }
+
+
+
          }
+            smile.play();
+     }
+     a(); 
     }
 
     lydiaSmile();
