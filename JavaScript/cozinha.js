@@ -8,7 +8,38 @@ let count1=false;
 let count2=false;
 var count3=false;
 
+//TEXTO LYDIA
+ let text1Lydia = "This room has the best instruments that you could ever dream of. You will never ever have to worry about dinner anymore, as soon as you get home you’ll have warm food on the table. Go ahead and take a look!";
+ let i1 = 0;
+ let speed = 50;
+ let apresentacao = document.getElementById("apresentacao");
+ let lydia= document.querySelector(".lydia");
 
+ function aparecerTexto(){
+     if (i1 < text1Lydia.length){
+         document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
+         i1++;
+         setTimeout(aparecerTexto, speed);
+     }
+
+ /*}
+
+ function desaparecerTexto() {
+
+  if (i1 >= text1Lydia.length - 1) {
+         text1Lydia.replace(text1Lydia, '');
+
+     }   */
+
+     apresentacao.play();
+
+ }
+
+ aparecerTexto();
+ //desaparecerTexto();
+
+
+//MOSTRAR A CARTA
 carta.addEventListener("click", ShowLetter);
 
     function ShowLetter() {
@@ -26,6 +57,9 @@ carta.addEventListener("click", ShowLetter);
         monstro1.src = "images/cozinha/Monstro1.png";
         psicologo.play();
     }
+
+
+//SAIR DA CARTA
 
 let cruz = document.getElementById("cruz");
 
@@ -45,9 +79,16 @@ function fecharfora(evt) {
     if (!papel && !textoPsicologo && !carta) {
         return sair();
     }
+    count3=true;                                               
+                                                               
+    if (count1 && count2 && count3 ){                          
+       document.getElementById('won').style.display = "block"; 
+    }                                                          
+
 }
 
 
+//MONSTROS
 
 function mouseOverMonstro1() {
     var monstro1 = document.querySelector("#monstro1");
@@ -71,6 +112,8 @@ function mouseLeftMonstro2() {
     }
 }
 
+//MONSTROS_SOM
+
 function playaudio1() {
     if (audio1.paused && audio2.paused) {
         audio1.play();
@@ -86,7 +129,7 @@ function playaudio1() {
     }
     count1=true;
 
-    if (count1 && count2){
+    if (count1 && count2 && count3){
        document.getElementById('won').style.display = "block";
     }
 }
@@ -106,11 +149,12 @@ function playaudio2() {
     }
     count2=true;
 
-    if (count1 && count2){
+    if (count1 && count2 && count3){
         document.getElementById('won').style.display = "block";
     }
 }
 
+//MONSTROS_CLICAR
 
 monstro2.addEventListener("mouseenter", mouseOverMonstro2);
 monstro2.addEventListener("mouseleave", mouseLeftMonstro2);
@@ -126,38 +170,3 @@ audio2.addEventListener("ended", function(){
 audio1.addEventListener("ended", function(){
     monstro1.src = "images/cozinha/Monstro1.png";
 });
-
-
-//texto lydia
-
-let text1Lydia = "This room has the best instruments that you could ever dream of. You will never ever have to worry about dinner anymore, as soon as you get home you’ll have warm food on the table. Go ahead and take a look!";
-let i1 = 0;
-let speed = 50;
-let apresentacao = document.getElementById("apresentacao");
-let lydia= document.querySelector(".lydia");
-
-function aparecerTexto(){
-    if (i1 < text1Lydia.length){
-        document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
-        i1++;
-        setTimeout(aparecerTexto, speed);
-    }
-
-/*}
-
-function desaparecerTexto() {
-*/
- if (i1 >= text1Lydia.length - 1) {
-        text1Lydia.replace(text1Lydia, '');
-
-    }
-    apresentacao.play();
-
-}
-
-aparecerTexto();
-//desaparecerTexto();
-
-
-
-
