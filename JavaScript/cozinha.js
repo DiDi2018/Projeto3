@@ -249,7 +249,7 @@ function draw() {
 
       var positions = tracker.getCurrentPosition();
 
-      //distância entre sobrancelha e olho
+      //distância entre cantos da boca
       if (positions.length > 0) {
           var MouthLeft = createVector(positions[44][0], positions[44][1]);
           var MouthRight = createVector(positions[50][0], positions[50][1]);
@@ -263,7 +263,7 @@ function draw() {
 
 
       } else {
-          document.getElementById('won').style.display = "block";
+          document.getElementById('won').style.display = "none";
       }
       console.log(sorriso);
   }
