@@ -112,47 +112,65 @@ var audio_cortina = document.getElementById('audio_cortina');
 var cortina_esq = document.getElementById("cortina_esq");
 var cortina_dir = document.getElementById("cortina_dir");
 
-function mouseOverCortinas() {
-    cortina_esq.src = "images/quarto/cortina_azul_esq.png";
-    cortina_dir.src = "images/quarto/cortina_azul_dir.png";
-}
-
-function mouseLeftCortinas() {
-    if (audio_cortina.ended || audio_cortina.paused) {
-        cortina_esq.src = "images/quarto/cortina_esq.png";
-        cortina_dir.src = "images/quarto/cortina_dir.png";
-    }
-}
-
-function audio_cortina_f() {
-    if (audio_cortina.paused && audio_q1.paused) {
-        audio_cortina.play();
-        document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
-        document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
-    } else if (audio_cortina.paused && !(audio_q1.paused)) {
-        audio_q1.pause();
-        audio_q1.currentTime = 0;
-        audio_cortina.play();
-        document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
-        document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
-    } else {
-        audio_cortina.pause();
-        audio_cortina.currentTime = 0;
-        document.getElementById("cortina_esq").classList.remove("cortina_esq_azul");
-        document.getElementById("cortina_dir").classList.remove("cortina_dir_azul");
-    }
-}
-
-cortina_esq.addEventListener("mouseenter", mouseOverCortinas);
-cortina_esq.addEventListener("mouseleave", mouseLeftCortinas);
-cortina_dir.addEventListener("mouseenter", mouseOverCortinas);
-cortina_dir.addEventListener("mouseleave", mouseLeftCortinas);
-
-cortina_esq.addEventListener("click", audio_cortina_f);
-cortina_dir.addEventListener("click", audio_cortina_f);
-
 audio_cortina.addEventListener("ended", function () {
         cortina_esq.src = "images/quarto/cortina_esq.png";
         cortina_dir.src = "images/quarto/cortina_dir.png";
     }
 );
+
+
+//CAPTURA DA CAMARA
+var capture;
+var tracker
+var w = 640,
+    h = 480;
+
+function setup() {
+    capture = createCapture({
+        audio: false,
+        video: {
+            width: w,
+            height: h
+        }
+    }, function() {
+        console.log('capture ready.')
+    });
+    capture.elt.setAttribute('playsinline', '');
+    createCanvas(w, h);
+    capture.size(w, h);
+    capture.hide();
+
+    colorMode(HSB);
+
+    tracker = new clm.tracker();
+    tracker.init();
+    tracker.start(capture.elt);
+}
+
+function draw() {
+   // image(capture, 0, 0, w, h);
+    var positions = tracker.getCurrentPosition();
+
+    //distância entre sobrancelha e olho
+    if (positions.length > 0) {
+        var sobrancelha = createVector(positions[20][0], positions[20][1]);
+        var olho = createVector(positions[24][0], positions[24][1]);
+        var open = sobrancelha.dist(olho);
+    }
+
+    if ((open>=30)) {
+        audio_cortina.play();
+        cortina_esq.src = "images/quarto/cortina_azul_esq.png";
+        cortina_dir.src = "images/quarto/cortina_azul_dir.png";
+        document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
+        document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
+    }
+    else{
+        audio_cortina.pause();
+        audio_cortina.currentTime = 0;
+        cortina_esq.src = "images/quarto/cortina_esq.png";
+        cortina_dir.src = "images/quarto/cortina_dir.png";
+        document.getElementById("cortina_esq").classList.remove("cortina_esq_azul");
+        document.getElementById("cortina_dir").classList.remove("cortina_dir_azul");
+    }
+}

@@ -143,7 +143,7 @@ img.sala:nth-child(5){  /*comando*/
 .cortina_esq_azul{
     transform: translateX(-80%);
     transition: all 1s ease-out;
-    transition-delay: 1s;
+    transition-delay: 0s;
 }
 
 #cortina_dir{  /*cortina da direita*/
@@ -155,7 +155,7 @@ img.sala:nth-child(5){  /*comando*/
 .cortina_dir_azul{
     transform: translateX(80%);
     transition: all 1s ease-out;
-    transition-delay: 1s;
+    transition-delay: 0s;
 }
 
 #cama { /*cama*/
