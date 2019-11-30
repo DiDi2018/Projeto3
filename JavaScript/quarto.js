@@ -152,7 +152,7 @@ function draw() {
         var open = sobrancelha.dist(olho);
     }
 
-    if ((open>=30)) {
+    if ((open>=35)) {
         audio_cortina.play();
         cortina_esq.src = "images/quarto/cortina_azul_esq.png";
         cortina_dir.src = "images/quarto/cortina_azul_dir.png";
