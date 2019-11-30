@@ -84,8 +84,7 @@ function startTime() {
 function checkTime(i) {
     if (i < 10) {
         i = "0" + i
-    }
-    ;  // add zero in front of numbers < 10
+    } // add zero in front of numbers < 10
     return i;
 }
 
@@ -106,3 +105,53 @@ relogio.addEventListener("mouseenter", mouseOverRelogio);
 relogio.addEventListener("mouseleave", mouseLeftRelogio);
 horas.addEventListener("mouseenter", mouseOverRelogio);
 horas.addEventListener("mouseleave", mouseLeftRelogio);
+
+
+//CORTINA
+var audio_cortina = document.getElementById('audio_cortina');
+var cortina_esq = document.getElementById("cortina_esq");
+var cortina_dir = document.getElementById("cortina_dir");
+
+function mouseOverCortinas() {
+    cortina_esq.src = "images/quarto/cortina_azul_esq.png";
+    cortina_dir.src = "images/quarto/cortina_azul_dir.png";
+}
+
+function mouseLeftCortinas() {
+    if (audio_cortina.ended || audio_cortina.paused) {
+        cortina_esq.src = "images/quarto/cortina_esq.png";
+        cortina_dir.src = "images/quarto/cortina_dir.png";
+    }
+}
+
+function audio_cortina_f() {
+    if (audio_cortina.paused && audio_q1.paused) {
+        audio_cortina.play();
+        document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
+        document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
+    } else if (audio_cortina.paused && !(audio_q1.paused)) {
+        audio_q1.pause();
+        audio_q1.currentTime = 0;
+        audio_cortina.play();
+        document.getElementById("ccortina_esq").classList.add("cortina_esq_azul");
+        document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
+    } else {
+        audio_cortina.pause();
+        audio_cortina.currentTime = 0;
+        document.getElementById("cortina_esq").classList.remove("cortina_esq_azul");
+        document.getElementById("cortina_dir").classList.remove("cortina_dir_azul");
+    }
+}
+
+cortina_esq.addEventListener("mouseenter", mouseOverCortinas);
+cortina_esq.addEventListener("mouseleave", mouseLeftCortinas);
+cortina_dir.addEventListener("mouseenter", mouseOverCortinas);
+cortina_dir.addEventListener("mouseleave", mouseLeftCortinas);
+cortina_esq.addEventListener("click", audio_cortina_f);
+cortina_dir.addEventListener("click", audio_cortina_f);
+
+audio_cortina.addEventListener("ended", function () {
+        cortina_esq.src = "images/quarto/cortina_esq.png";
+        cortina_dir.src = "images/quarto/cortina_dir.png";
+    }
+);
