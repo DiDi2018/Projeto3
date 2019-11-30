@@ -3,6 +3,10 @@ var monstro1 = document.getElementById("monstro1"); // works
 var monstro2 = document.getElementById("monstro2"); // works
 var audio1 = document.getElementById('audio1');
 var audio2 = document.getElementById('audio2');
+var psicologo=document.getElementById('psicologo');
+var count1=false;
+var count2=false;
+var count3=false;
 
 
 carta.addEventListener("click", ShowLetter);
@@ -20,12 +24,16 @@ carta.addEventListener("click", ShowLetter);
         audio1.pause();
         audio1.currentTime = 0;
         monstro1.src = "images/cozinha/Monstro1.png";
+        psicologo.play();
     }
 
 let cruz = document.getElementById("cruz");
 
 function sair() {
     document.getElementById('texto').style.display = "none";
+    psicologo.pause();
+    psicologo.currentTime = 0;
+    count1=true;
 }
 cruz.addEventListener("click", sair);
 document.addEventListener("click", fecharfora);
@@ -78,6 +86,7 @@ function playaudio1() {
         audio1.currentTime = 0;
     }
 }
+
 function playaudio2() {
     if (audio2.paused && audio1.paused) {
         audio2.play();
@@ -97,9 +106,11 @@ function playaudio2() {
 monstro2.addEventListener("mouseenter", mouseOverMonstro2);
 monstro2.addEventListener("mouseleave", mouseLeftMonstro2);
 monstro2.addEventListener("click", playaudio2);
+count2=true;
 monstro1.addEventListener("mouseenter", mouseOverMonstro1);
 monstro1.addEventListener("mouseleave", mouseLeftMonstro1);
 monstro1.addEventListener("click", playaudio1);
+count1=true;
 
 audio2.addEventListener("ended", function(){
     monstro2.src = "images/cozinha/Monstro2.png";
@@ -124,14 +135,25 @@ function aparecerTexto(){
         i1++;
         setTimeout(aparecerTexto, speed);
     }
+
+/*}
+
+function desaparecerTexto() {
+*/
+ if (i1 >= text1Lydia.length - 1) {
+        text1Lydia.replace(text1Lydia, '');
+
+    }
     apresentacao.play();
-    if(audio1.ended)
-        audio1.paused();
+
 }
-lydia.addEventListener("click", aparecerTexto);
 
-/*Promise.all(audios).then(aparecerTexto);*/
+aparecerTexto();
+//desaparecerTexto();
 
+if( count1===true && count2===true && count3===true){
+    document.getElementById('won').style.display = "block";
+}
 
 
 
