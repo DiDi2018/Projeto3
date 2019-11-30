@@ -8,7 +8,9 @@ let apresentacao = document.getElementById("apresentacao");
 let smile=document.getElementById("smile");
 let count1=false;
 let count2=false;
-var count3=false;
+let count3=false;
+let count4=false;
+
 
 //TEXTO LYDIA
  let text1Lydia = "This room has the best instruments that you could ever dream of. You will never ever have to worry about dinner anymore, as soon as you get home you’ll have warm food on the table. Go ahead and take a look!";
@@ -98,14 +100,14 @@ var count3=false;
 //MONSTROS
 
      function mouseOverMonstro1() {
-        if(apresentacao.paused && count1===true) {
+        if(apresentacao.paused && count1===true && smile.paused) {
             var monstro1 = document.querySelector("#monstro1");
             monstro1.src = "images/cozinha/Monstro1.1.png";
         }
      }
 
      function mouseLeftMonstro1() {
-        if(apresentacao.paused && count1===true) {
+        if(apresentacao.paused && count1===true && smile.paused) {
           var monstro1 = document.querySelector("#monstro1"); // works
              if (audio1.ended || audio1.paused) {
               monstro1.src = "images/cozinha/Monstro1.png";
@@ -114,14 +116,14 @@ var count3=false;
      }
 
      function mouseOverMonstro2() {
-        if(apresentacao.paused && count1===true) {
+        if(apresentacao.paused && count1===true && smile.paused) {
             var monstro2 = document.querySelector("#monstro2"); // works
             monstro2.src = "images/cozinha/Monstro2.1.png";
         }
      }
 
      function mouseLeftMonstro2() {
-        if(apresentacao.paused && count1===true) {
+        if(apresentacao.paused && count1===true && smile.paused) {
             var monstro2 = document.querySelector("#monstro2"); // works
             if (audio2.ended || audio2.paused) {
                 monstro2.src = "images/cozinha/Monstro2.png";
@@ -132,7 +134,7 @@ var count3=false;
 //MONSTROS_SOM
 
 function playaudio1() {
-        if(apresentacao.paused && count1===true) {
+        if(apresentacao.paused && count1===true && smile.paused) {
             if (audio1.paused && audio2.paused) {
                 audio1.play();
             } else if (audio1.paused && !(audio2.paused)) {
@@ -153,7 +155,7 @@ function playaudio1() {
 }
 
 function playaudio2() {
-        if(apresentacao.paused && count1===true) {
+        if(apresentacao.paused && count1===true && smile.paused) {
             if (audio2.paused && audio1.paused) {
                 audio2.play();
             } else if (audio2.paused && !(audio1.paused)) {
@@ -189,28 +191,81 @@ function playaudio2() {
         monstro1.src = "images/cozinha/Monstro1.png";
     });
 
-    function lydiaSmile(){
-     if (count1 && count2 && count3 && audio1.paused && audio2.paused) {
-           let text3Lydia = "Wait a second! Why are you not smiling? You just won this amazing House, so Smile!";
-           let i1 = 0;
-           let speed = 50;
+    function lydiaSmile() {
+        if (count1 && count2 && count3 && audio1.paused && audio2.paused && count4 === false) {
+            let text3Lydia = "Wait a second! Why are you not smiling? You just won this amazing House, so Smile!";
+            let i1 = 0;
+            let speed = 50;
             //document.getElementById('won').style.display = "block";
-            document.querySelector(".lydiaTexto p").innerHTML ="";
+            document.querySelector(".lydiaTexto p").innerHTML = "";
+            count4 = true;
 
-             function a() {
-                 if (i1 < text3Lydia.length){
-                     document.querySelector(".lydiaTexto p").innerHTML += text3Lydia.charAt(i1);
-                        i1++;
-                     setTimeout(a, speed);
-                  }
+            function a() {
+                if (i1 < text3Lydia.length) {
+                    document.querySelector(".lydiaTexto p").innerHTML += text3Lydia.charAt(i1);
+                    i1++;
+                    setTimeout(a, speed);
+                }
+            }
 
-
-
-         }
             smile.play();
-     }
-     a(); 
+        }
+        a();
     }
 
     lydiaSmile();
 
+//CAPTURA DE ECRÃ
+//CAPTURA DA CAMARA
+var capture;
+var tracker ;
+var w = 640,
+    h = 480;
+
+function setup() {
+     capture = createCapture({
+            audio: false,
+            video: {
+                width: w,
+                height: h
+            }
+        }, function () {
+            console.log('capture ready.')
+        });
+        capture.elt.setAttribute('playsinline', '');
+        createCanvas(w, h);
+        capture.size(w, h);
+        capture.hide();
+
+        colorMode(HSB);
+
+        tracker = new clm.tracker();
+        tracker.init();
+        tracker.start(capture.elt);
+    
+}
+function draw() {
+      if(count1 && count2 && count3 && smile.paused && count4) {
+
+      var positions = tracker.getCurrentPosition();
+
+      //distância entre cantos da boca
+      if (positions.length > 0) {
+          var MouthLeft = createVector(positions[44][0], positions[44][1]);
+          var MouthRight = createVector(positions[50][0], positions[50][1]);
+          var sorriso = MouthLeft.dist(MouthRight);
+      }
+
+      if (sorriso * 10 >=60) {
+          document.getElementById('won').style.display = "block";
+          document.getElementById('won').style.width=sorriso;
+          document.getElementById('won').style.height = "auto";
+
+
+      } else {
+          document.getElementById('won').style.display = "none";
+      }
+      console.log(sorriso);
+  }
+                         
+}

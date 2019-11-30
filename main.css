@@ -10,6 +10,25 @@ img {
     position: absolute;
 }
 
+/* INÍCIO*/
+
+ #popup{
+     border: solid;
+     stroke: black;
+     stroke-width: 20%;
+     background-color: white;
+     width: 50%;
+     height:70%;
+     position:absolute;
+     top: 50%;
+     left: 50%;
+     transform: translateX(-50%) translateY(-50%);
+     box-shadow: 15px 20px #999999;
+
+
+
+ }
+
 /* PLANTAS MENUS*/
 #kitchen, #livingroom, #bedroom, #nursery{
     position: fixed;
