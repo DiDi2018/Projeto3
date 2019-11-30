@@ -112,12 +112,6 @@ var audio_cortina = document.getElementById('audio_cortina');
 var cortina_esq = document.getElementById("cortina_esq");
 var cortina_dir = document.getElementById("cortina_dir");
 
-audio_cortina.addEventListener("ended", function () {
-        cortina_esq.src = "images/quarto/cortina_esq.png";
-        cortina_dir.src = "images/quarto/cortina_dir.png";
-    }
-);
-
 
 //CAPTURA DA CAMARA
 var capture;
@@ -164,13 +158,24 @@ function draw() {
         cortina_dir.src = "images/quarto/cortina_azul_dir.png";
         document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
         document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
+        document.getElementById("quadrado").style.background = "lightyellow";
+        document.getElementById("quadrado").style.zIndex = "-3";
     }
-    else{
+    else {
         audio_cortina.pause();
         audio_cortina.currentTime = 0;
         cortina_esq.src = "images/quarto/cortina_esq.png";
         cortina_dir.src = "images/quarto/cortina_dir.png";
         document.getElementById("cortina_esq").classList.remove("cortina_esq_azul");
         document.getElementById("cortina_dir").classList.remove("cortina_dir_azul");
+        document.getElementById("quadrado").style.background = "black";
+        document.getElementById("quadrado").style.zIndex = "1";
     }
 }
+
+audio_cortina.addEventListener("ended", function () {
+        cortina_esq.src = "images/quarto/cortina_esq.png";
+        cortina_dir.src = "images/quarto/cortina_dir.png";
+
+    }
+);
