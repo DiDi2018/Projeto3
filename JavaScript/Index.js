@@ -53,7 +53,7 @@ imagens[1] = "images/index/fundo.png";
 
 
 function rodarImagens() {
-    document.querySelector("#fundo").src = imagens[nrImagem++];
+    document.querySelector(".fundopopup").src = imagens[nrImagem++];
 
     if (nrImagem >= imagens.length)
         nrImagem = 0;

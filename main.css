@@ -23,30 +23,48 @@ img {
      left: 50%;
      transform: translateX(-50%) translateY(-50%);
      box-shadow: 15px 20px #999999;
+     overflow: hidden;
 
  }
  #popup h1{
      font-family: 'Source Code Pro', monospace;
-     text-align: center;
      opacity: 100%;
+     width: 55%;
+     text-align: left;
+     position:absolute;
+     left: 50%;
+     top:-3%;
+     transform: translateX(-40%);
 
  }
 
- #fundo{
+.fundopopup{
      position: absolute;
      top: 50%;
      left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: auto;
+    z-index: -200;
+
 
 }
  .casa{
      position: absolute;
-     top: 50%;
+     top: 53%;
      left: 50%;
      width: 45%;
      transform: translateX(-65%) translateY(-55%);
-
+ }
+ #popup form{
+     position: absolute;
+     bottom: 5%;
+     left: 50%;
+     transform: translateX(-50%);
 
  }
+
+
 /* PLANTAS MENUS*/
 #kitchen, #livingroom, #bedroom, #nursery{
     position: fixed;
