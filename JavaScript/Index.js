@@ -1,19 +1,26 @@
-var div =document.querySelector("#popup");
-setInterval(change(), 1000);
+//var div =document.querySelector("#popup");
 
-function change(){
-    var fundo =document.querySelector("#fundo");
+var nrImagem = 0;
+var imagens = [];
+var refrescar = 1;
 
-    if (fundo.src === "../images/index/fundo.png") {
-        fundo.src = "../images/index/fundo1.png";
-    } else if (fundo.src === "../images/index/fundo1.png") {
-        fundo.src = "../images/index/fundo.png";
-    }
+// colocar aqui todas as imagens, seguindo a ordem numérica
+imagens[0] = "images/index/fundo1.png";
+imagens[1] = "images/index/fundo.png";
+
+
+function rodarImagens() {
+    document.querySelector("#fundo").src = imagens[nrImagem++];
+
+    if (nrImagem >= imagens.length)
+        nrImagem = 0;
+
+    setTimeout("rodarImagens()", refrescar * 1000);
 }
+rodarImagens();
 
 
-
-dragElement(document.getElementById("popup"));
+//dragElement(document.getElementById("popup"));
 
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
