@@ -1,5 +1,5 @@
 var capture;
-var tracker
+var tracker;
 var w = 640,
     h = 480;
 

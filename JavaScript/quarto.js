@@ -34,7 +34,7 @@ var cortina_dir = document.getElementById("cortina_dir");
 
 //CAPTURA DA CAMARA
 var capture;
-var tracker
+var tracker;
 var w = 640,
     h = 480;
 
@@ -102,7 +102,7 @@ function draw() {
             document.getElementById("cortina_esq").classList.remove("cortina_esq_azul");
             document.getElementById("cortina_dir").classList.remove("cortina_dir_azul");
             document.getElementById("quadrado").style.background = "black";
-            document.getElementById("quadrado").style.zIndex = "1";
+            document.getElementById("quadrado").style.zIndex = "-2";
         }
     }
 }
