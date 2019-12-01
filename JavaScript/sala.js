@@ -69,7 +69,8 @@ var capture;
 var tracker;
 var w = 640,
     h = 480;
-var positions, xInitial, yInitial, zInitial;
+var positions, xInitial, yInitial, zInitial, stepLeft = [], initial = false;
+let left = [];
 let moveis = document.querySelectorAll("img.sala");
 
 function setup() {
@@ -97,22 +98,30 @@ function setup() {
 function draw() {
     positions = tracker.getCurrentPosition();
 
-    if (positions.length > 0 && frameCount >= 300) {
-        xInitial = positions[35][0] - positions[1][0];
+    if (positions.length > 0 && audios[0].ended && audios[1].ended && initial === false) {
+        initial=true;
         yInitial = positions[12][0] - positions[39][0];
         zInitial = positions[7][0] - positions[53][0];
+
+        for(let i=21; i<25; i++) {
+            left[i] = document.styleSheets[0].cssRules[i].style.left;
+            left[i] = left[i].replace('vw', '');
+            left[i] = parseFloat(left[i]);
+            stepLeft[i] = (50 - left[i]) / yInitial;
+
+        }
         moveFace();
     }
 }
 
 function moveFace(){
-    if (positions.length > 0 && frameCount >= 360) {
-        //rules dos moveis começam no 16
-        for(let i=16;i<19; i++){
-            let step = (document.styleSheets[0].cssRules[i].left - 0.5)/yInitial;
-            let positionLeft = document.styleSheets[0].cssRules[i].style.left - step*(positions[12][0] - positions[39][0]);
-            document.styleSheets[0].cssRules[i].style.left = `${positionLeft}`;
-            console.log(positionLeft);
+    if (positions.length > 0 && audios[0].ended && audios[1].ended) {
+        //rules dos moveis começam no 19
+        for(let i=21; i<25; i++){
+            let positionLeft = left[i] + stepLeft[i]*(positions[12][0] - positions[39][0]);
+            positionLeft = positionLeft.toString() + "vw";
+            document.styleSheets[0].cssRules[i].style.left = positionLeft;
         }
     }
+    setTimeout(moveFace,200);
 }
