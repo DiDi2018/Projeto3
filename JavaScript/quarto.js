@@ -1,8 +1,13 @@
-let count0=false;
-let count1=false;
-let count2=false;
-let count3=false;
-let count4=false;
+//CORTINAS
+var audio_cortina = document.getElementById('audio_cortina');
+var cortina_esq = document.getElementById("cortina_esq");
+var cortina_dir = document.getElementById("cortina_dir");
+
+
+//CAPTURA DA CAMARA
+var capture;
+var tracker;
+var w = 640, h = 480;
 
 //Som Lydia
 var audio_q1 = document.getElementById('audio_q1');
@@ -14,31 +19,11 @@ let i1 = 0;
 let speed = 40;
 let lydia = document.querySelector(".lydia");
 
-function aparecerTexto() {
-    if (i1 < text1Lydia.length) {
-        document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
-        i1++;
-        setTimeout(aparecerTexto, speed);
-    }
-    audio_q1.play();
-    count0=true;
-}
-aparecerTexto();
-
-
-//CORTINAS
-var audio_cortina = document.getElementById('audio_cortina');
-var cortina_esq = document.getElementById("cortina_esq");
-var cortina_dir = document.getElementById("cortina_dir");
-
-
-//CAPTURA DA CAMARA
-var capture;
-var tracker;
-var w = 640,
-    h = 480;
+var correr = 0;
+var myVar;
 
 function setup() {
+
     capture = createCapture({
         audio: false,
         video: {
@@ -58,77 +43,81 @@ function setup() {
     tracker = new clm.tracker();
     tracker.init();
     tracker.start(capture.elt);
+
+    function aparecerTexto() {
+        if (i1 < text1Lydia.length) {
+            document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
+            i1++;
+            setTimeout(aparecerTexto, speed);
+        }
+        audio_q1.play();
+    }
+
+    aparecerTexto();
 }
 
-var correr = 0;
-
-var myVar;
-
-
 function draw() {
-    if (count0===true) {
-        // image(capture, 0, 0, w, h);
-        var positions = tracker.getCurrentPosition();
+    // image(capture, 0, 0, w, h);
+    var positions = tracker.getCurrentPosition();
 
-        //distância entre sobrancelha e olho
-        if (positions.length > 0) {
-            var sobrancelha = createVector(positions[20][0], positions[20][1]);
-            var olho = createVector(positions[24][0], positions[24][1]);
-            var open = sobrancelha.dist(olho);
-        }
+    //distância entre sobrancelha e olho
+    if (positions.length > 0) {
+        var sobrancelha = createVector(positions[20][0], positions[20][1]);
+        var olho = createVector(positions[24][0], positions[24][1]);
+        var open = sobrancelha.dist(olho);
+    }
 
-        if ((open >= 35)) {
-            if (correr === 0) {
-                audio_cortina.play();
-                document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
-                document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
-                cortina_esq.src = "images/quarto/cortina_azul_esq.png";
-                cortina_dir.src = "images/quarto/cortina_azul_dir.png";
-                document.getElementById("quadrado").style.background = "lightyellow";
-                document.getElementById("quadrado").style.zIndex = "-10";
-                myVar = setInterval(alertFunc, 2000);
+    if ((open >= 35)) {
+        if (correr === 0) {
+            audio_cortina.play();
+            document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
+            document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
+            cortina_esq.src = "images/quarto/cortina_azul_esq.png";
+            cortina_dir.src = "images/quarto/cortina_azul_dir.png";
+            document.getElementById("quadrado").style.background = "lightyellow";
+            document.getElementById("quadrado").style.zIndex = "-20";
+            myVar = setInterval(alertFunc, 2000);
 
-                function alertFunc() {
-                    cortina_esq.src = "images/quarto/cortina_esq.png";
-                    cortina_dir.src = "images/quarto/cortina_dir.png";
-                }
+            function alertFunc() {
+                cortina_esq.src = "images/quarto/cortina_esq.png";
+                cortina_dir.src = "images/quarto/cortina_dir.png";
             }
-            correr = 1;
-            count1 = true;
-
-        } else if (correr === 0) {
-            cortina_esq.src = "images/quarto/cortina_esq.png";
-            cortina_dir.src = "images/quarto/cortina_dir.png";
-            document.getElementById("cortina_esq").classList.remove("cortina_esq_azul");
-            document.getElementById("cortina_dir").classList.remove("cortina_dir_azul");
-            document.getElementById("quadrado").style.background = "black";
-            document.getElementById("quadrado").style.zIndex = "-2";
         }
+        correr = 1;
+
+    } else if (correr === 0) {
+        cortina_esq.src = "images/quarto/cortina_esq.png";
+        cortina_dir.src = "images/quarto/cortina_dir.png";
+        document.getElementById("cortina_esq").classList.remove("cortina_esq_azul");
+        document.getElementById("cortina_dir").classList.remove("cortina_dir_azul");
+        document.getElementById("quadrado").style.background = "black";
+        document.getElementById("quadrado").style.zIndex = "-2";
     }
 }
 
 //TEXTO LYDIA 2
 var audio_q2 = document.getElementById('audio_q2');
+let text2Lydia = "Explore the rest of the wonders of the bedroom";
 
 function texto2() {
-    if (count0===true && count1===true && audio_cortina.pause && audio_q1.pause) {
-        let text2Lydia = "Explore the rest of the wonders of the bedroom";
-        let i1 = 0;
-        let speed = 50;
-        document.querySelector(".lydiaTexto p").innerHTML = "";
-        count2 = true;
 
-        function b() {
-            if (i1 < text2Lydia.length) {
-                document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i1);
-                i1++;
-                setTimeout(b, speed);
-            }
+    document.querySelector(".lydiaTexto p").innerHTML = "";
+
+    //count2 = true;
+
+    function b() {
+        if (i1 < text2Lydia.length) {
+            document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i1);
+            i1++;
+            setTimeout(b, speed);
         }
-        audio_q2.play();
     }
+
+    audio_q2.play();
+
     b();
 }
+
 texto2();
 
 
@@ -137,29 +126,29 @@ var audio_cama = document.getElementById('audio_cama');
 var cama = document.getElementById("cama");
 
 function mouseOverCama() {
-    if(audio_q1.paused && count2===true) {
+    if (audio_q1.paused) {
         cama.src = "images/quarto/cama_azul.png";
     }
 }
 
 function mouseLeftCama() {
-    if (audio_q1.paused && count2===true) {
+    if (audio_q1.paused) {
         cama.src = "images/quarto/cama.png";
     }
 }
 
 function audio_cama_f() {
-    if (audio_q1.paused && count2===true) {
+    if (audio_q1.paused) {
         if (audio_cama.paused) {
             audio_cama.play();
             document.getElementById("cama").classList.add("cama_azul");
-            count3 = true;
+
         } else if (audio_cama.paused && !(audio_q1.paused)) {
             audio_q1.pause();
             audio_q1.currentTime = 0;
             audio_cama.play();
             document.getElementById("cama").classList.add("cama_azul");
-            count3 = true;
+
         } else {
             audio_cama.pause();
             audio_cama.currentTime = 0;
@@ -202,32 +191,32 @@ var relogio = document.getElementById("relogio");
 var horas = document.getElementById("horas");
 
 function mouseOverRelogio() {
-    if (audio_q1.paused && audio_cama.paused && count2===true && count3===true) {
+    if (audio_q1.paused && audio_cama.paused) {
         relogio.src = "images/quarto/relogio_azul.png";
         document.getElementById("horas").style.color = "blue";
     }
 }
 
 function mouseLeftRelogio() {
-    if (audio_q1.paused && audio_cama.paused && count2===true && count3===true) {
+    if (audio_q1.paused && audio_cama.paused) {
         relogio.src = "images/quarto/relogio.png";
         document.getElementById("horas").style.color = "lightgrey";
     }
 }
 
 function audio_relogio_f() {
-    if (audio_q1.paused && audio_cama.paused && count2===true && count3===true) {
+    if (audio_q1.paused && audio_cama.paused) {
         audio_relogio.play();
         document.getElementById("horas").style.color = "blue";
         relogio.src = "images/quarto/relogio_azul.png";
-        count4 = true;
-    } else if (audio_relogio.paused && !(audio_q1.paused) && count2===true && count3===true) {
+
+    } else if (audio_relogio.paused && !(audio_q1.paused)) {
         audio_q1.pause();
         audio_q1.currentTime = 0;
         audio_relogio.play();
         document.getElementById("horas").style.color = "blue";
         relogio.src = "images/quarto/relogio_azul.png";
-        count4 = true;
+
     } else {
         audio_relogio.pause();
         audio_relogio.currentTime = 0;
@@ -249,12 +238,3 @@ audio_relogio.addEventListener("ended", function () {
         document.getElementById("horas").style.color = "lightgrey";
     }
 );
-
-
-//GANHAR
-if(count1===true && count2===true && count3===true && count4===true){
-    winLetra("l")
-}
-
-
-

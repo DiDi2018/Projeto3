@@ -204,27 +204,27 @@ img.sala:nth-child(5){  /*comando*/
     height: 550px;
     width: auto;
     left: 18%;
-    z-index:-7;
+    z-index:-15;
 }
 .cortina_esq_azul{
     transform: translateX(-80%);
     transition: all 1s ease-out;
     transition-delay: 0s;
-    z-index:-7;
+    z-index:-15;
 }
 
 #cortina_dir{  /*cortina da direita*/
     height: 550px;
     width: auto;
     left:33%;
-    z-index:-7;
+    z-index:-15;
 }
 
 .cortina_dir_azul{
     transform: translateX(80%);
     transition: all 1s ease-out;
     transition-delay: 0s;
-    z-index:-7;
+    z-index:-15;
 }
 
 #cama { /*cama*/
