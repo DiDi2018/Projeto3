@@ -19,8 +19,8 @@ function rodarImagens() {
 }
 rodarImagens();
 
-
-//dragElement(document.getElementById("popup"));
+//ISTO É O QUÊ MESMO? NÃO ESTÁ A FUNCIONAR MAS NAO QUIS ELIMINAR PQ NAO SEI O Q É, ASS: MARIA SOARES
+dragElement(document.getElementById("popup"));
 
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
