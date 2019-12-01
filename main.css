@@ -15,7 +15,7 @@ img {
  #popup{
      border: solid;
      stroke: black;
-     stroke-width: 20%;
+     stroke-width: 10px;
      background-color: white;
      width: 50%;
      height:70%;
@@ -25,10 +25,14 @@ img {
      transform: translateX(-50%) translateY(-50%);
      box-shadow: 15px 20px #999999;
 
-
-
  }
 
+ #fundo{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+
+}
 /* PLANTAS MENUS*/
 #kitchen, #livingroom, #bedroom, #nursery{
     position: fixed;

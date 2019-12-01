@@ -40,3 +40,38 @@ function dragElement(elmnt) {
         document.onmousemove = null;
     }
 }
+
+/*
+var div =document.querySelector("#popup");
+
+function change(){
+    var fundo =document.querySelector("#fundo");
+
+    if (fundo.src === "../images/index/fundo.png") {
+            fundo.src = "../images/index/fundo1.png";
+        } else if (fundo.src === "../images/index/fundo1.png") {
+            fundo.src = "../images/index/fundo.png";
+        }
+}
+
+//setInterval("change()", 1000);
+
+div.addEventListener("click",change());
+*/
+let div= document.querySelector("#popup");
+let fundo = document.querySelector("#fundo");
+
+function mudar(){
+    if(div.innerHTML===" <img id=\"fundo\" src=\"../images/index/fundo.png\" height=\"2480\" width=\"3508\" alt=\"fundo\"/>") {
+div.innerHTML=" <img id=\"fundo\" src=\"../images/index/fundo1.png\" height=\"2480\" width=\"3508\" alt=\"fundo\"/>";
+
+    }
+    else{
+        div.innerHTML=" <img id=\"fundo\" src=\"../images/index/fundo.png\" height=\"2480\" width=\"3508\" alt=\"fundo\"/>";
+
+    }
+
+}
+
+div.addEventListener('click',mudar);
+
