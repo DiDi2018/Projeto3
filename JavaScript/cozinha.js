@@ -264,6 +264,8 @@ function draw() {
 
         if (sorriso * 10 > 60) {
             document.getElementById('won').style.display = "block";
+            //winLetra("E");
+
         } else {
             document.getElementById('won').style.display = "none";
         }
