@@ -52,7 +52,8 @@ function typeWriter2(){
 }
 
 audios[2].addEventListener("ended", function(){
-    winLetra("l")
+    document.querySelector(".lydiaTexto p").innerHTML = "";
+    winLetra("l");
 });
 
 //clicar gato
@@ -103,7 +104,7 @@ function draw() {
         yInitial = positions[12][0] - positions[39][0];
         zInitial = positions[7][0] - positions[53][0];
 
-        for(let i=21; i<25; i++) {
+        for(let i=20; i<24; i++) {
             left[i] = document.styleSheets[0].cssRules[i].style.left;
             left[i] = left[i].replace('vw', '');
             left[i] = parseFloat(left[i]);
@@ -115,9 +116,9 @@ function draw() {
 }
 
 function moveFace(){
-    if (positions.length > 0 && audios[0].ended && audios[1].ended) {
+    if (positions.length > 0 && audios[0].ended && audios[1].ended && gatoEvent === false) {
         //rules dos moveis começam no 19
-        for(let i=21; i<25; i++){
+        for(let i=20; i<24; i++){
             let positionLeft = left[i] + stepLeft[i]*(positions[12][0] - positions[39][0]);
             positionLeft = positionLeft.toString() + "vw";
             document.styleSheets[0].cssRules[i].style.left = positionLeft;
