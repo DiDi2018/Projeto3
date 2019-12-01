@@ -1,25 +1,5 @@
-//var div =document.querySelector("#popup");
-
-var nrImagem = 0;
-var imagens = [];
-var refrescar = 1;
-
-// colocar aqui todas as imagens, seguindo a ordem numérica
-imagens[0] = "images/index/fundo1.png";
-imagens[1] = "images/index/fundo.png";
 
 
-function rodarImagens() {
-    document.querySelector("#fundo").src = imagens[nrImagem++];
-
-    if (nrImagem >= imagens.length)
-        nrImagem = 0;
-
-    setTimeout("rodarImagens()", refrescar * 1000);
-}
-rodarImagens();
-
-//ISTO É O QUÊ MESMO? NÃO ESTÁ A FUNCIONAR MAS NAO QUIS ELIMINAR PQ NAO SEI O Q É, ASS: MARIA SOARES
 dragElement(document.getElementById("popup"));
 
 function dragElement(elmnt) {
@@ -63,5 +43,22 @@ function dragElement(elmnt) {
     }
 }
 
+var nrImagem = 0;
+var imagens = [];
+var refrescar = 1;
 
+// colocar aqui todas as imagens, seguindo a ordem numérica
+imagens[0] = "images/index/fundo1.png";
+imagens[1] = "images/index/fundo.png";
+
+
+function rodarImagens() {
+    document.querySelector("#fundo").src = imagens[nrImagem++];
+
+    if (nrImagem >= imagens.length)
+        nrImagem = 0;
+
+    setTimeout("rodarImagens()", refrescar * 1000);
+}
+rodarImagens();
 

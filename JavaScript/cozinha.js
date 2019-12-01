@@ -209,14 +209,13 @@ function playaudio2() {
             }
 
             smile.play();
-        }
-        a();
+
+        } a();
     }
 
     lydiaSmile();
 
 //CAPTURA DE ECRÃ
-//CAPTURA DA CAMARA
 var capture;
 var tracker ;
 var w = 640,
@@ -242,30 +241,34 @@ function setup() {
         tracker = new clm.tracker();
         tracker.init();
         tracker.start(capture.elt);
-    
+
 }
 function draw() {
-      if(count1 && count2 && count3 && smile.paused && count4) {
+    var positions = tracker.getCurrentPosition();
+    noFill();
+    beginShape();
+    for (var i = 0; i < positions.length; i++) {
+        vertex(positions[i][0], positions[i][1]);
+    }
+    endShape();
 
-      var positions = tracker.getCurrentPosition();
+    //distância entre cantos da boca
+    if (positions.length > 0) {
+        var MouthLeft = createVector(positions[44][0], positions[44][1]);
+        var MouthRight = createVector(positions[50][0], positions[50][1]);
+        var sorriso = MouthLeft.dist(MouthRight);
+        console.log(sorriso);
+    }
 
-      //distância entre cantos da boca
-      if (positions.length > 0) {
-          var MouthLeft = createVector(positions[44][0], positions[44][1]);
-          var MouthRight = createVector(positions[50][0], positions[50][1]);
-          var sorriso = MouthLeft.dist(MouthRight);
-      }
+    if (count1 && count2 && count3 && smile.paused && count4) {
 
-      if (sorriso * 10 >=60) {
-          document.getElementById('won').style.display = "block";
-          document.getElementById('won').style.width=sorriso;
-          document.getElementById('won').style.height = "auto";
+        if (sorriso * 10 > 60) {
+            document.getElementById('won').style.display = "block";
+        } else {
+            document.getElementById('won').style.display = "none";
+        }
 
-
-      } else {
-          document.getElementById('won').style.display = "none";
-      }
-      console.log(sorriso);
-  }
-                         
+    }
 }
+
+//}
