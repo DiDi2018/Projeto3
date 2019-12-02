@@ -87,24 +87,22 @@ function draw() {
         var open = sobrancelha.dist(olho);
     }
 
-    if (open >= 50 && i1 === text1Lydia.length && audio_q1.ended) {
-        if (correr === 0) {
-            audio_cortina.play();
-            document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
-            document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
-            cortina_esq.src = "images/quarto/cortina_azul_esq.png";
-            cortina_dir.src = "images/quarto/cortina_azul_dir.png";
-            document.getElementById("quadrado").style.background = "lightyellow";
-            document.getElementById("quadrado").style.zIndex = "-10";
-            myVar = setInterval(alertFunc, 2000);
+    if (open >= 50 && i1 === text1Lydia.length && audio_q1.ended && correr === 0) {
+        audio_cortina.play();
+        document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
+        document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
+        cortina_esq.src = "images/quarto/cortina_azul_esq.png";
+        cortina_dir.src = "images/quarto/cortina_azul_dir.png";
+        document.getElementById("quadrado").style.background = "lightyellow";
+        document.getElementById("quadrado").style.zIndex = "-10";
+        myVar = setInterval(alertFunc, 2000);
 
-            function alertFunc() {
-                cortina_esq.src = "images/quarto/cortina_esq.png";
-                cortina_dir.src = "images/quarto/cortina_dir.png";
-            }
-            correr = 1;
-            setInterval(texto2,2001);
+        function alertFunc() {
+            cortina_esq.src = "images/quarto/cortina_esq.png";
+            cortina_dir.src = "images/quarto/cortina_dir.png";
         }
+        correr = 1;
+        setInterval(texto2,2001);
     }
 }
 
