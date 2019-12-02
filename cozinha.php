@@ -40,7 +40,7 @@ $nome = $_POST['name']
         <br>
         <br>
         <br>
-        <p id='conteudo'> Dear <?php $nome ?>,<br>
+        <p id='conteudo'> Dear <?php echo($nome) ?>,<br>
             <br>
             I’m writing this letter to warn you! Although you won this house, you must know that there are a lot of dangers that you should be aware of.
             <br>
@@ -52,8 +52,6 @@ $nome = $_POST['name']
             <br>
             <br>
             Be careful!</p>
-        <br>
-        <br>
         <br>
         <br>
         <br>
