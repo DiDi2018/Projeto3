@@ -196,7 +196,7 @@ img.sala:nth-child(5){  /*comando*/
     position: fixed;
     top:0;
     left: 0;
-    z-index:-2;
+    z-index:15;
     background:black;
 }
 
@@ -204,27 +204,27 @@ img.sala:nth-child(5){  /*comando*/
     height: 550px;
     width: auto;
     left: 18%;
-    z-index:-15;
+    z-index:-7;
 }
 .cortina_esq_azul{
     transform: translateX(-80%);
     transition: all 1s ease-out;
     transition-delay: 0s;
-    z-index:-15;
+    z-index:-7;
 }
 
 #cortina_dir{  /*cortina da direita*/
     height: 550px;
     width: auto;
     left:33%;
-    z-index:-15;
+    z-index:-7;
 }
 
 .cortina_dir_azul{
     transform: translateX(80%);
     transition: all 1s ease-out;
     transition-delay: 0s;
-    z-index:-15;
+    z-index:-7;
 }
 
 #cama { /*cama*/
@@ -233,11 +233,11 @@ img.sala:nth-child(5){  /*comando*/
     left: 12%;
     top: 50%;
     position: fixed;
-    z-index:-3;
+    z-index:1;
 }
 
 .cama_azul {
-    z-index:-3;
+    z-index:1;
     -webkit-animation:spin 4s linear infinite;
     -moz-animation:spin 4s linear infinite;
     animation:spin 4s linear infinite;
@@ -251,7 +251,7 @@ img.sala:nth-child(5){  /*comando*/
     width: auto;
     left: 73%;
     position: fixed;
-    z-index:-3;
+    z-index:1;
 }
 #horas{
     position: fixed;
@@ -261,11 +261,11 @@ img.sala:nth-child(5){  /*comando*/
     left: 78%;
     transform: rotate(1deg);
     font-family: 'digital-7', monospace;
-    z-index:-3;
+    z-index:1;
 }
 .horas_azul{
     color: blue;
-    z-index:-3;
+    z-index:1;
 }
 
 /*COZINHA*/

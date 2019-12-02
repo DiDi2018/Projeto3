@@ -22,6 +22,18 @@ let lydia = document.querySelector(".lydia");
 var correr = 0;
 var myVar;
 
+
+function aparecerTexto() {
+    if (i1 < text1Lydia.length) {
+        document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
+        i1++;
+        setTimeout(aparecerTexto, speed);
+    }
+    audio_q1.play();
+}
+
+aparecerTexto();
+
 function setup() {
 
     capture = createCapture({
@@ -44,16 +56,6 @@ function setup() {
     tracker.init();
     tracker.start(capture.elt);
 
-    function aparecerTexto() {
-        if (i1 < text1Lydia.length) {
-            document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
-            i1++;
-            setTimeout(aparecerTexto, speed);
-        }
-        audio_q1.play();
-    }
-
-    aparecerTexto();
 }
 
 function draw() {
@@ -75,7 +77,7 @@ function draw() {
             cortina_esq.src = "images/quarto/cortina_azul_esq.png";
             cortina_dir.src = "images/quarto/cortina_azul_dir.png";
             document.getElementById("quadrado").style.background = "lightyellow";
-            document.getElementById("quadrado").style.zIndex = "-20";
+            document.getElementById("quadrado").style.zIndex = "-10";
             myVar = setInterval(alertFunc, 2000);
 
             function alertFunc() {
@@ -100,10 +102,7 @@ var audio_q2 = document.getElementById('audio_q2');
 let text2Lydia = "Explore the rest of the wonders of the bedroom";
 
 function texto2() {
-
     document.querySelector(".lydiaTexto p").innerHTML = "";
-
-    //count2 = true;
 
     function b() {
         if (i1 < text2Lydia.length) {
@@ -112,9 +111,7 @@ function texto2() {
             setTimeout(b, speed);
         }
     }
-
     audio_q2.play();
-
     b();
 }
 
