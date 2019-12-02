@@ -1,6 +1,5 @@
 <?php
-session_start();
-$_SESSION['name'];
+$nome = $_POST['name']
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +40,7 @@ $_SESSION['name'];
         <br>
         <br>
         <br>
-        <p id='conteudo'> Dear <?php $_POST['name'] ?>,<br>
+        <p id='conteudo'> Dear <?php $nome ?>,<br>
             <br>
             I’m writing this letter to warn you! Although you won this house, you must know that there are a lot of dangers that you should be aware of.
             <br>

@@ -1,5 +1,4 @@
-<?php include('php_index.php');
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
