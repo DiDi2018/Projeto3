@@ -33,6 +33,24 @@ function aparecerTexto() {
 }
 aparecerTexto();
 
+//TEXTO LYDIA 2
+var audio_q2 = document.getElementById('audio_q2');
+let text2Lydia = "Explore the rest of the wonders of the bedroom";
+
+function texto2() {
+    document.querySelector(".lydiaTexto p").innerHTML = "";
+
+    function b() {
+        if (i1 < text2Lydia.length) {
+            document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i1);
+            i1++;
+            setTimeout(b, speed);
+        }
+    }
+    audio_q2.play();
+    b();
+}
+
 //CÂMARA ABRIR CORTINAS
 function setup() {
 
@@ -84,38 +102,11 @@ function draw() {
                 cortina_esq.src = "images/quarto/cortina_esq.png";
                 cortina_dir.src = "images/quarto/cortina_dir.png";
             }
-        }
-        correr = 1;
-
-    } else if (correr === 0) {
-        cortina_esq.src = "images/quarto/cortina_esq.png";
-        cortina_dir.src = "images/quarto/cortina_dir.png";
-        document.getElementById("cortina_esq").classList.remove("cortina_esq_azul");
-        document.getElementById("cortina_dir").classList.remove("cortina_dir_azul");
-        document.getElementById("quadrado").style.background = "black";
-        document.getElementById("quadrado").style.zIndex = "-2";
-    }
-}
-
-//TEXTO LYDIA 2
-var audio_q2 = document.getElementById('audio_q2');
-let text2Lydia = "Explore the rest of the wonders of the bedroom";
-
-function texto2() {
-    document.querySelector(".lydiaTexto p").innerHTML = "";
-
-    function b() {
-        if (i1 < text2Lydia.length) {
-            document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i1);
-            i1++;
-            setTimeout(b, speed);
+            correr = 1;
+            setInterval(texto2,2001);
         }
     }
-    audio_q2.play();
-    b();
 }
-
-texto2();
 
 
 //CAMA RODAR
@@ -235,6 +226,5 @@ audio_relogio.addEventListener("ended", function () {
         document.getElementById("horas").style.color = "lightgrey";
     }
 );
-
 
 //GANHAR
