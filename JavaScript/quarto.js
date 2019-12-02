@@ -15,7 +15,7 @@ var audio_q1 = document.getElementById('audio_q1');
 //texto lydia
 let text1Lydia = "This is the bedroom. It’s completely automatic so it does everything for you. " +
     "To open the curtains you just need to raise your eyebrows.";
-let i1 = 0;
+let i1=0, i2=0;
 let speed = 40;
 let lydia = document.querySelector(".lydia");
 
@@ -41,9 +41,9 @@ function texto2() {
     document.querySelector(".lydiaTexto p").innerHTML = "";
 
     function b() {
-        if (i1 < text2Lydia.length) {
-            document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i1);
-            i1++;
+        if (i2 < text2Lydia.length) {
+            document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i2);
+            i2++;
             setTimeout(b, speed);
         }
     }
