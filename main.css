@@ -256,9 +256,9 @@ img.sala:nth-child(5){  /*comando*/
 #horas{
     position: fixed;
     color: lightgrey;
-    font-size: 58px;
-    margin-top: 7%;
-    left: 78%;
+    font-size: 50px;
+    margin-top: 13vh;
+    left: 74vw;
     transform: rotate(1deg);
     font-family: 'digital-7', monospace;
     z-index:1;
