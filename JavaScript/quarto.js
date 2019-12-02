@@ -87,7 +87,7 @@ function draw() {
         var open = sobrancelha.dist(olho);
     }
 
-    if ((open >= 50)) {
+    if (open >= 50 && i1 === text1Lydia.length && audio_q1.ended) {
         if (correr === 0) {
             audio_cortina.play();
             document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
