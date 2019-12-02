@@ -234,11 +234,11 @@ img.sala:nth-child(5){  /*comando*/
     left: 12%;
     top: 50%;
     position: fixed;
-    z-index:1;
+    z-index:-6;
 }
 
 .cama_azul {
-    z-index:1;
+    z-index:-6;
     -webkit-animation:spin 4s linear infinite;
     -moz-animation:spin 4s linear infinite;
     animation:spin 4s linear infinite;
@@ -252,7 +252,7 @@ img.sala:nth-child(5){  /*comando*/
     width: auto;
     left: 73%;
     position: fixed;
-    z-index:1;
+    z-index:-6;
 }
 #horas{
     position: fixed;
@@ -262,11 +262,11 @@ img.sala:nth-child(5){  /*comando*/
     left: 74vw;
     transform: rotate(1deg);
     font-family: 'digital-7', monospace;
-    z-index:1;
+    z-index:-6;
 }
 .horas_azul{
     color: blue;
-    z-index:1;
+    z-index:-6;
 }
 
 /*COZINHA*/
