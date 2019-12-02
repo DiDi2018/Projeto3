@@ -70,7 +70,7 @@ var capture;
 var tracker;
 var w = 640,
     h = 480;
-var positions, xInitial, yInitial, zInitial, stepLeft = [], initial = false;
+var positions, xInitial, yInitial, zInitial, stepLeftX = [], stepLeftY = [], initial = false;
 let left = [];
 let moveis = document.querySelectorAll("img.sala");
 
@@ -101,6 +101,7 @@ function draw() {
 
     if (positions.length > 0 && audios[0].ended && audios[1].ended && initial === false) {
         initial=true;
+        xInitial = positions[35][0] - positions[1][0];
         yInitial = positions[12][0] - positions[39][0];
         zInitial = positions[7][0] - positions[53][0];
 
@@ -108,8 +109,22 @@ function draw() {
             left[i] = document.styleSheets[0].cssRules[i].style.left;
             left[i] = left[i].replace('vw', '');
             left[i] = parseFloat(left[i]);
-            stepLeft[i] = (50 - left[i]) / yInitial;
-
+            if (i===20){
+                stepLeftY[i] = (48 - left[i]) / yInitial;
+                stepLeftX[i] = (left[i] - 0.5) / xInitial;
+            }
+            else if (i===21){
+                stepLeftY[i] = (46 - left[i]) / yInitial;
+                stepLeftX[i] = (left[i] - 0.5) / xInitial;
+            }
+            else if(i===22){
+                stepLeftY[i] = (66 - left[i]) / yInitial;
+                stepLeftX[i] = (left[i] - 0.5) / xInitial;
+            }
+            else{
+                stepLeftY[i] = (63 - left[i]) / yInitial;
+                stepLeftX[i] = (left[i] - 0.5) / xInitial;
+            }
         }
         moveFace();
     }
@@ -119,9 +134,19 @@ function moveFace(){
     if (positions.length > 0 && audios[0].ended && audios[1].ended && gatoEvent === false) {
         //rules dos moveis começam no 19
         for(let i=20; i<24; i++){
-            let positionLeft = left[i] + stepLeft[i]*(positions[12][0] - positions[39][0]);
-            positionLeft = positionLeft.toString() + "vw";
-            document.styleSheets[0].cssRules[i].style.left = positionLeft;
+            //mover horizontal
+            if((positions[35][0] - positions[1][0]) < xInitial && (positions[12][0] - positions[39][0]) > yInitial){
+                let positionLeft = left[i] - stepLeftY[i]*(positions[35][0] - positions[1][0]);
+                positionLeft = positionLeft.toString() + "vw";
+                document.styleSheets[0].cssRules[i].style.left = positionLeft;
+            }
+            else {
+                let positionLeft = left[i] - stepLeftX[i]*(positions[12][0] - positions[39][0]);
+                positionLeft = positionLeft.toString() + "vw";
+                document.styleSheets[0].cssRules[i].style.left = positionLeft;
+            }
+            //mover vertical
+
         }
     }
     setTimeout(moveFace,200);
