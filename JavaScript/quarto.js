@@ -95,14 +95,14 @@ function draw() {
         cortina_dir.src = "images/quarto/cortina_azul_dir.png";
         document.getElementById("quadrado").style.background = "lightyellow";
         document.getElementById("quadrado").style.zIndex = "-10";
-        myVar = setInterval(alertFunc, 2000);
+        myVar = setTimeout(alertFunc, 2000);
 
         function alertFunc() {
             cortina_esq.src = "images/quarto/cortina_esq.png";
             cortina_dir.src = "images/quarto/cortina_dir.png";
         }
         correr = 1;
-        setInterval(texto2,2001);
+        setTimeout(texto2,2001);
     }
 }
 
