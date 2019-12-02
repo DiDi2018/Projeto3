@@ -10,6 +10,10 @@ let count1=false;
 let count2=false;
 let count3=false;
 let count4=false;
+var capture;
+var tracker ;
+var w = 640,
+    h = 480;
 
 
 //TEXTO LYDIA
@@ -216,10 +220,7 @@ function playaudio2() {
     lydiaSmile();
 
 //CAPTURA DE ECRÃ
-var capture;
-var tracker ;
-var w = 640,
-    h = 480;
+
 
 function setup() {
      capture = createCapture({
