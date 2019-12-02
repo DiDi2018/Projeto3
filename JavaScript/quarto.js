@@ -22,7 +22,7 @@ let lydia = document.querySelector(".lydia");
 var correr = 0;
 var myVar;
 
-
+//PRIMEIRO TEXTO
 function aparecerTexto() {
     if (i1 < text1Lydia.length) {
         document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
@@ -31,9 +31,9 @@ function aparecerTexto() {
     }
     audio_q1.play();
 }
-
 aparecerTexto();
 
+//CÂMARA ABRIR CORTINAS
 function setup() {
 
     capture = createCapture({
@@ -118,7 +118,7 @@ function texto2() {
 texto2();
 
 
-//CAMA
+//CAMA RODAR
 var audio_cama = document.getElementById('audio_cama');
 var cama = document.getElementById("cama");
 
@@ -163,7 +163,7 @@ audio_cama.addEventListener("ended", function () {
     }
 );
 
-//RELÓGIO
+//RELÓGIO FALA
 function startTime() {
     var today = new Date();
     var h = today.getHours();
@@ -235,3 +235,6 @@ audio_relogio.addEventListener("ended", function () {
         document.getElementById("horas").style.color = "lightgrey";
     }
 );
+
+
+//GANHAR
