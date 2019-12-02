@@ -3,6 +3,10 @@ var audio_cortina = document.getElementById('audio_cortina');
 var cortina_esq = document.getElementById("cortina_esq");
 var cortina_dir = document.getElementById("cortina_dir");
 
+//RELOGIO
+var audio_relogio = document.getElementById('audio_relogio');
+var relogio = document.getElementById("relogio");
+var horas = document.getElementById("horas");
 
 //CAPTURA DA CAMARA
 var capture;
@@ -16,11 +20,10 @@ var audio_q1 = document.getElementById('audio_q1');
 let text1Lydia = "This is the bedroom. It’s completely automatic so it does everything for you. " +
     "To open the curtains you just need to raise your eyebrows.";
 let i1=0, i2=0;
-let speed = 40;
+let speed = 50;
 let lydia = document.querySelector(".lydia");
 
 var correr = 0;
-var myVar;
 
 //PRIMEIRO TEXTO
 function aparecerTexto() {
@@ -29,8 +32,8 @@ function aparecerTexto() {
         i1++;
         setTimeout(aparecerTexto, speed);
     }
-    audio_q1.play();
 }
+audio_q1.play();
 aparecerTexto();
 
 //TEXTO LYDIA 2
@@ -38,22 +41,20 @@ var audio_q2 = document.getElementById('audio_q2');
 let text2Lydia = "Explore the rest of the wonders of the bedroom";
 
 function texto2() {
-    document.querySelector(".lydiaTexto p").innerHTML = "";
-
-    function b() {
-        if (i2 < text2Lydia.length) {
-            document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i2);
-            i2++;
-            setTimeout(b, speed);
-        }
+    if (i2 < text2Lydia.length) {
+        document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i2);
+        i2++;
+        setTimeout(texto2, speed);
     }
-    audio_q2.play();
-    b();
+    else {
+        cama.addEventListener("mouseenter", mouseOverCama);
+        cama.addEventListener("mouseleave", mouseLeftCama);
+        cama.addEventListener("click", audio_cama_f);
+    }
 }
 
 //CÂMARA ABRIR CORTINAS
 function setup() {
-
     capture = createCapture({
         audio: false,
         video: {
@@ -73,7 +74,6 @@ function setup() {
     tracker = new clm.tracker();
     tracker.init();
     tracker.start(capture.elt);
-
 }
 
 function draw() {
@@ -88,21 +88,25 @@ function draw() {
     }
 
     if (open >= 50 && i1 === text1Lydia.length && audio_q1.ended && correr === 0) {
-        audio_cortina.play();
         document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
         document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
         cortina_esq.src = "images/quarto/cortina_azul_esq.png";
         cortina_dir.src = "images/quarto/cortina_azul_dir.png";
         document.getElementById("quadrado").style.background = "lightyellow";
         document.getElementById("quadrado").style.zIndex = "-10";
-        myVar = setTimeout(alertFunc, 2000);
+        audio_cortina.play();
+        setTimeout(alertFunc, 2000);
 
         function alertFunc() {
             cortina_esq.src = "images/quarto/cortina_esq.png";
             cortina_dir.src = "images/quarto/cortina_dir.png";
         }
         correr = 1;
-        setTimeout(texto2,2001);
+        setTimeout(function(){
+            document.querySelector(".lydiaTexto p").innerHTML = "";
+            texto2();
+            audio_q2.play();
+        },2001);
     }
 }
 
@@ -112,47 +116,62 @@ var audio_cama = document.getElementById('audio_cama');
 var cama = document.getElementById("cama");
 
 function mouseOverCama() {
-    if (audio_q1.paused) {
-        cama.src = "images/quarto/cama_azul.png";
-    }
+    cama.src = "images/quarto/cama_azul.png";
 }
 
 function mouseLeftCama() {
-    if (audio_q1.paused) {
+    if (audio_cama.paused || audio_cama.ended) {
         cama.src = "images/quarto/cama.png";
     }
 }
 
 function audio_cama_f() {
-    if (audio_q1.paused) {
-        if (audio_cama.paused) {
-            audio_cama.play();
-            document.getElementById("cama").classList.add("cama_azul");
+    if (audio_cama.paused) {
+        audio_cama.play();
+        document.getElementById("cama").classList.add("cama_azul");
 
-        } else if (audio_cama.paused && !(audio_q1.paused)) {
-            audio_q1.pause();
-            audio_q1.currentTime = 0;
-            audio_cama.play();
-            document.getElementById("cama").classList.add("cama_azul");
+    }
+    else if (audio_cama.paused && !(audio_q1.paused)) {
+        audio_q1.pause();
+        audio_q1.currentTime = 0;
+        audio_cama.play();
+        document.getElementById("cama").classList.add("cama_azul");
 
-        } else {
-            audio_cama.pause();
-            audio_cama.currentTime = 0;
-            document.getElementById("cama").classList.remove("cama_azul");
-        }
+    }
+    else {
+        audio_cama.pause();
+        audio_cama.currentTime = 0;
+        cama.src = "images/quarto/cama.png";
+        document.getElementById("cama").classList.remove("cama_azul");
+        eventsRelogio();
     }
 }
 
-cama.addEventListener("mouseenter", mouseOverCama);
-cama.addEventListener("mouseleave", mouseLeftCama);
-cama.addEventListener("click", audio_cama_f);
+audio_cama.addEventListener("ended", function(){
+    document.getElementById("cama").classList.remove("cama_azul");
+    eventsRelogio();
 
-audio_cama.addEventListener("ended", function () {
-        cama.src = "images/quarto/cama.png";
-    }
-);
+});
 
 //RELÓGIO FALA
+
+function eventsRelogio(){
+    cama.src = "images/quarto/cama.png";
+    relogio.addEventListener("mouseenter", mouseOverRelogio);
+    relogio.addEventListener("mouseleave", mouseLeftRelogio);
+    horas.addEventListener("mouseenter", mouseOverRelogio);
+    horas.addEventListener("mouseleave", mouseLeftRelogio);
+
+    relogio.addEventListener("click", audio_relogio_f);
+    horas.addEventListener("click", audio_relogio_f);
+
+    audio_relogio.addEventListener("ended", function () {
+        relogio.src = "images/quarto/relogio.png";
+        document.getElementById("horas").style.color = "lightgrey";
+        winLetra('v');
+    });
+}
+
 function startTime() {
     var today = new Date();
     var h = today.getHours();
@@ -172,10 +191,6 @@ function checkTime(i) {
     return i;
 }
 
-var audio_relogio = document.getElementById('audio_relogio');
-var relogio = document.getElementById("relogio");
-var horas = document.getElementById("horas");
-
 function mouseOverRelogio() {
     if (audio_q1.paused && audio_cama.paused) {
         relogio.src = "images/quarto/relogio_azul.png";
@@ -184,45 +199,23 @@ function mouseOverRelogio() {
 }
 
 function mouseLeftRelogio() {
-    if (audio_q1.paused && audio_cama.paused) {
+        if ((audio_q1.paused && audio_cama.paused) && (audio_relogio.paused || audio_relogio.ended)) {
         relogio.src = "images/quarto/relogio.png";
         document.getElementById("horas").style.color = "lightgrey";
     }
 }
 
 function audio_relogio_f() {
-    if (audio_q1.paused && audio_cama.paused) {
+    if (audio_cama.paused && audio_relogio.paused) {
         audio_relogio.play();
         document.getElementById("horas").style.color = "blue";
         relogio.src = "images/quarto/relogio_azul.png";
+    }
 
-    } else if (audio_relogio.paused && !(audio_q1.paused)) {
-        audio_q1.pause();
-        audio_q1.currentTime = 0;
-        audio_relogio.play();
-        document.getElementById("horas").style.color = "blue";
-        relogio.src = "images/quarto/relogio_azul.png";
-
-    } else {
+    else {
         audio_relogio.pause();
         audio_relogio.currentTime = 0;
         document.getElementById("horas").style.color = "lightgrey";
         relogio.src = "images/quarto/relogio.png";
     }
 }
-
-relogio.addEventListener("mouseenter", mouseOverRelogio);
-relogio.addEventListener("mouseleave", mouseLeftRelogio);
-horas.addEventListener("mouseenter", mouseOverRelogio);
-horas.addEventListener("mouseleave", mouseLeftRelogio);
-
-relogio.addEventListener("click", audio_relogio_f);
-horas.addEventListener("click", audio_relogio_f);
-
-audio_relogio.addEventListener("ended", function () {
-        relogio.src = "images/quarto/relogio.png";
-        document.getElementById("horas").style.color = "lightgrey";
-    }
-);
-
-//GANHAR
