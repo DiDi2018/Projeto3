@@ -33,14 +33,13 @@ function aparecerTexto(){
         setTimeout(aparecerTexto, speed);
 
     }
-    else{
-        document.querySelector(".lydiaTexto p").innerHTML = "";
-
-    }
 }
 apresentacao.play();
 aparecerTexto();
 
+apresentacao.addEventListener("ended",function(){
+    document.querySelector(".lydiaTexto p").innerHTML = "";
+});
 
 //MOSTRAR A CARTA
 
