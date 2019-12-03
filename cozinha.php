@@ -8,8 +8,8 @@ $nome = $_POST['name']
     <meta charset="UTF-8">
     <title>The Kitchen</title>
     <script src="JavaScript/p5.min.js"></script>
-    <script src="JavaScript/p5.dom.min.js"></script>
     <script src="JavaScript/clmtrackr.min.js"></script>
+    <script src="JavaScript/imageMapResizer.min.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -61,12 +61,19 @@ $nome = $_POST['name']
     </div>
 </div>
 
-<img id="won" src="images/paper_choque.png" height="753" width="1564"/>
+<!--<img id="won" src="images/paper_choque.png" height="753" width="1564"/>-->
+
+<map name="setamap">
+    <area shape="rect" alt="image" href="Menus/LivingRoom.html"
+          coords="207,16,319,124">
+</map>
+
 <div class="win">
     <div>
     </div>
     <img src="images/seta.png" width="319" height="133" alt="" usemap="#setamap">
 </div>
+
 <script src="JavaScript/cozinha.js"></script>
 <script src="JavaScript/main.js"></script>
 </body>
