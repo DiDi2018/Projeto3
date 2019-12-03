@@ -195,8 +195,10 @@ function playaudio2() {
         monstro1.src = "images/cozinha/Monstro1.png";
     });
 
+
+
     function lydiaSmile() {
-        if (count1 && count2 && count3 && audio1.paused && audio2.paused && count4 === false) {
+        /*if (count1 && count2 && count3 && audio1.paused && audio2.paused && count4 === false) {
             let text3Lydia = "Wait a second! Why are you not smiling? You just won this amazing House, so Smile!";
             let i1 = 0;
             let speed = 50;
@@ -212,11 +214,25 @@ function playaudio2() {
                 }
             }
 
-            smile.play();
+          a();
 
-        } a();
-    }
+        }
+    }*/
 
+        if(audio1.paused && audio2.paused) {
+            if (i3 < text3Lydia.length) {
+                document.querySelector(".lydiaTexto p").innerHTML += text3Lydia.charAt(i3);
+                i3++;
+                setTimeout(lydiaSmile, speed);
+                count4 = true;
+                smile.play();
+                monstro1.src = "images/cozinha/Monstro1.png";
+                monstro2.src = "images/cozinha/Monstro2.png";
+            }
+        }
+
+}
+smile.play();
     lydiaSmile();
 
 //CAPTURA DE ECRÃ
@@ -264,11 +280,8 @@ function draw() {
     if (count1 && count2 && count3 && smile.paused && count4) {
 
         if (sorriso * 10 > 60) {
-            document.getElementById('won').style.display = "block";
-            //winLetra("E");
+            winLetra("E");
 
-        } else {
-            document.getElementById('won').style.display = "none";
         }
 
     }
