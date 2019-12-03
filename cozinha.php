@@ -7,9 +7,9 @@ $nome = $_POST['name']
 <head>
     <meta charset="UTF-8">
     <title>The Kitchen</title>
+    <script src="JavaScript/imageMapResizer.min.js"></script>
     <script src="JavaScript/p5.min.js"></script>
     <script src="JavaScript/clmtrackr.min.js"></script>
-    <script src="JavaScript/imageMapResizer.min.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -69,8 +69,7 @@ $nome = $_POST['name']
 </map>
 
 <div class="win">
-    <div>
-    </div>
+    <div></div>
     <img src="images/seta.png" width="319" height="133" alt="" usemap="#setamap">
 </div>
 
