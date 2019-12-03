@@ -85,7 +85,7 @@ function setup() {
         console.log('capture ready.')
     });
     capture.elt.setAttribute('playsinline', '');
-    createCanvas(w, h);
+    createCanvas(1, 1);
     capture.size(w, h);
     capture.hide();
 
