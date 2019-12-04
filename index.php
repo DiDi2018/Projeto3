@@ -11,13 +11,16 @@
     <div id="fundo_index"></div>
     <div id="popup">
         <img id='cruz_index' src='images/index/cruz.png' alt="cruz" onclick="desaparecer()">
-        <img class="fundopopup" alt="""popup" src="images/index/fundo.png" height="2480" width="3508"/>
+        <img class="fundopopup" alt="popup" src="images/index/fundo.png" height="2480" width="3508"/>
         <img class="casa" alt="casa" src="images/index/Casa.png"/>
         <h1>GET A CHANCE OF WINING AN AMAZING HAPPY LIFE HOME!</h1>
 
         <form action="waiting.php" method="POST" >
             <h2>Enter now</h2>
-            <input type="text" name="name" required><br>
+            <label>
+                <input type="text" name="name" required>
+            </label>
+            <br>
             <label>
                 <button type="submit">Submit</button><br>
             </label>

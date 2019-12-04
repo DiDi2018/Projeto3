@@ -120,37 +120,37 @@ function draw() {
         yInitial = positions[12][0] - positions[35][0];
         //zInitial = positions[7][0] - positions[53][0];
 
-        for(let i=26; i<30; i++){
+        for(let i=32; i<37; i++){
             left[i] = document.styleSheets[0].cssRules[i].style.left;
             left[i] = left[i].replace('vw', '');
             left[i] = parseFloat(left[i]);
 
-            if (i===26){
+            if (i===32){
                 stepLeftX[i] = (48 - left[i]) / xInitial;
                 stepLeftY[i] = (left[i] - 0.5) / yInitial;
-                console.log(stepLeftX + " " + stepLeftY);
             }
-            else if (i===27){
+            else if (i===33){
                 stepLeftX[i] = (46 - left[i]) / xInitial;
                 stepLeftY[i] = (left[i] - 0.5) / yInitial;
-                console.log(stepLeftX + " " + stepLeftY);
             }
-            else if(i===28){
-                stepLeftX[i] = (66 - left[i]) / xInitial;
+            else if(i===34){
+                stepLeftX[i] = (78 - left[i]) / xInitial;
                 stepLeftY[i] = (left[i] - 0.5) / yInitial;
-                console.log(stepLeftX + " " + stepLeftY);
             }
-            else{
+            else if(i===35){
                 stepLeftX[i] = (63 - left[i]) / xInitial;
                 stepLeftY[i] = (left[i] - 0.5) / yInitial;
-                console.log(stepLeftX + " " + stepLeftY);
+            }
+            else {
+                stepLeftX[i] = (54 - left[i]) / xInitial;
+                stepLeftY[i] = (left[i] - 0.5) / yInitial;
             }
         }
     }
 
     if (positions.length > 0 && audios[0].ended && audios[1].ended && gatoEvent === false && initial) {
         //rules dos moveis começam no 26
-        for(let i=26; i<30; i++){
+        for(let i=32; i<37; i++){
             if((positions[12][0] - positions[35][0]) < yInitial){
                 let positionLeft = left[i] - stepLeftY[i]*(yInitial - (positions[12][0] - positions[35][0]));
                 positionLeft = positionLeft.toString() + "vw";
