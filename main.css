@@ -332,7 +332,7 @@ img.sala:nth-child(5){  /*comando*/
 #relogio{  /*relógio*/
     height: 200px;
     width: auto;
-    left: 73%;
+    left: 0%;
     position: fixed;
     z-index:-6;
 }
@@ -341,7 +341,7 @@ img.sala:nth-child(5){  /*comando*/
     color: lightgrey;
     font-size: 50px;
     margin-top: 13vh;
-    left: 74vw;
+    left: 5vw;
     transform: rotate(1deg);
     font-family: 'digital-7', monospace;
     z-index:-6;
