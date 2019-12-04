@@ -57,17 +57,16 @@ img {
      transform: translateX(-40%);
  }
 
-.fundopopup{
-     position: absolute;
-     top: 50%;
-     left: 50%;
+.fundopopup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translateX(-50%) translateY(-50%);
     width: 100%;
     height: auto;
     z-index: -200;
-
-
 }
+
  .casa{
      position: absolute;
      top: 53%;
@@ -366,11 +365,11 @@ img.sala:nth-child(5){  /*comando*/
 }
 
 #monstro1 {
-    width:42%;
+    width:29%;
     height:auto;
     position: absolute;
-    bottom:35%;
-    left:7%;
+    bottom:30%;
+    left:12%;
     z-index: -10;
 }
 
@@ -380,7 +379,7 @@ img.sala:nth-child(5){  /*comando*/
     left:2%;
     width:20%;
     height:auto;
-    z-index: -8;
+    z-index: -800;
 }
 
 #cadeira2{
@@ -390,7 +389,6 @@ img.sala:nth-child(5){  /*comando*/
     position:fixed;
     bottom:8%;
     left:35%;
-    z-index: -8;
 }
 
 #mesa{
@@ -410,6 +408,7 @@ img.sala:nth-child(5){  /*comando*/
     height:auto;
     z-index: -6;
     transform: rotate(15deg);
+    cursor: pointer;
 }
 
 #carta:hover{
@@ -425,6 +424,7 @@ img.sala:nth-child(5){  /*comando*/
     left:32%;
     z-index: 1;
     width:32%;
+    transform: rotate(-6deg);
 }
 
 #fundo{
@@ -450,6 +450,8 @@ img.sala:nth-child(5){  /*comando*/
     z-index: 2;
     width:32%;
     height:auto;
+    transform: rotate(-6deg);
+
 
 }
 

@@ -24,3 +24,4 @@ function winLetra(x){
 }
 
 imageMapResize();
+

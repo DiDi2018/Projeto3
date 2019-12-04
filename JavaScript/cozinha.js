@@ -1,4 +1,5 @@
 var carta=  document.getElementById('carta');
+var cruz=document.getElementById('cruz');
 var monstro1 = document.getElementById("monstro1"); // works
 var monstro2 = document.getElementById("monstro2"); // works
 var audio1 = document.getElementById('audio1');
@@ -70,6 +71,7 @@ function sair() {
     psicologo.pause();
     psicologo.currentTime = 0;
 }
+cruz.addEventListener("click", sair);
 
 document.addEventListener("click", fecharfora);
 
@@ -150,15 +152,6 @@ function playaudio2() {
 
     }
 }
-
-//MONSTROS_CLICAR
-//monstros passar por cima e clicar
-monstro2.addEventListener("mouseenter", mouseOverMonstro2);
-monstro2.addEventListener("mouseleave", mouseLeftMonstro2);
-monstro2.addEventListener("click", playaudio2);
-monstro1.addEventListener("mouseenter", mouseOverMonstro1);
-monstro1.addEventListener("mouseleave", mouseLeftMonstro1);
-monstro1.addEventListener("click", playaudio1);
 
 //ao parar o audio a imagem do monstro volta para pb
 audio2.addEventListener("ended", function () {
@@ -243,6 +236,7 @@ function draw() {
     }
 }
 
+imageMapResize();
 
 /*var carta=  document.getElementById('carta');
 var monstro1 = document.getElementById("monstro1"); // works
