@@ -92,7 +92,7 @@ function draw() {
         document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
         cortina_esq.src = "images/quarto/cortina_azul_esq.png";
         cortina_dir.src = "images/quarto/cortina_azul_dir.png";
-        document.getElementById("quadrado").style.background = "lightyellow";
+        document.getElementById("quadrado").style.background = "white";
         document.getElementById("quadrado").style.zIndex = "-10";
         audio_cortina.play();
         setTimeout(alertFunc, 2000);
