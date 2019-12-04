@@ -135,16 +135,14 @@ img {
 }
 
 .casa_ac{
-    display: block;
-    margin-top:auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top:10%;
+    margin-left:37%;
     width:20%;
     height:auto;
 }
 
 .casa_ac:hover {
-    transform: scale(4.5);
+    transform: scale(3.5);
     transition: all .8s ease-in-out;
 }
 
@@ -351,6 +349,16 @@ img.sala:nth-child(5){  /*comando*/
 .horas_azul{
     color: blue;
     z-index:-6;
+}
+
+#chao{
+    width: 100%;
+    height:30%;
+    position: fixed;
+    top:70%;
+    left: 0;
+    z-index:-8;
+    background:lightblue;
 }
 
 /*COZINHA*/

@@ -14,7 +14,7 @@
         <img class="casa" alt="casa" src="images/index/Casa.png"/>
         <h1>GET A CHANCE OF WINING AN AMAZING HAPPY LIFE HOME!</h1>
 
-        <form action="waiting.html" method="POST" >
+        <form action="sorteio.php" method="POST" >
             <h2>Enter now</h2>
             <input type="text" name="name" required><br>
             <label>
