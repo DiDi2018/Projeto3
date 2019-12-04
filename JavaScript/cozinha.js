@@ -18,6 +18,8 @@ var tracker;
 var w = 640,
     h = 480;
 var positions, MouthLeft, MouthRight, sorriso;
+var areaMonstro1=document.getElementById("areaMonstro1");
+var areaMonstro2=document.getElementById("areaMonstro2");
 
 
 
@@ -70,6 +72,9 @@ function sair() {
     document.getElementById('texto').style.display = "none";
     psicologo.pause();
     psicologo.currentTime = 0;
+    areaMonstro1.removeAttribute("style");
+    areaMonstro2.removeAttribute("style");
+
 }
 cruz.addEventListener("click", sair);
 
