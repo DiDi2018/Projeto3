@@ -13,7 +13,6 @@
         <img class="fundopopup" alt="""popup" src="images/index/fundo.png" height="2480" width="3508"/>
         <img class="casa" alt="casa" src="images/index/Casa.png"/>
         <h1>GET A CHANCE OF WINING AN AMAZING HAPPY LIFE HOME!</h1>
-        <audio id="audio_pub" src="sons/pub.wav"></audio>
 
         <form action="sorteio.php" method="POST" >
             <h2>Enter now</h2>
@@ -23,6 +22,7 @@
             </label>
         </form>
     </div>
+    <audio id="audio_pub" src="sons/pub.ogg"></audio>
 </header>
 <script src="Indexx.js"></script>
 </body>
