@@ -161,14 +161,14 @@ img {
 
 
 .lydia{
-    z-index: -1;
-    position:fixed;
-    float: right;
-    width:15%;
-    height:auto;
-    bottom: -25px;
-    right: 1%;
-}
+     z-index: -1;
+     position:fixed;
+     float: right;
+     width:15%;
+     height:auto;
+     bottom: -25px;
+     right: 1%;
+ }
 
 .lydiaTexto {
     z-index: -1;
@@ -360,16 +360,16 @@ img.sala:nth-child(5){  /*comando*/
     z-index:-6;
 }
 
-#chao{
+#chao {
     width: 100%;
-    height:30%;
+    height: 30%;
     position: fixed;
-    top:70%;
+    top: 70%;
     left: 0;
-    z-index:-8;
-    background:dodgerblue;
-
-
+    z-index: -8;
+    background: dodgerblue;
+}
+l
 /*COZINHA*/
 
 #monstro2{
@@ -491,4 +491,15 @@ img.sala:nth-child(5){  /*comando*/
 
 #won{
     display:none;
+}
+
+/*NURSERY*/
+.lydia_nursery{
+    z-index: 1;
+    position:fixed;
+    float: right;
+    width:15%;
+    height:auto;
+    bottom: -25px;
+    right: 1%;
 }
