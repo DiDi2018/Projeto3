@@ -54,6 +54,7 @@ function ShowLetter() {
         m = n.getMonth() + 1;
         d = n.getDate();
         document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
+        
         document.getElementById("texto").style.display = "block";
         audio2.pause();
         audio2.currentTime = 0;
@@ -63,6 +64,8 @@ function ShowLetter() {
         monstro1.src = "images/cozinha/Monstro1.png";
         psicologo.play();
         count1 = true;
+        areaMonstro1.removeAttribute("style");
+        areaMonstro2.removeAttribute("style");
     }
 }
 
@@ -72,8 +75,6 @@ function sair() {
     document.getElementById('texto').style.display = "none";
     psicologo.pause();
     psicologo.currentTime = 0;
-    areaMonstro1.removeAttribute("style");
-    areaMonstro2.removeAttribute("style");
 
 }
 cruz.addEventListener("click", sair);
