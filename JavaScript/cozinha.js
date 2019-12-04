@@ -64,6 +64,8 @@ function ShowLetter() {
         monstro1.src = "images/cozinha/Monstro1.png";
         psicologo.play();
         count1 = true;
+        cruz.addEventListener("click", sair);
+        document.addEventListener("click", fecharfora);
     }
 }
 
@@ -75,10 +77,9 @@ function sair() {
     psicologo.currentTime = 0;
     areaMonstro1.removeAttribute("style");
     areaMonstro2.removeAttribute("style");
+    cruz.removeEventListener("click", sair);
+    document.removeEventListener("click", fecharfora);
 }
-cruz.addEventListener("click", sair);
-
-document.addEventListener("click", fecharfora);
 
 function fecharfora(evt) {
     let papel = document.getElementById('papel').contains(evt.target);
