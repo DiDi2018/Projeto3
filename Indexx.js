@@ -1,3 +1,4 @@
+var audio_pub = document.getElementById('audio_pub');
 var nclicou=0;
 
 function popup(){
@@ -9,6 +10,7 @@ popup();
 
 function aparecer() {
     document.getElementById("popup").style.display = "block";
+    audio_pub.play();
 }
 
 function desaparecer(){
