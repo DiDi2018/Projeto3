@@ -47,7 +47,6 @@ img {
 
  }
  #popup h1{
-     font-family: 'Source Code Pro', monospace;
      opacity: 100%;
      width: 55%;
      text-align: left;
@@ -110,18 +109,16 @@ img {
 }
 
 .txt_processing p{
-    font-family: 'Source Code Pro', monospace;
     font-size: 30px;
 }
-.txt_won {
 
+.txt_won {
     position: absolute;
 }
 
 .txt_won p {
     left: 15%;
     top: 20%;
-    font-family: 'Source Code Pro', monospace;
     font-size: 30px;
 }
 
@@ -360,15 +357,15 @@ img.sala:nth-child(5){  /*comando*/
     z-index:-6;
 }
 
-#chao{
+#chao {
     width: 100%;
-    height:30%;
+    height: 30%;
     position: fixed;
-    top:70%;
+    top: 70%;
     left: 0;
-    z-index:-8;
-    background:dodgerblue;
-
+    z-index: -8;
+    background: dodgerblue;
+}
 
 /*COZINHA*/
 
