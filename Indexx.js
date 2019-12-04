@@ -11,6 +11,7 @@ popup();
 function aparecer() {
     document.getElementById("popup").style.display = "block";
     audio_pub.play();
+    setTimeout(audio_pub, 2000);
 }
 
 function desaparecer(){

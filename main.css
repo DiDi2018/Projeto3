@@ -47,7 +47,6 @@ img {
 
  }
  #popup h1{
-     font-family: 'Source Code Pro', monospace;
      opacity: 100%;
      width: 55%;
      text-align: left;
@@ -82,6 +81,10 @@ img {
 
  }
 
+#botao_submeter{
+
+}
+
  /*WAITING*/
 #quadrado_waiting{
     width: 140%;
@@ -110,22 +113,20 @@ img {
 }
 
 .txt_processing p{
-    font-family: 'Source Code Pro', monospace;
     font-size: 30px;
 }
-.txt_won {
 
+.txt_won {
     position: absolute;
 }
 
 .txt_won p {
     left: 15%;
     top: 20%;
-    font-family: 'Source Code Pro', monospace;
     font-size: 30px;
 }
 
-#botao_submeter, #botao_start{
+#botao_start{
     color: black;
     font-size: 20px;
     background: 0;
@@ -238,37 +239,46 @@ img.sala:first-child {  /*gato*/
     height: 30vh;
     width: auto;
     top: 32vh;
-    left: 15vw;
+    left: 20vw;
 }
 
 img.sala:nth-child(2) {  /*sofá*/
     transform: rotate(-0.8deg);
-    height: 38vh;
+    height: 50vh;
     width: auto;
-    top: 29vh;
-    left: 6.92vw;
+    top: 25vh;
+    left: 7vw;
 }
 
 img.sala:nth-child(3){  /*mesa*/
-    height: 48.6vh;
+    height: 45vh;
     width: auto;
-    top: 48vh;
-    left: 23.9vw;
+    top: 52vh;
+    left: 25vw;
 }
 
 img.sala:nth-child(4){  /*candeeiro*/
-    height: 79.9vh;
+    height: 62vh;
     width: auto;
-    top: 5.74vh;
-    left: 62vw;
+    top: 6vh;
+    left: 7vw;
+    z-index: -3;
 }
 
 img.sala:nth-child(5){  /*comando*/
     transform: rotate(23deg);
-    height: 34.26vh;
+    height: 25vh;
     width: auto;
-    top: 58vh;
-    left: 30.15vw;
+    top: 64vh;
+    left: 33vw;
+}
+
+img.sala:nth-child(6){ /*janela*/
+    height: 50vh;
+    width: auto;
+    top: 2vh;
+    left: 49vw;
+    z-index: -4;
 }
 
 /*QUARTO*/
@@ -369,7 +379,7 @@ img.sala:nth-child(5){  /*comando*/
     z-index: -8;
     background: dodgerblue;
 }
-l
+
 /*COZINHA*/
 
 #monstro2{
