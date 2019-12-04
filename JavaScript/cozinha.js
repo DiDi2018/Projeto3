@@ -54,7 +54,7 @@ function ShowLetter() {
         m = n.getMonth() + 1;
         d = n.getDate();
         document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
-        
+
         document.getElementById("texto").style.display = "block";
         audio2.pause();
         audio2.currentTime = 0;
