@@ -10,7 +10,9 @@ session_start();
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
 <header>
     <div class="txt_won">
         <p>Hello <?php echo $_SESSION['nome'] ?>!</p>
@@ -18,5 +20,6 @@ session_start();
         <a href="cozinha.php" id="botao_start">START TOUR</a>
     </div>
 </header>
+
 </body>
 </html>
