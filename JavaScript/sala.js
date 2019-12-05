@@ -36,6 +36,19 @@ function typeWriter1(){
     }
 }
 
+function removeText(){
+    if(i1>0){
+        let tmp = document.querySelector(".lydiaTexto p").innerHTML;
+        tmp = tmp.slice(0,i1 -1);
+        console.log(tmp);
+        document.querySelector(".lydiaTexto p").innerHTML = tmp;
+        i1 = i1 - 1;
+        setTimeout(removeText, 30);
+    }
+}
+
+audios[1].addEventListener('ended', removeText);
+
 Promise.all([audios[0],audios[1]]).then(function(){
     audios[0].play();
     typeWriter1();
