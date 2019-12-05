@@ -75,17 +75,15 @@ session_start();
     </div>
 </div>
 
-<!--<img id="won" src="images/paper_choque.png" height="753" width="1564"/>-->
+<div class="win">
+    <div></div>
+    <img src="images/seta.png" width="319" height="133" alt="" usemap="#setamap">
+</div>
 
 <map name="setamap">
     <area shape="rect" alt="image" href="Menus/LivingRoom.html"
           coords="207,16,319,124">
 </map>
-
-<div class="win">
-    <div></div>
-    <img src="images/seta.png" width="319" height="133" alt="" usemap="#setamap">
-</div>
 
 <script src="JavaScript/cozinha.js"></script>
 <script src="JavaScript/main.js"></script>
