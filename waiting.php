@@ -20,6 +20,6 @@ $_SESSION['nome']=$_POST['name'];
         <img id="relogio_processing" src="images/relogio.png" alt="relogio">
         <a href="sorteio.php" id="botao_start">START TOUR</a>
     </header>
-    <script src="waiting.js"></script>
+    <script src="JavaScript/waiting.js"></script>
     </body>
     </html><?php

@@ -28,6 +28,6 @@
     </div>
     <audio id="audio_pub" src="sons/sala/pub.ogg"></audio>
 </header>
-<script src="Indexx.js"></script>
+<script src="JavaScript/Indexx.js"></script>
 </body>
 </html>
