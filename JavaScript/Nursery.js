@@ -1,4 +1,4 @@
-var nrImagem = 0;
+/*var nrImagem = 0;
 var imagens = [];
 var refrescar = 1;
 
@@ -8,14 +8,26 @@ imagens[1] = "images/nursery/borboleta_ruido.png";
 
 
 function rodarImagem() {
-    document.querySelector(".b1").src = imagens[nrImagem++];
+    document.querySelectorAll("a-image.b1").src = imagens[nrImagem++];
 
     if (nrImagem >= imagens.length)
         nrImagem = 0;
 
     setTimeout("rodarImagem()", refrescar * 500);
 }
-rodarImagem();
+rodarImagem();*/
+nclicou=0;
+
+function popup(){
+    if(nclicou===0) {
+        setTimeout(aparecer, 2000);
+    }
+}
+popup();
+function aparecer() {
+    document.getElementsByClassName(".b1").style.display = "block";
+}
+aparecer();
 
 
 let text1Lydia = "This is the bedroom. It’s completely automatic so it does everything for you. " +
@@ -30,5 +42,5 @@ function aparecerTexto() {
         setTimeout(aparecerTexto, speed);
     }
 }
-audio_q1.play();
+//audio_q1.play();
 aparecerTexto();
