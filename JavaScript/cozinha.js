@@ -45,15 +45,67 @@ apresentacao.addEventListener("ended",function(){
 });
 
 //MOSTRAR A CARTA
+let n = new Date();
+let y = n.getFullYear();
+let m = n.getMonth() + 1;
+let d = n.getDate();
+let date=d+"/" + m + "/" + y;
+//let nome= nome;
+let t1="I’m writing this letter to warn you! Although you won this house, you must know that there are a lot of dangers that you should be aware of.";
+let t2= "Carol must not know that I wrote this letter. If you ever want to turn off the house go to the nursery, you will know what to do.";
+let t3= "Don’t let technology blind you like it blinded the last family that lived here.";
+let t4= "Be careful!";
+let assinado="Mr.McClean";
+let i7 = 0;
+let n5= 0;
+let n6=0;
+let n1= 0;
+let n2=0;
+let n3=0;
+let n4=0;
+let n7=0;
+
+function ler() {
+    if (n5< date.length){
+        document.querySelector("#date").innerHTML += date.charAt(n5);
+        n5++;
+    }
+    if (n6< nome.length && n5>= date.length){
+        document.querySelector("#nome").innerHTML += name.charAt(n6);
+        n6++;
+    }
+
+    if (n1< t1.length && n6>= name.length && n5>=date.length){
+        document.querySelector("#p1").innerHTML += t1.charAt(n1);
+        n1++;
+    }
+    if (n2<t2.length && n1>= t1.length && n6>= name.length && n5>=date.length){
+        document.querySelector("#p2").innerHTML += t2.charAt(n2);
+        n2++;
+    }
+    if (n3<t3.length && n2>=t2.length && n1>= t1.length && n6>= name.length && n5>=date.length){
+        document.querySelector("#p3").innerHTML += t3.charAt(n3);
+        n3++;
+    }
+    if (n4<t4.length && n3>=t3.length && n2>=t2.length && n1>= t1.length && n6>= name.length && n5>=date.length){
+        document.querySelector("#p4").innerHTML += t4.charAt(n4);
+        n4++;
+    }
+    if (n7< assinado.length && n4>=t4.length && n3>=t3.length && n2>=t2.length && n1>= t1.length && n6>= name.length && n5>=date.length){
+        document.querySelector("#assinado").innerHTML += assinado.charAt(n7);
+        n7++;
+    }
+
+    setTimeout(ler, speed);
+
+}
+
 
 carta.addEventListener("click", ShowLetter);
+
+
 function ShowLetter() {
     if(apresentacao.paused) {
-        n = new Date();
-        y = n.getFullYear();
-        m = n.getMonth() + 1;
-        d = n.getDate();
-        document.getElementById("date").innerHTML = d + "/" + m + "/" + y;
 
         document.getElementById("texto").style.display = "block";
         audio2.pause();
@@ -66,12 +118,13 @@ function ShowLetter() {
         count1 = true;
         cruz.addEventListener("click", sair);
         document.addEventListener("click", fecharfora);
+        ler();
     }
 }
-
 //SAIR DA CARTA
 
 function sair() {
+    if(psicologo.ended){
     document.getElementById('texto').style.display = "none";
     psicologo.pause();
     psicologo.currentTime = 0;
@@ -79,6 +132,7 @@ function sair() {
     areaMonstro2.removeAttribute("style");
     cruz.removeEventListener("click", sair);
     document.removeEventListener("click", fecharfora);
+}
 }
 
 function fecharfora(evt) {
