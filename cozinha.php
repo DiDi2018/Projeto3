@@ -55,26 +55,16 @@ session_start();
         <br>
         <br>
         <br>
-        <p id='conteudo'> Dear <?php echo $_SESSION['nome'] ?>,<br>
-            <br>
-            I’m writing this letter to warn you! Although you won this house, you must know that there are a lot of dangers that you should be aware of.
-            <br>
-            <br>
-            Carol must not know that I wrote this letter. If you ever want to turn off the house go to the nursery, you will know what to do.
-            <br>
-            <br>
-            Don’t let technology blind you like it blinded the last family that lived here.
-            <br>
-            <br>
-            Be careful!</p>
+        <p id='nome'> Dear <?php echo $_SESSION['nome'] ?>,<br>
+        <p id='p1'> </p>
+        <p id='p2'></p>
+        <p id='p3'> </p>
+        <p id='p4'></p>
         <br>
-        <br>
-        <br>
-        <p id='assinado'>Mr.McClean</p>
+        <p id='assinado'></p>
         <img id='cruz' src='images/cozinha/cruz.png' alt="cruz">
     </div>
 </div>
-
 <div class="win">
     <div></div>
     <img src="images/seta.png" width="319" height="133" alt="" usemap="#setamap">

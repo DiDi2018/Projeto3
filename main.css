@@ -411,6 +411,7 @@ img.sala:nth-child(6){ /*janela*/
     position:fixed;
     bottom:8%;
     left:35%;
+    z-index: -800;
 }
 
 #mesa{
@@ -467,24 +468,19 @@ img.sala:nth-child(6){ /*janela*/
 
 #textoPsicologo {
     position: fixed;
-    top: 3%;
-    left: 32%;
+    top: 4%;
+    left: 31%;
     z-index: 2;
-    width:32%;
+    width:27%;
     height:auto;
     transform: rotate(-6deg);
+    padding: 3%;
 
 
 }
 
 #date, #assinado{
     float:right;
-}
-
-#textoPsicologo p{
-    padding:6%;
-    font-size: 1em;
-    font-family: "Source Code Pro", regular, sans-serif;
 }
 
 #cruz{
