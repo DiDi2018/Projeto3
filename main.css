@@ -135,6 +135,8 @@ display:none;
 
 .txt_won {
     position: absolute;
+    width: 100%;
+    height: 100vh;
 }
 
 .txt_won p {
