@@ -12,7 +12,6 @@ function nothoverkitchen() {
     kitchen.src = "../images/plantas/kitchen.png";
 }
 
-
 //LivingRoom
 function hoverlivingroom1() {
     livingroom.src = "../images/plantas/livingroom1.png";
@@ -23,7 +22,6 @@ function hoverlivingroom2() {
 function nothoverlivingroom() {
     livingroom.src = "../images/plantas/livingroom.png";
 }
-
 
 //Bedroom
 function hoverbedroom1() {
@@ -38,7 +36,6 @@ function hoverbedroom3() {
 function nothoverbedroom() {
     bedroom.src = "../images/plantas/bedroom.png";
 }
-
 
 //Nursery
 function hovernursery1() {
@@ -57,6 +54,24 @@ function nothovernursery() {
     nursery.src = "../images/plantas/nursery.png";
 }
 
+//textoLydia
 
+let audio = document.querySelector("audio");
+let i = 0;
+let p = document.querySelector(".lydiaTexto p");
+let texto = p.innerHTML;
+p.innerHTML = "";
+p.removeAttribute("style");
+
+audio.play();
+typewriter();
+
+function typewriter (){
+    if (i < texto.length){
+        p.innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(typewriter,50);
+    }
+}
 
 imageMapResize();
