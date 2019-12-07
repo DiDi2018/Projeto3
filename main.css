@@ -165,19 +165,39 @@ display:none;
 }
 /*SORTEIO*/
 .sorteiochapeu{
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    width: 50%;
+    position: fixed;
+    top: 20%;
+    left: 28%;
+    width: 46%;
 }
 
 .sorteiochapeu:hover{
     cursor:pointer;
 }
 
-.vencedor{
-    display: none;
+.vencedor {
+    position: relative;
+    width: 26%;
+    margin-top: 16%;
+    margin-left: 30%;
+    z-index: 0;
 }
+
+.vencedor>p {
+    width:80%;
+    position: absolute;
+    top: 34%;
+    left: 56%;
+    margin: auto;
+
+}
+.vencedor img{
+    position: relative;
+    left:38%;
+    width:84%;
+}
+
+
 
 /* PLANTAS MENUS*/
 #kitchen, #livingroom, #bedroom, #nursery {

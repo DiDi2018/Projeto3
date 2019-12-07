@@ -19,4 +19,10 @@ rodarImagens();
 
 function mouseOverChapeu() {
 
+
+}
+
+function revelacao(){
+    document.querySelector(".vencedor").style.marginTop="0";
+
 }
