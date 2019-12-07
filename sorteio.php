@@ -23,7 +23,6 @@ session_start();
         </div>
         <img class="sorteiochapeu" alt="chapeu" src="images/sorteio/chapeu.png"/>
 
-
     </div>
 </header>
 <script src="JavaScript/sorteio.js"></script>
