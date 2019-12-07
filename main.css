@@ -293,8 +293,8 @@ img.sala:nth-child(6){ /*janela*/
     top: 70%;
     left: 19vw;
     z-index: -8;
-    
 }
+
 #quadrado{
     opacity: 80%;
     width: 100%;
@@ -374,6 +374,14 @@ img.sala:nth-child(6){ /*janela*/
     z-index:-6;
 }
 
+#poltrona{
+    height: 45vh;
+    width: auto;
+    left: 2%;
+    top: 43%;
+    position: fixed;
+    z-index:-6;
+}
 
 /*COZINHA*/
 
