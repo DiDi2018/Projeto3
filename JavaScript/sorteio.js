@@ -19,10 +19,10 @@ rodarImagens();
 
 function mouseOverChapeu() {
 
-
 }
 
 function revelacao(){
-    document.querySelector(".vencedor").style.marginTop="0";
-
+    document.querySelector(".vencedor").style.display="block";
+    document.querySelector(".bilhete").style.display="block";
+    document.querySelector("#botao_start").style.display="block";
 }

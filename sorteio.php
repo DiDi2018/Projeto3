@@ -14,17 +14,16 @@ session_start();
 <body>
 
 <header>
-    <div class="txt_won">
-        <p>We are happy to inform you that you've won the draw! Your visit to the Happy Life Home was scheduled for
-            today. See you there.</p>
-        <a href="cozinha.php" id="botao_start">START TOUR</a>
-        <div class="vencedor">
-            <p> <?php echo $_SESSION['nome'] ?>!</p>
-            <img class="bilhete" src="images/sorteio/ticketblue.png" alt="ticket">
-        </div>
-        <img class="sorteiochapeu" alt="chapeu" src="images/sorteio/chapeu.png" onclick="revelacao()"/>
-
+    <div id="id_1">
+        <p class="txt_won"> The draw has just started and we already have a winner! Click on the hat to find out!</p>
+        <a id="botao_start" href="cozinha.php"> START TOUR </a>
     </div>
+    <div id="id_2">
+        <img class="bilhete" src="images/sorteio/ticketblue.png" alt="ticket">
+        <img class="sorteiochapeu" alt="chapeu" src="images/sorteio/chapeu.png" onclick="revelacao()"/>
+        <p class="vencedor"> <?php echo $_SESSION['nome'] ?></p>
+    </div>
+
 </header>
 <script src="JavaScript/sorteio.js"></script>
 
