@@ -163,7 +163,21 @@ display:none;
     transform: scale(3.5);
     transition: all .8s ease-in-out;
 }
+/*SORTEIO*/
+.sorteiochapeu{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+}
 
+.sorteiochapeu:hover{
+    cursor:pointer;
+}
+
+.vencedor{
+    display: none;
+}
 
 /* PLANTAS MENUS*/
 #kitchen, #livingroom, #bedroom, #nursery {
