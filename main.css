@@ -506,3 +506,33 @@ img.sala:nth-child(6){ /*janela*/
     bottom: -25px;
     right: 1%;
 }
+
+/*HALLWAY*/
+
+.scene {
+    width: 84vw;
+    height: 100vh;
+    perspective: 400px;
+    perspective-origin: 50% 50%;
+    display: flex;
+    justify-content: center;
+    z-index: -8;
+}
+
+.hallway.tv{
+    width: 100%;
+    height: auto;
+    top: -50%;
+    transition: ease 1s;
+}
+
+.hallway.lamp {
+    width: 20%;
+    height: auto;
+    transition: ease 1s;
+}
+
+.hallway.bush {
+    height: auto;
+    transition: ease 1s;
+}
