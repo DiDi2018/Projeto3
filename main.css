@@ -93,7 +93,7 @@ img {
     top: -45%;
     position: fixed;
     z-index:-2;
-    background:lightblue;
+    background:#76d9fc;
     transform: rotate(-20deg);
 }
 
@@ -377,6 +377,10 @@ img.sala:nth-child(6){ /*janela*/
 
 /*COZINHA*/
 
+#php{
+    display: none;
+}
+
 #monstro2{
     width:40%;
     height:auto;
@@ -475,8 +479,6 @@ img.sala:nth-child(6){ /*janela*/
     height:auto;
     transform: rotate(-6deg);
     padding: 3%;
-
-
 }
 
 #date, #assinado{
