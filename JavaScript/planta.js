@@ -72,6 +72,22 @@ function typewriter (){
         i++;
         setTimeout(typewriter,50);
     }
+    else {
+        removeText();
+    }
+}
+
+function removeText(){
+    if(i>0 && audio.ended){
+        let tmp = p.innerHTML;
+        tmp = tmp.slice(0,i -1);
+        p.innerHTML = tmp;
+        i = i - 1;
+        setTimeout(removeText, 30);
+    }
+    if(!audio.ended){
+        setTimeout(removeText, 30);
+    }
 }
 
 imageMapResize();
