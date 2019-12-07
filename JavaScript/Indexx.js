@@ -1,9 +1,11 @@
+var audio_pub = document.getElementById('audio_pub');
+
 function surgir(){
 
-    document.querySelector("body").style.display = "block";
-    setTimeout(audio_pub, 2000);
-
+    document.querySelector("#publicidade").style.display = "block";
+    audio_pub.play();
 }
+setTimeout(surgir, 10);
 
 /*
 var audio_pub = document.getElementById('audio_pub');

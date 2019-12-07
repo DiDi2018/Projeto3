@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
+<div id="publicidade">
     <img class="fundopopup" alt="popup" src="images/index/fundo.png" height="2480" width="3508"/>
     <img class="casa" alt="casa" src="images/index/Casa.png"/>
     <img class="mulher" alt="mulher" src="images/index/mulher.png"/>
@@ -15,18 +16,20 @@
     <div class="aparecerTicket">
         <div id="fundo"></div>
         <img class="ticket" alt="ticket" src="images/index/ticket.png"/>
-        <form class="formParticipar" action="waiting.php" method="POST" >
+        <form class="formParticipar" action="waiting.php" method="POST">
             <h2>Please enter your name:</h2>
             <label>
                 <input type="text" name="name" required>
             </label>
             <br>
             <label>
-                <button type="submit">Submit</button><br>
+                <button type="submit">Submit</button>
+                <br>
             </label>
         </form>
     </div>
-    <audio id="audio_pub" src="sons/sala/pub.ogg"></audio>
+</div>
+<audio id="audio_pub" src="sons/index/pub.ogg"></audio>
 <script src="JavaScript/Indexx.js"></script>
 </body>
 </html>

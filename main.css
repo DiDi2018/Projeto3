@@ -11,6 +11,9 @@ img {
 }
 
 /* INÍCIO*/
+#publicidade{
+    display: none;
+}
 .titulo {
     width: 42%;
     margin: 2%;
