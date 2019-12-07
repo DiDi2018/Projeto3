@@ -1,6 +1,13 @@
+function surgir(){
+
+    document.querySelector("body").style.display = "block";
+    setTimeout(audio_pub, 2000);
+
+}
+
+/*
 var audio_pub = document.getElementById('audio_pub');
 var nclicou=0;
-
 function popup(){
     if(nclicou===0) {
         setTimeout(aparecer, 2000);
@@ -17,7 +24,7 @@ function aparecer() {
 function desaparecer(){
     document.getElementById("popup").style.display = "none";
     setTimeout(aparecer, 500);
-}
+}*/
 
 //Alternância imagens popup
 var nrImagem = 0;
@@ -38,3 +45,26 @@ function rodarImagens() {
     setTimeout("rodarImagens()", refrescar * 1000);
 }
 rodarImagens();
+
+function aparecer(){
+    document.querySelector(".aparecerTicket").style.display = "block";
+    document.addEventListener("click", fecharfora);
+
+
+}
+
+function sair() {
+    document.querySelector(".aparecerTicket").style.display= "none";
+    document.removeEventListener("click", fecharfora);
+}
+
+function fecharfora(evt) {
+    let formParticipar = document.querySelector('.formParticipar').contains(evt.target);
+    let ticket = document.querySelector('.ticket').contains(evt.target);
+    let participar = document.querySelector('.participar').contains(evt.target);
+
+
+    if (!formParticipar && !ticket && !participar) {
+        return sair();
+    }
+}

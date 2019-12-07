@@ -11,98 +11,112 @@ img {
 }
 
 /* INÍCIO*/
-#fundo_index{
-    opacity: 1%;
-    width: 100%;
-    height:100%;
-    position: fixed;
-    top:0;
-    left: 0;
-    z-index:-1;
-    background:white;
+.titulo {
+    width: 42%;
+    margin: 2%;
+    font-size: 240%;
+    font-weight: lighter;
 }
 
-#cruz_index{
-    position: fixed;
-    top: 2%;
-    right: 2%;
-    width: 4%;
-    height: auto;
-
+.participar {
+    width: 80%;
+    margin-left: 2%;
+    margin-top: 3%;
+    font-size: 400%;
 }
 
- #popup{
-     display: none;
-     border: solid;
-     stroke: black;
-     stroke-width: 10px;
-     width: 50%;
-     height:70%;
-     position:absolute;
-     top: 50%;
-     left: 50%;
-     transform: translateX(-50%) translateY(-50%);
-     box-shadow: 15px 20px #999999;
-     overflow: hidden;
+.participar:hover {
+    text-decoration: underline overline;
+    cursor: pointer;
+}
 
- }
- #popup h1{
-     opacity: 100%;
-     width: 55%;
-     text-align: left;
-     position:absolute;
-     left: 50%;
-     top:-3%;
-     transform: translateX(-40%);
- }
 
 .fundopopup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 100%;
+    width: 180%;
     height: auto;
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    transform: translateX(-50%) translateY(-50%);
     z-index: -200;
 }
 
- .casa{
-     position: absolute;
-     top: 53%;
-     left: 50%;
-     width: 45%;
-     transform: translateX(-65%) translateY(-55%);
- }
- #popup form{
-     position: absolute;
-     bottom: 5%;
-     left: 50%;
-     transform: translateX(-50%);
+.mulher {
+    position: fixed;
+    top: 34%;
+    left: -10%;
+    width: 50%;
+    transform: rotate(30deg);
+}
 
- }
+.casa {
+    position: fixed;
+    top: 2%;
+    left: 48%;
+    width: 48%;
+    transform: rotate(-10deg);
+}
 
-#botao_submeter{
+.formParticipar {
+    position: fixed;
+    top: 50%;
+    left: 57%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.formParticipar input{
+    width: 68%;
+    font-size: 8vh;
+    background: center;
+    border: none;
+    border-bottom: 4px solid black;
+    margin-top: 2%;
+
+}
+.formParticipar button{
+    float: right;
+    margin-top: 12%;
+    background:center;
+    border:none;
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-right: 30%;
+}
+
+.formParticipar button:hover{
+    cursor: pointer;
+    text-decoration: underline overline;
 
 }
 
- /*WAITING*/
-#quadrado_waiting{
+.ticket {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.aparecerTicket {
+display:none;
+}
+
+/*WAITING*/
+#quadrado_waiting {
     width: 140%;
-    height:120%;
+    height: 120%;
     left: -20%;
     top: -45%;
     position: fixed;
-    z-index:-2;
-    background:#76d9fc;
+    z-index: -2;
+    background: #76d9fc;
     transform: rotate(-20deg);
 }
 
-#relogio_processing{
-    z-index:1;
+#relogio_processing {
+    z-index: 1;
     top: 30%;
-    left:-10%;
+    left: -10%;
     width: 50vw;
-    height:auto;
+    height: auto;
     transform: rotate(30deg);
 }
 
@@ -112,7 +126,7 @@ img {
     position: absolute;
 }
 
-.txt_processing p{
+.txt_processing p {
     font-size: 30px;
 }
 
@@ -126,20 +140,20 @@ img {
     font-size: 30px;
 }
 
-#botao_start{
+#botao_start {
     color: black;
     font-size: 20px;
     background: 0;
-    padding-top:30px;
+    padding-top: 30px;
     padding-bottom: 30px;
     width: auto;
 }
 
-.casa_ac{
-    margin-top:10%;
-    margin-left:37%;
-    width:20%;
-    height:auto;
+.casa_ac {
+    margin-top: 10%;
+    margin-left: 37%;
+    width: 20%;
+    height: auto;
 }
 
 .casa_ac:hover {
@@ -149,7 +163,7 @@ img {
 
 
 /* PLANTAS MENUS*/
-#kitchen, #livingroom, #bedroom, #nursery{
+#kitchen, #livingroom, #bedroom, #nursery {
     position: fixed;
     top: -6%;
     left: -2%;
@@ -161,19 +175,19 @@ img {
 /*Lydia*/
 
 
-.lydia{
-     z-index: -1;
-     position:fixed;
-     float: right;
-     width:15%;
-     height:auto;
-     bottom: -25px;
-     right: 1%;
- }
+.lydia {
+    z-index: -1;
+    position: fixed;
+    float: right;
+    width: 15%;
+    height: auto;
+    bottom: -25px;
+    right: 1%;
+}
 
 .lydiaTexto {
     z-index: -1;
-    width: calc(100%/9);
+    width: calc(100% / 9);
     position: fixed;
     bottom: 20vh;
     right: 2.5%;
@@ -188,7 +202,7 @@ img {
     z-index: 1;
     width: 100%;
     height: 100vh;
-    background-color: rgb(0,0,0,0.8);
+    background-color: rgb(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -235,14 +249,14 @@ img.sala {
     z-index: -2;
 }
 
-img.sala:first-child {  /*gato*/
+img.sala:first-child { /*gato*/
     height: 30vh;
     width: auto;
     top: 32vh;
     left: 20vw;
 }
 
-img.sala:nth-child(2) {  /*sofá*/
+img.sala:nth-child(2) { /*sofá*/
     transform: rotate(-0.8deg);
     height: 50vh;
     width: auto;
@@ -250,14 +264,14 @@ img.sala:nth-child(2) {  /*sofá*/
     left: 7vw;
 }
 
-img.sala:nth-child(3){  /*mesa*/
+img.sala:nth-child(3) { /*mesa*/
     height: 45vh;
     width: auto;
     top: 52vh;
     left: 25vw;
 }
 
-img.sala:nth-child(4){  /*candeeiro*/
+img.sala:nth-child(4) { /*candeeiro*/
     height: 62vh;
     width: auto;
     top: 6vh;
@@ -265,7 +279,7 @@ img.sala:nth-child(4){  /*candeeiro*/
     z-index: -3;
 }
 
-img.sala:nth-child(5){  /*comando*/
+img.sala:nth-child(5) { /*comando*/
     transform: rotate(23deg);
     height: 25vh;
     width: auto;
@@ -273,7 +287,7 @@ img.sala:nth-child(5){  /*comando*/
     left: 33vw;
 }
 
-img.sala:nth-child(6){ /*janela*/
+img.sala:nth-child(6) { /*janela*/
     height: 50vh;
     width: auto;
     top: 2vh;
@@ -293,44 +307,46 @@ img.sala:nth-child(6){ /*janela*/
     top: 70%;
     left: 19vw;
     z-index: -8;
-    
-}
-#quadrado{
-    opacity: 80%;
-    width: 100%;
-    height:100%;
-    position: fixed;
-    top:0;
-    left: 0;
-    z-index:15;
-    background:black;
+
 }
 
-#cortina_esq {  /*cortina da esquerda*/
+#quadrado {
+    opacity: 80%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background: black;
+}
+
+#cortina_esq { /*cortina da esquerda*/
     height: 550px;
     width: auto;
     left: 33%;
-    z-index:-7;
+    z-index: -7;
 }
-.cortina_esq_azul{
+
+.cortina_esq_azul {
     transform: translateX(-70%);
     transition: all 1s ease-out;
     transition-delay: 0s;
-    z-index:-7;
+    z-index: -7;
 }
 
-#cortina_dir{  /*cortina da direita*/
+#cortina_dir { /*cortina da direita*/
     height: 550px;
     width: auto;
-    left:48%;
-    z-index:-7;
+    left: 48%;
+    z-index: -7;
 }
 
-.cortina_dir_azul{
+.cortina_dir_azul {
     transform: translateX(70%);
     transition: all 1s ease-out;
     transition-delay: 0s;
-    z-index:-7;
+    z-index: -7;
 }
 
 #cama { /*cama*/
@@ -339,27 +355,44 @@ img.sala:nth-child(6){ /*janela*/
     left: 27%;
     top: 50%;
     position: fixed;
-    z-index:-6;
+    z-index: -6;
 }
 
 .cama_azul {
-    z-index:-6;
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+    z-index: -6;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
 }
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-#relogio{  /*relógio*/
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+#relogio { /*relógio*/
     height: 200px;
     width: auto;
     left: -5%;
     position: fixed;
-    z-index:-6;
+    z-index: -6;
 }
-#horas{
+
+#horas {
     position: fixed;
     color: lightgrey;
     font-size: 50px;
@@ -367,106 +400,107 @@ img.sala:nth-child(6){ /*janela*/
     left: 5vw;
     transform: rotate(-1deg);
     font-family: 'digital-7', monospace;
-    z-index:-6;
+    z-index: -6;
 }
-.horas_azul{
+
+.horas_azul {
     color: blue;
-    z-index:-6;
+    z-index: -6;
 }
 
 
 /*COZINHA*/
 
-#php{
+#php {
     display: none;
 }
 
-#monstro2{
-    width:40%;
-    height:auto;
-    position:fixed;
-    bottom:6%;
-    right:18%;
+#monstro2 {
+    width: 40%;
+    height: auto;
+    position: fixed;
+    bottom: 6%;
+    right: 18%;
     z-index: -9;
 }
 
 #monstro1 {
-    width:29%;
-    height:auto;
+    width: 29%;
+    height: auto;
     position: absolute;
-    bottom:30%;
-    left:12%;
+    bottom: 30%;
+    left: 12%;
     z-index: -10;
 }
 
-#cadeira1{
-    position:fixed;
-    bottom:3%;
-    left:2%;
-    width:20%;
-    height:auto;
+#cadeira1 {
+    position: fixed;
+    bottom: 3%;
+    left: 2%;
+    width: 20%;
+    height: auto;
     z-index: -800;
 }
 
-#cadeira2{
-    width:15%;
-    height:auto;
+#cadeira2 {
+    width: 15%;
+    height: auto;
     transform: scaleX(-1);
-    position:fixed;
-    bottom:8%;
-    left:35%;
+    position: fixed;
+    bottom: 8%;
+    left: 35%;
     z-index: -800;
 }
 
-#mesa{
-    position:fixed;
-    bottom:-5%;
-    left:14%;
-    width:30%;
-    height:auto;
+#mesa {
+    position: fixed;
+    bottom: -5%;
+    left: 14%;
+    width: 30%;
+    height: auto;
     z-index: -7;
 }
 
-#carta{
-    position:fixed;
-    bottom:18%;
-    left:25%;
-    width:8%;
-    height:auto;
+#carta {
+    position: fixed;
+    bottom: 18%;
+    left: 25%;
+    width: 8%;
+    height: auto;
     z-index: -6;
     transform: rotate(15deg);
     cursor: pointer;
 }
 
-#carta:hover{
-    width:10%;
-    bottom:16%;
-    left:24%;
+#carta:hover {
+    width: 10%;
+    bottom: 16%;
+    left: 24%;
 }
 
-#papel{
-    height:auto;
-    position:fixed;
-    top:4%;
-    left:32%;
+#papel {
+    height: auto;
+    position: fixed;
+    top: 4%;
+    left: 32%;
     z-index: 1;
-    width:32%;
+    width: 32%;
     transform: rotate(-6deg);
 }
 
-#fundo{
-    transition:all 1s ease 0s;
-    background-color:black;
-    opacity:80%;
+#fundo {
+    transition: all 1s ease 0s;
+    background-color: black;
+    opacity: 80%;
     width: 100%;
-    height:100%;
+    height: 100%;
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     z-index: 0;
 }
 
-#texto{
+#texto {
     display: none;
 }
 
@@ -475,34 +509,34 @@ img.sala:nth-child(6){ /*janela*/
     top: 4%;
     left: 31%;
     z-index: 2;
-    width:27%;
-    height:auto;
+    width: 27%;
+    height: auto;
     transform: rotate(-6deg);
     padding: 3%;
 }
 
-#date, #assinado{
-    float:right;
+#date, #assinado {
+    float: right;
 }
 
-#cruz{
+#cruz {
     position: fixed;
     top: 2%;
     right: 2%;
     width: 4%;
 }
 
-#won{
-    display:none;
+#won {
+    display: none;
 }
 
 /*NURSERY*/
-.lydia_nursery{
+.lydia_nursery {
     z-index: 1;
-    position:fixed;
+    position: fixed;
     float: right;
-    width:15%;
-    height:auto;
+    width: 15%;
+    height: auto;
     bottom: -25px;
     right: 1%;
 }
@@ -519,7 +553,7 @@ img.sala:nth-child(6){ /*janela*/
     z-index: -8;
 }
 
-.hallway.tv{
+.hallway.tv {
     width: 100%;
     height: auto;
     top: -50%;

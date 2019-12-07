@@ -7,16 +7,16 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <div id="fundo_index"></div>
-    <div id="popup">
-        <img id='cruz_index' src='images/index/cruz.png' alt="cruz" onclick="desaparecer()">
-        <img class="fundopopup" alt="popup" src="images/index/fundo.png" height="2480" width="3508"/>
-        <img class="casa" alt="casa" src="images/index/Casa.png"/>
-        <h1>GET A CHANCE OF WINING AN AMAZING HAPPY LIFE HOME!</h1>
-
-        <form action="waiting.php" method="POST" >
-            <h2>Enter now</h2>
+    <img class="fundopopup" alt="popup" src="images/index/fundo.png" height="2480" width="3508"/>
+    <img class="casa" alt="casa" src="images/index/Casa.png"/>
+    <img class="mulher" alt="mulher" src="images/index/mulher.png"/>
+    <h1 class="titulo">GET A CHANCE OF WINNING AN AMAZING HAPPY LIFE HOME!</h1>
+    <h1 class="participar" onclick="aparecer()">PARTICIPATE NOW!</h1>
+    <div class="aparecerTicket">
+        <div id="fundo"></div>
+        <img class="ticket" alt="ticket" src="images/index/ticket.png"/>
+        <form class="formParticipar" action="waiting.php" method="POST" >
+            <h2>Please enter your name:</h2>
             <label>
                 <input type="text" name="name" required>
             </label>
@@ -27,7 +27,6 @@
         </form>
     </div>
     <audio id="audio_pub" src="sons/sala/pub.ogg"></audio>
-</header>
 <script src="JavaScript/Indexx.js"></script>
 </body>
 </html>
