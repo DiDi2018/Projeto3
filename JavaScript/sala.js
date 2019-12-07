@@ -30,14 +30,17 @@ function typeWriter1(){
         audios[1].play();
     }
     if (i1 < text1Lydia.length){
-            document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
-            i1++;
-            setTimeout(typeWriter1, speed);
+        document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
+        i1++;
+        setTimeout(typeWriter1, speed);
+    }
+    else {
+        removeText();
     }
 }
 
 function removeText(){
-    if(i1>0){
+    if(i1>0 && audios[1].ended){
         let tmp = document.querySelector(".lydiaTexto p").innerHTML;
         tmp = tmp.slice(0,i1 -1);
         console.log(tmp);
@@ -45,9 +48,10 @@ function removeText(){
         i1 = i1 - 1;
         setTimeout(removeText, 30);
     }
+    if(!audios[1].ended){
+        setTimeout(removeText, 30);
+    }
 }
-
-audios[1].addEventListener('ended', removeText);
 
 Promise.all([audios[0],audios[1]]).then(function(){
     audios[0].play();
