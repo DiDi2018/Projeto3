@@ -557,7 +557,7 @@ img.sala:nth-child(6) { /*janela*/
     left: 31%;
     z-index: 2;
     width: 27%;
-    height: auto;
+    height: 65%;
     transform: rotate(-6deg);
     padding: 3%;
 }

@@ -107,7 +107,6 @@ carta.addEventListener("click", ShowLetter);
 
 function ShowLetter() {
     if(apresentacao.paused) {
-
         document.getElementById("texto").style.display = "block";
         audio2.pause();
         audio2.currentTime = 0;
@@ -126,14 +125,14 @@ function ShowLetter() {
 
 function sair() {
     if(psicologo.ended){
-    document.getElementById('texto').style.display = "none";
-    psicologo.pause();
-    psicologo.currentTime = 0;
-    areaMonstro1.removeAttribute("style");
-    areaMonstro2.removeAttribute("style");
-    cruz.removeEventListener("click", sair);
-    document.removeEventListener("click", fecharfora);
-}
+        document.getElementById('texto').style.display = "none";
+        psicologo.pause();
+        psicologo.currentTime = 0;
+        areaMonstro1.removeAttribute("style");
+        areaMonstro2.removeAttribute("style");
+        cruz.removeEventListener("click", sair);
+        document.removeEventListener("click", fecharfora);
+    }
 }
 
 function fecharfora(evt) {
