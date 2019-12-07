@@ -32,13 +32,29 @@ function aparecerTexto() {
         i1++;
         setTimeout(aparecerTexto, speed);
     }
+    else {
+        removerTexto1();
+    }
 }
 audio_q1.play();
 aparecerTexto();
 
-//TEXTO LYDIA 2
+function removerTexto1(){
+    if(i1>0 && audio_q1.ended){
+        let tmp = document.querySelector(".lydiaTexto p").innerHTML;
+        tmp = tmp.slice(0,i1 -1);
+        document.querySelector(".lydiaTexto p").innerHTML = tmp;
+        i1 = i1 - 1;
+        setTimeout(removerTexto1, 30);
+    }
+    if(!audio_q1.ended){
+        setTimeout(removerTexto1, 30);
+    }
+}
+
+//SEGUNDO TEXTO
 var audio_q2 = document.getElementById('audio_q2');
-let text2Lydia = "Explore the rest of the wonders of the bedroom";
+let text2Lydia = "Explore the rest of the wonders of the bedroom.";
 
 function texto2() {
     if (i2 < text2Lydia.length) {
@@ -50,6 +66,20 @@ function texto2() {
         cama.addEventListener("mouseenter", mouseOverCama);
         cama.addEventListener("mouseleave", mouseLeftCama);
         cama.addEventListener("click", audio_cama_f);
+        removerTexto2();
+    }
+}
+
+function removerTexto2(){
+    if(i2>0 && audio_q2.ended){
+        let tmp = document.querySelector(".lydiaTexto p").innerHTML;
+        tmp = tmp.slice(0,i2 -1);
+        document.querySelector(".lydiaTexto p").innerHTML = tmp;
+        i2 = i2 - 1;
+        setTimeout(removerTexto2, 30);
+    }
+    if(!audio_q2.ended){
+        setTimeout(removerTexto2, 30);
     }
 }
 
@@ -102,10 +132,19 @@ function draw() {
             cortina_dir.src = "images/quarto/cortina_dir.png";
         }
         correr = 1;
+
+        function texto(){
+            if(document.querySelector(".lydiaTexto p").innerHTML === "") {
+                texto2();
+                audio_q2.play();
+            }
+            else {
+                setTimeout(texto,30);
+            }
+        }
+
         setTimeout(function(){
-            document.querySelector(".lydiaTexto p").innerHTML = "";
-            texto2();
-            audio_q2.play();
+            texto();
         },2001);
     }
 }
