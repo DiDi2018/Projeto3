@@ -32,13 +32,31 @@ function aparecerTexto() {
         i1++;
         setTimeout(aparecerTexto, speed);
     }
+    /*else {
+        removetext();
+    }*/
 }
 audio_q1.play();
 aparecerTexto();
 
+/*let stuff;
+
+function removetext(){
+    if(i1>0 && audio_q1.ended){
+        let tmp = document.querySelector(".lydiaTexto p").innerHTML;
+        tmp = tmp.slice(0,i1 -1);
+        document.querySelector(".lydiaTexto p").innerHTML = tmp;
+        i1 = i1 - 1;
+        stuff = setTimeout(removetext, 30);
+    }
+    if(!audio_q1.ended){
+        stuff = setTimeout(removetext, 30);
+    }
+}*/
+
 //TEXTO LYDIA 2
 var audio_q2 = document.getElementById('audio_q2');
-let text2Lydia = "Explore the rest of the wonders of the bedroom";
+let text2Lydia = "Explore the rest of the wonders of the bedroom.";
 
 function texto2() {
     if (i2 < text2Lydia.length) {
@@ -50,6 +68,20 @@ function texto2() {
         cama.addEventListener("mouseenter", mouseOverCama);
         cama.addEventListener("mouseleave", mouseLeftCama);
         cama.addEventListener("click", audio_cama_f);
+        removeText2();
+    }
+}
+
+function removeText2(){
+    if(i2>0 && audio_q2.ended){
+        let tmp = document.querySelector(".lydiaTexto p").innerHTML;
+        tmp = tmp.slice(0,i2 -1);
+        document.querySelector(".lydiaTexto p").innerHTML = tmp;
+        i2 = i2 - 1;
+        setTimeout(removeText2, 30);
+    }
+    if(!audio_q2.ended){
+        setTimeout(removeText2, 30);
     }
 }
 
@@ -150,7 +182,6 @@ function audio_cama_f() {
 audio_cama.addEventListener("ended", function(){
     document.getElementById("cama").classList.remove("cama_azul");
     eventsRelogio();
-
 });
 
 //RELÓGIO FALA
@@ -168,6 +199,8 @@ function eventsRelogio(){
     audio_relogio.addEventListener("ended", function () {
         relogio.src = "images/quarto/relogio.png";
         document.getElementById("horas").style.color = "lightgrey";
+        let canvas = document.getElementById("defaultCanvas0");
+        canvas.parentNode.removeChild(canvas);
         winLetra('v');
     });
 }
