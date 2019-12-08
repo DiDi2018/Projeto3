@@ -1,4 +1,7 @@
 function winLetra(x){
+    let canvas = document.getElementById("defaultCanvas0");
+    canvas.parentNode.removeChild(canvas);
+
     let win = document.querySelector(".win");
     win.style.display = "flex";
     let div = document.querySelector(".win div");

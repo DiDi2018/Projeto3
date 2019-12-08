@@ -14,7 +14,7 @@ session_start();
 </head>
 <body>
 <!--<object onmouseover = "mouseOverImage()" id="monstro2" type="image/svg+xml" data="images/cozinha/Monstro2.svg"></object>-->
-<p id='php'> Dear, <?php echo $_SESSION['nome'] ?></p>
+<p id='php'> Dear <?php echo $_SESSION['nome'] ?>,</p>
 <img id="monstro1" src="images/cozinha/Monstro1.png" alt="monstro1" usemap="#monstro1map"/>
 <map name="monstro1map">
     <area id="areaMonstro1" shape="poly" alt="" onmouseover="mouseOverMonstro1()" onmouseout="mouseLeftMonstro1()" onclick="playaudio1()"

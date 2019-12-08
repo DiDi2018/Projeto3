@@ -199,8 +199,6 @@ function eventsRelogio(){
     audio_relogio.addEventListener("ended", function () {
         relogio.src = "images/quarto/relogio.png";
         document.getElementById("horas").style.color = "lightgrey";
-        let canvas = document.getElementById("defaultCanvas0");
-        canvas.parentNode.removeChild(canvas);
         winLetra('v');
     });
 }
