@@ -34,16 +34,26 @@ function aparecerTexto(){
         document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
         i1++;
         setTimeout(aparecerTexto, speed);
-
+    }
+    else {
+        removerText();
     }
 }
 apresentacao.play();
 aparecerTexto();
 
-apresentacao.addEventListener("ended",function(){
-    document.querySelector(".lydiaTexto p").innerHTML = "";
-});
-
+function removerText(){
+    if(i1>0 && apresentacao.ended){
+        let tmp = document.querySelector(".lydiaTexto p").innerHTML;
+        tmp = tmp.slice(0,i1 -1);
+        document.querySelector(".lydiaTexto p").innerHTML = tmp;
+        i1 = i1 - 1;
+        setTimeout(removerText, 30);
+    }
+    if(!apresentacao.ended){
+        setTimeout(removerText, 30);
+    }
+}
 
 //MOSTRAR A CARTA
 let n = new Date();
@@ -53,7 +63,7 @@ let d = n.getDate();
 let date=d+"/" + m + "/" + y;
 let nome= document.getElementById("php").innerHTML;
 let t1="I’m writing this letter to warn you! Although you won this house, you must know that there are a lot of dangers that you should be aware of.";
-let t2= "Carol must not know that I wrote this letter. If you ever want to turn off the house go to the nursery, you will know what to do.";
+let t2= "Lydia must not know that I wrote this letter. If you ever want to turn off the house go to the nursery, you will know what to do.";
 let t3= "Don’t let technology blind you like it blinded the last family that lived here.";
 let t4= "Be careful!";
 let assinado="Mr.McClean";
@@ -101,9 +111,7 @@ function ler() {
 
 }
 
-
 carta.addEventListener("click", ShowLetter);
-
 
 function ShowLetter() {
     if(apresentacao.paused) {
@@ -235,6 +243,9 @@ function lydiaSmile() {
             monstro1.src = "images/cozinha/Monstro1.png";
             monstro2.src = "images/cozinha/Monstro2.png";
         }
+        else {
+            removerText2();
+        }
     }
 }
 
@@ -259,6 +270,19 @@ audio2.addEventListener("pause", function(){
         lydiaSmile();
     }
 });
+
+function removerText2(){
+    if(i3>0 && smile.ended){
+        let tmp = document.querySelector(".lydiaTexto p").innerHTML;
+        tmp = tmp.slice(0,i3 -1);
+        document.querySelector(".lydiaTexto p").innerHTML = tmp;
+        i3 = i3 - 1;
+        setTimeout(removerText2, 30);
+    }
+    if(!smile.ended){
+        setTimeout(removerText2, 30);
+    }
+}
 
 function setup() {
     capture = createCapture({
