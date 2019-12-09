@@ -29,8 +29,7 @@ session_start();
 
 <img id="cadeira1" src="images/cozinha/cadeira.png" alt="cadeira1">
 <img id="cadeira2" src="images/cozinha/cadeira.png" alt="cadeira2">
-
-
+<img id="flores" src="images/cozinha/flowers.png" alt="flores">
 <img id="mesa" src="images/cozinha/mesa.png" alt="mesa">
 <img id="carta" src="images/cozinha/carta.png" alt="carta">
 <img id="monstro2" src="images/cozinha/Monstro2.png" alt="monstro2" usemap="#monstro2map">
