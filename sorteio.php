@@ -20,9 +20,9 @@ session_start();
     </div>
     <img class="sorteiochapeu" alt="chapeu" src="images/sorteio/chapeu.png" onclick="revelacao()"/>
 
-    <div id="id_2">
-        <img class="bilhete" src="images/sorteio/ticketblue.png" alt="ticket">
-        <p class="vencedor"> <?php echo $_SESSION['nome'] ?></p>
+    <div class="id_2">
+        <img id="bilhete" src="images/sorteio/ticketblue.png" alt="ticket">
+        <p id="vencedor"> <?php echo $_SESSION['nome'] ?></p>
     </div>
 
 </header>
