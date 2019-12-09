@@ -28,6 +28,7 @@ session_start();
         <p id="vencedor"> <?php echo $_SESSION['nome'] ?></p>
     </div>
 
+<audio id="audio_sorteio" src="sons/index/win_sorteio.wav"></audio>
 <script src="JavaScript/sorteio.js"></script>
 
 </body>

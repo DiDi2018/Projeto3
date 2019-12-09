@@ -1,6 +1,7 @@
 var nrImagem = 0;
 var imagens = [];
 var refrescar = 1;
+var audio_sorteio = document.getElementById('audio_sorteio');
 
 // colocar aqui todas as imagens, seguindo a ordem numérica
 imagens[0] = "images/sorteio/chapeu.png";
@@ -25,5 +26,6 @@ function revelacao(){
     document.querySelector("#botao_start").style.display="block";
     document.querySelector("#vencedor").classList.add("vencedorSurgir");
     document.querySelector("#bilhete").classList.add("bilheteSurgir");
+    audio_sorteio.play();
 
 }
