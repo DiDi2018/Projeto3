@@ -360,7 +360,7 @@ img.sala:nth-child(6) { /*janela*/
 #cortina_esq { /*cortina da esquerda*/
     height: 550px;
     width: auto;
-    left: 33%;
+    left: 37%;
     z-index: -7;
 }
 
@@ -376,6 +376,7 @@ img.sala:nth-child(6) { /*janela*/
     width: auto;
     left: 48%;
     z-index: -7;
+    top:-3%;
 }
 
 .cortina_dir_azul {
