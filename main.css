@@ -309,7 +309,7 @@ img.sala:nth-child(2) { /*sofá*/
     transform: rotate(-0.8deg);
     height: 50vh;
     width: auto;
-    top: 25vh;
+    top: 20vh;
     left: 7vw;
 }
 
@@ -321,9 +321,9 @@ img.sala:nth-child(3) { /*mesa*/
 }
 
 img.sala:nth-child(4) { /*candeeiro*/
-    height: 62vh;
+    height: 61vh;
     width: auto;
-    top: 6vh;
+    top: 2vh;
     left: 7vw;
     z-index: -3;
 }
@@ -337,11 +337,18 @@ img.sala:nth-child(5) { /*comando*/
 }
 
 img.sala:nth-child(6) { /*janela*/
+    height: 36vh;
+    width: auto;
+    top: 6vh;
+    left: 65vw;
+    z-index: -4;
+}
+img.sala:nth-child(7) { /*tapete*/
     height: 50vh;
     width: auto;
-    top: 2vh;
-    left: 49vw;
-    z-index: -4;
+    margin-top: 58vh;
+    left: 16vw;
+    z-index: -500;
 }
 
 /*QUARTO*/
