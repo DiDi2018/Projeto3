@@ -157,9 +157,7 @@ display:none;
 #id_1{
     width:40%;
 }
-#id_2{
-    width:60%;
-}
+
 .txt_won{
     margin-top:20%;
     margin-left:10%;
@@ -169,12 +167,6 @@ display:none;
     margin-left:10%;
     font-size:38px;
     display:none;
-}
-.vencedor{
-    font-size:32px;
-    z-index:1;
-    display:none;
-    line-height: 20%;
 }
 
 .sorteiochapeu{
@@ -189,17 +181,32 @@ display:none;
     cursor:pointer;
 }
 
-.bilhete{
-    top:20%;
-    height:20%;
-    left:59%;
+#vencedor{
+    display: block;
+    position: absolute;
+    width:40%;
+    top: 53%;
+    left:65%;
+    font-size:32px;
+    z-index:1;
+}
+#bilhete{
+    width:20%;
+    top:50%;
+    height:auto;
+    left:60%;
     z-index:-1;
-    display:block;
-    animation: ease 3s;
 }
 
 .bilheteSurgir{
-    transform: translateY(-90%);
+     width:20%;
+     transform: translateY(-150%);
+     transition: all 1s ease-out;
+     transition-delay: 0s;
+ }
+.vencedorSurgir{
+
+    transform: translateY(-510%);
     transition: all 1s ease-out;
     transition-delay: 0s;
 }
