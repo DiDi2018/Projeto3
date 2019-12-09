@@ -256,12 +256,12 @@ display:none;
     height: 40vh;
 }
 
-.win img:first-of-type {
+.win a img {
     display: none;
     width: 12vh;
     height: auto;
-    margin-left: 30%;
-    margin-top: 10vh;
+    margin-left: 15%;
+    margin-top: -3vh;
     z-index: 2;
 }
 
@@ -366,7 +366,7 @@ img.sala:nth-child(6) { /*janela*/
 #cortina_esq { /*cortina da esquerda*/
     height: 550px;
     width: auto;
-    left: 33%;
+    left: 37%;
     z-index: -7;
 }
 
@@ -382,6 +382,7 @@ img.sala:nth-child(6) { /*janela*/
     width: auto;
     left: 48%;
     z-index: -7;
+    top:-3%;
 }
 
 .cortina_dir_azul {
