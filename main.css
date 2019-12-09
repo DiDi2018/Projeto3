@@ -307,9 +307,9 @@ img.sala:first-child { /*gato*/
 
 img.sala:nth-child(2) { /*sofá*/
     transform: rotate(-0.8deg);
-    height: 50vh;
+    height: 45vh;
     width: auto;
-    top: 20vh;
+    top: 28vh;
     left: 7vw;
 }
 
