@@ -171,16 +171,15 @@ display:none;
     display:none;
 }
 .vencedor{
-    margin-top: -22%;
-    margin-left:109%;
     font-size:32px;
     z-index:1;
     display:none;
+    line-height: 20%;
 }
 
 .sorteiochapeu{
     position: fixed;
-    top: 19%;
+    top: 23%;
     left: 50%;
     width: 40%;
     z-index:2;
@@ -192,10 +191,17 @@ display:none;
 
 .bilhete{
     top:20%;
-    width:20%;
+    height:20%;
     left:59%;
     z-index:-1;
-    display:none;
+    display:block;
+    animation: ease 3s;
+}
+
+.bilheteSurgir{
+    transform: translateY(-90%);
+    transition: all 1s ease-out;
+    transition-delay: 0s;
 }
 
 /* PLANTAS MENUS*/

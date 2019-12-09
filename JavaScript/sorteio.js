@@ -23,6 +23,7 @@ function mouseOverChapeu() {
 
 function revelacao(){
     document.querySelector(".vencedor").style.display="block";
-    document.querySelector(".bilhete").style.display="block";
     document.querySelector("#botao_start").style.display="block";
+    document.querySelector("#id_2").classList.add("bilheteSurgir");
+
 }

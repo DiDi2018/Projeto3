@@ -119,7 +119,7 @@ function draw() {
         var open = sobrancelha.dist(olho);
     }
 
-    if (open >= 50 && i1 === text1Lydia.length && audio_q1.ended && correr === 0) {
+    if (open >= 30 && i1 === text1Lydia.length && audio_q1.ended && correr === 0) {
         document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
         document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
         cortina_esq.src = "images/quarto/cortina_azul_esq.png";

@@ -16,11 +16,12 @@ session_start();
 <header>
     <div id="id_1">
         <p class="txt_won"> The draw has just started and we already have a winner! Click on the hat to find out!</p>
-        <a id="botao_start" href="cozinha.php"> START TOUR </a>
+        <a id="botao_start" href="acenar.html"> START TOUR </a>
     </div>
+    <img class="sorteiochapeu" alt="chapeu" src="images/sorteio/chapeu.png" onclick="revelacao()"/>
+
     <div id="id_2">
         <img class="bilhete" src="images/sorteio/ticketblue.png" alt="ticket">
-        <img class="sorteiochapeu" alt="chapeu" src="images/sorteio/chapeu.png" onclick="revelacao()"/>
         <p class="vencedor"> <?php echo $_SESSION['nome'] ?></p>
     </div>
 
