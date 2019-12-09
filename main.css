@@ -459,6 +459,15 @@ img.sala:nth-child(5) { /*comando*/
     position: fixed;
     z-index:-6;
 }
+#almofada{
+    height: 15vh;
+    width: auto;
+    left: 11%;
+    top: 52%;
+    position: fixed;
+    z-index:-5;
+    transform: rotate(15deg);
+}
 
 #janela{
     height: 35vh;
