@@ -250,12 +250,12 @@ display:none;
     height: 40vh;
 }
 
-.win img:first-of-type {
+.win a img {
     display: none;
     width: 12vh;
     height: auto;
-    margin-left: 30%;
-    margin-top: 10vh;
+    margin-left: 15%;
+    margin-top: -3vh;
     z-index: 2;
 }
 
