@@ -336,13 +336,6 @@ img.sala:nth-child(5) { /*comando*/
     left: 33vw;
 }
 
-img.sala:nth-child(6) { /*janela*/
-    height: 50vh;
-    width: auto;
-    top: 2vh;
-    left: 49vw;
-    z-index: -4;
-}
 
 /*QUARTO*/
 
@@ -454,7 +447,7 @@ img.sala:nth-child(6) { /*janela*/
 }
 
 .horas_azul {
-    color: blue;
+    color: dodgerblue;
     z-index: -6;
 }
 
@@ -465,6 +458,14 @@ img.sala:nth-child(6) { /*janela*/
     top: 43%;
     position: fixed;
     z-index:-6;
+}
+
+#janela{
+    height: 35vh;
+    width: auto;
+    top: 11vh;
+    left: 42vw;
+    z-index: -8;
 }
 
 /*COZINHA*/
