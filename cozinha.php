@@ -53,8 +53,6 @@ session_start();
     <div id='textoPsicologo'>
         <p id='date'></p>
         <br>
-        <br>
-        <br>
         <p id='nome'></p>
         <p id='p1'> </p>
         <p id='p2'></p>

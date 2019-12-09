@@ -575,13 +575,14 @@ img.sala:nth-child(5) { /*comando*/
 }
 
 #date, #assinado {
-    float: right;
+    width: 22%;
+    margin-left: 78%;
 }
 
 #cruz {
     position: fixed;
-    top: 2%;
-    right: 2%;
+    top: 3%;
+    right: 4%;
     width: 4%;
 }
 
