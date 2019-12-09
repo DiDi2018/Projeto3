@@ -13,7 +13,10 @@ session_start();
 
 <body>
 
-<header>
+<div id="triangulo1"></div>
+<div id="triangulo2"></div>
+
+
     <div id="id_1">
         <p class="txt_won"> The draw has just started and we already have a winner! Click on the hat to find out!</p>
         <a id="botao_start" href="acenar.html"> START TOUR </a>
@@ -25,7 +28,6 @@ session_start();
         <p id="vencedor"> <?php echo $_SESSION['nome'] ?></p>
     </div>
 
-</header>
 <script src="JavaScript/sorteio.js"></script>
 
 </body>
