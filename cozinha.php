@@ -67,13 +67,8 @@ session_start();
 </div>
 <div class="win">
     <div></div>
-    <img src="images/seta.png" width="319" height="133" alt="" usemap="#setamap">
+    <a href="Menus/LivingRoom.html"><img src="images/seta.png" width="319" height="133" alt=""></a>
 </div>
-
-<map name="setamap">
-    <area shape="rect" alt="image" href="Menus/LivingRoom.html"
-          coords="207,16,319,124">
-</map>
 
 <script src="JavaScript/cozinha.js"></script>
 <script src="JavaScript/main.js"></script>
