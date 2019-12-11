@@ -14,8 +14,6 @@ function blink(){
     timeout = setTimeout(blink,400);
 }
 
-blink();
-
 function end(){
     clearTimeout(timeout);
     p.innerHTML = "";
@@ -26,24 +24,10 @@ function end(){
     setTimeout(function(){
         window.location = "Menus/Kitchen.html";
     },4000);
-};
+}
 
 let video = document.querySelector("video");
 let model = null;
-
-function startVideo(){
-    handTrack.startVideo(video).then(function (status) {
-        console.log("video started", status);
-        if (status) {
-            runDetection();
-        }
-    });
-}
-
-handTrack.load().then(lmodel => {
-    startVideo();
-    model = lmodel;
-});
 
 function runDetection() {
     model.detect(video).then(predictions => {
@@ -57,4 +41,18 @@ function runDetection() {
     });
 }
 
+function startVideo(){
+    handTrack.startVideo(video).then(function (status) {
+        console.log("video started", status);
+        if (status) {
+            runDetection();
+        }
+    });
+}
+
+handTrack.load().then(lmodel => {
+    startVideo();
+    blink();
+    model = lmodel;
+});
 
