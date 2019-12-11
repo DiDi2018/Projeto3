@@ -674,18 +674,15 @@ img.sala:nth-child(7) { /*tapete*/
     width: 100%;
     height: auto;
     top: -50%;
-    transition: ease 1s;
 }
 
 .hallway.lamp {
     width: 20%;
     height: auto;
-    transition: ease 1s;
 }
 
 .hallway.bush {
     height: auto;
-    transition: ease 1s;
 }
 
 #letra_A {

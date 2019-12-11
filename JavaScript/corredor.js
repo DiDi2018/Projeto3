@@ -26,9 +26,6 @@ function aproximar() {
             value.toString();
 
             image.style.transform = imageCSS.replace(/translateZ\(([-]?)[0-9]{1,4}px\)/, `translateZ(${value}px)`);
-
-
-
         }
     }
     if(value === -700){
@@ -73,12 +70,10 @@ function draw() {
     if (boca >= 26) {
         aproximar();
         gritos.play();
-
     }
+    
     else{
         gritos.pause();
-
-
     }
 }
 
