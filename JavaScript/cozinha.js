@@ -22,7 +22,6 @@ var areaMonstro1=document.getElementById("areaMonstro1");
 var areaMonstro2=document.getElementById("areaMonstro2");
 
 
-
 //TEXTO LYDIA
 let text1Lydia = "This room has the best instruments that you could ever dream of. You will never ever have to worry about dinner anymore, as soon as you get home you’ll have warm food on the table. Go ahead and take a look!";
 let i1 = 0;
