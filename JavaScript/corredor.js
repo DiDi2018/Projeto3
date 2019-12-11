@@ -26,9 +26,6 @@ function aproximar() {
             value.toString();
 
             image.style.transform = imageCSS.replace(/translateZ\(([-]?)[0-9]{1,4}px\)/, `translateZ(${value}px)`);
-
-
-
         }
     }
     if(value === -700){
