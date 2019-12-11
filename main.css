@@ -133,27 +133,28 @@ display:none;
     font-size: 30px;
 }
 
-#botao_start {
-    color: black;
-    font-size: 20px;
-    background: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    width: auto;
-}
+/*ACENAR*/
 
 .casa_ac {
-    margin-top: 16%;
-    margin-left: 37%;
-    width: 20%;
+    margin-top: 7%;
+    margin-left: 11%;
+    width: 50%;
     height: auto;
+    transition: ease-in 4s;
+    position: fixed;
+    z-index: -5;
 }
 
-.casa_ac:hover {
-    transform: scale(3.5);
-    transition: all .8s ease-in-out;
+.texto {
+    position: absolute;
+    right: 5%;
+    bottom: 7%;
+    font-size: 2vw;
+    width: 22%;
 }
+
 /*SORTEIO*/
+
 #id_1{
     width:40%;
 }
