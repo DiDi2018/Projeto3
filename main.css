@@ -688,3 +688,10 @@ img.sala:nth-child(7) { /*tapete*/
     transition: ease 1s;
 }
 
+#letra_A {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+}
