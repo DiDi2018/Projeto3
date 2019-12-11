@@ -4,6 +4,10 @@ var tracker;
 var w = 640,
     h = 480;
 var gritos=document.getElementById("grito");
+
+
+
+
 function aproximar() {
     let image1 = document.querySelector(".hallway:nth-child(1)").style.transform;
     let value1 = image1.match(/translateZ\(([-]?)[0-9]{1,4}px\)/);
@@ -15,9 +19,16 @@ function aproximar() {
             let imageCSS = image.style.transform;
             let valueIni = imageCSS.match(/translateZ\(([-]?)[0-9]{1,4}px\)/);
             let value = parseInt(valueIni[0].slice(11, valueIni[0].length - 3)) + 25;
+            if(value>=-25 && value<0){
+                var lamp=document.querySelector(".lamp");
+                lamp.src="images/corredor/lamp_yellow.png"
+            }
             value.toString();
 
             image.style.transform = imageCSS.replace(/translateZ\(([-]?)[0-9]{1,4}px\)/, `translateZ(${value}px)`);
+
+
+
         }
     }
 }
@@ -67,3 +78,4 @@ function draw() {
 
     }
 }
+
