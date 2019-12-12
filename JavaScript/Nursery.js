@@ -1,21 +1,22 @@
-/*var nrImagem = 0;
+var nrImagem = 0;
 var imagens = [];
 var refrescar = 1;
 
 // colocar aqui todas as imagens, seguindo a ordem numérica
-imagens[0] = "images/nursery/borboleta.png";
+imagens[0] = "images/nursery/arvore.png";
 imagens[1] = "images/nursery/borboleta_ruido.png";
 
 
 function rodarImagem() {
-    document.querySelectorAll("a-image.b1").src = imagens[nrImagem++];
+
+document.querySelector('arvore').setAttribute('src', imagens[nrImagem++])
 
     if (nrImagem >= imagens.length)
         nrImagem = 0;
 
     setTimeout("rodarImagem()", refrescar * 500);
 }
-rodarImagem();*/
+rodarImagem();
 nclicou=0;
 
 function popup(){

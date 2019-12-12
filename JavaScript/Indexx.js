@@ -3,7 +3,6 @@ var audio_pub = document.getElementById('audio_pub');
 function surgir(){
 
     document.querySelector("#publicidade").style.display = "block";
-    audio_pub.play();
 }
 setTimeout(surgir, 10);
 
@@ -32,12 +31,21 @@ function desaparecer(){
 var nrImagem = 0;
 var imagens = [];
 var refrescar = 1;
-
+var p=document.querySelector(".participar");
+var texto="PARTICIPATE NOW!";
 // colocar aqui todas as imagens, seguindo a ordem numérica
 imagens[0] = "images/index/fundo1.png";
 imagens[1] = "images/index/fundo.png";
-
-
+function blink(){
+    if(p.innerHTML === texto){
+        p.innerHTML = "";
+    }
+    else {
+        p.innerHTML = texto;
+    }
+    timeout = setTimeout(blink,200);
+}
+blink();
 function rodarImagens() {
     document.querySelector(".fundopopup").src = imagens[nrImagem++];
 
@@ -51,7 +59,7 @@ rodarImagens();
 function aparecer(){
     document.querySelector(".aparecerTicket").style.display = "block";
     document.addEventListener("click", fecharfora);
-
+    audio_pub.play();
 
 }
 

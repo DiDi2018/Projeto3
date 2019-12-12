@@ -22,14 +22,19 @@ img {
 }
 
 .participar {
-    width: 80%;
     margin-left: 2%;
     margin-top: 3%;
+    padding-left:1%;
     font-size: 400%;
+    border: solid 8px black;
+    width: 43vw;
+    height:12vh;
+
+
 }
 
 .participar:hover {
-    text-decoration: underline overline;
+    /*text-decoration: underline overline;*/
     cursor: pointer;
 }
 
@@ -160,7 +165,7 @@ display:none;
 }
 
 .txt_won{
-    margin-top:20%;
+    margin-top:40%;
     margin-left:10%;
     font-size:28px;
 }
@@ -168,11 +173,16 @@ display:none;
     margin-left:10%;
     font-size:38px;
     display:none;
+    border: solid 8px black;
+    text-decoration: none;
+    color: black;
+    width: 24%;
+    padding-left: 2%;
 }
 
 .sorteiochapeu{
     position: fixed;
-    top: 23%;
+    top: 29%;
     left: 50%;
     width: 40%;
     z-index:2;
@@ -186,14 +196,14 @@ display:none;
     display: block;
     position: absolute;
     width:40%;
-    top: 53%;
+    top: 56%;
     left:65%;
     font-size:32px;
     z-index:1;
 }
 #bilhete{
     width:20%;
-    top:50%;
+    top:56%;
     height:auto;
     left:60%;
     z-index:-1;
@@ -216,7 +226,7 @@ display:none;
     height: 0;
     border-left: 10vw solid transparent;
     border-right: 10vw solid transparent;
-    border-bottom: 120vh solid lightblue;
+    border-bottom: 120vh solid #76d9fc;
     position: fixed;
     top: -40%;
     left: 44vw;
@@ -228,7 +238,7 @@ display:none;
     height: 0;
     border-left: 10vw solid transparent;
     border-right: 10vw solid transparent;
-    border-bottom: 120vh solid lightblue;
+    border-bottom: 120vh solid #76d9fc;
     position: fixed;
     top: -40%;
     left: 76vw;
