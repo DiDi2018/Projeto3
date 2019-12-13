@@ -47,7 +47,7 @@ session_start();
 </div>
 <audio id="apresentacao" src="sons/cozinha/ApresentacaoCozinha.ogg"></audio>
 <audio id="smile" src="sons/cozinha/SmileLydia.ogg"></audio>
-<audio id="psicologo" src="sons/cozinha/Psicologo.ogg"></audio>
+<audio id="psicologo" src="sons/cozinha/psicologo.mp3"></audio>
 <div id="texto">
     <img id='papel' src='images/cozinha/papel.png' alt="papelcarta">
     <div id='fundo'></div>

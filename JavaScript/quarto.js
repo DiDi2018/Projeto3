@@ -19,7 +19,7 @@ var audio_q1 = document.getElementById('audio_q1');
 //texto lydia
 let text1Lydia = "This is the bedroom. It’s completely automatic so it does everything for you. " +
     "To open the curtains you just need to raise your eyebrows.";
-let i1=0, i2=0;
+let i1 = 0, i2 = 0;
 let speed = 50;
 let lydia = document.querySelector(".lydia");
 
@@ -36,6 +36,7 @@ function aparecerTexto() {
         removetext();
     }*/
 }
+
 audio_q1.play();
 aparecerTexto();
 
@@ -63,24 +64,21 @@ function texto2() {
         document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i2);
         i2++;
         setTimeout(texto2, speed);
-    }
-    else {
-        cama.addEventListener("mouseenter", mouseOverCama);
-        cama.addEventListener("mouseleave", mouseLeftCama);
-        cama.addEventListener("click", audio_cama_f);
+    } else {
+        cama.setAttribute("usemap","#bedmap");
         removeText2();
     }
 }
 
-function removeText2(){
-    if(i2>0 && audio_q2.ended){
+function removeText2() {
+    if (i2 > 0 && audio_q2.ended) {
         let tmp = document.querySelector(".lydiaTexto p").innerHTML;
-        tmp = tmp.slice(0,i2 -1);
+        tmp = tmp.slice(0, i2 - 1);
         document.querySelector(".lydiaTexto p").innerHTML = tmp;
         i2 = i2 - 1;
         setTimeout(removeText2, 30);
     }
-    if(!audio_q2.ended){
+    if (!audio_q2.ended) {
         setTimeout(removeText2, 30);
     }
 }
@@ -133,12 +131,13 @@ function draw() {
             cortina_esq.src = "images/quarto/cortina_esq.png";
             cortina_dir.src = "images/quarto/cortina_dir.png";
         }
+
         correr = 1;
-        setTimeout(function(){
+        setTimeout(function () {
             document.querySelector(".lydiaTexto p").innerHTML = "";
             texto2();
             audio_q2.play();
-        },2001);
+        }, 2001);
     }
 }
 
@@ -162,15 +161,13 @@ function audio_cama_f() {
         audio_cama.play();
         document.getElementById("cama").classList.add("cama_azul");
 
-    }
-    else if (audio_cama.paused && !(audio_q1.paused)) {
+    } else if (audio_cama.paused && !(audio_q1.paused)) {
         audio_q1.pause();
         audio_q1.currentTime = 0;
         audio_cama.play();
         document.getElementById("cama").classList.add("cama_azul");
 
-    }
-    else {
+    } else {
         audio_cama.pause();
         audio_cama.currentTime = 0;
         cama.src = "images/quarto/cama.png";
@@ -179,21 +176,19 @@ function audio_cama_f() {
     }
 }
 
-audio_cama.addEventListener("ended", function(){
+audio_cama.addEventListener("ended", function () {
     document.getElementById("cama").classList.remove("cama_azul");
     eventsRelogio();
 });
 
 //RELÓGIO FALA
 
-function eventsRelogio(){
+function eventsRelogio() {
     cama.src = "images/quarto/cama.png";
-    relogio.addEventListener("mouseenter", mouseOverRelogio);
-    relogio.addEventListener("mouseleave", mouseLeftRelogio);
+    relogio.setAttribute("usemap","#clockmap");
+
     horas.addEventListener("mouseenter", mouseOverRelogio);
     horas.addEventListener("mouseleave", mouseLeftRelogio);
-
-    relogio.addEventListener("click", audio_relogio_f);
     horas.addEventListener("click", audio_relogio_f);
 
     audio_relogio.addEventListener("ended", function () {
@@ -230,7 +225,7 @@ function mouseOverRelogio() {
 }
 
 function mouseLeftRelogio() {
-        if ((audio_q1.paused && audio_cama.paused) && (audio_relogio.paused || audio_relogio.ended)) {
+    if ((audio_q1.paused && audio_cama.paused) && (audio_relogio.paused || audio_relogio.ended)) {
         relogio.src = "images/quarto/relogio.png";
         document.getElementById("horas").style.color = "lightgrey";
     }
@@ -241,12 +236,12 @@ function audio_relogio_f() {
         audio_relogio.play();
         document.getElementById("horas").style.color = "blue";
         relogio.src = "images/quarto/relogio_azul.png";
-    }
-
-    else {
+    } else {
         audio_relogio.pause();
         audio_relogio.currentTime = 0;
         document.getElementById("horas").style.color = "lightgrey";
         relogio.src = "images/quarto/relogio.png";
     }
 }
+
+imageMapResize();
