@@ -10,8 +10,6 @@
 
 <body>
 
-<div id="triangulo1"></div>
-<div id="triangulo2"></div>
 <header>
 
 </header>
