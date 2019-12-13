@@ -684,11 +684,3 @@ img.sala:nth-child(7) { /*tapete*/
 .hallway.bush {
     height: auto;
 }
-
-#letra_A {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    position: absolute;
-}
