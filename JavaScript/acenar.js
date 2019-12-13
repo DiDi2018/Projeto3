@@ -5,7 +5,7 @@ let div = document.querySelector('div');
 let timeout;
 
 function blink(){
-    if(p.innerHTML === texto){
+    if(p.innerHTML === texto || p.innerHTML === "Loading..."){
         p.innerHTML = "";
     }
     else {
