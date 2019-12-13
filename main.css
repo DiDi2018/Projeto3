@@ -671,7 +671,7 @@ img.sala:nth-child(7) { /*tapete*/
 /*HALLWAY*/
 
 .scene {
-    width: 84vw;
+    width: 75vw;
     height: 100vh;
     perspective: 400px;
     perspective-origin: 50% 50%;

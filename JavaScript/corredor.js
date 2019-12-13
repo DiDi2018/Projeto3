@@ -1,4 +1,4 @@
-//document.addEventListener("click", aproximar);
+document.addEventListener("click", aproximar);
 var tv = document.getElementById("tv");
 var audio_ruido = document.getElementById('audio_ruido');
 
@@ -20,8 +20,11 @@ function aproximar() {
             let imageCSS = image.style.transform;
             let valueIni = imageCSS.match(/translateZ\(([-]?)[0-9]{1,4}px\)/);
             let value = parseInt(valueIni[0].slice(11, valueIni[0].length - 3)) + 25;
-            if(value>=-25 && value<0 && image.className === "hallway lamp"){
+            if(value>=-150 && value<-25 && image.className === "hallway lamp"){
                 image.src="images/corredor/lamp_yellow.png"
+            }
+            else if(value >= -25){
+                image.style.display = "none";
             }
             value.toString();
 
@@ -71,7 +74,7 @@ function draw() {
         aproximar();
         gritos.play();
     }
-    
+
     else{
         gritos.pause();
     }
