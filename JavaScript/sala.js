@@ -16,19 +16,14 @@ function nothover(){
 
 //texto lydia
 
-let text1Lydia = "Umm... There's something missing in here. Why don't you try to find it?";
+let text1Lydia = "Umm... There's something missing in here. Move your face and try to find it!";
 let text2Lydia = "There it is! That silly cat is always hiding!";
 let i1 = 0;
 let i2 = 0;
-let audio1Run = false;
-let speed = 45;
+let speed = 40;
 let audios = document.querySelectorAll("audio");
 
 function typeWriter1(){
-    if (i1 >= 39 && audios[0].ended && audio1Run === false){
-        audio1Run = true;
-        audios[1].play();
-    }
     if (i1 < text1Lydia.length){
         document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
         i1++;
@@ -40,14 +35,14 @@ function typeWriter1(){
 }
 
 function removeText(){
-    if(i1>0 && audios[1].ended){
+    if(i1>0 && audios[0].ended){
         let tmp = document.querySelector(".lydiaTexto p").innerHTML;
         tmp = tmp.slice(0,i1 -1);
         document.querySelector(".lydiaTexto p").innerHTML = tmp;
         i1 = i1 - 1;
         setTimeout(removeText, 30);
     }
-    if(!audios[1].ended){
+    if(!audios[0].ended){
         setTimeout(removeText, 30);
     }
 }
@@ -59,7 +54,7 @@ Promise.all([audios[0],audios[1]]).then(function(){
 
 function typeWriter2(){
     if(i2 === 0){
-        audios[2].play();
+        audios[1].play();
     }
     if (i2 < text2Lydia.length){
         document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i2);
@@ -68,7 +63,7 @@ function typeWriter2(){
     }
 }
 
-audios[2].addEventListener("ended", function(){
+audios[1].addEventListener("ended", function(){
     document.querySelector(".lydiaTexto p").innerHTML = "";
     winLetra("l");
 });
@@ -87,7 +82,7 @@ var capture;
 var tracker;
 var w = 640,
     h = 480;
-var positions, xInitial, yInitial, zInitial, stepLeftX = [], stepLeftY = [], initial = false;
+var positions, xInitial, yInitial, stepLeftX = [], stepLeftY = [], initial = false;
 var left = [];
 
 function setup() {
@@ -115,26 +110,11 @@ function setup() {
 
 function draw() {
     positions = tracker.getCurrentPosition();
-    /*
-    image(capture, 0, 0, w, h);
-    noFill();
-    stroke(255);
-    beginShape();
-    for (let i = 0; i < positions.length; i++) {
-        vertex(positions[i][0], positions[i][1]);
-    }
-    endShape();
-    for (let i = 0; i < positions.length; i++) {
-        fill(map(i, 0, positions.length, 0, 360), 50, 100);
-        // ellipse(positions[i][0], positions[i][1], 2, 2);
-        text(i, positions[i][0], positions[i][1]);
-    }
-    */
+
     if (positions.length > 0 && audios[0].ended && audios[1].ended && initial === false) {
         initial = true;
         xInitial = positions[35][0] - positions[1][0];
         yInitial = positions[12][0] - positions[35][0];
-        //zInitial = positions[7][0] - positions[53][0];
 
         for(let i=40; i<45; i++){
             left[i] = document.styleSheets[0].cssRules[i].style.left;
