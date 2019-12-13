@@ -702,3 +702,11 @@ img.sala:nth-child(7) { /*tapete*/
     user-select: none;
     position: absolute;
 }
+
+.help{
+    position: fixed;
+    right: 1%;
+    top: 1%;
+    width:2%;
+
+}

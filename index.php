@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
+<?php include ("headerinfo.php");?>
 <div id="publicidade">
     <img class="fundopopup" alt="popup" src="images/index/fundo.png" height="2480" width="3508"/>
     <img class="casa" alt="casa" src="images/index/Casa.png"/>

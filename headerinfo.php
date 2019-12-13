@@ -11,6 +11,7 @@
 <body>
 
 <header>
+    <img class="help" src="images/Help.png" alt="" />
 
 </header>
 </body>
