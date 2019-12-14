@@ -7,6 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>The Kitchen</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
     <script src="JavaScript/imageMapResizer.min.js"></script>
     <script src="JavaScript/p5.min.js"></script>
     <script src="JavaScript/clmtrackr.min.js"></script>
