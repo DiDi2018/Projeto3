@@ -3,13 +3,13 @@ var imagens = [];
 var refrescar = 1;
 
 // colocar aqui todas as imagens, seguindo a ordem numérica
-imagens[0] = "images/nursery/arvore.png";
-imagens[1] = "images/nursery/borboleta_ruido.png";
+imagens[0] = "images/nursery/girafa.png";
+imagens[1] = "images/nursery/girafa_ruido.png";
 
 
 function rodarImagem() {
 
-document.querySelector('arvore').setAttribute('src', imagens[nrImagem++])
+document.querySelector('girafa').setAttribute('src', imagens[nrImagem++])
 
     if (nrImagem >= imagens.length)
         nrImagem = 0;
@@ -17,18 +17,7 @@ document.querySelector('arvore').setAttribute('src', imagens[nrImagem++])
     setTimeout("rodarImagem()", refrescar * 500);
 }
 rodarImagem();
-nclicou=0;
 
-function popup(){
-    if(nclicou===0) {
-        setTimeout(aparecer, 2000);
-    }
-}
-popup();
-function aparecer() {
-    document.getElementsByClassName(".b1").style.display = "block";
-}
-aparecer();
 
 
 let text1Lydia = "This is the bedroom. It’s completely automatic so it does everything for you. " +
