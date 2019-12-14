@@ -704,13 +704,14 @@ img.sala:nth-child(7) { /*tapete*/
     height: auto;
 }
 
+/*HELP*/
+
 .help {
     position: fixed;
     right: 1%;
     top: 1%;
     width: 2%;
     z-index: 600;
-
 }
 
 .help:hover {
@@ -752,14 +753,12 @@ img.sala:nth-child(7) { /*tapete*/
 
 }
 
-
 .sobre{
     position: fixed;
     right: 4%;
     top: 1%;
     width:7%;
     z-index: 600;
-
 }
 
 .sobre:hover{
@@ -773,6 +772,7 @@ img.sala:nth-child(7) { /*tapete*/
     width: 80%;
     z-index: 300;
 }
+
 .creditos{
     display:none;
     width:40%;
@@ -799,4 +799,13 @@ img.sala:nth-child(7) { /*tapete*/
 .creditostexto h4 {
     font-size:1.2em ;
 
+}
+
+/*CODIGO*/
+
+.code {
+    height: 85vh;
+    width: auto;
+    left: 20vw;
+    top: 7vh;
 }

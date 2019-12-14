@@ -3,7 +3,7 @@ var tv = document.getElementById("tv");
 var audio_ruido = document.getElementById('audio_ruido');
 var audio_lydia1 = document.getElementById("audio1");
 var audio_lydia2 = document.getElementById("audio2");
-let i1 = 0, i2 = 0, speed = 50, textos = false;
+let i1 = 0, i2 = 0, speed = 50, textos = false, textoGritos = false;
 let text1Lydia = 'Say "hi" to the hallway!';
 let text2Lydia = "Ohhh... Can you hear it? These screams come from the Nursery! Can't wait to show you that amazing room!" +
     " To get there we have to go through the hallway!";
@@ -60,12 +60,6 @@ function removeText1(){
         document.querySelector(".lydiaTexto p").innerHTML = tmp;
         i1 = i1 - 1;
         setTimeout(removeText1, 30);
-    }
-    else if (i1 === 0) {
-        setTimeout(typewriter2, 30);
-        setTimeout(function(){
-            audio_lydia2.play();
-        }, 30);
     }
     if(!audio_lydia1.ended){
         setTimeout(removeText1, 30);
@@ -138,6 +132,13 @@ function draw() {
     if (boca >= 26) {
         aproximar();
         gritos.play();
+        if(textoGritos === false){
+            textoGritos = true;
+            setTimeout(typewriter2, 30);
+            setTimeout(function(){
+                audio_lydia2.play();
+            }, 30);
+        }
     }
 
     else{
