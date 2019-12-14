@@ -708,5 +708,43 @@ img.sala:nth-child(7) { /*tapete*/
     right: 1%;
     top: 1%;
     width:2%;
+    z-index: 600;
+
+}
+
+.help:hover{
+    cursor:pointer;
+}
+
+.postit{
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    width: 40%;
+    z-index: 300;
+}
+.instrucoes{
+    display:none;
+    width:40%;
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    z-index: 320;
+}
+
+.instrucoestexto {
+    width:28%;
+    position: fixed;
+    top: 30%;
+    left: 36%;
+    z-index: 380;
+    transform: rotate(4deg);
+}
+.instrucoestexto p {
+    font-size: 1.3em;
+}
+
+.instrucoestexto h2 {
+    font-size:2em ;
 
 }
