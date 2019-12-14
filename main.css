@@ -739,3 +739,52 @@ img.sala:nth-child(7) { /*tapete*/
     font-size:2em ;
 
 }
+
+
+.sobre{
+    position: fixed;
+    right: 4%;
+    top: 1%;
+    width:7%;
+    z-index: 600;
+
+}
+
+.sobre:hover{
+    cursor:pointer;
+}
+
+.maquina{
+    position: fixed;
+    top: 10%;
+    left: 12%;
+    width: 80%;
+    z-index: 300;
+}
+.creditos{
+    display:none;
+    width:40%;
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    z-index: 320;
+}
+
+.creditostexto {
+    width:50%;
+    position: fixed;
+    top: 20%;
+    left: 36%;
+    z-index: 380;
+
+}
+.creditostexto p {
+    font-size: 1em;
+    line-height: 0.1em;
+    margin:0.1em;
+}
+
+.creditostexto h4 {
+    font-size:1.2em ;
+
+}

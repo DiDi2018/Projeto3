@@ -15,3 +15,21 @@ function aparecer() {
 
 
 help.addEventListener("click", aparecer);
+
+var sobre = document.querySelector(".sobre");
+var creditos = document.querySelector(".creditos");
+let clicar2 = false;
+
+function aparecer2() {
+    if (clicar2 == false) {
+        creditos.style.display = "block";
+        clicar2 = true;
+    }
+    else{
+        creditos.style.display = "none";
+        clicar2=false;
+    }
+}
+
+
+sobre.addEventListener("click", aparecer2);
