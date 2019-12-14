@@ -1,4 +1,4 @@
-document.addEventListener("click", aproximar);
+//document.addEventListener("click", aproximar);
 var tv = document.getElementById("tv");
 var audio_ruido = document.getElementById('audio_ruido');
 var audio_lydia1 = document.getElementById("audio1");
