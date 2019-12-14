@@ -1,6 +1,8 @@
 function winLetra(x){
     let canvas = document.getElementById("defaultCanvas0");
-    canvas.parentNode.removeChild(canvas);
+    if(canvas != null){
+        canvas.parentNode.removeChild(canvas);
+    }
 
     let win = document.querySelector(".win");
     win.style.display = "flex";
@@ -11,6 +13,15 @@ function winLetra(x){
     let text1 = document.createTextNode("YOU WON THE LETTER");
     p1.appendChild(text1);
     let p3 = document.createElement("p");
+    if(x === 'v'){
+        p3.style.fontStyle = "italic";
+    }
+    else if (x === 'E'){
+        p3.style.fontWeight = "lighter";
+    }
+    else if (x === 'T'){
+        p3.style.fontWeight = "bold";
+    }
     let text3 = document.createTextNode(x);
     p3.appendChild(text3);
 

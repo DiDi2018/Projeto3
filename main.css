@@ -11,9 +11,10 @@ img {
 }
 
 /* INÍCIO*/
-#publicidade{
+#publicidade {
     display: none;
 }
+
 .titulo {
     width: 42%;
     margin: 2%;
@@ -24,11 +25,11 @@ img {
 .participar {
     margin-left: 2%;
     margin-top: 3%;
-    padding-left:1%;
+    padding-left: 1%;
     font-size: 400%;
     border: solid 8px black;
     width: 43vw;
-    height:12vh;
+    height: 12vh;
 
 
 }
@@ -71,7 +72,8 @@ img {
     left: 57%;
     transform: translateX(-50%) translateY(-50%);
 }
-.formParticipar input{
+
+.formParticipar input {
     width: 68%;
     font-size: 8vh;
     background: center;
@@ -80,17 +82,18 @@ img {
     margin-top: 2%;
 
 }
-.formParticipar button{
+
+.formParticipar button {
     float: right;
     margin-top: 12%;
-    background:center;
-    border:none;
+    background: center;
+    border: none;
     font-size: 1.5em;
     font-weight: bolder;
     margin-right: 30%;
 }
 
-.formParticipar button:hover{
+.formParticipar button:hover {
     cursor: pointer;
     text-decoration: underline overline;
 
@@ -104,7 +107,7 @@ img {
 }
 
 .aparecerTicket {
-display:none;
+    display: none;
 }
 
 /*WAITING*/
@@ -160,19 +163,20 @@ display:none;
 
 /*SORTEIO*/
 
-#id_1{
-    width:40%;
+#id_1 {
+    width: 40%;
 }
 
-.txt_won{
-    margin-top:40%;
-    margin-left:10%;
-    font-size:28px;
+.txt_won {
+    margin-top: 40%;
+    margin-left: 10%;
+    font-size: 28px;
 }
-#botao_start{
-    margin-left:10%;
-    font-size:38px;
-    display:none;
+
+#botao_start {
+    margin-left: 10%;
+    font-size: 38px;
+    display: none;
     border: solid 8px black;
     text-decoration: none;
     color: black;
@@ -180,42 +184,44 @@ display:none;
     padding-left: 2%;
 }
 
-.sorteiochapeu{
+.sorteiochapeu {
     position: fixed;
     top: 29%;
     left: 50%;
     width: 40%;
-    z-index:2;
+    z-index: 2;
 }
 
-.sorteiochapeu:hover{
-    cursor:pointer;
+.sorteiochapeu:hover {
+    cursor: pointer;
 }
 
-#vencedor{
+#vencedor {
     display: block;
     position: absolute;
-    width:40%;
+    width: 40%;
     top: 56%;
-    left:65%;
-    font-size:32px;
-    z-index:1;
-}
-#bilhete{
-    width:20%;
-    top:56%;
-    height:auto;
-    left:60%;
-    z-index:-1;
+    left: 65%;
+    font-size: 32px;
+    z-index: 1;
 }
 
-.bilheteSurgir{
-     width:20%;
-     transform: translateY(-150%);
-     transition: all 1s ease-out;
-     transition-delay: 0s;
- }
-.vencedorSurgir{
+#bilhete {
+    width: 20%;
+    top: 56%;
+    height: auto;
+    left: 60%;
+    z-index: -1;
+}
+
+.bilheteSurgir {
+    width: 20%;
+    transform: translateY(-150%);
+    transition: all 1s ease-out;
+    transition-delay: 0s;
+}
+
+.vencedorSurgir {
     transform: translateY(-510%);
     transition: all 1s ease-out;
     transition-delay: 0s;
@@ -233,6 +239,7 @@ display:none;
     z-index: -8;
     transform: rotate(140deg)
 }
+
 #triangulo2 {
     width: 0;
     height: 0;
@@ -378,6 +385,7 @@ img.sala:nth-child(6) { /*quadro*/
     left: 65vw;
     z-index: -4;
 }
+
 img.sala:nth-child(7) { /*tapete*/
     height: 50vh;
     width: auto;
@@ -400,7 +408,7 @@ img.sala:nth-child(7) { /*tapete*/
     z-index: -8;
 }
 
-#quadrado{
+#quadrado {
     opacity: 80%;
     width: 100%;
     height: 100%;
@@ -430,7 +438,7 @@ img.sala:nth-child(7) { /*tapete*/
     width: auto;
     left: 48%;
     z-index: -7;
-    top:-3%;
+    top: -3%;
 }
 
 .cortina_dir_azul {
@@ -499,25 +507,26 @@ img.sala:nth-child(7) { /*tapete*/
     z-index: -6;
 }
 
-#poltrona{
+#poltrona {
     height: 45vh;
     width: auto;
     left: 2%;
     top: 43%;
     position: fixed;
-    z-index:-6;
+    z-index: -6;
 }
-#almofada{
+
+#almofada {
     height: 15vh;
     width: auto;
     left: 11%;
     top: 52%;
     position: fixed;
-    z-index:-5;
+    z-index: -5;
     transform: rotate(15deg);
 }
 
-#janela{
+#janela {
     height: 35vh;
     width: auto;
     top: 11vh;
@@ -568,7 +577,7 @@ img.sala:nth-child(7) { /*tapete*/
     z-index: -800;
 }
 
-#flores{
+#flores {
     position: fixed;
     bottom: 22%;
     left: 29%;
@@ -675,6 +684,7 @@ img.sala:nth-child(7) { /*tapete*/
     perspective: 400px;
     perspective-origin: 50% 50%;
     display: flex;
+    position: absolute;
     justify-content: center;
     z-index: -8;
 }
@@ -694,29 +704,30 @@ img.sala:nth-child(7) { /*tapete*/
     height: auto;
 }
 
-.help{
+.help {
     position: fixed;
     right: 1%;
     top: 1%;
-    width:2%;
+    width: 2%;
     z-index: 600;
 
 }
 
-.help:hover{
-    cursor:pointer;
+.help:hover {
+    cursor: pointer;
 }
 
-.postit{
+.postit {
     position: fixed;
     top: 10%;
     left: 30%;
     width: 40%;
     z-index: 300;
 }
-.instrucoes{
-    display:none;
-    width:40%;
+
+.instrucoes {
+    display: none;
+    width: 40%;
     position: fixed;
     top: 10%;
     left: 30%;
@@ -724,19 +735,20 @@ img.sala:nth-child(7) { /*tapete*/
 }
 
 .instrucoestexto {
-    width:28%;
+    width: 28%;
     position: fixed;
     top: 30%;
     left: 36%;
     z-index: 380;
     transform: rotate(4deg);
 }
+
 .instrucoestexto p {
     font-size: 1.3em;
 }
 
 .instrucoestexto h2 {
-    font-size:2em ;
+    font-size: 2em;
 
 }
 
