@@ -400,7 +400,6 @@ img.sala:nth-child(7) { /*tapete*/
     z-index: -8;
 }
 
-
 #quadrado{
     opacity: 80%;
     width: 100%;
@@ -442,7 +441,7 @@ img.sala:nth-child(7) { /*tapete*/
 }
 
 #cama { /*cama*/
-    height: 300px;
+    height: 40vh;
     width: auto;
     left: 27%;
     top: 50%;
@@ -693,14 +692,6 @@ img.sala:nth-child(7) { /*tapete*/
 
 .hallway.bush {
     height: auto;
-}
-
-#letra_A {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    position: absolute;
 }
 
 .help{
