@@ -38,6 +38,7 @@ function aproximar() {
     }
     else if(value >= -500 && textos){
         textos = false;
+        gritos.pause();
         winLetra('T');
     }
 }
@@ -145,27 +146,6 @@ function draw() {
         gritos.pause();
     }
 }
-
-//RUIDO
-/*function mudar() {
-    setTimeout(ruidar, 1000);
-    setTimeout(desafio, 4000);
-}
-*/
-function ruido() {
-    document.getElementById("ruido").style.display = "block";
-    audio_ruido.play();
-    gritos.pause();
-    setTimeout(function () {
-        window.location.href = "codigo.html";
-    },1000);
-}
-/*
-function desafio() {
-    tv.src = "images/corredor/tv.png";
-    audio_ruido.pause();
-    gritos.pause();
-}*/
 
 audio_lydia1.play();
 typewriter1();
