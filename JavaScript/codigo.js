@@ -19,10 +19,12 @@ function desafio() {
     letras.style.display = "block";
     word.style.display = "block";
     audio_ruido.pause();
+    aparecer();
 }
 
 ruido();
-console.log(letter);
+
+//CLICAR NAS LETRAS
 
 for(let i=0; i<letter.length; i++){
     letter[i].addEventListener('click',function(){
@@ -35,8 +37,12 @@ function click(x){
     let css1 = letter[x].style.fontWeight;
     let css2 = letter[x].style.fontStyle;
     if(array.includes(a)){
-        guess[array.indexOf(a)].setAttribute("style",css1);
-        guess[array.indexOf(a)].setAttribute("style",css2);
+        if(css1 !== ""){
+            guess[array.indexOf(a)].setAttribute("style","font-weight: " + css1);
+        }
+        else if(css2 !== ""){
+            guess[array.indexOf(a)].setAttribute("style","font-style:" + css2);
+        }
         guess[array.indexOf(a)].innerText = a;
         correto++;
         if(correto === 5){
@@ -48,5 +54,39 @@ function click(x){
                 window.location.href = "nursery.html";
             },1250);
         }
+    }
+}
+
+//LYDIA
+
+let i =0;
+let texto = "To unlock the room please enter the letters you received in the correct order.";
+let speed = 40;
+let audioLydia = document.getElementById("audio_lydia");
+
+function aparecer() {
+    if (i === 0){
+        audioLydia.play();
+    }
+    if(i < texto.length){
+        document.querySelector(".lydiaTexto p").innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(aparecer, speed);
+    }
+    else {
+        remover();
+    }
+}
+
+function remover(){
+    if(i > 0 && audioLydia.ended){
+        let tmp = document.querySelector(".lydiaTexto p").innerHTML;
+        tmp = tmp.slice(0,i -1);
+        document.querySelector(".lydiaTexto p").innerHTML = tmp;
+        i = i - 1;
+        setTimeout(remover, 30);
+    }
+    if(!audioLydia.ended){
+        setTimeout(remover, 30);
     }
 }

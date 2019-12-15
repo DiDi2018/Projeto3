@@ -810,19 +810,11 @@ img.sala:nth-child(7) { /*tapete*/
     top: 7vh;
 }
 
-.letters1 li {
-    cursor: pointer;
-}
-
-.letters2 li {
-    cursor: pointer;
-}
-
 .word {
     position: absolute;
     top: 50%;
-    font-size: 3vw;
-    left: 32vw;
+    font-size: 3.5vw;
+    left: 30.5vw;
 }
 
 .word ul {
@@ -844,4 +836,16 @@ img.sala:nth-child(7) { /*tapete*/
     position: absolute;
     cursor: pointer;
     margin: 0;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.light {
+    font-weight: lighter;
 }

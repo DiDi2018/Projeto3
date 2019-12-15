@@ -236,11 +236,13 @@ let text3Lydia = "Wait a second! Why are you not smiling? You just won this amaz
 
 function lydiaSmile() {
     if(audio1.paused && audio2.paused) {
+        if(i3 === 0){
+            smile.play();
+        }
         if (i3 < text3Lydia.length) {
             document.querySelector(".lydiaTexto p").innerHTML += text3Lydia.charAt(i3);
             i3++;
             setTimeout(lydiaSmile, speed);
-            smile.play();
             count4 = true;
             monstro1.src = "images/cozinha/Monstro1.png";
             monstro2.src = "images/cozinha/Monstro2.png";
