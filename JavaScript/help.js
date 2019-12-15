@@ -1,6 +1,9 @@
 let help = document.querySelector(".help");
 let instrucoes = document.querySelector(".instrucoes");
+let sobre = document.querySelector(".sobre");
+let creditos = document.querySelector(".creditos");
 let clicar = false;
+let clicar2 = false;
 
 function aparecer() {
     if (clicar === false) {
@@ -17,9 +20,10 @@ if(help !== null){
     help.addEventListener("click", aparecer);
 }
 
-let sobre = document.querySelector(".sobre");
-let creditos = document.querySelector(".creditos");
-let clicar2 = false;
+else {
+    sobre.style.right = "1%";
+}
+
 
 function aparecer2() {
     if (clicar2 === false) {
