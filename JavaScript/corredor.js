@@ -19,7 +19,7 @@ function aproximar() {
     let value1 = image1.match(/translateZ\(([-]?)[0-9]{1,4}px\)/);
     let value = parseInt(value1[0].slice(11, value1[0].length - 3));
 
-    if (value < -500) {
+    if (value < -500 && textoGritos && audio_lydia2.ended) {
         for (let i = 1; i < 17; i++) {
             let image = document.querySelector(`.hallway:nth-child(${i})`);
             let imageCSS = image.style.transform;
