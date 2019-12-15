@@ -124,7 +124,7 @@ function draw() {
     var positions = tracker.getCurrentPosition();
 
     //distância entre sobrancelha e olho
-    if (positions.length > 0 && textos) {
+    if (positions.length > 0 && audio_lydia1.ended) {
         var MouthTop = createVector(positions[58][0], positions[58][1]);
         var MouthBottom = createVector(positions[59][0], positions[59][1]);
         var boca = MouthTop.dist(MouthBottom);
@@ -135,8 +135,8 @@ function draw() {
         gritos.play();
         if(textoGritos === false){
             textoGritos = true;
-            setTimeout(typewriter2, 30);
             setTimeout(function(){
+                typewriter2();
                 audio_lydia2.play();
             }, 30);
         }

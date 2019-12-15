@@ -112,7 +112,6 @@ function draw() {
     positions = tracker.getCurrentPosition();
 
     if (positions.length > 0 && audios[0].ended && initial === false) {
-        console.log("lol");
         initial = true;
         xInitial = positions[35][0] - positions[1][0];
         yInitial = positions[12][0] - positions[35][0];
@@ -151,7 +150,6 @@ function draw() {
     }
 
     if (positions.length > 0 && audios[0].ended && gatoEvent === false && initial) {
-        console.log("lol");
         //rules dos moveis começam no 46
         for(let i=45; i<51; i++){
             if((positions[12][0] - positions[35][0]) < yInitial){
