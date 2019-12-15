@@ -30,12 +30,9 @@ img {
     border: solid 8px black;
     width: 43vw;
     height: 12vh;
-
-
 }
 
 .participar:hover {
-    /*text-decoration: underline overline;*/
     cursor: pointer;
 }
 
@@ -80,7 +77,6 @@ img {
     border: none;
     border-bottom: 4px solid black;
     margin-top: 2%;
-
 }
 
 .formParticipar button {
@@ -96,7 +92,6 @@ img {
 .formParticipar button:hover {
     cursor: pointer;
     text-decoration: underline overline;
-
 }
 
 .ticket {

@@ -112,29 +112,42 @@ function draw() {
     positions = tracker.getCurrentPosition();
 
     if (positions.length > 0 && audios[0].ended && audios[1].ended && initial === false) {
+        console.log("lol");
         initial = true;
         xInitial = positions[35][0] - positions[1][0];
         yInitial = positions[12][0] - positions[35][0];
 
-        for(let i=40; i<45; i++){
+        for(let i=46; i<54; i++){
             left[i] = document.styleSheets[0].cssRules[i].style.left;
             left[i] = left[i].replace('vw', '');
             left[i] = parseFloat(left[i]);
 
-            if (i===40){
+            if (i===46){
                 stepLeftX[i] = (48 - left[i]) / xInitial;
                 stepLeftY[i] = (left[i] - 0.5) / yInitial;
             }
-            else if (i===41){
+            else if (i===47){
                 stepLeftX[i] = (46 - left[i]) / xInitial;
                 stepLeftY[i] = (left[i] - 0.5) / yInitial;
             }
-            else if(i===42){
+            else if(i===48){
                 stepLeftX[i] = (78 - left[i]) / xInitial;
                 stepLeftY[i] = (left[i] - 0.5) / yInitial;
             }
-            else if(i===43){
+            else if(i===49){
                 stepLeftX[i] = (63 - left[i]) / xInitial;
+                stepLeftY[i] = (left[i] - 0.5) / yInitial;
+            }
+            else if(i===50){
+                stepLeftX[i] = (54 - left[i]) / xInitial;
+                stepLeftY[i] = (left[i] - 0.5) / yInitial;
+            }
+            else if(i===51){
+                stepLeftX[i] = (54 - left[i]) / xInitial;
+                stepLeftY[i] = (left[i] - 0.5) / yInitial;
+            }
+            else if(i===52){
+                stepLeftX[i] = (54 - left[i]) / xInitial;
                 stepLeftY[i] = (left[i] - 0.5) / yInitial;
             }
             else {
@@ -145,8 +158,9 @@ function draw() {
     }
 
     if (positions.length > 0 && audios[0].ended && audios[1].ended && gatoEvent === false && initial) {
-        //rules dos moveis começam no 26
-        for(let i=40; i<45; i++){
+        console.log("lol");
+        //rules dos moveis começam no 46
+        for(let i=46; i<54; i++){
             if((positions[12][0] - positions[35][0]) < yInitial){
                 let positionLeft = left[i] - stepLeftY[i]*(yInitial - (positions[12][0] - positions[35][0]));
                 positionLeft = positionLeft.toString() + "vw";
