@@ -1,7 +1,7 @@
 let p = document.querySelector('p');
 let texto = "To go inside the house please wave!";
 let casa = document.querySelector('.casa_ac');
-let div = document.querySelector('div');
+let div = document.querySelector('#preto');
 let timeout;
 
 function blink(){
