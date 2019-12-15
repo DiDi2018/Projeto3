@@ -842,3 +842,11 @@ img.sala:nth-child(7) { /*tapete*/
 .light {
     font-weight: lighter;
 }
+
+#texto_erro{
+    display: none;
+    Position: absolute;
+    left:50%;
+    top: 45%;
+    transform: translateX(-50%);
+}

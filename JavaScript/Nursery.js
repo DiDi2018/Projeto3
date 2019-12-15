@@ -55,8 +55,15 @@ function removerTexto(){
         setTimeout(function(){
             document.querySelector("#ruido").style.display = "none";
             document.getElementById("audio_ruido").pause();
+            document.querySelector(".lydia_nursery").style.display = "none";
+            document.querySelector("#texto_erro").style.display = "block";
         },12000);
-    }
+
+        setTimeout(function(){
+            window.location.href = "index.php";
+        },15000);
+        }
+
 }
 
 document.querySelector('a-scene').addEventListener('loaded', function () {
