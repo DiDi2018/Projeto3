@@ -11,8 +11,9 @@
 </head>
 
 <body style="position: fixed; width: 100%;">
+
     <img class="sala" src="images/sala/gato.png" height="1828" width="1368" alt="" usemap="#catmap"/>
-    <img class="sala" src="images/sala/sofa_pb.png" height="656" width="1500"/>
+    <img class="sala" src="images/sala/sofa_pb.png" height="656" width="1500" alt=""/>
     <img class="sala" src="images/sala/sala_table_pb.png" height="484" width="750" alt=""/>
     <img class="sala" src="images/sala/lamp.png" height="1000" width="262" alt=""/>
     <img class="sala" src="images/sala/comando_pb.png" height="600" width="800" alt=""/>
@@ -36,11 +37,15 @@
     <a href="Menus/Bedroom.html"><img src="images/seta.png" width="319" height="133" alt=""></a>
     </div>
 
+    <?php include 'headerinfo.php' ?>
+
     <audio src="sons/sala/1_1.mp3"></audio>
     <audio src="sons/sala/3.mp3"></audio>
 
     <script src="JavaScript/sala.js"></script>
     <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/help.js"></script>
+
 </body>
 
 </html>

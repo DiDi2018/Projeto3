@@ -14,7 +14,9 @@ session_start();
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<!--<object onmouseover = "mouseOverImage()" id="monstro2" type="image/svg+xml" data="images/cozinha/Monstro2.svg"></object>-->
+
+<?php include 'headerinfo.php'?>
+
 <p id='php'> Dear <?php echo $_SESSION['nome'] ?>,</p>
 <img id="monstro1" src="images/cozinha/Monstro1.png" alt="monstro1" usemap="#monstro1map"/>
 <map name="monstro1map">
@@ -51,7 +53,7 @@ session_start();
 <audio id="psicologo" src="sons/cozinha/psicologo.mp3"></audio>
 <div id="texto">
     <img id='papel' src='images/cozinha/papel.png' alt="papelcarta">
-    <div id='fundo'></div>
+    <div class='fundo'></div>
     <div id='textoPsicologo'>
         <p id='date'></p>
         <br>
@@ -72,5 +74,7 @@ session_start();
 
 <script src="JavaScript/cozinha.js"></script>
 <script src="JavaScript/main.js"></script>
+<script src="JavaScript/help.js"></script>
+
 </body>
 </html>

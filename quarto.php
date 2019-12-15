@@ -11,6 +11,9 @@
 </head>
 
 <body onload="startTime()">
+
+<?php include 'headerinfo.php' ?>
+
 <main>
     <!--Objetos quarto-->
     <img id="cortina_esq" alt="cortina_esq" src="images/quarto/cortina_esq.png" height="2384" width="1026"/>
@@ -53,7 +56,10 @@
     </div>
 
 </main>
+
 <script src="JavaScript/quarto.js"></script>
 <script src="JavaScript/main.js"></script>
+<script src="JavaScript/help.js"></script>
+
 </body>
 </html>

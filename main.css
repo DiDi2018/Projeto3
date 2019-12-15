@@ -617,7 +617,7 @@ img.sala:nth-child(7) { /*tapete*/
     transform: rotate(-6deg);
 }
 
-#fundo {
+.fundo {
     transition: all 1s ease 0s;
     background-color: black;
     opacity: 80%;

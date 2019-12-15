@@ -19,7 +19,7 @@ function desafio() {
     letras.style.display = "block";
     word.style.display = "block";
     audio_ruido.pause();
-    aparecer();
+    aparecerTexto();
 }
 
 ruido();
@@ -64,14 +64,14 @@ let texto = "To unlock the room please enter the letters you received in the cor
 let speed = 40;
 let audioLydia = document.getElementById("audio_lydia");
 
-function aparecer() {
+function aparecerTexto() {
     if (i === 0){
         audioLydia.play();
     }
     if(i < texto.length){
         document.querySelector(".lydiaTexto p").innerHTML += texto.charAt(i);
         i++;
-        setTimeout(aparecer, speed);
+        setTimeout(aparecerTexto, speed);
     }
     else {
         remover();

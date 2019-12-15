@@ -13,6 +13,28 @@ session_start();
 
 <body>
 
+<header>
+    <img class="sobre" src="images/sobre.png" alt=""/>
+
+    <div class="creditos">
+        <!--<div class="creditostexto">
+            <h4>Made By</h4>
+            <p>Diana Dias</p><br>
+            <p>Maria Figueira</p><br>
+            <p>Maria Soares</p>
+            <h4>Guidance of</h4>
+            <p>Ana Boavida, Luís Pereira and Pedro Martins</p>
+            <h4>Design and Multimedia</h4>
+            <p>Project 3 - Multimedia Applications</p>
+            <h4>University of Coimbra</h4>
+            <p> Faculty of Sciences and Technology</p>
+            <h5>2019/2020</h5>
+        </div>-->
+        <img class="maquina" src="images/maquina3.png" alt=""/>
+        <div class="fundo"></div>
+    </div>
+</header>
+
 <div id="triangulo1"></div>
 <div id="triangulo2"></div>
 
@@ -29,7 +51,9 @@ session_start();
     </div>
 
 <audio id="audio_sorteio" src="sons/index/win_sorteio.wav"></audio>
+
 <script src="JavaScript/sorteio.js"></script>
+<script src="JavaScript/help.js"></script>
 
 </body>
 </html>

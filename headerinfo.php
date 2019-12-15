@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sorteio</title>
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
+<header>
 <img class="help" src="images/Help.png" alt=""/>
 <div class="instrucoes">
     <div class="instrucoestexto">
@@ -20,7 +10,7 @@
 
     </div>
     <img class="postit" src="images/postit.png" alt=""/>
-    <div id="fundo"></div>
+    <div class="fundo"></div>
 </div>
 
 <img class="sobre" src="images/sobre.png" alt=""/>
@@ -40,16 +30,9 @@
         <h5>2019/2020</h5>
     </div>-->
     <img class="maquina" src="images/maquina3.png" alt=""/>
-    <div id="fundo"></div>
+    <div class="fundo"></div>
 </div>
 
-
-
-
-
-<script src="JavaScript/help.js"></script>
-
 </header>
-</body>
-</html>
+
 

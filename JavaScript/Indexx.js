@@ -36,6 +36,7 @@ var texto="PARTICIPATE NOW!";
 // colocar aqui todas as imagens, seguindo a ordem numérica
 imagens[0] = "images/index/fundo1.png";
 imagens[1] = "images/index/fundo.png";
+
 function blink(){
     if(p.innerHTML === texto){
         p.innerHTML = "";
@@ -45,7 +46,9 @@ function blink(){
     }
     timeout = setTimeout(blink,200);
 }
+
 blink();
+
 function rodarImagens() {
     document.querySelector(".fundopopup").src = imagens[nrImagem++];
 
@@ -54,9 +57,10 @@ function rodarImagens() {
 
     setTimeout("rodarImagens()", refrescar * 1000);
 }
+
 rodarImagens();
 
-function aparecer(){
+function aparecerPopUp(){
     document.querySelector(".aparecerTicket").style.display = "block";
     document.addEventListener("click", fecharfora);
     audio_pub.play();

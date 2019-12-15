@@ -1,9 +1,9 @@
-var help = document.querySelector(".help");
-var instrucoes = document.querySelector(".instrucoes");
+let help = document.querySelector(".help");
+let instrucoes = document.querySelector(".instrucoes");
 let clicar = false;
 
 function aparecer() {
-    if (clicar == false) {
+    if (clicar === false) {
         instrucoes.style.display = "block";
         clicar = true;
     }
@@ -13,15 +13,16 @@ function aparecer() {
     }
 }
 
+if(help !== null){
+    help.addEventListener("click", aparecer);
+}
 
-help.addEventListener("click", aparecer);
-
-var sobre = document.querySelector(".sobre");
-var creditos = document.querySelector(".creditos");
+let sobre = document.querySelector(".sobre");
+let creditos = document.querySelector(".creditos");
 let clicar2 = false;
 
 function aparecer2() {
-    if (clicar2 == false) {
+    if (clicar2 === false) {
         creditos.style.display = "block";
         clicar2 = true;
     }
@@ -30,6 +31,5 @@ function aparecer2() {
         clicar2=false;
     }
 }
-
 
 sobre.addEventListener("click", aparecer2);

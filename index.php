@@ -7,15 +7,17 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
 </head>
 <body>
-<?php include ("headerinfo.php");?>
+
+<?php include "headerinfo.php"; ?>
+
 <div id="publicidade">
     <img class="fundopopup" alt="popup" src="images/index/fundo.png" height="2480" width="3508"/>
     <img class="casa" alt="casa" src="images/index/Casa.png"/>
     <img class="mulher" alt="mulher" src="images/index/mulher.png"/>
     <h1 class="titulo">GET A CHANCE OF WINNING AN AMAZING HAPPY LIFE HOME!</h1>
-    <h1 class="participar" onclick="aparecer()">PARTICIPATE NOW!</h1>
+    <h1 class="participar" onclick="aparecerPopUp()">PARTICIPATE NOW!</h1>
     <div class="aparecerTicket">
-        <div id="fundo"></div>
+        <div class="fundo"></div>
         <img class="ticket" alt="ticket" src="images/index/ticket.png"/>
         <form class="formParticipar" action="waiting.php" method="POST">
             <h2>Please enter your name:</h2>
@@ -31,6 +33,9 @@
     </div>
 </div>
 <audio id="audio_pub" src="sons/index/pub.ogg"></audio>
+
 <script src="JavaScript/Indexx.js"></script>
+<script src="JavaScript/help.js"></script>
+
 </body>
 </html>
