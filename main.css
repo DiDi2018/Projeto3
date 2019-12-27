@@ -505,7 +505,7 @@ img.sala:nth-child(7) { /*tapete*/
     height: 45vh;
     width: auto;
     left: 2%;
-    top: 43%;
+    top: 50%;
     position: fixed;
     z-index: -6;
 }
@@ -514,7 +514,7 @@ img.sala:nth-child(7) { /*tapete*/
     height: 15vh;
     width: auto;
     left: 11%;
-    top: 52%;
+    top: 59%;
     position: fixed;
     z-index: -5;
     transform: rotate(15deg);
