@@ -1,3 +1,7 @@
+var capture;
+var tracker;
+var w = 640,
+    h = 480;
 var gritos=document.getElementById("grito");
 
 var nrImagem = 0;
@@ -121,7 +125,7 @@ function draw() {
     var positions = tracker.getCurrentPosition();
 
 
-    if (positions.length > 0) {
+    if (positions.length > 0 /*&& audio_lydia1.ended*/) {
         var MouthTop = createVector(positions[58][0], positions[58][1]);
         var MouthBottom = createVector(positions[59][0], positions[59][1]);
         var boca = MouthTop.dist(MouthBottom);
@@ -130,6 +134,7 @@ function draw() {
     if (boca >= 26) {
         gritos.play();
     }
+
     else{
         gritos.pause();
     }
