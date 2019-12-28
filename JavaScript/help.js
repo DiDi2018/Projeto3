@@ -30,16 +30,19 @@ if (help !== null) {
 
 
 function aparecer2() {
-
     if (clicar2 === false) {
         creditos.style.display = "block";
-        instrucoes.style.display = "none";
+        if (help !== null) {
+            instrucoes.style.display = "none";
+        }
         clicar2 = true;
         clicar = false;
 
-    } else if(clicar2 === true) {
+    } else if(clicar2) {
         creditos.style.display = "none";
-        instrucoes.style.display = "none";
+        if (help !== null) {
+            instrucoes.style.display = "none";
+        }
         clicar2 = false;
     }
 

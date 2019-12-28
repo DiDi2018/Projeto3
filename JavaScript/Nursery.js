@@ -58,7 +58,7 @@ function aparecerTexto() {
 }
 
 function removerTexto(){
-    if(i1>0 && audio[1].ended){
+    if(i1>0 && audio[2].ended){
         let tmp = document.querySelector(".lydiaTexto p").innerHTML;
         tmp = tmp.slice(0,i1 -1);
         document.querySelector(".lydiaTexto p").innerHTML = tmp;
@@ -66,7 +66,7 @@ function removerTexto(){
         setTimeout(removerTexto, 30);
     }
 
-    else if(!audio[1].ended){
+    else if(!audio[2].ended){
         setTimeout(removerTexto, 30);
     }
 
@@ -86,12 +86,11 @@ function removerTexto(){
         setTimeout(function(){
             window.location.href = "index.php";
         },15000);
-        }
-
+    }
 }
 
 document.querySelector('a-scene').addEventListener('loaded', function () {
-    audio[1].play();
+    audio[2].play();
     aparecerTexto();
 });
 
