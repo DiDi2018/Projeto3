@@ -13,9 +13,9 @@ function rodarImagem() {
     document.querySelector('#girafa').setAttribute('src', imagens[nrImagem++]);
     if (nrImagem >= imagens.length)
         nrImagem = 0;
-    setTimeout("rodarImagem()", refrescar * 500);
+    setTimeout("rodarImagem()", refrescar * 70);
 }
-
+//setTimeout("rodarImagem()",9000);
 rodarImagem();
 
 let audio = document.querySelectorAll("audio");
