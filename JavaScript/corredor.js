@@ -123,7 +123,7 @@ function draw() {
     // image(capture, 0, 0, w, h);
     var positions = tracker.getCurrentPosition();
 
-    //distância entre sobrancelha e olho
+
     if (positions.length > 0 && audio_lydia1.ended) {
         var MouthTop = createVector(positions[58][0], positions[58][1]);
         var MouthBottom = createVector(positions[59][0], positions[59][1]);

@@ -2,6 +2,8 @@ var nrImagem = 0;
 var imagens = [];
 var refrescar = 1;
 
+var gritos=document.getElementById("grito");
+
 // colocar aqui todas as imagens, seguindo a ordem numérica
 imagens[0] = "images/nursery/girafa.png";
 imagens[1] = "images/nursery/girafa_ruido.png";
@@ -70,3 +72,45 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
     audio[1].play();
     aparecerTexto();
 });
+
+//CÂMARA
+function setup() {
+    capture = createCapture({
+        audio: false,
+        video: {
+            width: w,
+            height: h
+        }
+    }, function () {
+        console.log('capture ready.')
+    });
+    capture.elt.setAttribute('playsinline', '');
+    createCanvas(1, 1);
+    capture.size(w, h);
+    capture.hide();
+
+    colorMode(HSB);
+
+    tracker = new clm.tracker();
+    tracker.init();
+    tracker.start(capture.elt);
+}
+
+function draw() {
+    // image(capture, 0, 0, w, h);
+    var positions = tracker.getCurrentPosition();
+
+
+    if (positions.length > 0) {
+        var MouthTop = createVector(positions[58][0], positions[58][1]);
+        var MouthBottom = createVector(positions[59][0], positions[59][1]);
+        var boca = MouthTop.dist(MouthBottom);
+    }
+
+    if (boca >= 26) {
+        gritos.play();
+    }
+    else{
+        gritos.pause();
+    }
+}
