@@ -6,34 +6,43 @@ let clicar = false;
 let clicar2 = false;
 
 function aparecer() {
+
     if (clicar === false) {
         instrucoes.style.display = "block";
+        creditos.style.display = "none";
         clicar = true;
+        clicar2=false;
+
     }
-    else{
+    else if(clicar === true) {
         instrucoes.style.display = "none";
-        clicar=false;
+        creditos.style.display = "none";
+        clicar = false;
     }
+
 }
 
-if(help !== null){
+if (help !== null) {
     help.addEventListener("click", aparecer);
-}
-
-else {
+} else {
     sobre.style.right = "1%";
 }
 
 
 function aparecer2() {
+
     if (clicar2 === false) {
         creditos.style.display = "block";
+        instrucoes.style.display = "none";
         clicar2 = true;
-    }
-    else{
+        clicar = false;
+
+    } else if(clicar2 === true) {
         creditos.style.display = "none";
-        clicar2=false;
+        instrucoes.style.display = "none";
+        clicar2 = false;
     }
+
 }
 
 sobre.addEventListener("click", aparecer2);

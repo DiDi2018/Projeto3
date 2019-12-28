@@ -8,7 +8,14 @@
 </head>
 <body>
 
-<?php include "headerinfo.php"; ?>
+<header>
+    <img class="sobre" src="images/sobre.png" alt=""/>
+
+    <div class="creditos">
+        <img class="maquina" src="images/maquina3.png" alt=""/>
+        <div class="fundo"></div>
+    </div>
+</header>
 
 <div id="publicidade">
     <img class="fundopopup" alt="popup" src="images/index/fundo.png" height="2480" width="3508"/>
