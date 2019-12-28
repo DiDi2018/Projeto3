@@ -8,15 +8,18 @@ var gritos=document.getElementById("grito");
 imagens[0] = "images/nursery/girafa.png";
 imagens[1] = "images/nursery/girafa_ruido.png";
 
-
 function rodarImagem() {
     document.querySelector('#girafa').setAttribute('src', imagens[nrImagem++]);
+
     if (nrImagem >= imagens.length)
         nrImagem = 0;
     setTimeout("rodarImagem()", refrescar * 70);
 }
 //setTimeout("rodarImagem()",9000);
 rodarImagem();
+
+
+//LYDIA
 
 let audio = document.querySelectorAll("audio");
 let text1Lydia = "This room is the heart of the house. Whenever you feel like escaping reality " +
@@ -72,6 +75,8 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
     audio[1].play();
     aparecerTexto();
 });
+
+
 
 //CÂMARA
 function setup() {
