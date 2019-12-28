@@ -1,19 +1,34 @@
+var gritos=document.getElementById("grito");
+
 var nrImagem = 0;
 var imagens = [];
 var refrescar = 1;
-
-var gritos=document.getElementById("grito");
 
 // colocar aqui todas as imagens, seguindo a ordem numérica
 imagens[0] = "images/nursery/girafa.png";
 imagens[1] = "images/nursery/girafa_ruido.png";
 
-function rodarImagem() {
+function rodarImagemGirafa() {
     document.querySelector('#girafa').setAttribute('src', imagens[nrImagem++]);
-
     if (nrImagem >= imagens.length)
         nrImagem = 0;
-    setTimeout("rodarImagem()", refrescar * 70);
+    setTimeout("rodarImagemGirafa()", refrescar * 70);
+}
+//setTimeout("rodarImagemGirafa()",9000);
+rodarImagemGirafa();
+
+
+var nrImagem2 = 0;
+var imagens2 = [];
+
+imagens2[0] = "images/nursery/abutre.png";
+imagens2[1] = "images/nursery/abutre_ruido.png";
+
+function rodarImagem() {
+    document.querySelector('#abutre').setAttribute('src', imagens2[nrImagem2++]);
+    if (nrImagem2 >= imagens2.length)
+        nrImagem2 = 0;
+    setTimeout("rodarImagem()", refrescar * 120);
 }
 //setTimeout("rodarImagem()",9000);
 rodarImagem();
