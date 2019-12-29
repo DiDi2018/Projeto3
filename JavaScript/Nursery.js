@@ -145,9 +145,9 @@ let y = n.getFullYear();
 let m = n.getMonth() + 1;
 let d = n.getDate();
 let date = d +"/" + m + "/" + y;
-let nome = "maria"; //document.getElementById("php").innerHTML;
+let nome = document.getElementById("php").innerHTML;
 let t1="If you have found this letter it's because you're in the Nursery.";
-let t2= "Now you only have one way out! This if technology hasn't taken over you yet. Find the security panel and turn off the House.";
+let t2= "Now you only have one way out! This if technology hasn't taken over you yet. Find the security panel and turn off the Happy Life Home.";
 let t3= "Good luck!";
 let assinado="Mr.McClean";
 let n5=0;
@@ -184,7 +184,7 @@ function ler() {
     }
 
     if(n4 < assinado.length){
-        setTimeout(ler, speed);
+        setTimeout(ler, 20);
     }
 }
 
