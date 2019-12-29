@@ -2,40 +2,44 @@ var capture;
 var tracker;
 var w = 640,
     h = 480;
-var gritos=document.getElementById("grito");
+var gritos = document.getElementById("grito");
 
-var nrImagem = 0;
 var imagens = [];
-var refrescar = 1;
 
 // colocar aqui todas as imagens, seguindo a ordem numérica
 imagens[0] = "images/nursery/girafa.png";
 imagens[1] = "images/nursery/girafa_ruido.png";
+imagens[2] = "images/nursery/abutre.png";
+imagens[3] = "images/nursery/abutre_ruido.png";
+imagens[4] = "images/nursery/leao.png";
+imagens[5] = "images/nursery/leao_ruido.png";
 
-function rodarImagemGirafa() {
-    document.querySelector('#girafa').setAttribute('src', imagens[nrImagem++]);
-    if (nrImagem >= imagens.length)
-        nrImagem = 0;
-    setTimeout("rodarImagemGirafa()", refrescar * 70);
+function rodarImagem(x) {
+    let nrImagem;
+    let src = document.querySelector(`#${x}`).getAttribute("src");
+
+    for(let i = 0; i < imagens.length; i++){
+        if(imagens[i] === src){
+            if (src.includes('ruido')) nrImagem = i - 1;
+            else nrImagem = i + 1;
+        }
+    }
+
+    document.querySelector(`#${x}`).setAttribute('src', imagens[nrImagem]);
+    //se a imagem tiver passado para normal, esperar um tempo random para mudar de imagem outra vez
+    //para parecer mais como uma falha, não ser algo constante
+    if(nrImagem % 2 === 0){
+        setTimeout("rodarImagem('" + x + "')", Math.floor(Math.random() * (800 - 70)) + 70);
+    }
+    else {
+        setTimeout("rodarImagem('" + x + "')", 70);
+    }
 }
-//setTimeout("rodarImagemGirafa()",9000);
-rodarImagemGirafa();
 
-
-var nrImagem2 = 0;
-var imagens2 = [];
-
-imagens2[0] = "images/nursery/abutre.png";
-imagens2[1] = "images/nursery/abutre_ruido.png";
-
-function rodarImagem() {
-    document.querySelector('#abutre').setAttribute('src', imagens2[nrImagem2++]);
-    if (nrImagem2 >= imagens2.length)
-        nrImagem2 = 0;
-    setTimeout("rodarImagem()", refrescar * 120);
-}
-//setTimeout("rodarImagem()",9000);
-rodarImagem();
+rodarImagem('girafa');
+rodarImagem('abutre');
+rodarImagem('abutre2');
+rodarImagem('leao');
 
 
 //LYDIA
