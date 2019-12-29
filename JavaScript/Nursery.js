@@ -4,8 +4,24 @@ var w = 640,
     h = 480;
 var gritos = document.getElementById("grito");
 var imagens = [];
-var cruz = document.querySelector(".cruzNursery");
-
+let n = new Date();
+let y = n.getFullYear();
+let m = n.getMonth() + 1;
+let d = n.getDate();
+let date=d+"/" + m + "/" + y;
+let nome= document.getElementById("php").innerHTML;
+let t1="If you have found this letter it's because you're in the Nursery.";
+let t2= "Now you only have one way out! This if technology hasn't taken over you yet. Find the security panel and turn off the House.";
+let t3= "Good luck!";
+let assinado="Mr.McClean";
+let i7 = 0;
+let n5=0;
+let n6=0;
+let n1=0;
+let n2=0;
+let n3=0;
+let n4=0;
+let n7=0;
 
 // colocar aqui todas as imagens, seguindo a ordem numérica
 imagens[0] = "images/nursery/girafa.png";
@@ -98,16 +114,6 @@ function removerTexto() {
     }
 }
 
-function aparecer() {
-    // if (audio.ended) {
-    document.getElementById("textoCartaNursery").style.display = "block";
-    //  }
-}
-
-function sair() {
-    document.getElementById('textoCartaNursery').style.display = "none";
-    //   document.removeEventListener("click", fecharfora);
-}
 
 document.querySelector('a-scene').addEventListener('loaded', function () {
     audio[2].play();
@@ -150,6 +156,48 @@ function draw() {
     } else {
         gritos.pause();
     }
+}
+
+function ler() {
+    if (n5< date.length){
+        document.querySelector(".data").innerHTML += date.charAt(n5);
+        n5++;
+    }
+    if (n6< nome.length && n5>= date.length){
+        document.querySelector(".name").innerHTML += nome.charAt(n6);
+        n6++;
+    }
+
+    if (n1< t1.length && n6>= nome.length && n5>=date.length){
+        document.querySelector(".l1").innerHTML += t1.charAt(n1);
+        n1++;
+    }
+    if (n2<t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
+        document.querySelector(".l2").innerHTML += t2.charAt(n2);
+        n2++;
+    }
+    if (n3<t3.length && n2>=t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
+        document.querySelector(".l3").innerHTML += t3.charAt(n3);
+        n3++;
+    }
+    if (n4< assinado.length && n3>=t3.length && n2>=t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
+        document.querySelector(".assin").innerHTML += assinado.charAt(n4);
+        n4++;
+    }
+    if(n4 < assinado.length){
+        setTimeout(ler, speed);
+    }
+}
+function aparecer() {
+    // if (audio.ended) {
+    document.getElementById("textoCartaNursery").style.display = "block";
+    ler();
+    //  }
+}
+
+function sair() {
+    document.getElementById('textoCartaNursery').style.display = "none";
+    //   document.removeEventListener("click", fecharfora);
 }
 
 
