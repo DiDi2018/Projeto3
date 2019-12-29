@@ -22,8 +22,8 @@ function rodarImagem(x) {
     let nrImagem;
     let src = document.querySelector(`#${x}`).getAttribute("src");
 
-    for(let i = 0; i < imagens.length; i++){
-        if(imagens[i] === src){
+    for (let i = 0; i < imagens.length; i++) {
+        if (imagens[i] === src) {
             if (src.includes('ruido')) nrImagem = i - 1;
             else nrImagem = i + 1;
         }
@@ -32,28 +32,28 @@ function rodarImagem(x) {
     document.querySelector(`#${x}`).setAttribute('src', imagens[nrImagem]);
     //se a imagem tiver passado para normal, esperar um tempo random para mudar de imagem outra vez
     //para parecer mais como uma falha, não ser algo constante
-    if(nrImagem % 2 === 0){
+    if (nrImagem % 2 === 0) {
         setTimeout("rodarImagem('" + x + "')", Math.floor(Math.random() * (800 - 70)) + 70);
-    }
-    else {
+    } else {
         setTimeout("rodarImagem('" + x + "')", 70);
     }
 }
-setTimeout("rodarImagem('girafa')",13000);
-setTimeout("rodarImagem('girafa2')",15000);
-setTimeout("rodarImagem('abutre')",19000);
-setTimeout("rodarImagem('abutre2')",13000);
-setTimeout("rodarImagem('leao')",17000);
-setTimeout("rodarImagem('zebra')",15000);
-setTimeout("rodarImagem('leao_amarelo')",15000);
-setTimeout("rodarImagem('leao_amarelo2')",15000);
+
+setTimeout("rodarImagem('girafa')", 13000);
+setTimeout("rodarImagem('girafa2')", 15000);
+setTimeout("rodarImagem('abutre')", 19000);
+setTimeout("rodarImagem('abutre2')", 13000);
+setTimeout("rodarImagem('leao')", 17000);
+setTimeout("rodarImagem('zebra')", 15000);
+setTimeout("rodarImagem('leao_amarelo')", 15000);
+setTimeout("rodarImagem('leao_amarelo2')", 15000);
 
 
 //LYDIA
 
 let audio = document.querySelectorAll("audio");
 let text1Lydia = "This room is the heart of the house. Whenever you feel like escaping reality " +
-                "you can do it without actually leaving. You will feel like you're in another world!";
+    "you can do it without actually leaving. You will feel like you're in another world!";
 let i1 = 0;
 let speed = 45;
 
@@ -62,41 +62,38 @@ function aparecerTexto() {
         document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
         i1++;
         setTimeout(aparecerTexto, speed);
-    }
-    else {
+    } else {
         removerTexto();
     }
 }
 
-function removerTexto(){
-    if(i1>0 && audio[2].ended){
+function removerTexto() {
+    if (i1 > 0 && audio[2].ended) {
         let tmp = document.querySelector(".lydiaTexto p").innerHTML;
-        tmp = tmp.slice(0,i1 -1);
+        tmp = tmp.slice(0, i1 - 1);
         document.querySelector(".lydiaTexto p").innerHTML = tmp;
         i1 = i1 - 1;
         setTimeout(removerTexto, 30);
-    }
-
-    else if(!audio[2].ended){
+    } else if (!audio[2].ended) {
         setTimeout(removerTexto, 30);
     }
 
-    if(i1 <= 0){
-        setTimeout(function(){
+    if (i1 <= 0) {
+        setTimeout(function () {
             document.querySelector("#ruido").style.display = "block";
             document.querySelector('a-scene').style.display = "none";
             document.getElementById("audio_ruido").play();
-        },10000);
-        setTimeout(function(){
+        }, 10000);
+        setTimeout(function () {
             document.querySelector("#ruido").style.display = "none";
             document.getElementById("audio_ruido").pause();
             document.querySelector(".lydia_nursery").style.display = "none";
             document.querySelector("#texto_erro").style.display = "block";
-        },12000);
+        }, 12000);
 
-        setTimeout(function(){
+        setTimeout(function () {
             window.location.href = "index.php";
-        },15000);
+        }, 15000);
     }
 }
 
@@ -104,7 +101,6 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
     audio[2].play();
     aparecerTexto();
 });
-
 
 
 //CÂMARA
@@ -139,14 +135,14 @@ function draw() {
     }
     if (boca >= 26) {
         gritos.play();
-    }
-    else{
+    } else {
         gritos.pause();
     }
 }
 
-function aparecer(){
-    document.getElementById("textoCartaNursery").style.display = "block";
+function aparecer() {
+        document.getElementById("textoCartaNursery").style.display = "block";
+
 }
 
 

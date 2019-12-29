@@ -98,12 +98,15 @@
              material="alphaTest: 0.5"></a-image>
 
     <!--Carta do Psicólogo-->
-    <a-image id="cartaNursery" src="images/cozinha/carta.png" position="0 -11 -30" height="6" width="6" depth="1"
-             onclick="aparecer()" material="alphaTest: 0.5" rotation="0 0 20" cursor="rayOrigin: mouse"></a-image>
+    <a-entity cursor="rayOrigin: mouse"></a-entity>
+    <a-image id="cartaNursery" src="images/cozinha/carta.png" position="0 -11 -30" height="6" width="6" depth="1" material="alphaTest: 0.5" rotation="0 0 20" onclick="aparecer()"></a-image>
 </a-scene>
 
 <div id="textoCartaNursery">
     <img id='papel' src='images/cozinha/papel.png' alt="papelcarta">
+    <div class='fundo'></div>
+    <div id='textoPsicologoFinal'>
+    </div>
 </div>
 
 <div class="lydiaTexto" style="z-index: 10">
