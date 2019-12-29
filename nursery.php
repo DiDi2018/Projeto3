@@ -155,7 +155,7 @@ session_start();
     <p>ERROR CONNECTION </p>
 </div>
 
-<audio src="sons/nursery/text1Lydia.mp3"></audio>
+<audio id="lydianursery" src="sons/nursery/text1Lydia.mp3"></audio>
 
 <script src="JavaScript/help.js"></script>
 <script src="JavaScript/Nursery.js"></script>

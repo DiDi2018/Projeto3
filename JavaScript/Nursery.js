@@ -54,7 +54,7 @@ let audio = document.querySelectorAll("audio");
 let text1Lydia = "This room is the heart of the house. Whenever you feel like escaping reality " +
     "you can do it without actually leaving. You will feel like you're in another world!";
 let i1 = 0;
-let speed = 45;
+let speed = 20;
 
 function aparecerTexto() {
     if (i1 < text1Lydia.length) {
@@ -183,20 +183,29 @@ function ler() {
         n4++;
     }
 
+    else {
+        document.querySelector(".cruzNursery").addEventListener("click", sair);
+        //document.addEventListener("click", fecharfora);
+    }
+
     if(n4 < assinado.length){
-        setTimeout(ler, 20);
+        setTimeout(ler, 16);
     }
 }
 
 function aparecer() {
-    // if (audio.ended) {
+     if (document.getElementById("lydianursery").ended) {
     document.getElementById("textoCartaNursery").style.display = "block";
     ler();
-    //  }
+    document.getElementById("psicologofinal").play();
+
+     }
 }
 
 function sair() {
     document.getElementById('textoCartaNursery').style.display = "none";
+
+
     //   document.removeEventListener("click", fecharfora);
 }
 
