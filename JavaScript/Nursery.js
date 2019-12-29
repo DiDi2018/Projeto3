@@ -3,8 +3,9 @@ var tracker;
 var w = 640,
     h = 480;
 var gritos = document.getElementById("grito");
-
 var imagens = [];
+var carta=  document.querySelector(".cartaNursery");
+
 
 // colocar aqui todas as imagens, seguindo a ordem numérica
 imagens[0] = "images/nursery/girafa.png";
@@ -142,3 +143,10 @@ function draw() {
         gritos.pause();
     }
 }
+
+function aparecer(){
+    document.querySelector(".textoCartaNursery").style.display = "block";
+}
+
+carta.addEventListener( "click" ,aparecer);
+
