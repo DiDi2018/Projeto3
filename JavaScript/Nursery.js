@@ -4,7 +4,6 @@ var w = 640,
     h = 480;
 var gritos = document.getElementById("grito");
 var imagens = [];
-var carta=  document.querySelector(".cartaNursery");
 
 
 // colocar aqui todas as imagens, seguindo a ordem numérica
@@ -132,28 +131,22 @@ function setup() {
 }
 
 function draw() {
-    // image(capture, 0, 0, w, h);
     var positions = tracker.getCurrentPosition();
-
-
     if (positions.length > 0 /*&& audio_lydia1.ended*/) {
         var MouthTop = createVector(positions[58][0], positions[58][1]);
         var MouthBottom = createVector(positions[59][0], positions[59][1]);
         var boca = MouthTop.dist(MouthBottom);
     }
-
     if (boca >= 26) {
         gritos.play();
     }
-
     else{
         gritos.pause();
     }
 }
 
 function aparecer(){
-    document.querySelector(".textoCartaNursery").style.display = "block";
+    document.getElementById("textoCartaNursery").style.display = "block";
 }
 
-carta.addEventListener( "click" ,aparecer);
 

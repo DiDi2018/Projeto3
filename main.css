@@ -851,10 +851,10 @@ img.sala:nth-child(7) { /*tapete*/
     transform: translateX(-50%);
 }
 
-.cartaNursery {
+#cartaNursery {
     transform: rotate(15deg);
     cursor: pointer;
 }
-.textoCartaNursery{
+#textoCartaNursery{
     display:none;
 }
