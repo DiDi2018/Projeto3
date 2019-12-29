@@ -110,7 +110,7 @@ function ler() {
     }
     else {
         cruz.addEventListener("click", sair);
-        document.addEventListener("click", fecharfora);
+        //document.addEventListener("click", fecharfora);
     }
 
 }
@@ -142,9 +142,9 @@ function sair() {
     areaMonstro1.removeAttribute("style");
     areaMonstro2.removeAttribute("style");
     cruz.removeEventListener("click", sair);
-    document.removeEventListener("click", fecharfora);
+ //   document.removeEventListener("click", fecharfora);
 }
-
+/*
 function fecharfora(evt) {
     let papel = document.getElementById('papel').contains(evt.target);
     let textoPsicologo = document.getElementById('textoPsicologo').contains(evt.target);
@@ -154,7 +154,7 @@ function fecharfora(evt) {
         return sair();
     }
 }
-
+*/
 //MONSTROS
 
 function mouseOverMonstro1() {

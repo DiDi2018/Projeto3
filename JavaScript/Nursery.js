@@ -4,6 +4,7 @@ var w = 640,
     h = 480;
 var gritos = document.getElementById("grito");
 var imagens = [];
+var cruz = document.querySelector(".cruzNursery");
 
 
 // colocar aqui todas as imagens, seguindo a ordem numérica
@@ -97,6 +98,17 @@ function removerTexto() {
     }
 }
 
+function aparecer() {
+    // if (audio.ended) {
+    document.getElementById("textoCartaNursery").style.display = "block";
+    //  }
+}
+
+function sair() {
+    document.getElementById('textoCartaNursery').style.display = "none";
+    //   document.removeEventListener("click", fecharfora);
+}
+
 document.querySelector('a-scene').addEventListener('loaded', function () {
     audio[2].play();
     aparecerTexto();
@@ -140,9 +152,7 @@ function draw() {
     }
 }
 
-function aparecer() {
-        document.getElementById("textoCartaNursery").style.display = "block";
 
-}
+
 
 
