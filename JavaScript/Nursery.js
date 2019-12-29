@@ -14,6 +14,10 @@ imagens[2] = "images/nursery/abutre.png";
 imagens[3] = "images/nursery/abutre_ruido.png";
 imagens[4] = "images/nursery/leao.png";
 imagens[5] = "images/nursery/leao_ruido.png";
+imagens[6] = "images/nursery/leao_amarelo.png";
+imagens[7] = "images/nursery/leao_amarelo_ruido.png";
+imagens[8] = "images/nursery/zebra.png";
+imagens[9] = "images/nursery/zebra_ruido.png";
 
 function rodarImagem(x) {
     let nrImagem;
@@ -36,11 +40,14 @@ function rodarImagem(x) {
         setTimeout("rodarImagem('" + x + "')", 70);
     }
 }
-
-rodarImagem('girafa');
-rodarImagem('abutre');
-rodarImagem('abutre2');
-rodarImagem('leao');
+setTimeout("rodarImagem('girafa')",13000);
+setTimeout("rodarImagem('girafa2')",15000);
+setTimeout("rodarImagem('abutre')",19000);
+setTimeout("rodarImagem('abutre2')",13000);
+setTimeout("rodarImagem('leao')",17000);
+setTimeout("rodarImagem('zebra')",15000);
+setTimeout("rodarImagem('leao_amarelo')",15000);
+setTimeout("rodarImagem('leao_amarelo2')",15000);
 
 
 //LYDIA
