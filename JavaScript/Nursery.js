@@ -4,24 +4,6 @@ var w = 640,
     h = 480;
 var gritos = document.getElementById("grito");
 var imagens = [];
-let n = new Date();
-let y = n.getFullYear();
-let m = n.getMonth() + 1;
-let d = n.getDate();
-let date=d+"/" + m + "/" + y;
-let nome= document.getElementById("php").innerHTML;
-let t1="If you have found this letter it's because you're in the Nursery.";
-let t2= "Now you only have one way out! This if technology hasn't taken over you yet. Find the security panel and turn off the House.";
-let t3= "Good luck!";
-let assinado="Mr.McClean";
-let i7 = 0;
-let n5=0;
-let n6=0;
-let n1=0;
-let n2=0;
-let n3=0;
-let n4=0;
-let n7=0;
 
 // colocar aqui todas as imagens, seguindo a ordem numérica
 imagens[0] = "images/nursery/girafa.png";
@@ -158,7 +140,25 @@ function draw() {
     }
 }
 
+
 function ler() {
+    let n = new Date();
+    let y = n.getFullYear();
+    let m = n.getMonth() + 1;
+    let d = n.getDate();
+    let date=d+"/" + m + "/" + y;
+    let nome= "maria";//document.getElementById("php").innerHTML;
+    let t1="If you have found this letter it's because you're in the Nursery.";
+    let t2= "Now you only have one way out! This if technology hasn't taken over you yet. Find the security panel and turn off the House.";
+    let t3= "Good luck!";
+    let assinado="Mr.McClean";
+    let n5=0;
+    let n6=0;
+    let n1=0;
+    let n2=0;
+    let n3=0;
+    let n4=0;
+
     if (n5< date.length){
         document.querySelector(".data").innerHTML += date.charAt(n5);
         n5++;
