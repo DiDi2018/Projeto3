@@ -136,9 +136,9 @@ session_start();
         <p id='date'></p>
         <br>
         <p id='nome'></p>
-        <p id='p1'> </p>
+        <p id='p1'></p>
         <p id='p2'></p>
-        <p id='p3'> </p>
+        <p id='p3'></p>
         <br>
         <p id='assinado'></p>
     </div>
@@ -157,6 +157,7 @@ session_start();
 
 <audio src="sons/nursery/text1Lydia.mp3"></audio>
 
+<script src="JavaScript/help.js"></script>
 <script src="JavaScript/Nursery.js"></script>
 
 </body>

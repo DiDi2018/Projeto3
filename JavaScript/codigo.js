@@ -51,7 +51,7 @@ function click(x){
                 audio_ruido.play();
             },250);
             setTimeout(function(){
-                window.location.href = "nursery.html";
+                window.location.href = "nursery.php";
             },1250);
         }
     }

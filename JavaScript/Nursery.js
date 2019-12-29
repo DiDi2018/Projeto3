@@ -67,13 +67,13 @@ function aparecerTexto() {
 }
 
 function removerTexto() {
-    if (i1 > 0 && audio[2].ended) {
+    if (i1 > 0 && audio[3].ended) {
         let tmp = document.querySelector(".lydiaTexto p").innerHTML;
         tmp = tmp.slice(0, i1 - 1);
         document.querySelector(".lydiaTexto p").innerHTML = tmp;
         i1 = i1 - 1;
         setTimeout(removerTexto, 30);
-    } else if (!audio[2].ended) {
+    } else if (!audio[3].ended) {
         setTimeout(removerTexto, 30);
     }
 
@@ -98,7 +98,7 @@ function removerTexto() {
 
 
 document.querySelector('a-scene').addEventListener('loaded', function () {
-    audio[2].play();
+    audio[3].play();
     aparecerTexto();
 });
 
