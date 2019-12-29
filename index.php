@@ -9,10 +9,10 @@
 <body>
 
 <header>
-    <img class="sobre" src="images/sobre.png" alt=""/>
+    <img class="sobre" src="images/header/sobre.png" alt=""/>
 
     <div class="creditos">
-        <img class="maquina" src="images/maquina3.png" alt=""/>
+        <img class="maquina" src="images/header/maquina3.png" alt=""/>
         <div class="fundo"></div>
     </div>
 </header>

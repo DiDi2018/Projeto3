@@ -14,7 +14,7 @@ session_start();
 <body style="overflow: hidden">
 
 <header>
-    <img class="sobre" src="images/sobre.png" alt=""/>
+    <img class="sobre" src="images/header/sobre.png" alt=""/>
 
     <div class="creditos">
         <!--<div class="creditostexto">
@@ -30,7 +30,7 @@ session_start();
             <p> Faculty of Sciences and Technology</p>
             <h5>2019/2020</h5>
         </div>-->
-        <img class="maquina" src="images/maquina3.png" alt=""/>
+        <img class="maquina" src="images/header/maquina3.png" alt=""/>
         <div class="fundo"></div>
     </div>
 </header>

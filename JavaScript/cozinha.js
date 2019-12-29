@@ -59,7 +59,7 @@ let n = new Date();
 let y = n.getFullYear();
 let m = n.getMonth() + 1;
 let d = n.getDate();
-let date=d+"/" + m + "/" + y;
+let date = d +"/" + m + "/" + y;
 let nome= document.getElementById("php").innerHTML;
 let t1="I’m writing this letter to warn you! Although you won this house, you must know that there are a lot of dangers that you should be aware of.";
 let t2= "Lydia must not know that I wrote this letter. If you ever want to turn off the house go to the nursery, you will know what to do.";
@@ -144,6 +144,7 @@ function sair() {
     cruz.removeEventListener("click", sair);
  //   document.removeEventListener("click", fecharfora);
 }
+
 /*
 function fecharfora(evt) {
     let papel = document.getElementById('papel').contains(evt.target);

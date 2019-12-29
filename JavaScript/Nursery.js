@@ -140,54 +140,54 @@ function draw() {
     }
 }
 
+let n = new Date();
+let y = n.getFullYear();
+let m = n.getMonth() + 1;
+let d = n.getDate();
+let date = d +"/" + m + "/" + y;
+let nome = "maria"; //document.getElementById("php").innerHTML;
+let t1="If you have found this letter it's because you're in the Nursery.";
+let t2= "Now you only have one way out! This if technology hasn't taken over you yet. Find the security panel and turn off the House.";
+let t3= "Good luck!";
+let assinado="Mr.McClean";
+let n5=0;
+let n6=0;
+let n1=0;
+let n2=0;
+let n3=0;
+let n4=0;
 
 function ler() {
-    let n = new Date();
-    let y = n.getFullYear();
-    let m = n.getMonth() + 1;
-    let d = n.getDate();
-    let date=d+"/" + m + "/" + y;
-    let nome= "maria";//document.getElementById("php").innerHTML;
-    let t1="If you have found this letter it's because you're in the Nursery.";
-    let t2= "Now you only have one way out! This if technology hasn't taken over you yet. Find the security panel and turn off the House.";
-    let t3= "Good luck!";
-    let assinado="Mr.McClean";
-    let n5=0;
-    let n6=0;
-    let n1=0;
-    let n2=0;
-    let n3=0;
-    let n4=0;
-
-    if (n5< date.length){
+    if (n5 < date.length){
         document.querySelector(".data").innerHTML += date.charAt(n5);
         n5++;
     }
-    if (n6< nome.length && n5>= date.length){
+    else if (n6 < nome.length && n5>= date.length){
         document.querySelector(".name").innerHTML += nome.charAt(n6);
         n6++;
     }
-
-    if (n1< t1.length && n6>= nome.length && n5>=date.length){
+    else if (n1 < t1.length && n6 >= nome.length && n5 >= date.length){
         document.querySelector(".l1").innerHTML += t1.charAt(n1);
         n1++;
     }
-    if (n2<t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
+    else if (n2<t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
         document.querySelector(".l2").innerHTML += t2.charAt(n2);
         n2++;
     }
-    if (n3<t3.length && n2>=t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
+    else if (n3<t3.length && n2>=t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
         document.querySelector(".l3").innerHTML += t3.charAt(n3);
         n3++;
     }
-    if (n4< assinado.length && n3>=t3.length && n2>=t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
+    else if (n4< assinado.length && n3>=t3.length && n2>=t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
         document.querySelector(".assin").innerHTML += assinado.charAt(n4);
         n4++;
     }
+
     if(n4 < assinado.length){
         setTimeout(ler, speed);
     }
 }
+
 function aparecer() {
     // if (audio.ended) {
     document.getElementById("textoCartaNursery").style.display = "block";
