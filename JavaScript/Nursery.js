@@ -159,27 +159,27 @@ let n4=0;
 
 function ler() {
     if (n5 < date.length){
-        document.querySelector(".data").innerHTML += date.charAt(n5);
+        document.querySelector("#date").innerHTML += date.charAt(n5);
         n5++;
     }
     else if (n6 < nome.length && n5>= date.length){
-        document.querySelector(".name").innerHTML += nome.charAt(n6);
+        document.querySelector("#nome").innerHTML += nome.charAt(n6);
         n6++;
     }
     else if (n1 < t1.length && n6 >= nome.length && n5 >= date.length){
-        document.querySelector(".l1").innerHTML += t1.charAt(n1);
+        document.querySelector("#p1").innerHTML += t1.charAt(n1);
         n1++;
     }
     else if (n2<t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
-        document.querySelector(".l2").innerHTML += t2.charAt(n2);
+        document.querySelector("#p2").innerHTML += t2.charAt(n2);
         n2++;
     }
     else if (n3<t3.length && n2>=t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
-        document.querySelector(".l3").innerHTML += t3.charAt(n3);
+        document.querySelector("#p3").innerHTML += t3.charAt(n3);
         n3++;
     }
     else if (n4< assinado.length && n3>=t3.length && n2>=t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
-        document.querySelector(".assin").innerHTML += assinado.charAt(n4);
+        document.querySelector("#assinado").innerHTML += assinado.charAt(n4);
         n4++;
     }
 

@@ -855,10 +855,10 @@ img.sala:nth-child(7) { /*tapete*/
     transform: rotate(15deg);
     cursor: pointer;
 }
+
 #textoCartaNursery{
     display:none;
 }
-
 
 .cruzNursery {
     position: fixed;
@@ -867,8 +867,6 @@ img.sala:nth-child(7) { /*tapete*/
     width: 2%;
     z-index: 600;
     transform: rotate(-6deg);
-
-
 }
 
 .folha {
