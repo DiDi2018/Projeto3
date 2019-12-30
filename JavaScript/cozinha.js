@@ -326,7 +326,7 @@ function draw() {
             canvas.height = h;
             context.drawImage(capture.elt, 0, 0);
             let data = canvas.toDataURL('image/png');
-            localStorage.setItem('imageCozinha', data);
+            sessionStorage.setItem('imageCozinha', data);
 
             count5=true;
             winLetra("E");
