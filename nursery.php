@@ -127,7 +127,7 @@ session_start();
     <a-entity cursor="rayOrigin: mouse"></a-entity>
     <a-image id="cartaNursery" src="images/cozinha/carta.png" position="0 -11 -30" height="6" width="6" depth="1" material="alphaTest: 0.5" rotation="0 0 20" onclick="aparecer()"></a-image>
 </a-scene>
-<audio id="psicologofinal" src="sons/nursery/psicologofinal.mp3"></audio>
+<audio id="psicologofinal" src="sons/nursery/psicologofinal2.ogg"></audio>
 <div id="textoCartaNursery">
     <img class='folha' src='images/cozinha/papel.png' alt="papelcarta">
     <div class='fundo'></div>
@@ -142,6 +142,11 @@ session_start();
         <br>
         <p id='assinado'></p>
     </div>
+</div>
+
+<div class="PopUpSorriso">
+    <div class='fundosmile'></div>
+<p>WHY ARE YOU NOT SMILING?</p>
 </div>
 
 <div class="lydiaTexto" style="z-index: 10">

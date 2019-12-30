@@ -17,7 +17,8 @@ imagens[7] = "images/nursery/leao_amarelo_ruido.png";
 imagens[8] = "images/nursery/zebra.png";
 imagens[9] = "images/nursery/zebra_ruido.png";
 
-var psi=false;
+var psi = false;
+var fecharcarta = 0;
 
 function rodarImagem(x) {
     let nrImagem;
@@ -135,83 +136,111 @@ function draw() {
         var MouthTop = createVector(positions[58][0], positions[58][1]);
         var MouthBottom = createVector(positions[59][0], positions[59][1]);
         var boca = MouthTop.dist(MouthBottom);
+        var MouthLeft = createVector(positions[50][0], positions[50][1]);
+        var MouthRight = createVector(positions[44][0], positions[44][1]);
+        var sorriso = MouthLeft.dist(MouthRight);
+
     }
     if (boca >= 26) {
         gritos.play();
     } else {
         gritos.pause();
     }
+
+    //SmilePopUp
+    if (fecharcarta === true) {
+        setTimeout(function () {
+            document.querySelector(".PopUpSorriso").style.display = "block";
+        }, 1000);
+        if (sorriso > 80) {
+            document.querySelector(".PopUpSorriso").style.display = "none";
+        }
+    }
+
 }
 
 let n = new Date();
 let y = n.getFullYear();
 let m = n.getMonth() + 1;
 let d = n.getDate();
-let date = d +"/" + m + "/" + y;
+let date = d + "/" + m + "/" + y;
 let nome = document.getElementById("php").innerHTML;
-let t1="If you have found this letter it's because you're in the Nursery.";
-let t2= "Now you only have one way out! This if technology hasn't taken over you yet. Find the security panel and turn off the Happy Life Home.";
-let t3= "Good luck!";
-let assinado="Mr.McClean";
-let n5=0;
-let n6=0;
-let n1=0;
-let n2=0;
-let n3=0;
-let n4=0;
+let t1 = "If you have found this letter it's because you're in the Nursery.";
+let t2 = "Now you only have one way out! This if technology hasn't taken over you yet. Find the security panel and turn off the Happy Life Home.";
+let t3 = "Good luck!";
+let assinado = "Mr.McClean";
+let n5 = 0;
+let n6 = 0;
+let n1 = 0;
+let n2 = 0;
+let n3 = 0;
+let n4 = 0;
 
 function ler() {
-    if (n5 < date.length){
+    if (n5 < date.length) {
         document.querySelector("#date").innerHTML += date.charAt(n5);
         n5++;
-    }
-    else if (n6 < nome.length && n5>= date.length){
+    } else if (n6 < nome.length && n5 >= date.length) {
         document.querySelector("#nome").innerHTML += nome.charAt(n6);
         n6++;
-    }
-    else if (n1 < t1.length && n6 >= nome.length && n5 >= date.length){
+    } else if (n1 < t1.length && n6 >= nome.length && n5 >= date.length) {
         document.querySelector("#p1").innerHTML += t1.charAt(n1);
         n1++;
-    }
-    else if (n2<t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
+    } else if (n2 < t2.length && n1 >= t1.length && n6 >= nome.length && n5 >= date.length) {
         document.querySelector("#p2").innerHTML += t2.charAt(n2);
         n2++;
-    }
-    else if (n3<t3.length && n2>=t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
+    } else if (n3 < t3.length && n2 >= t2.length && n1 >= t1.length && n6 >= nome.length && n5 >= date.length) {
         document.querySelector("#p3").innerHTML += t3.charAt(n3);
         n3++;
-    }
-    else if (n4< assinado.length && n3>=t3.length && n2>=t2.length && n1>= t1.length && n6>= nome.length && n5>=date.length){
+    } else if (n4 < assinado.length && n3 >= t3.length && n2 >= t2.length && n1 >= t1.length && n6 >= nome.length && n5 >= date.length) {
         document.querySelector("#assinado").innerHTML += assinado.charAt(n4);
         n4++;
     }
 
-    if(n4 < assinado.length){
-        setTimeout(ler, 10);
+    if (n4 < assinado.length) {
+        setTimeout(ler, 45);
 
 
     }
 }
 
 function aparecer() {
-     if (document.getElementById("lydianursery").ended) {
-    document.getElementById("textoCartaNursery").style.display = "block";
-         if(psi===false){
-             document.getElementById("psicologofinal").play();
-         }
-    psi=true;
-    ler();
-     }
+    if (document.getElementById("lydianursery").ended) {
+        document.getElementById("textoCartaNursery").style.display = "block";
+        if (psi === false) {
+            document.getElementById("psicologofinal").play();
+        }
+        psi = true;
+        ler();
+    }
 
 }
 
 function sair() {
     if (document.getElementById("psicologofinal").ended) {
+        fecharcarta++;
         document.getElementById('textoCartaNursery').style.display = "none";
     }
 
     //   document.removeEventListener("click", fecharfora);
 }
+
+function popupSmile() {
+    //SmilePopUp
+    if (fecharcarta>0) {
+        setTimeout(function () {
+            document.querySelector(".PopUpSorriso").style.display = "block";
+        }, 1000);
+        if (sorriso > 80) {
+            document.querySelector(".PopUpSorriso").style.display = "none";
+        }
+    }
+}
+
+popupSmile();
+
+
+
 
 
 
