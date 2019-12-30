@@ -319,6 +319,15 @@ function draw() {
         sorriso = MouthLeft.dist(MouthRight);
 
         if (count1 && count2 && count3 && count4 && smile.paused && sorriso > 80 && count5===false) {
+            //save image
+            let canvas = document.createElement('canvas');
+            let context = canvas.getContext('2d');
+            canvas.width = w;
+            canvas.height = h;
+            context.drawImage(capture.elt, 0, 0);
+            let data = canvas.toDataURL('image/png');
+            localStorage.setItem('imageCozinha', data);
+
             count5=true;
             winLetra("E");
         }
