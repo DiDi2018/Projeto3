@@ -18,7 +18,7 @@ imagens[8] = "images/nursery/zebra.png";
 imagens[9] = "images/nursery/zebra_ruido.png";
 
 var psi = false;
-var fecharcarta = 0;
+var fecharcarta = false;
 
 function rodarImagem(x) {
     let nrImagem;
@@ -86,17 +86,17 @@ function removerTexto() {
             document.querySelector('a-scene').style.display = "none";
             document.getElementById('textoCartaNursery').style.display = "none";
             document.getElementById("audio_ruido").play();
-        }, 10000);
+        }, 20000);
         setTimeout(function () {
             document.querySelector("#ruido").style.display = "none";
             document.getElementById("audio_ruido").pause();
             document.querySelector(".lydia_nursery").style.display = "none";
             document.querySelector("#texto_erro").style.display = "block";
-        }, 12000);
+        }, 24000);
 
         setTimeout(function () {
             window.location.href = "index.php";
-        }, 15000);
+        }, 30000);
     }
 }
 
@@ -198,7 +198,7 @@ function ler() {
     }
 
     if (n4 < assinado.length) {
-        setTimeout(ler, 45);
+        setTimeout(ler, 20);
 
 
     }
@@ -218,7 +218,7 @@ function aparecer() {
 
 function sair() {
     if (document.getElementById("psicologofinal").ended) {
-        fecharcarta++;
+        fecharcarta = true;
         document.getElementById('textoCartaNursery').style.display = "none";
     }
 
@@ -227,11 +227,11 @@ function sair() {
 
 function popupSmile() {
     //SmilePopUp
-    if (fecharcarta>0) {
+    if (fecharcarta === true) {
         setTimeout(function () {
             document.querySelector(".PopUpSorriso").style.display = "block";
-        }, 1000);
-        if (sorriso > 80) {
+        }, 10000);
+        if (sorriso > 76) {
             document.querySelector(".PopUpSorriso").style.display = "none";
         }
     }

@@ -894,3 +894,23 @@ img.sala:nth-child(7) { /*tapete*/
     left: 0;
     z-index: 0;
 }
+
+.PopUpSorrisoTexto{
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-54%);
+    font-size: 2.5em;
+}
+
+.PopUpSorriso img{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 40vh;
+    top: 50%;
+    transform: translateY(-50%);
+
+}

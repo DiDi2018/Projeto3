@@ -125,7 +125,8 @@ session_start();
 
     <!--Carta do Psicólogo-->
     <a-entity cursor="rayOrigin: mouse"></a-entity>
-    <a-image id="cartaNursery" src="images/cozinha/carta.png" position="0 -11 -30" height="6" width="6" depth="1" material="alphaTest: 0.5" rotation="0 0 20" onclick="aparecer()"></a-image>
+    <a-image id="cartaNursery" src="images/cozinha/carta.png" position="0 -11 -30" height="6" width="6" depth="1"
+             material="alphaTest: 0.5" rotation="0 0 20" onclick="aparecer()"></a-image>
 </a-scene>
 <audio id="psicologofinal" src="sons/nursery/psicologofinal2.ogg"></audio>
 <div id="textoCartaNursery">
@@ -146,7 +147,8 @@ session_start();
 
 <div class="PopUpSorriso">
     <div class='fundosmile'></div>
-<p>WHY ARE YOU NOT SMILING?</p>
+    <img src = "images/paper_choque.png" alt="">
+    <p class="PopUpSorrisoTexto">WHY ARE YOU NOT SMILING?! :)</p>
 </div>
 
 <div class="lydiaTexto" style="z-index: 10">
