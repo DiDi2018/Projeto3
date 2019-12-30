@@ -36,7 +36,7 @@ function click(x){
     let a = letter[x].innerHTML;
     let css1 = letter[x].style.fontWeight;
     let css2 = letter[x].style.fontStyle;
-    if(array.includes(a)){
+    if(array.includes(a) && guess[array.indexOf(a)].innerText === '_'){
         if(css1 !== ""){
             guess[array.indexOf(a)].setAttribute("style","font-weight: " + css1);
         }
