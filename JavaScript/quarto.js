@@ -118,6 +118,15 @@ function draw() {
     }
 
     if (open >= 30 && i1 === text1Lydia.length && audio_q1.ended && correr === 0) {
+        //save image
+        let canvas = document.createElement('canvas');
+        let context = canvas.getContext('2d');
+        canvas.width = w;
+        canvas.height = h;
+        context.drawImage(capture.elt, 0, 0);
+        let data = canvas.toDataURL('image/png');
+        sessionStorage.setItem('imagemQuarto', data);
+
         document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
         document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
         cortina_esq.src = "images/quarto/cortina_azul_esq.png";

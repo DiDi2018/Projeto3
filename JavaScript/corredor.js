@@ -37,6 +37,15 @@ function aproximar() {
         }
     }
     else if(value >= -500 && textos){
+        //save image
+        let canvas = document.createElement('canvas');
+        let context = canvas.getContext('2d');
+        canvas.width = w;
+        canvas.height = h;
+        context.drawImage(capture.elt, 0, 0);
+        let data = canvas.toDataURL('image/png');
+        sessionStorage.setItem('imagemCorredor', data);
+
         textos = false;
         gritos.pause();
         winLetra('T');
@@ -131,17 +140,19 @@ function draw() {
     }
 
     if (boca >= 26) {
-        aproximar();
-        gritos.play();
         if(textoGritos === false){
             textoGritos = true;
             setTimeout(function(){
+                gritos.pause();
                 typewriter2();
                 audio_lydia2.play();
             }, 30);
         }
+        else {
+            aproximar();
+            gritos.play();
+        }
     }
-
     else{
         gritos.pause();
     }

@@ -33,6 +33,16 @@ function runDetection() {
     model.detect(video).then(predictions => {
         if(predictions.length > 0) {
             console.log("Predictions: ", predictions);
+
+            //save image
+            let canvas = document.createElement('canvas');
+            let context = canvas.getContext('2d');
+            canvas.width = w;
+            canvas.height = h;
+            context.drawImage(capture.elt, 0, 0);
+            let data = canvas.toDataURL('image/png');
+            sessionStorage.setItem('imagemAcenar', data);
+
             end();
         }
         else {

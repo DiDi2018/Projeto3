@@ -71,6 +71,15 @@ audios[1].addEventListener("ended", function(){
 //clicar gato
 
 function gatoclick() {
+    //save image
+    let canvas = document.createElement('canvas');
+    let context = canvas.getContext('2d');
+    canvas.width = w;
+    canvas.height = h;
+    context.drawImage(capture.elt, 0, 0);
+    let data = canvas.toDataURL('image/png');
+    sessionStorage.setItem('imagemSala', data);
+
     gatoEvent = true;
     document.querySelector(".lydiaTexto p").innerHTML = "";
     typeWriter2();
