@@ -37,9 +37,9 @@ function runDetection() {
             //save image
             let canvas = document.createElement('canvas');
             let context = canvas.getContext('2d');
-            canvas.width = w;
-            canvas.height = h;
-            context.drawImage(capture.elt, 0, 0);
+            canvas.width = 640;
+            canvas.height = 480;
+            context.drawImage(video, 0, 0);
             let data = canvas.toDataURL('image/png');
             sessionStorage.setItem('imagemAcenar', data);
 
