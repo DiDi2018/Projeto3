@@ -912,18 +912,16 @@ img.sala:nth-child(7) { /*tapete*/
 
 #texto_erro{
     display: none;
-    Position: absolute;
+    position: absolute;
     left:50%;
     top: 45%;
     transform: translateX(-50%);
 }
 
-#final {
-    transition: display 1s;
-}
-
 #final div {
     width: 30%;
+    position: absolute;
+    transition: opacity 0.3s ease-in;
 }
 
 #final div img {
@@ -932,7 +930,8 @@ img.sala:nth-child(7) { /*tapete*/
 }
 
 #final div p {
-    margin: 0;
     position: relative;
     display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
 }

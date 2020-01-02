@@ -15,33 +15,50 @@ srcImage();
 let divs = document.querySelectorAll('#final div');
 
 setTimeout(function () {
-    divs[0].style.display = 'inline-block';
+    divs[0].style.opacity = '1';
 },500);
 
 setTimeout(function () {
-    divs[1].style.display = 'inline-block';
+    divs[0].style.opacity = '0';
+    setTimeout(function(){
+        divs[1].style.opacity = '1';
+    },500);
 },2500);
 
 setTimeout(function () {
-    divs[2].style.display = 'inline-block';
-},5500);
+    divs[1].style.opacity = '0';
+    setTimeout(function(){
+        divs[2].style.opacity = '1';
+    },500);
+},5000);
 
 setTimeout(function () {
-    divs[3].style.display = 'inline-block';
-},8000);
+    divs[2].style.opacity = '0';
+    setTimeout(function(){
+        divs[3].style.opacity = '1';
+    },500);
+},7000);
 
 setTimeout(function () {
-    divs[4].style.display = 'inline-block';
-},9500);
+    divs[3].style.opacity = '0';
+    setTimeout(function(){
+        divs[4].style.opacity = '1';
+    },500);
+},9000);
 
 setTimeout(function(){
-    for(let i = 0; i < divs.length; i++){
-        divs[i].style.display = 'none';
-    }
-    document.querySelector('#texto_erro').style.display = 'block';
+    divs[4].style.opacity = '0';
+    document.querySelector('#ruido').style.visibility = 'visible';
+    document.querySelector('#audio_ruido').play();
 },11000);
+
+setTimeout(function(){
+    document.querySelector('#ruido').style.visibility = 'hidden';
+    document.querySelector('#audio_ruido').pause();
+    document.querySelector('#texto_erro').style.display = 'block';
+},13000);
 
 setTimeout(function(){
     sessionStorage.clear();
     window.location = 'index.php';
-},13000);
+},14000);

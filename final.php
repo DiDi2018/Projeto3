@@ -19,28 +19,31 @@
 </header>
 
 <main>
+    <img id="ruido" src="images/corredor/ruido.jpg" alt="" style="width:100%; height: 100vh; position: absolute; visibility: hidden; z-index: 10">
+    <audio id="audio_ruido" src="sons/corredor/ruido.mp3"></audio>
+
     <div id="final">
-        <div style="display: none">
+        <div style="opacity: 0; left: 5%; top: 5%">
             <img alt="Waving image" src="">
             <p>Something</p>
         </div>
 
-        <div style="display: none">
+        <div style="opacity: 0; left: 35%; top: 20%">
             <img alt="Kitchen image" src="">
             <p>Look at that fake smile</p>
         </div>
 
-        <div style="display: none">
+        <div style="opacity: 0; right: 10%; top: 40%">
             <img alt="Living-room image" src="">
             <p>Something</p>
         </div>
 
-        <div style="display: none">
+        <div style="opacity: 0; left: 10%; top: 40%">
             <img alt="Bedroom image" src="">
             <p>Something</p>
         </div>
 
-        <div style="display: none">
+        <div style="opacity: 0; right: 10%; top: 15%">
             <img alt="Hallway image" src="">
             <p>Something</p>
         </div>
