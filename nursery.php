@@ -20,26 +20,12 @@ session_start();
     <img class="sobre" src="images/header/sobre.png" alt=""/>
 
     <div class="creditos">
-        <!--<div class="creditostexto">
-            <h4>Made By</h4>
-            <p>Diana Dias</p><br>
-            <p>Maria Figueira</p><br>
-            <p>Maria Soares</p>
-            <h4>Guidance of</h4>
-            <p>Ana Boavida, Luís Pereira and Pedro Martins</p>
-            <h4>Design and Multimedia</h4>
-            <p>Project 3 - Multimedia Applications</p>
-            <h4>University of Coimbra</h4>
-            <p> Faculty of Sciences and Technology</p>
-            <h5>2019/2020</h5>
-        </div>-->
         <img class="maquina" src="images/header/maquina3.png" alt=""/>
         <div class="fundo"></div>
     </div>
 </header>
 
-<img id="ruido" src="images/corredor/ruido.jpg" alt=""
-     style="width:100%; height: 100vh; position: absolute; display: none; z-index: 10">
+<img id="ruido" src="images/corredor/ruido.jpg" alt="" style="width:100%; height: 100vh; position: absolute; display: none; z-index: 10">
 <audio id="audio_ruido" src="sons/corredor/ruido.mp3"></audio>
 
 <a-scene id="fundo_nursery" background="color: yellow" vr-mode-ui="enabled: false">
@@ -128,7 +114,9 @@ session_start();
     <a-image id="cartaNursery" src="images/cozinha/carta.png" position="0 -11 -30" height="6" width="6" depth="1"
              material="alphaTest: 0.5" rotation="0 0 20" onclick="aparecer()"></a-image>
 </a-scene>
+
 <audio id="psicologofinal" src="sons/nursery/psicologofinal2.ogg"></audio>
+
 <div id="textoCartaNursery">
     <img class='folha' src='images/cozinha/papel.png' alt="papelcarta">
     <div class='fundo'></div>
@@ -158,9 +146,6 @@ session_start();
 <audio id="grito" src="sons/corredor/ScreamingPeople.ogg"></audio>
 
 <img class="lydia_nursery" src="images/Lydia1.png" height="1000" width="1000" alt=""/>
-<div id="texto_erro">
-    <p>ERROR CONNECTION </p>
-</div>
 
 <audio id="lydianursery" src="sons/nursery/text1Lydia.mp3"></audio>
 

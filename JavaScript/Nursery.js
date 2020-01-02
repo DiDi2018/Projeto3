@@ -82,24 +82,17 @@ function removerTexto() {
 
     if (i1 <= 0) {
         setTimeout(function () {
-            document.querySelector("#ruido").style.display = "block";
-            document.querySelector('a-scene').style.display = "none";
+            document.querySelector(".PopUpSorriso").style.display = "none";
             document.getElementById('textoCartaNursery').style.display = "none";
+            document.querySelector('a-scene').style.display = "none";
+            document.querySelector("#ruido").style.display = "block";
             document.getElementById("audio_ruido").play();
-        }, 20000);
-        setTimeout(function () {
-            document.querySelector("#ruido").style.display = "none";
-            document.getElementById("audio_ruido").pause();
-            document.querySelector(".lydia_nursery").style.display = "none";
-            document.querySelector("#texto_erro").style.display = "block";
-        }, 24000);
-
-        setTimeout(function () {
-            window.location.href = "index.php";
         }, 30000);
+        setTimeout(function () {
+            window.location.href = "final.php";
+        }, 33000);
     }
 }
-
 
 document.querySelector('a-scene').addEventListener('loaded', function () {
     audio[3].play();
@@ -156,7 +149,6 @@ function draw() {
             document.querySelector(".PopUpSorriso").style.display = "none";
         }
     }
-
 }
 
 let n = new Date();
@@ -199,8 +191,6 @@ function ler() {
 
     if (n4 < assinado.length) {
         setTimeout(ler, 20);
-
-
     }
 }
 
@@ -213,7 +203,6 @@ function aparecer() {
         psi = true;
         ler();
     }
-
 }
 
 function sair() {
@@ -224,25 +213,3 @@ function sair() {
 
     //   document.removeEventListener("click", fecharfora);
 }
-
-function popupSmile() {
-    //SmilePopUp
-    if (fecharcarta === true) {
-        setTimeout(function () {
-            document.querySelector(".PopUpSorriso").style.display = "block";
-        }, 10000);
-        if (sorriso > 76) {
-            document.querySelector(".PopUpSorriso").style.display = "none";
-        }
-    }
-}
-
-popupSmile();
-
-
-
-
-
-
-
-

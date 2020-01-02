@@ -843,13 +843,7 @@ img.sala:nth-child(7) { /*tapete*/
     font-weight: lighter;
 }
 
-#texto_erro{
-    display: none;
-    Position: absolute;
-    left:50%;
-    top: 45%;
-    transform: translateX(-50%);
-}
+/*NURSERY*/
 
 #cartaNursery {
     transform: rotate(15deg);
@@ -879,10 +873,10 @@ img.sala:nth-child(7) { /*tapete*/
     transform: rotate(-6deg);
 }
 
-
 .PopUpSorriso{
     display: none;
 }
+
 .fundosmile {
     transition: all 1s ease 0s;
     background-color: black;
@@ -912,5 +906,33 @@ img.sala:nth-child(7) { /*tapete*/
     height: 40vh;
     top: 50%;
     transform: translateY(-50%);
+}
 
+/*FINAL*/
+
+#texto_erro{
+    display: none;
+    Position: absolute;
+    left:50%;
+    top: 45%;
+    transform: translateX(-50%);
+}
+
+#final {
+    transition: display 1s;
+}
+
+#final div {
+    width: 30%;
+}
+
+#final div img {
+    width: 100%;
+    position: relative;
+}
+
+#final div p {
+    margin: 0;
+    position: relative;
+    display: inline-block;
 }
