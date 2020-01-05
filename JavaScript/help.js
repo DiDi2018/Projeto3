@@ -6,20 +6,18 @@ let clicar = false;
 let clicar2 = false;
 
 function aparecer() {
-
     if (clicar === false) {
         instrucoes.style.display = "block";
         creditos.style.display = "none";
         clicar = true;
         clicar2=false;
-
     }
+
     else if(clicar === true) {
         instrucoes.style.display = "none";
         creditos.style.display = "none";
         clicar = false;
     }
-
 }
 
 if (help !== null) {
@@ -49,3 +47,47 @@ function aparecer2() {
 }
 
 sobre.addEventListener("click", aparecer2);
+
+//RESIZE
+
+let body = document.querySelector('body');
+let widthOriginal = 1800;
+let heightOriginal = 900;
+body.style.width = '1800px';
+body.style.height = '900px';
+console.log(widthOriginal + ", " + heightOriginal);
+
+function resize(){
+    let height = window.innerHeight;
+    let width = window.innerWidth;
+
+    body.style.top = 0;
+    body.style.left = 0;
+
+    let scale = Math.min(width / widthOriginal, height / heightOriginal);
+    body.style.transform = "scale(" + scale + ")";
+
+    let position = body.getBoundingClientRect();
+    let top = - position['top'] + ((height - position['height'])/2);
+    let left = - position['left'] + ((width - position['width'])/2);
+    body.style.top = top + 'px';
+    body.style.left = left + 'px';
+
+    console.log(body.getBoundingClientRect());
+    console.log('resize');
+    console.log(height + ", " + width);
+}
+
+window.addEventListener('resize', resize);
+
+function resizeBegin(){
+    if(document.readyState === 'complete'){
+        body.style.visibility = 'visible';
+        resize();
+    }
+    else {
+        setTimeout(resizeBegin,50);
+    }
+}
+
+resizeBegin();
