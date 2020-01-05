@@ -40,12 +40,13 @@ session_start();
           style="cursor:default;">
 </map>
 
-
 <audio id="audio2" src="sons/cozinha/Monstro2.ogg"></audio>
+
 <img class="lydia" src="images/Lydia1.png" alt="lydia" height="1000" width="1000"/>
 <div class="lydiaTexto">
     <p></p>
 </div>
+
 <audio id="apresentacao" src="sons/cozinha/ApresentacaoCozinha.ogg"></audio>
 <audio id="smile" src="sons/cozinha/SmileLydia.ogg"></audio>
 <audio id="psicologo" src="sons/cozinha/psicologo.mp3"></audio>
@@ -65,6 +66,7 @@ session_start();
         <img id='cruz' src='images/cozinha/cruz.png' alt="cruz">
     </div>
 </div>
+
 <div class="win">
     <div></div>
     <a href="Menus/LivingRoom.html"><img src="images/seta.png" width="319" height="133" alt=""></a>

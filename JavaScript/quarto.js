@@ -32,28 +32,10 @@ function aparecerTexto() {
         i1++;
         setTimeout(aparecerTexto, speed);
     }
-    /*else {
-        removetext();
-    }*/
 }
 
 audio_q1.play();
 aparecerTexto();
-
-/*let stuff;
-
-function removetext(){
-    if(i1>0 && audio_q1.ended){
-        let tmp = document.querySelector(".lydiaTexto p").innerHTML;
-        tmp = tmp.slice(0,i1 -1);
-        document.querySelector(".lydiaTexto p").innerHTML = tmp;
-        i1 = i1 - 1;
-        stuff = setTimeout(removetext, 30);
-    }
-    if(!audio_q1.ended){
-        stuff = setTimeout(removetext, 30);
-    }
-}*/
 
 //TEXTO LYDIA 2
 var audio_q2 = document.getElementById('audio_q2');
@@ -65,7 +47,7 @@ function texto2() {
         i2++;
         setTimeout(texto2, speed);
     } else {
-        cama.setAttribute("usemap","#bedmap");
+        cama.setAttribute("usemap", "#bedmap");
         removeText2();
     }
 }
@@ -106,47 +88,60 @@ function setup() {
     tracker.start(capture.elt);
 }
 
+var sobrancelha0;
+var olho0;
+var open0;
+var sobrancelha;
+var olho;
+var open;
+
 function draw() {
-    // image(capture, 0, 0, w, h);
     var positions = tracker.getCurrentPosition();
 
     //distância entre sobrancelha e olho
-    if (positions.length > 0) {
-        var sobrancelha = createVector(positions[20][0], positions[20][1]);
-        var olho = createVector(positions[24][0], positions[24][1]);
-        var open = sobrancelha.dist(olho);
-    }
+    if (positions.length > 0 && audio_q1.ended) {
+        if (open0 === undefined) {
+            sobrancelha0 = createVector(positions[20][0], positions[20][1]);
+            olho0 = createVector(positions[24][0], positions[24][1]);
+            open0 = sobrancelha0.dist(olho0);
 
-    if (open >= 30 && i1 === text1Lydia.length && audio_q1.ended && correr === 0) {
-        //save image
-        let canvas = document.createElement('canvas');
-        let context = canvas.getContext('2d');
-        canvas.width = w;
-        canvas.height = h;
-        context.drawImage(capture.elt, 0, 0);
-        let data = canvas.toDataURL('image/png');
-        sessionStorage.setItem('imagemQuarto', data);
-
-        document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
-        document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
-        cortina_esq.src = "images/quarto/cortina_azul_esq.png";
-        cortina_dir.src = "images/quarto/cortina_azul_dir.png";
-        document.getElementById("quadrado").style.background = "white";
-        document.getElementById("quadrado").style.zIndex = "-10";
-        audio_cortina.play();
-        setTimeout(alertFunc, 2000);
-
-        function alertFunc() {
-            cortina_esq.src = "images/quarto/cortina_esq.png";
-            cortina_dir.src = "images/quarto/cortina_dir.png";
+        } else {
+            sobrancelha = createVector(positions[20][0], positions[20][1]);
+            olho = createVector(positions[24][0], positions[24][1]);
+            open = sobrancelha.dist(olho);
         }
 
-        correr = 1;
-        setTimeout(function () {
-            document.querySelector(".lydiaTexto p").innerHTML = "";
-            texto2();
-            audio_q2.play();
-        }, 2001);
+        if (open0 < open && open >= 1.2 * open0 && i1 === text1Lydia.length && audio_q1.ended && correr === 0) {
+            //save image
+            let canvas = document.createElement('canvas');
+            let context = canvas.getContext('2d');
+            canvas.width = w;
+            canvas.height = h;
+            context.drawImage(capture.elt, 0, 0);
+            let data = canvas.toDataURL('image/png');
+            sessionStorage.setItem('imagemQuarto', data);
+
+            document.getElementById("cortina_esq").classList.add("cortina_esq_azul");
+            document.getElementById("cortina_dir").classList.add("cortina_dir_azul");
+            cortina_esq.src = "images/quarto/cortina_azul_esq.png";
+            cortina_dir.src = "images/quarto/cortina_azul_dir.png";
+            document.getElementById("quadrado").style.background = "white";
+            document.getElementById("quadrado").style.zIndex = "-10";
+            audio_cortina.play();
+            setTimeout(alertFunc, 2000);
+
+            function alertFunc() {
+                cortina_esq.src = "images/quarto/cortina_esq.png";
+                cortina_dir.src = "images/quarto/cortina_dir.png";
+            }
+
+            correr = 1;
+            setTimeout(function () {
+                document.querySelector(".lydiaTexto p").innerHTML = "";
+                texto2();
+                audio_q2.play();
+            }, 2001);
+        }
     }
 }
 
@@ -194,7 +189,7 @@ audio_cama.addEventListener("ended", function () {
 
 function eventsRelogio() {
     cama.src = "images/quarto/cama.png";
-    relogio.setAttribute("usemap","#clockmap");
+    relogio.setAttribute("usemap", "#clockmap");
 
     horas.addEventListener("mouseenter", mouseOverRelogio);
     horas.addEventListener("mouseleave", mouseLeftRelogio);
