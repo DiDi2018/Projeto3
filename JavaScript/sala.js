@@ -125,29 +125,29 @@ function draw() {
         xInitial = positions[35][0] - positions[1][0];
         yInitial = positions[12][0] - positions[35][0];
 
-        for(let i=45; i<51; i++){
+        for(let i=44; i<50; i++){
             left[i] = document.styleSheets[0].cssRules[i].style.left;
-            left[i] = left[i].replace('vw', '');
+            left[i] = left[i].replace('%', '');
             left[i] = parseFloat(left[i]);
 
-            if (i===45){
-                stepLeftX[i] = (48 - left[i]) / xInitial;
+            if (i===44){
+                stepLeftX[i] = (33 - left[i]) / xInitial;
                 stepLeftY[i] = (left[i] - 0.5) / yInitial;
             }
-            else if (i===46){
-                stepLeftX[i] = (46 - left[i]) / xInitial;
+            else if (i===45){
+                stepLeftX[i] = (49 - left[i]) / xInitial;
+                stepLeftY[i] = (left[i] - 0.5) / yInitial;
+            }
+            else if(i===46){
+                stepLeftX[i] = (77 - left[i]) / xInitial;
                 stepLeftY[i] = (left[i] - 0.5) / yInitial;
             }
             else if(i===47){
-                stepLeftX[i] = (78 - left[i]) / xInitial;
+                stepLeftX[i] = (58 - left[i]) / xInitial;
                 stepLeftY[i] = (left[i] - 0.5) / yInitial;
             }
             else if(i===48){
-                stepLeftX[i] = (63 - left[i]) / xInitial;
-                stepLeftY[i] = (left[i] - 0.5) / yInitial;
-            }
-            else if(i===49){
-                stepLeftX[i] = (69 - left[i]) / xInitial;
+                stepLeftX[i] = (70 - left[i]) / xInitial;
                 stepLeftY[i] = (left[i] - 0.5) / yInitial;
             }
             else {
@@ -160,15 +160,15 @@ function draw() {
 
     if (positions.length > 0 && audios[0].ended && gatoEvent === false && initial) {
         //rules dos moveis começam no 46
-        for(let i=45; i<51; i++){
+        for(let i=44; i<50; i++){
             if((positions[12][0] - positions[35][0]) < yInitial){
                 let positionLeft = left[i] - stepLeftY[i]*(yInitial - (positions[12][0] - positions[35][0]));
-                positionLeft = positionLeft.toString() + "vw";
+                positionLeft = positionLeft.toString() + "%";
                 document.styleSheets[0].cssRules[i].style.left = positionLeft;
             }
             else {
                 let positionLeft = left[i] + stepLeftX[i]*(xInitial - (positions[35][0] - positions[1][0]));
-                positionLeft = positionLeft.toString() + "vw";
+                positionLeft = positionLeft.toString() + "%";
                 document.styleSheets[0].cssRules[i].style.left = positionLeft;
             }
         }

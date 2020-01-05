@@ -18,10 +18,6 @@ function rodarImagens() {
 }
 rodarImagens();
 
-function mouseOverChapeu() {
-
-}
-
 function revelacao(){
     document.querySelector("#botao_start").style.display="block";
     document.querySelector("#vencedor").classList.add("vencedorSurgir");

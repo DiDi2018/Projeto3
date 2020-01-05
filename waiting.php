@@ -11,9 +11,10 @@ $_SESSION['nome']=$_POST['name'];
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
 </head>
-<body class="fadeIn" style="overflow: hidden">
+
+<body style="overflow: hidden">
     <header>
-        <div id="quadrado_waiting"></div>
+        <img src="images/processing_fundo.png" id="quadrado_waiting" />
         <div class="txt_processing">
             <p>We are processing your submission...</p>
         </div>
@@ -22,4 +23,5 @@ $_SESSION['nome']=$_POST['name'];
 
     <script src="JavaScript/waiting.js"></script>
 </body>
+
 </html>

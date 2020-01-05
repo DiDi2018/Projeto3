@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: yellow">
 <head>
     <meta charset="UTF-8">
     <title>Nursery</title>
@@ -14,7 +14,7 @@ session_start();
     <script src="JavaScript/clmtrackr.min.js"></script>
 </head>
 
-<body>
+<body id="notFadeIn">
 <header>
     <p id='php'> Dear <?php echo $_SESSION['nome'] ?>,</p>
     <img class="sobre" src="images/header/sobre.png" alt=""/>
@@ -25,7 +25,7 @@ session_start();
     </div>
 </header>
 
-<img id="ruido" src="images/corredor/ruido.jpg" alt="" style="width:100%; height: 100vh; position: absolute; display: none; z-index: 10">
+<img id="ruido" src="images/corredor/ruido.jpg" alt="">
 <audio id="audio_ruido" src="sons/corredor/ruido.mp3"></audio>
 
 <a-scene id="fundo_nursery" background="color: yellow" vr-mode-ui="enabled: false">

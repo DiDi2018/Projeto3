@@ -134,12 +134,9 @@ var MouthBottom0;
 var boca0;
 
 function draw() {
-    // image(capture, 0, 0, w, h);
     var positions = tracker.getCurrentPosition();
 
-
     if (positions.length > 0 && audio_lydia1.ended) {
-
         if (boca0 === undefined) {
             MouthTop0 = createVector(positions[58][0], positions[58][1]);
             MouthBottom0 = createVector(positions[59][0], positions[59][1]);

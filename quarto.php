@@ -10,11 +10,10 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
 </head>
 
-<body class="fadeIn" onload="startTime()">
+<body onload="startTime()">
 
 <?php include 'headerinfo.php' ?>
 
-<main>
     <!--Objetos quarto-->
     <img id="cortina_esq" alt="cortina_esq" src="images/quarto/cortina_esq.png" height="2384" width="1026"/>
     <img id="cortina_dir" alt="cortina_dir" src="images/quarto/cortina_dir.png" height="2480" width="1230"/>
@@ -55,7 +54,6 @@
         <a href="Menus/Nursery.html"><img src="images/seta.png" width="319" height="133" alt=""></a>
     </div>
 
-</main>
 
 <script src="JavaScript/quarto.js"></script>
 <script src="JavaScript/main.js"></script>

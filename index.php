@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
 </head>
-<body>
+
+<body id="notFadeIn">
 
 <header>
     <img class="sobre" src="images/header/sobre.png" alt=""/>
@@ -18,7 +19,7 @@
 </header>
 
 <div id="publicidade">
-    <img class="fundopopup" alt="popup" src="images/index/fundo.png" height="2480" width="3508"/>
+    <img class="fundopopup" alt="popup" src="images/index/fundo.png" height="900" width="1800"/>
     <img class="casa" alt="casa" src="images/index/Casa.png"/>
     <img class="mulher" alt="mulher" src="images/index/mulher.png"/>
     <h1 class="titulo">GET A CHANCE OF WINNING AN AMAZING HAPPY LIFE HOME!</h1>

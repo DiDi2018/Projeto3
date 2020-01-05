@@ -310,10 +310,6 @@ function setup() {
     tracker.start(capture.elt);
 }
 
-/*
-var MouthLeft0 = createVector(positions0[50][0], positions0[50][1]);
-var MouthRight0 = createVector(positions0[44][0], positions0[44][1]);
-var sorriso0 = MouthLeft0.dist(MouthRight0);*/
 var MouthLeft0;
 var MouthRight0;
 var sorriso0;
@@ -331,8 +327,6 @@ function draw() {
             MouthRight = createVector(positions[44][0], positions[44][1]);
             sorriso = MouthLeft.dist(MouthRight);
         }
-        //console.log(sorriso);
-        console.log(sorriso0);
 
         if (count1 && count2 && count3 && count4 && sorriso0 < sorriso && sorriso>=1.3*sorriso0 && count5 === false) {
             //save image

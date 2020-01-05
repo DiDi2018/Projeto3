@@ -32,28 +32,10 @@ function aparecerTexto() {
         i1++;
         setTimeout(aparecerTexto, speed);
     }
-    /*else {
-        removetext();
-    }*/
 }
 
 audio_q1.play();
 aparecerTexto();
-
-/*let stuff;
-
-function removetext(){
-    if(i1>0 && audio_q1.ended){
-        let tmp = document.querySelector(".lydiaTexto p").innerHTML;
-        tmp = tmp.slice(0,i1 -1);
-        document.querySelector(".lydiaTexto p").innerHTML = tmp;
-        i1 = i1 - 1;
-        stuff = setTimeout(removetext, 30);
-    }
-    if(!audio_q1.ended){
-        stuff = setTimeout(removetext, 30);
-    }
-}*/
 
 //TEXTO LYDIA 2
 var audio_q2 = document.getElementById('audio_q2');
@@ -114,7 +96,6 @@ var olho;
 var open;
 
 function draw() {
-    // image(capture, 0, 0, w, h);
     var positions = tracker.getCurrentPosition();
 
     //distância entre sobrancelha e olho
@@ -129,9 +110,6 @@ function draw() {
             olho = createVector(positions[24][0], positions[24][1]);
             open = sobrancelha.dist(olho);
         }
-//        console.log(open);
-        console.log(open0);
-
 
         if (open0 < open && open >= 1.2 * open0 && i1 === text1Lydia.length && audio_q1.ended && correr === 0) {
             //save image

@@ -11,32 +11,18 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
 </head>
 
-<body class="fadeIn" style="overflow: hidden">
+<body style="overflow: hidden">
 
 <header>
     <img class="sobre" src="images/header/sobre.png" alt=""/>
 
     <div class="creditos">
-        <!--<div class="creditostexto">
-            <h4>Made By</h4>
-            <p>Diana Dias</p><br>
-            <p>Maria Figueira</p><br>
-            <p>Maria Soares</p>
-            <h4>Guidance of</h4>
-            <p>Ana Boavida, Luís Pereira and Pedro Martins</p>
-            <h4>Design and Multimedia</h4>
-            <p>Project 3 - Multimedia Applications</p>
-            <h4>University of Coimbra</h4>
-            <p> Faculty of Sciences and Technology</p>
-            <h5>2019/2020</h5>
-        </div>-->
         <img class="maquina" src="images/header/maquina3.png" alt=""/>
         <div class="fundo"></div>
     </div>
 </header>
 
-<div id="triangulo1"></div>
-<div id="triangulo2"></div>
+<img src="images/sorteio/fundo.png" id="triangulo">
 
 
     <div id="id_1">

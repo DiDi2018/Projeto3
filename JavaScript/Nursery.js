@@ -140,7 +140,7 @@ var boca0;
 function draw() {
     var positions = tracker.getCurrentPosition();
     if (positions.length > 0) {
-        if (fecharcarta ===true) {
+        if (fecharcarta) {
             if (sorriso0 === undefined) {
                 MouthLeft0 = createVector(positions[50][0], positions[50][1]);
                 MouthRight0 = createVector(positions[44][0], positions[44][1]);
@@ -151,7 +151,7 @@ function draw() {
                 sorriso = MouthLeft.dist(MouthRight);
             }
         }
-        if (fecharcarta===true) {
+        if (fecharcarta) {
             if (boca0 === undefined) {
                 MouthTop0 = createVector(positions[58][0], positions[58][1]);
                 MouthBottom0 = createVector(positions[59][0], positions[59][1]);
@@ -162,9 +162,8 @@ function draw() {
                 boca = MouthTop.dist(MouthBottom);
             }
         }
-
-
     }
+    
     if (boca >= 3.5 * boca0) {
         gritos.play();
     } else {
@@ -172,7 +171,7 @@ function draw() {
     }
 
     //SmilePopUp
-    if (fecharcarta === true) {
+    if (fecharcarta) {
         setTimeout(function () {
             document.querySelector(".PopUpSorriso").style.display = "block";
         }, 1000);
