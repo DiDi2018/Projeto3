@@ -27,16 +27,16 @@ function aproximar() {
             let imageCSS = image.style.transform;
             let valueIni = imageCSS.match(/translateZ\(([-]?)[0-9]{1,4}px\)/);
             let value = parseInt(valueIni[0].slice(11, valueIni[0].length - 3)) + 20;
-            if(value>=-200 && value<-25 && image.className === "hallway lamp"){
-                image.src="images/corredor/lamp_yellow.png"
-            } else if(value >= -25){
+            if (value >= -200 && value < -25 && image.className === "hallway lamp") {
+                image.src = "images/corredor/lamp_yellow.png"
+            } else if (value >= -25) {
                 image.style.display = "none";
             }
             value.toString();
 
             image.style.transform = imageCSS.replace(/translateZ\(([-]?)[0-9]{1,4}px\)/, `translateZ(${value}px)`);
         }
-    } else if(value >= -500 && textos){
+    } else if (value >= -500 && textos) {
         //save image
         let canvas = document.createElement('canvas');
         let context = canvas.getContext('2d');
@@ -53,7 +53,7 @@ function aproximar() {
 }
 
 function typewriter1() {
-    if (i1 < text1Lydia.length){
+    if (i1 < text1Lydia.length) {
         document.querySelector(".lydiaTexto p").innerHTML += text1Lydia.charAt(i1);
         i1++;
         setTimeout(typewriter1, speed);
@@ -62,21 +62,21 @@ function typewriter1() {
     }
 }
 
-function removeText1(){
-    if (i1 > 0 && audio_lydia1.ended){
+function removeText1() {
+    if (i1 > 0 && audio_lydia1.ended) {
         let tmp = document.querySelector(".lydiaTexto p").innerHTML;
-        tmp = tmp.slice(0,i1 - 1);
+        tmp = tmp.slice(0, i1 - 1);
         document.querySelector(".lydiaTexto p").innerHTML = tmp;
         i1 = i1 - 1;
         setTimeout(removeText1, 30);
     }
-    if (!audio_lydia1.ended){
+    if (!audio_lydia1.ended) {
         setTimeout(removeText1, 30);
     }
 }
 
 function typewriter2() {
-    if (i2 < text2Lydia.length){
+    if (i2 < text2Lydia.length) {
         document.querySelector(".lydiaTexto p").innerHTML += text2Lydia.charAt(i2);
         i2++;
         setTimeout(typewriter2, speed);
@@ -85,21 +85,21 @@ function typewriter2() {
     }
 }
 
-function removeText2(){
-    if (i2 > 0 && audio_lydia2.ended){
+function removeText2() {
+    if (i2 > 0 && audio_lydia2.ended) {
         let tmp = document.querySelector(".lydiaTexto p").innerHTML;
-        tmp = tmp.slice(0,i2 - 1);
+        tmp = tmp.slice(0, i2 - 1);
         document.querySelector(".lydiaTexto p").innerHTML = tmp;
         i2 = i2 - 1;
         setTimeout(removeText2, 30);
     }
 
-    if (!audio_lydia2.ended){
+    if (!audio_lydia2.ended) {
         setTimeout(removeText2, 30);
     }
 }
 
-audio_lydia2.addEventListener("ended",function () {
+audio_lydia2.addEventListener("ended", function () {
     textos = true;
 });
 
@@ -134,7 +134,6 @@ var MouthBottom0;
 var boca0;
 
 function draw() {
-    // image(capture, 0, 0, w, h);
     var positions = tracker.getCurrentPosition();
 
     if (positions.length > 0 && audio_lydia1.ended) {
@@ -156,11 +155,13 @@ function draw() {
                     typewriter2();
                     audio_lydia2.play();
                 }, 2000);
-            } else if (boca >= 3.5 * boca0 && audio_lydia2.ended) {
-                aproximar();
-            } else if (audio_lydia2.ended) {
-                gritos.pause();
             }
+        }
+        else if (boca >= 3.5 * boca0 && audio_lydia2.ended) {
+            aproximar();
+
+        } else if(audio_lydia2.ended) {
+            gritos.pause();
         }
     }
 }

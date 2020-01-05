@@ -328,7 +328,7 @@ function draw() {
             sorriso = MouthLeft.dist(MouthRight);
         }
 
-        if (count1 && count2 && count3 && count4 && smile.paused && sorriso > 80 && count5 === false) {
+        if (count1 && count2 && count3 && count4 && sorriso0 < sorriso && sorriso>=1.3*sorriso0 && count5 === false) {
             //save image
             let canvas = document.createElement('canvas');
             let context = canvas.getContext('2d');
@@ -342,6 +342,7 @@ function draw() {
             winLetra("E");
         }
     }
+
 }
 
 imageMapResize();

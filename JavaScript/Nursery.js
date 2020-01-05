@@ -139,7 +139,6 @@ var boca0;
 
 function draw() {
     var positions = tracker.getCurrentPosition();
-
     if (positions.length > 0) {
         if (fecharcarta) {
             if (sorriso0 === undefined) {
@@ -163,12 +162,12 @@ function draw() {
                 boca = MouthTop.dist(MouthBottom);
             }
         }
-
-        if (boca >= 3.5 * boca0) {
-            gritos.play();
-        } else {
-            gritos.pause();
-        }
+    }
+    
+    if (boca >= 3.5 * boca0) {
+        gritos.play();
+    } else {
+        gritos.pause();
     }
 
     //SmilePopUp
