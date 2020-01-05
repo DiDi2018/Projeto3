@@ -55,7 +55,6 @@ let widthOriginal = 1852;
 let heightOriginal = 900;
 body.style.width = '1852px';
 body.style.height = '900px';
-console.log(widthOriginal + ", " + heightOriginal);
 
 function resize(){
     let height = window.innerHeight;
