@@ -51,6 +51,7 @@ session_start();
         <img alt="" src="images/nursery/leao_amarelo_ruido.png" height="582" width="840"/>
 
         <img alt="" src="images/nursery/painel.jpg"/>
+        <img alt="" src="images/nursery/box.png"/>
         <img alt="carta" src="images/cozinha/carta.png">
 
     </a-assets>
@@ -105,8 +106,10 @@ session_start();
     <a-image src="images/nursery/bush_yellow.png" position="-210 -20 -10" rotation="0 60 0" height="25" width="25"
              depth="1" material="alphaTest: 0.5"></a-image>
 
-    <!--Tablet-->
+    <!--Caixa e interruptores-->
     <a-image src="images/nursery/painel.jpg" position="90 10 250" height="30" width="20" depth="1"
+             material="alphaTest: 0.5"></a-image>
+    <a-image src="images/nursery/box.png" position="90 10 250" height="50" width="50" depth="1"
              material="alphaTest: 0.5"></a-image>
 
     <!--Carta do Psicólogo-->
