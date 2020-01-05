@@ -51,9 +51,9 @@ sobre.addEventListener("click", aparecer2);
 //RESIZE
 
 let body = document.querySelector('body');
-let widthOriginal = 1800;
+let widthOriginal = 1850;
 let heightOriginal = 900;
-body.style.width = '1800px';
+body.style.width = '1850px';
 body.style.height = '900px';
 console.log(widthOriginal + ", " + heightOriginal);
 
@@ -72,10 +72,6 @@ function resize(){
     let left = - position['left'] + ((width - position['width'])/2);
     body.style.top = top + 'px';
     body.style.left = left + 'px';
-
-    console.log(body.getBoundingClientRect());
-    console.log('resize');
-    console.log(height + ", " + width);
 }
 
 window.addEventListener('resize', resize);
