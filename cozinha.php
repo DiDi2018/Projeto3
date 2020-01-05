@@ -71,7 +71,6 @@ session_start();
     <div></div>
     <a href="Menus/LivingRoom.html"><img src="images/seta.png" width="319" height="133" alt=""></a>
 </div>
-
 <script src="JavaScript/cozinha.js"></script>
 <script src="JavaScript/main.js"></script>
 <script src="JavaScript/help.js"></script>
