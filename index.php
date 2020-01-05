@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
 </head>
 
-<body  id="notFadeIn">
+<body id="notFadeIn">
 
 <header>
     <img class="sobre" src="images/header/sobre.png" alt=""/>
