@@ -1,9 +1,9 @@
 //RESIZE
 
 let body = document.querySelector('body');
-let widthOriginal = 1855;
+let widthOriginal = 1852;
 let heightOriginal = 900;
-body.style.width = '1855px';
+body.style.width = '1852px';
 body.style.height = '900px';
 console.log(widthOriginal + ", " + heightOriginal);
 
