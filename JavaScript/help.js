@@ -79,7 +79,9 @@ function resizeBegin(){
     if(document.readyState === 'complete'){
         resize();
         body.style.visibility = 'visible';
-        body.classList.add('fadeIn');
+        if(body.id !== 'notFadeIn'){
+            body.classList.add('fadeIn');
+        }
     }
     else {
         setTimeout(resizeBegin,50);

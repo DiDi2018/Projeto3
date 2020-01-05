@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body id="notFadeIn">
 
 <?php include 'headerinfo.php' ?>
 
