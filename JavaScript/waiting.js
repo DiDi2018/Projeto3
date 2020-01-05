@@ -1,10 +1,10 @@
 //RESIZE
 
 let body = document.querySelector('body');
-let widthOriginal = 1852;
-let heightOriginal = 900;
-body.style.width = '1852px';
-body.style.height = '900px';
+let widthOriginal = 1800;
+let heightOriginal = 891;
+body.style.width = '1800px';
+body.style.height = '891px';
 
 function resize(){
     let height = window.innerHeight;
@@ -21,8 +21,6 @@ function resize(){
     let left = - position['left'] + ((width - position['width'])/2);
     body.style.top = top + 'px';
     body.style.left = left + 'px';
-
-    console.log(width + ", " + height);
 }
 
 window.addEventListener('resize', resize);
