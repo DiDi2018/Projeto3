@@ -621,9 +621,15 @@ img.sala:nth-child(7) { /*tapete*/
     height: 65%;
     transform: rotate(-6deg);
     padding: 3%;
+    font-size: 17px;
 }
 
-#date, #assinado {
+#date {
+    width: 17%;
+    margin-left: 83%;
+}
+
+#assinado {
     width: 22%;
     margin-left: 78%;
 }
