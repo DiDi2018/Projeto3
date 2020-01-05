@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="notFadeIn">
 
 <header>
     <img class="sobre" src="images/header/sobre.png" alt=""/>
@@ -19,7 +19,7 @@
 </header>
 
 <main>
-    <img id="ruido" src="images/corredor/ruido.jpg" alt="" style="width:100%; height: 100vh; position: absolute; visibility: hidden; z-index: 10">
+    <img id="ruido" src="images/corredor/ruido.jpg" alt="">
     <audio id="audio_ruido" src="sons/corredor/ruido.mp3"></audio>
 
     <div id="final">

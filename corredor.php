@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body class="fadeIn" style="position: fixed; width: 100%;">
+<body style="position: fixed; width: 100%;">
 
 <?php include 'headerinfo.php' ?>
 
-<main>
+<main style="height: 100%;">
     <audio id="audio_ruido" src="sons/corredor/ruido.wav"></audio>
     <audio id="grito" src="sons/corredor/ScreamingPeople.ogg"></audio>
     <audio id="audio1" src="sons/corredor/text1Lydia.mp3"></audio>
@@ -46,7 +46,7 @@
         <img class="hallway lamp" src="images/corredor/lamp_yellow.png" width="" height="" alt="" style="transform: translateX(200%) translateY(115%) translateZ(0) rotate(-40deg)"/>
         <img class="hallway lamp" src="images/corredor/lamp_yellow.png" width="" height="" alt="" style="transform: translateX(-240%) translateY(110%) translateZ(0) rotate(50deg)"/>
 
-        <img class="hallway bush" src="images/corredor/Bush.png" height="348" width="612" alt="" style="width:35%; top: 70vh; left: -17vw; transform: translateZ(0);"/>
+        <img class="hallway bush" src="images/corredor/Bush.png" height="348" width="612" alt="" style="width:35%; top: 70%; left: -17%; transform: translateZ(0);"/>
     </div>
 
     <img class="lydia" src="images/Lydia1.png" height="1000" width="1000" alt="Lydia"/>
