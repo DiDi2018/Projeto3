@@ -11,7 +11,7 @@ $_SESSION['nome']=$_POST['name'];
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
 </head>
-<body style="overflow: hidden">
+<body class="fadeIn" style="overflow: hidden">
     <header>
         <div id="quadrado_waiting"></div>
         <div class="txt_processing">

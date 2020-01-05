@@ -13,7 +13,7 @@ session_start();
     <script src="JavaScript/clmtrackr.min.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body class="fadeIn">
 
 <?php include 'headerinfo.php'?>
 
