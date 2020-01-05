@@ -38,4 +38,3 @@ function winLetra(x){
 }
 
 imageMapResize();
-

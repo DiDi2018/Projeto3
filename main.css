@@ -277,15 +277,15 @@ img {
 .win img {
     position: fixed;
     width: 100%;
-    height: 40vh;
+    height: 40%;
 }
 
 .win a img {
     display: none;
-    width: 12vh;
+    width: 6%;
     height: auto;
     margin-left: 15%;
-    margin-top: -3vh;
+    margin-top: -0.5%;
     z-index: 2;
 }
 
@@ -295,7 +295,7 @@ img {
 
 .win p {
     line-height: 60px;
-    font-size: 3vh;
+    font-size: 26px;
     text-align: center;
     margin-top: 0;
 }
@@ -470,7 +470,7 @@ img.sala:nth-child(7) { /*tapete*/
     position: fixed;
     color: lightgrey;
     font-size: 60px;
-    margin-top: 6.5%;
+    top: 13%;
     left: 5.5%;
     transform: rotate(-1deg);
     font-family: 'digital-7', monospace;
@@ -654,14 +654,15 @@ img.sala:nth-child(7) { /*tapete*/
 /*HALLWAY*/
 
 .scene {
-    width: 75vw;
-    height: 100vh;
+    width: 75%;
+    height: 100%;
     perspective: 400px;
     perspective-origin: 50% 50%;
     display: flex;
     position: absolute;
     justify-content: center;
     z-index: -8;
+    overflow: hidden;
 }
 
 .hallway.tv {
