@@ -461,7 +461,7 @@ img.sala:nth-child(7) { /*tapete*/
 #relogio { /*relógio*/
     height: 250px;
     width: auto;
-    left: -5%;
+    left: 0;
     position: fixed;
     z-index: -6;
 }
@@ -471,7 +471,7 @@ img.sala:nth-child(7) { /*tapete*/
     color: lightgrey;
     font-size: 60px;
     top: 13%;
-    left: 5.5%;
+    left: 5%;
     transform: rotate(-1deg);
     font-family: 'digital-7', monospace;
     z-index: -6;
