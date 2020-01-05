@@ -27,11 +27,12 @@ window.addEventListener('resize', resize);
 
 function resizeBegin(){
     if(document.readyState === 'complete'){
+        resize();
         body.style.visibility = 'visible';
+        body.classList.add('fadeIn');
         setTimeout(function(){
             window.location.href="sorteio.php";
         }, 3000);
-        resize();
     }
     else {
         setTimeout(resizeBegin,50);

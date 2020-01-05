@@ -77,8 +77,9 @@ window.addEventListener('resize', resize);
 
 function resizeBegin(){
     if(document.readyState === 'complete'){
-        body.style.visibility = 'visible';
         resize();
+        body.style.visibility = 'visible';
+        body.classList.add('fadeIn');
     }
     else {
         setTimeout(resizeBegin,50);
