@@ -72,6 +72,8 @@ function resize(){
     let left = - position['left'] + ((width - position['width'])/2);
     body.style.top = top + 'px';
     body.style.left = left + 'px';
+
+    console.log(width + ", " + height);
 }
 
 window.addEventListener('resize', resize);
