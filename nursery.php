@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en" style="background-color: white">
+<html lang="en" style="background-color: yellow">
 <head>
     <meta charset="UTF-8">
     <title>Nursery</title>
