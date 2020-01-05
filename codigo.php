@@ -11,36 +11,36 @@
 
 <?php include 'headerinfo.php' ?>
 
-<main>
+<main style="height: 100%">
     <audio id="audio_ruido" src="sons/corredor/ruido.mp3"></audio>
     <audio id="audio_lydia" src="sons/corredor/textoLydia.mp3"></audio>
 
-    <img id="ruido" src="images/corredor/ruido.jpg" alt="" style="width:100%; height: 100vh; position: absolute; display: none; z-index: 10">
+    <img id="ruido" src="images/corredor/ruido.jpg" alt="">
 
     <img class="code" src="images/corredor/tv_ruido.png" height="958" width="1023" alt=""/>
 
     <div class="letters" style="display: none">
-        <a class="letter" style="top: 20%; left: 30%;">W</a>
-        <a class="letter" style="top: 25%; left: 53%;">U</a>
-        <a class="letter" style="top: 15%; left: 40%;">a</a>
-        <a class="letter" style="top: 40%; left: 33%;">J</a>
-        <a class="letter" style="top: 30%; left: 45%;">k</a>
-        <a class="letter" style="top: 45%; left: 55%;">I</a>
-        <a class="letter" style="top: 32%; left: 27%; font-weight: lighter">E</a>
-        <a class="letter" style="top: 20%; left: 48%;">l</a>
-        <a class="letter" style="top: 40%; left: 50%; font-style: italic">v</a>
-        <a class="letter" style="top: 26%; left: 38%;">d</a>
-        <a class="letter" style="top: 45%; left: 42%; font-weight: bold">T</a>
-    </div>
+        <a class="letter" style="top: 25%; left: 34%;">W</a>
+        <a class="letter" style="top: 30%; left: 54%;">U</a>
+        <a class="letter" style="top: 21%; left: 42%;">a</a>
+        <a class="letter" style="top: 43%; left: 35%;">J</a>
+        <a class="letter" style="top: 35%; left: 46%;">k</a>
+        <a class="letter" style="top: 48%; left: 55%;">I</a>
+        <a class="letter" style="top: 37%; left: 31%; font-weight: lighter">E</a>
+        <a class="letter" style="top: 25%; left: 48%;">l</a>
+        <a class="letter" style="top: 42%; left: 50%; font-style: italic">v</a>
+        <a class="letter" style="top: 31%; left: 40%;">d</a>
+        <a class="letter" style="top: 48%; left: 42%; font-weight: bold">T</a>
 
-    <div class="word" style="display: none">
-        <ul>
-            <li class="guess">_</li>
-            <li class="guess">_</li>
-            <li class="guess">_</li>
-            <li class="guess">_</li>
-            <li class="guess">_</li>
-        </ul>
+        <div class="word" style="display: none">
+            <ul>
+                <li class="guess">_</li>
+                <li class="guess">_</li>
+                <li class="guess">_</li>
+                <li class="guess">_</li>
+                <li class="guess">_</li>
+            </ul>
+        </div>
     </div>
 
     <img class="lydia" src="images/Lydia1.png" height="1000" width="1000" alt="Lydia"/>

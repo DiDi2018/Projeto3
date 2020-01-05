@@ -18,7 +18,7 @@
 </header>
 
 <div id="publicidade">
-    <img class="fundopopup" alt="popup" src="images/index/fundo.png" height="2480" width="3508"/>
+    <img class="fundopopup" alt="popup" src="images/index/fundo.png" height="900" width="1800"/>
     <img class="casa" alt="casa" src="images/index/Casa.png"/>
     <img class="mulher" alt="mulher" src="images/index/mulher.png"/>
     <h1 class="titulo">GET A CHANCE OF WINNING AN AMAZING HAPPY LIFE HOME!</h1>

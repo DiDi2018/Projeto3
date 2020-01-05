@@ -13,13 +13,13 @@
 <body style="position: fixed; width: 100%;">
 
     <img class="sala" src="images/sala/gato.png" height="1828" width="1368" alt="" usemap="#catmap"/>
-    <img class="sala" src="images/sala/sofa_pb.png" height="656" width="1500" alt=""/>
+    <img class="sala" src="images/sala/sofa_pb.png" height="655" width="1458" alt=""/>
     <img class="sala" src="images/sala/sala_table_pb.png" height="484" width="750" alt=""/>
     <img class="sala" src="images/sala/lamp.png" height="1000" width="262" alt=""/>
     <img class="sala" src="images/sala/comando_pb.png" height="600" width="800" alt=""/>
     <img class="sala" src="images/sala/TVLisa.png" height="510" width="378" alt=""/>
     <img class="sala" src="images/sala/carpete.png" height="428" width="920" alt=""/>
-    <div id="parede" style="background-color:#76d9fc ; width:100%; height:58vh; z-index:-10; position:fixed;"></div>
+    <div id="parede" style="background-color:#76d9fc ; width:100%; height:58%; z-index:-10; position:fixed;"></div>
 
     <map name="catmap">
         <area shape="poly" alt="image" onmouseover="hover()" onmouseout="nothover()" onclick="gatoclick()"

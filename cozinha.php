@@ -13,6 +13,7 @@ session_start();
     <script src="JavaScript/clmtrackr.min.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
 
 <?php include 'headerinfo.php'?>
@@ -25,10 +26,7 @@ session_start();
           style="cursor: default;">
 </map>
 
-
-<!--<img id="monstro1" src="images/cozinha/Monstro1.png" alt="monstro1">-->
 <audio id="audio1" src="sons/cozinha/Monstro1.ogg"></audio>
-
 
 <img id="cadeira1" src="images/cozinha/cadeira.png" alt="cadeira1">
 <img id="cadeira2" src="images/cozinha/cadeira.png" alt="cadeira2">

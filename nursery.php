@@ -25,7 +25,7 @@ session_start();
     </div>
 </header>
 
-<img id="ruido" src="images/corredor/ruido.jpg" alt="" style="width:100%; height: 100vh; position: absolute; display: none; z-index: 10">
+<img id="ruido" src="images/corredor/ruido.jpg" alt="">
 <audio id="audio_ruido" src="sons/corredor/ruido.mp3"></audio>
 
 <a-scene id="fundo_nursery" background="color: yellow" vr-mode-ui="enabled: false">
