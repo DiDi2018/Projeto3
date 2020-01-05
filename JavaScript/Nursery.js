@@ -123,18 +123,49 @@ function setup() {
     tracker.start(capture.elt);
 }
 
+var MouthLeft;
+var MouthRight;
+var sorriso;
+var MouthLeft0;
+var MouthRight0;
+var sorriso0;
+
+var MouthTop;
+var MouthBottom;
+var boca;
+var MouthTop0;
+var MouthBottom0;
+var boca0;
+
 function draw() {
     var positions = tracker.getCurrentPosition();
-    if (positions.length > 0 /*&& audio_lydia1.ended*/) {
-        var MouthTop = createVector(positions[58][0], positions[58][1]);
-        var MouthBottom = createVector(positions[59][0], positions[59][1]);
-        var boca = MouthTop.dist(MouthBottom);
-        var MouthLeft = createVector(positions[50][0], positions[50][1]);
-        var MouthRight = createVector(positions[44][0], positions[44][1]);
-        var sorriso = MouthLeft.dist(MouthRight);
+    if (positions.length > 0) {
+        if (fecharcarta ===true) {
+            if (sorriso0 === undefined) {
+                MouthLeft0 = createVector(positions[50][0], positions[50][1]);
+                MouthRight0 = createVector(positions[44][0], positions[44][1]);
+                sorriso0 = MouthLeft0.dist(MouthRight0);
+            } else {
+                MouthLeft = createVector(positions[50][0], positions[50][1]);
+                MouthRight = createVector(positions[44][0], positions[44][1]);
+                sorriso = MouthLeft.dist(MouthRight);
+            }
+        }
+        if (fecharcarta===true) {
+            if (boca0 === undefined) {
+                MouthTop0 = createVector(positions[58][0], positions[58][1]);
+                MouthBottom0 = createVector(positions[59][0], positions[59][1]);
+                boca0 = MouthTop0.dist(MouthBottom0);
+            } else {
+                MouthTop = createVector(positions[58][0], positions[58][1]);
+                MouthBottom = createVector(positions[59][0], positions[59][1]);
+                boca = MouthTop.dist(MouthBottom);
+            }
+        }
+
 
     }
-    if (boca >= 26) {
+    if (boca >= 3.5 * boca0) {
         gritos.play();
     } else {
         gritos.pause();
@@ -145,7 +176,7 @@ function draw() {
         setTimeout(function () {
             document.querySelector(".PopUpSorriso").style.display = "block";
         }, 1000);
-        if (sorriso > 80) {
+        if (sorriso0 < sorriso && sorriso>=1.3*sorriso0) {
             document.querySelector(".PopUpSorriso").style.display = "none";
         }
     }
