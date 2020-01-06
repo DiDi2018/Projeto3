@@ -82,6 +82,7 @@ function resizeBegin(){
         if(body.id !== 'notFadeIn'){
             body.classList.add('fadeIn');
         }
+        imageMapResize();
     }
     else {
         setTimeout(resizeBegin,50);

@@ -36,5 +36,3 @@ function winLetra(x){
 
     image1.src = "images/paper_claro.png";
 }
-
-imageMapResize();
