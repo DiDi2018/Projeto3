@@ -14,7 +14,7 @@ session_start();
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body id="body_fade">
 
 <?php include 'headerinfo.php'?>
 
@@ -69,7 +69,7 @@ session_start();
 
 <div class="win">
     <div></div>
-    <a href="Menus/LivingRoom.html"><img src="images/seta.png" width="319" height="133" alt=""></a>
+    <a><img src="images/seta.png" width="319" height="133" alt=""  onclick="FadeOut()"></a>
 </div>
 <script src="JavaScript/cozinha.js"></script>
 <script src="JavaScript/main.js"></script>

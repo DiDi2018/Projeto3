@@ -8,7 +8,7 @@
     <script src="../JavaScript/imageMapResizer.min.js"></script>
 
 </head>
-<body id="notFadeIn">
+<body class="fadeIn" id="body_fade">
 
 <header>
     <img class="sobre" src="../images/header/sobre.png" alt=""/>
@@ -22,13 +22,13 @@
 <main>
     <img id="nursery" src="../images/plantas/nursery.png" alt="nurseryplanta" height="1359" width="1833" usemap="#planta4"/>
     <map name="planta4">
-        <area shape="poly" alt="image" href="../cozinha.php" onmouseover="hovernursery1()" onmouseout="nothovernursery()"
+        <area shape="poly" alt="image" onclick="FadeOutCozinha()" onmouseover="hovernursery1()" onmouseout="nothovernursery()"
               coords="93,723,325,584,510,903,275,1039">
-        <area shape="poly" alt="image" href="../sala.php" onmouseover="hovernursery2()" onmouseout="nothovernursery()"
+        <area shape="poly" alt="image" onclick="FadeOutSala()" onmouseover="hovernursery2()" onmouseout="nothovernursery()"
               coords="361,642,513,902,839,716,688,456">
-        <area shape="poly" alt="image" href="../quarto.php" onmouseover="hovernursery3()" onmouseout="nothovernursery()"
+        <area shape="poly" alt="image" onclick="FadeOutQuarto()" onmouseover="hovernursery3()" onmouseout="nothovernursery()"
               coords="688,459,837,713,1071,578,922,323">
-        <area shape="poly" alt="image" href="../corredor.php" onmouseover="hovernursery4()" onmouseout="nothovernursery()"
+        <area shape="poly" alt="image" onclick="FadeOutNursery()" onmouseover="hovernursery4()" onmouseout="nothovernursery()"
               coords="275,1037,333,1135,1131,678,1161,726,1577,492,1339,79,924,319,1075,579">
     </map>
 

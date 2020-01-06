@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
 </head>
 
-<body onload="startTime()">
+<body id="body_fade" onload="startTime()">
 
 <?php include 'headerinfo.php' ?>
 
@@ -51,7 +51,7 @@
     <div class="win">
         <div>
         </div>
-        <a href="Menus/Nursery.html"><img src="images/seta.png" width="319" height="133" alt=""></a>
+        <a><img src="images/seta.png" width="319" height="133" alt=""  onclick="FadeOut()"></a>
     </div>
 
 

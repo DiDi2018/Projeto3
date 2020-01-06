@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
 </head>
 
-<body style="position: fixed; width: 100%;">
+<body id="body_fade" style="position: fixed; width: 100%;">
 
     <img class="sala" src="images/sala/gato.png" height="1828" width="1368" alt="" usemap="#catmap"/>
     <img class="sala" src="images/sala/sofa_pb.png" height="655" width="1458" alt=""/>
@@ -34,7 +34,7 @@
     <div class="win">
         <div>
         </div>
-    <a href="Menus/Bedroom.html"><img src="images/seta.png" width="319" height="133" alt=""></a>
+        <a><img src="images/seta.png" width="319" height="133" alt=""  onclick="FadeOut()"></a>
     </div>
 
     <?php include 'headerinfo.php' ?>

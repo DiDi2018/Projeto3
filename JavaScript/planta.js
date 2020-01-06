@@ -91,3 +91,34 @@ function removeText(){
 }
 
 imageMapResize();
+
+//FADE OUT
+
+function FadeOutCozinha(){
+    document.getElementById("body_fade").classList.add("fadeOut");
+    setTimeout(function(){
+        window.location.href="../cozinha.php";
+    }, 800);
+}
+
+function FadeOutSala(){
+    document.getElementById("body_fade").classList.add("fadeOut");
+    setTimeout(function(){
+        window.location.href="../sala.php";
+    }, 800);
+}
+
+function FadeOutQuarto(){
+    document.getElementById("body_fade").classList.add("fadeOut");
+    setTimeout(function(){
+        window.location.href="../quarto.php";
+    }, 800);
+}
+
+function FadeOutNursery(){
+    document.getElementById("body_fade").classList.add("fadeOut");
+    setTimeout(function(){
+        window.location.href="../corredor.php";
+    }, 800);
+}
+

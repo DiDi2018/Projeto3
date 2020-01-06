@@ -32,7 +32,6 @@ function resizeBegin(){
         if(body.id !== 'notFadeIn'){
             body.classList.add('fadeIn');
         }
-
         setTimeout(function(){
             window.location.href="sorteio.php";
         }, 3000);

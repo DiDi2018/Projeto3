@@ -8,7 +8,7 @@
     <script src="../JavaScript/imageMapResizer.min.js"></script>
 
 </head>
-<body class="fadeIn">
+<body class="fadeIn" id="body_fade">
 
 <header>
     <img class="sobre" src="../images/header/sobre.png" alt=""/>
@@ -22,11 +22,11 @@
 <main>
     <img id="bedroom" src="../images/plantas/bedroom.png" alt="bedroomplanta" height="1218" width="2108" usemap="#planta3"/>
     <map name="planta3">
-        <area shape="poly" alt="image" href="../cozinha.php" onmouseover="hoverbedroom1()" onmouseout="nothoverbedroom()"
+        <area shape="poly" alt="image" onclick="FadeOutCozinha()" onmouseover="hoverbedroom1()" onmouseout="nothoverbedroom()"
               coords="93,723,325,584,510,903,275,1039">
-        <area shape="poly" alt="image" href="../sala.php" onmouseover="hoverbedroom2()" onmouseout="nothoverbedroom()"
+        <area shape="poly" alt="image" onclick="FadeOutSala()" onmouseover="hoverbedroom2()" onmouseout="nothoverbedroom()"
               coords="361,642,513,902,839,716,688,456">
-        <area shape="poly" alt="image" href="../quarto.php" onmouseover="hoverbedroom3()" onmouseout="nothoverbedroom()"
+        <area shape="poly" alt="image" onclick="FadeOutQuarto()" onmouseover="hoverbedroom3()" onmouseout="nothoverbedroom()"
               coords="688,459,837,713,1071,578,922,323">
     </map>
 
