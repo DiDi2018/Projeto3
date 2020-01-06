@@ -317,8 +317,8 @@ img.sala {
 img.sala:first-child { /*gato*/
     height: 25%;
     width: auto;
-    top: 32%;
-    left: 18%;
+    top: 34%;
+    left: 14%;
 }
 
 img.sala:nth-child(2) { /*sofá*/
