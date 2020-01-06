@@ -21,9 +21,9 @@ function end(){
     casa.style.marginLeft = "-11%";
     casa.style.marginTop = "0%";
     div.style.opacity = "1";
-   /* setTimeout(function(){
+    setTimeout(function(){
         window.location = "Menus/Kitchen.html";
-    },4000);*/
+    },4000);
 }
 
 let video = document.querySelector("video");
