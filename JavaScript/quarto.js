@@ -224,7 +224,7 @@ function checkTime(i) {
 function mouseOverRelogio() {
     if (audio_q1.paused && audio_cama.paused) {
         relogio.src = "images/quarto/relogio_azul.png";
-        document.getElementById("horas").style.color = "blue";
+        document.getElementById("horas").style.color = "dodgerblue";
     }
 }
 
@@ -238,7 +238,7 @@ function mouseLeftRelogio() {
 function audio_relogio_f() {
     if (audio_cama.paused && audio_relogio.paused) {
         audio_relogio.play();
-        document.getElementById("horas").style.color = "blue";
+        document.getElementById("horas").style.color = "dodgerblue";
         relogio.src = "images/quarto/relogio_azul.png";
     } else {
         audio_relogio.pause();
