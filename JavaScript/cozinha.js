@@ -342,7 +342,4 @@ function draw() {
             winLetra("E");
         }
     }
-
 }
-
-imageMapResize();

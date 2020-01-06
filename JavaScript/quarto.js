@@ -247,5 +247,3 @@ function audio_relogio_f() {
         relogio.src = "images/quarto/relogio.png";
     }
 }
-
-imageMapResize();

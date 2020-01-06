@@ -89,5 +89,3 @@ function removeText(){
         setTimeout(removeText, 30);
     }
 }
-
-imageMapResize();
