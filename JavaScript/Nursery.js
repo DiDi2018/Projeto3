@@ -273,5 +273,5 @@ function hoverswitch3(){
 }
 
 function nothoverswitch(){
-    interruptores.src= "images/nursery/Switch.png";
+    interruptores.src= "images/nursery/Switch0.png";
 }
