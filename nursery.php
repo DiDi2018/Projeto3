@@ -12,6 +12,7 @@ session_start();
     <script src="https://aframe.io/releases/1.0.2/aframe.min.js"></script>
     <script src="JavaScript/p5.min.js"></script>
     <script src="JavaScript/clmtrackr.min.js"></script>
+    <script src="JavaScript/imageMapResizer.min.js"></script>
 </head>
 
 <body class="notFadeIn">
@@ -154,7 +155,7 @@ session_start();
 </div>
 <div id="Interruptor">
     <div class='fundo'></div>
-    <img id='switch' src='images/nursery/Switch.png' alt="interruptor" usemap="#interruptor">
+    <img id='switch' src='images/nursery/SwitchBlue.png' alt="interruptor" usemap="#interruptor">
     <map name="interruptor">
         <area shape="poly" alt="image" onmouseover="hoverswitch1()" onmouseout="nothoverswitch()"
               coords="96,211,95,172,86,156,89,138,113,139,124,141,126,211" >
