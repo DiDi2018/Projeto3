@@ -167,3 +167,12 @@ function draw() {
 
 audio_lydia1.play();
 typewriter1();
+
+
+//FADE OUT
+function FadeOut(){
+    document.getElementById("body_fade").classList.add("fadeOut");
+    setTimeout(function(){
+        window.location.href="codigo.php";
+    }, 800);
+}

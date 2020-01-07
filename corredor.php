@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body style="position: fixed; width: 100%;">
+<body id="body_fade" style="position: fixed; width: 100%;">
 
 <?php include 'headerinfo.php' ?>
 
@@ -57,7 +57,7 @@
     <div class="win">
         <div>
         </div>
-        <a href="codigo.php"><img src="images/seta.png" width="319" height="133" alt="" style="cursor: pointer"></a>
+        <a><img src="images/seta.png" width="319" height="133" alt="" onclick="FadeOut()" style="cursor: pointer"></a>
     </div>
 </main>
 
