@@ -82,3 +82,11 @@ function fecharfora(evt) {
         return sair();
     }
 }
+
+//FADE OUT
+function FadeOut(){
+    document.querySelector('body').classList.add("fadeOut");
+    setTimeout(function(){
+        window.location.href="../waiting.php";
+    }, 800);
+}
