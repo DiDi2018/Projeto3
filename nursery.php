@@ -36,6 +36,7 @@ session_start();
             Good luck! </p>
 
         </div>
+        <img class="postit" src="images/nursery/Switch.png" alt=""/>
         <img class="postit" src="images/header/postit.png" alt=""/>
         <div class="fundo"></div>
     </div>
@@ -67,7 +68,7 @@ session_start();
         <img alt="leao_amarelo" src="images/nursery/leao_amarelo.png"/>
         <img alt="" src="images/nursery/leao_amarelo_ruido.png" height="582" width="840"/>
 
-        <img alt="" src="images/nursery/painel.jpg"/>
+        <img alt="" src="images/nursery/Switch.png"/>
         <img alt="" src="images/nursery/box.png"/>
         <img alt="carta" src="images/cozinha/carta.png">
 
@@ -124,10 +125,9 @@ session_start();
              depth="1" material="alphaTest: 0.5"></a-image>
 
     <!--Caixa e interruptores-->
-    <a-image src="images/nursery/painel.jpg" position="90 10 250" height="30" width="20" depth="1"
-             material="alphaTest: 0.5"></a-image>
-    <a-image src="images/nursery/box.png" position="90 10 250" height="50" width="50" depth="1"
-             material="alphaTest: 0.5"></a-image>
+    <a-entity cursor="rayOrigin: mouse"></a-entity>
+    <a-image src="images/nursery/Switch.png" position="90 10 250" height="30" width="40" depth="1"
+             material="alphaTest: 0.5" onmouseover="hover()" onmouseout="notHover()" onclick="aparecerInterruptor()"></a-image>
 
     <!--Carta do Psicólogo-->
     <a-entity cursor="rayOrigin: mouse"></a-entity>
@@ -152,7 +152,20 @@ session_start();
         <p id='assinado'></p>
     </div>
 </div>
+<div id="Interruptor">
+    <div class='fundo'></div>
+    <img id='switch' src='images/nursery/Switch.png' alt="interruptor" usemap="#interruptor">
+    <map name="interruptor">
+        <area shape="poly" alt="image" onclick="" onmouseover="hoverswitch1()" onmouseout="nothoverswitch()"
+              coords="96,211,95,172,86,156,89,138,113,139,124,141,126,211" >
+        <area shape="poly" alt="image" onclick="" onmouseover="hoverswitch2()" onmouseout="nothoverswitch()"
+              coords="226,142,255,142,255,214,225,213">
+        <area shape="poly" alt="image" onclick="" onmouseover="hoverswitch3()" onmouseout="nothoverswitch()"
+              coords="352,143,381,142,388,143,389,159,380,173,379,212,351,212" >
+    </map>
 
+
+</div>
 <div class="PopUpSorriso">
     <div class='fundosmile'></div>
     <img src="images/paper_choque.png" alt="">

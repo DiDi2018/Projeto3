@@ -612,6 +612,18 @@ img.sala:nth-child(7) { /*tapete*/
     display: none;
 }
 
+#Interruptor{
+  display:none;
+}
+
+#switch{
+    position: fixed;
+    top: 24%;
+    left: 29%;
+    z-index: 1;
+    width: 38%;
+}
+
 #textoPsicologo {
     position: fixed;
     top: 4%;

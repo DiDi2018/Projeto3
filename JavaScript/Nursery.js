@@ -235,6 +235,13 @@ function aparecer() {
     }
 }
 
+function aparecerInterruptor(){
+    if (document.getElementById("lydianursery").ended) {
+        document.getElementById("Interruptor").style.display = "block";
+    }
+
+}
+
 function sair() {
     if (document.getElementById("psicologofinal").ended) {
         fecharcarta = true;
@@ -242,4 +249,29 @@ function sair() {
     }
 
     //   document.removeEventListener("click", fecharfora);
+}
+
+function hover(){
+
+}
+
+function notHover(){
+
+}
+let interruptores = document.querySelector("#switch");
+
+function hoverswitch1(){
+    interruptores.src= "../images/nursery/Switch1.png";
+}
+
+function hoverswitch2(){
+    interruptores.src= "../images/nursery/Switch2.png";
+}
+
+function hoverswitch3(){
+    interruptores.src= "../images/nursery/Switch3.png";
+}
+
+function nothoverswitch(){
+    interruptores.src= "../images/nursery/Switch.png";
 }
