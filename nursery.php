@@ -14,7 +14,7 @@ session_start();
     <script src="JavaScript/clmtrackr.min.js"></script>
 </head>
 
-<body id="notFadeIn">
+<body class="notFadeIn">
 <header>
     <p id='php'> Dear <?php echo $_SESSION['nome'] ?>,</p>
     <img class="sobre" src="images/header/sobre.png" alt=""/>
