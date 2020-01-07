@@ -37,7 +37,6 @@ session_start();
             Good luck! </p>
 
         </div>
-        <img class="postit" src="images/nursery/Switch.png" alt=""/>
         <img class="postit" src="images/header/postit.png" alt=""/>
         <div class="fundo"></div>
     </div>

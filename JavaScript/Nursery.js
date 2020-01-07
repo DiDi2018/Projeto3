@@ -261,17 +261,17 @@ function notHover(){
 let interruptores = document.querySelector("#switch");
 
 function hoverswitch1(){
-    interruptores.src= "../images/nursery/Switch1.png";
+    interruptores.src= "images/nursery/Switch1.png";
 }
 
 function hoverswitch2(){
-    interruptores.src= "../images/nursery/Switch2.png";
+    interruptores.src= "images/nursery/Switch2.png";
 }
 
 function hoverswitch3(){
-    interruptores.src= "../images/nursery/Switch3.png";
+    interruptores.src= "images/nursery/Switch3.png";
 }
 
 function nothoverswitch(){
-    interruptores.src= "../images/nursery/Switch.png";
+    interruptores.src= "images/nursery/Switch.png";
 }
