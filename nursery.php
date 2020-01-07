@@ -27,15 +27,14 @@ session_start();
 
     <img class="help" src="images/header/Help.png" alt=""/>
     <div class="instrucoes">
-        <div class="instrucoestexto tam">
+        <div class="instrucoestexto">
             <h2>Are you lost?</h2>
-            <br>This room is really special and different from the others. To explore it click and drag, to move press
+            <p>
+                <br>This room is really special and different from the others. To explore it click and drag, to move press
             the arrows of your keyboard.
-
-            <br> Don't forget to follow the instructions from the letter.
-            <br>
-            Good luck! </p>
-
+                <br>Don't forget to follow the instructions from the letter.
+                <br>Good luck!
+            </p>
         </div>
         <img class="postit" src="images/header/postit.png" alt=""/>
         <div class="fundo"></div>

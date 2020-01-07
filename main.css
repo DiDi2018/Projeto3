@@ -738,13 +738,11 @@ img.sala:nth-child(7) { /*tapete*/
 }
 
 .instrucoestexto p {
-    font-size: 1.3em;
+    font-size: 20px;
 }
-.tam{
-    font-size: 1.3em;
-}
+
 .instrucoestexto h2 {
-    font-size: 2em;
+    font-size: 35px;
 }
 
 .sobre{
