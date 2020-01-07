@@ -246,6 +246,16 @@ function audio_relogio_f() {
         document.getElementById("horas").style.color = "lightgrey";
         relogio.src = "images/quarto/relogio.png";
     }
+
 }
 
 imageMapResize();
+
+
+//FADE OUT
+function FadeOut(){
+    document.getElementById("body_fade").classList.add("fadeOut");
+    setTimeout(function(){
+        window.location.href="Menus/Nursery.html";
+    }, 800);
+}

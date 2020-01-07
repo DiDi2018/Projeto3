@@ -174,3 +174,11 @@ function draw() {
         }
     }
 }
+
+//FADE OUT
+function FadeOut(){
+    document.getElementById("body_fade").classList.add("fadeOut");
+    setTimeout(function(){
+        window.location.href="Menus/Bedroom.html";
+    }, 800);
+}

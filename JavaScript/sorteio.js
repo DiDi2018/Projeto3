@@ -23,5 +23,12 @@ function revelacao(){
     document.querySelector("#vencedor").classList.add("vencedorSurgir");
     document.querySelector("#bilhete").classList.add("bilheteSurgir");
     audio_sorteio.play();
+}
 
+//FADE OUT
+function FadeOut(){
+    document.getElementById("body_fade").classList.add("fadeOut");
+    setTimeout(function(){
+        window.location.href="acenar.html";
+    }, 800);
 }
