@@ -90,8 +90,6 @@ function removeText(){
     }
 }
 
-imageMapResize();
-
 //FADE OUT
 
 function FadeOutCozinha(){
