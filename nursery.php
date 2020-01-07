@@ -153,7 +153,7 @@ session_start();
 </div>
 <div id="Interruptor">
     <div class='fundo'></div>
-    <img id='switch' src='images/nursery/Switch0.png' alt="interruptor" usemap="#interruptor">
+    <img id='switch' src='images/nursery/Switch.png' alt="interruptor" usemap="#interruptor">
     <map name="interruptor">
         <area shape="poly" alt="image" onmouseover="hoverswitch1()" onmouseout="nothoverswitch()"
               coords="96,211,95,172,86,156,89,138,113,139,124,141,126,211" >
