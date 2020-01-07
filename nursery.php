@@ -127,7 +127,7 @@ session_start();
 
     <!--Caixa e interruptores-->
     <a-entity cursor="rayOrigin: mouse"></a-entity>
-    <a-image src="images/nursery/Switch.png" position="90 10 250" height="30" width="40" depth="1"
+    <a-image src="images/nursery/SwitchBlue.png" position="90 10 250" height="30" width="40" depth="1"
              material="alphaTest: 0.5" onmouseover="hover()" onmouseout="notHover()" onclick="aparecerInterruptor()"></a-image>
 
     <!--Carta do Psicólogo-->
