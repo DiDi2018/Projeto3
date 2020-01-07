@@ -27,7 +27,7 @@
     <div class="aparecerTicket">
         <div class="fundo"></div>
         <img class="ticket" alt="ticket" src="images/index/ticket.png"/>
-        <form class="formParticipar" action="waiting.php" method="POST">
+        <form class="formParticipar" action="waiting.php" onsubmit="FadeOut()" method="POST">
             <h2>Please enter your name:</h2>
             <label>
                 <input type="text" name="name" required>
