@@ -156,11 +156,11 @@ session_start();
     <img id='switch' src='images/nursery/Switch.png' alt="interruptor" usemap="#interruptor">
     <map name="interruptor">
         <area shape="poly" alt="image" onmouseover="hoverswitch1()" onmouseout="nothoverswitch()"
-              coords="96,211,95,172,86,156,89,138,113,139,124,141,126,211" >
+              coords="91,206,120,208,119,139,84,136,81,152,93,166" >
         <area shape="poly" alt="image" onmouseover="hoverswitch2()" onmouseout="nothoverswitch()"
-              coords="226,142,255,142,255,214,225,213">
+              coords="220,206,245,207,247,140,219,140">
         <area shape="poly" alt="image" onmouseover="hoverswitch3()" onmouseout="nothoverswitch()"
-              coords="352,143,381,142,388,143,389,159,380,173,379,212,351,212" >
+              coords="346,208,373,208,373,170,383,157,381,140,347,139" >
     </map>
 
 
