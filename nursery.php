@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en" style="background-color: yellow">
+<html lang="en" style="background-color: yellow" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Nursery</title>
@@ -14,7 +14,7 @@ session_start();
     <script src="JavaScript/clmtrackr.min.js"></script>
 </head>
 
-<body id="notFadeIn">
+<body class="notFadeIn">
 <header>
     <p id='php'> Dear <?php echo $_SESSION['nome'] ?>,</p>
     <img class="sobre" src="images/header/sobre.png" alt=""/>
@@ -23,6 +23,23 @@ session_start();
         <img class="maquina" src="images/header/maquina3.png" alt=""/>
         <div class="fundo"></div>
     </div>
+
+    <img class="help" src="images/header/Help.png" alt=""/>
+    <div class="instrucoes">
+        <div class="instrucoestexto tam">
+            <h2>Are you lost?</h2>
+            <br>This room is really special and different from the others. To explore it click and drag, to move press
+            the arrows of your keyboard.
+
+            <br> Don't forget to follow the instructions from the letter.
+            <br>
+            Good luck! </p>
+
+        </div>
+        <img class="postit" src="images/header/postit.png" alt=""/>
+        <div class="fundo"></div>
+    </div>
+
 </header>
 
 <img id="ruido" src="images/corredor/ruido.jpg" alt="">
@@ -138,7 +155,7 @@ session_start();
 
 <div class="PopUpSorriso">
     <div class='fundosmile'></div>
-    <img src = "images/paper_choque.png" alt="">
+    <img src="images/paper_choque.png" alt="">
     <p class="PopUpSorrisoTexto">WHY ARE YOU NOT SMILING?! :)</p>
 </div>
 

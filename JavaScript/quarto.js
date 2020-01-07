@@ -249,9 +249,6 @@ function audio_relogio_f() {
 
 }
 
-imageMapResize();
-
-
 //FADE OUT
 function FadeOut(){
     document.getElementById("body_fade").classList.add("fadeOut");

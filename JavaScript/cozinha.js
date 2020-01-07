@@ -344,10 +344,6 @@ function draw() {
     }
 }
 
-imageMapResize();
-
-
-
 //FADE OUT
 function FadeOut(){
     document.getElementById("body_fade").classList.add("fadeOut");

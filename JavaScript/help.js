@@ -79,7 +79,7 @@ function resizeBegin(){
     if(document.readyState === 'complete'){
         resize();
         body.style.visibility = 'visible';
-        if(body.id !== 'notFadeIn'){
+        if(body.className !== 'notFadeIn'){
             body.classList.add('fadeIn');
         }
         imageMapResize();
