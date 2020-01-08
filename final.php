@@ -25,7 +25,7 @@
     <div id="final">
         <div style="opacity: 0; left: 5%; top: 5%">
             <img alt="Waving image" src="">
-            <p>Something</p>
+            <p>Is that even an hand?</p>
         </div>
 
         <div style="opacity: 0; left: 35%; top: 20%">

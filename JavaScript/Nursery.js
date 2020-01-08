@@ -238,6 +238,7 @@ function aparecer() {
 function aparecerInterruptor(){
     if (document.getElementById("lydianursery").ended) {
         document.getElementById("Interruptor").style.display = "block";
+        imageMapResize();
     }
 
 }
