@@ -235,14 +235,6 @@ function sair() {
         fecharcarta = true;
         document.getElementById('textoCartaNursery').style.display = "none";
     }
-
-    //   document.removeEventListener("click", fecharfora);
-}
-
-function hover(){
-}
-
-function notHover(){
 }
 
 let interruptores = document.querySelector("#switch");
