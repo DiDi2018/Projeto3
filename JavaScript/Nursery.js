@@ -79,19 +79,6 @@ function removerTexto() {
     } else if (!audio[3].ended) {
         setTimeout(removerTexto, 30);
     }
-
-    if (i1 <= 0) {
-        setTimeout(function () {
-            document.querySelector(".PopUpSorriso").style.display = "none";
-            document.getElementById('textoCartaNursery').style.display = "none";
-            document.querySelector('a-scene').style.display = "none";
-            document.querySelector("#ruido").style.display = "block";
-            document.getElementById("audio_ruido").play();
-        }, 30000);
-        setTimeout(function () {
-            window.location.href = "final.php";
-        }, 33000);
-    }
 }
 
 document.querySelector('a-scene').addEventListener('loaded', function () {
@@ -253,12 +240,11 @@ function sair() {
 }
 
 function hover(){
-
 }
 
 function notHover(){
-
 }
+
 let interruptores = document.querySelector("#switch");
 
 function hoverswitch1(){
@@ -275,4 +261,15 @@ function hoverswitch3(){
 
 function nothoverswitch(){
     interruptores.src= "images/nursery/Switch.png";
+}
+
+function clickInterruptores(){
+        document.querySelector(".PopUpSorriso").style.display = "none";
+        document.getElementById('textoCartaNursery').style.display = "none";
+        document.querySelector('a-scene').style.display = "none";
+        document.querySelector("#ruido").style.display = "block";
+        document.getElementById("audio_ruido").play();
+        setTimeout(function () {
+            window.location.href = "final.php";
+        }, 2000);
 }

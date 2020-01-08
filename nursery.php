@@ -67,8 +67,8 @@ session_start();
         <img alt="leao_amarelo" src="images/nursery/leao_amarelo.png"/>
         <img alt="" src="images/nursery/leao_amarelo_ruido.png" height="582" width="840"/>
 
-        <img alt="" src="images/nursery/Switch0.png"/>
-        <img alt="" src="images/nursery/box.png"/>
+        <img alt="" src="images/nursery/Switch.png"/>
+        <img alt="" src="images/nursery/painel.png"/>
         <img alt="carta" src="images/cozinha/carta.png">
 
     </a-assets>
@@ -125,7 +125,7 @@ session_start();
 
     <!--Caixa e interruptores-->
     <a-entity cursor="rayOrigin: mouse"></a-entity>
-    <a-image src="images/nursery/SwitchBlue.png" position="90 10 250" height="30" width="40" depth="1"
+    <a-image src="images/nursery/painel.png" position="90 10 250" height="30" width="40" depth="1"
              material="alphaTest: 0.5" onmouseover="hover()" onmouseout="notHover()" onclick="aparecerInterruptor()"></a-image>
 
     <!--Carta do Psicólogo-->
@@ -155,11 +155,11 @@ session_start();
     <div class='fundo'></div>
     <img id='switch' src='images/nursery/Switch.png' alt="interruptor" usemap="#interruptor">
     <map name="interruptor">
-        <area shape="poly" alt="image" onmouseover="hoverswitch1()" onmouseout="nothoverswitch()"
+        <area shape="poly" alt="image" onmouseover="hoverswitch1()" onmouseout="nothoverswitch()" onclick="clickInterruptores()"
               coords="91,206,120,208,119,139,84,136,81,152,93,166" >
-        <area shape="poly" alt="image" onmouseover="hoverswitch2()" onmouseout="nothoverswitch()"
+        <area shape="poly" alt="image" onmouseover="hoverswitch2()" onmouseout="nothoverswitch()" onclick="clickInterruptores()"
               coords="220,206,245,207,247,140,219,140">
-        <area shape="poly" alt="image" onmouseover="hoverswitch3()" onmouseout="nothoverswitch()"
+        <area shape="poly" alt="image" onmouseover="hoverswitch3()" onmouseout="nothoverswitch()" onclick="clickInterruptores()"
               coords="346,208,373,208,373,170,383,157,381,140,347,139" >
     </map>
 
