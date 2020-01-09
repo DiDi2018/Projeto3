@@ -57,7 +57,7 @@ let audio = document.querySelectorAll("audio");
 let text1Lydia = "This room is the heart of the house. Whenever you feel like escaping reality " +
     "you can do it without actually leaving. You will feel like you're in another world!";
 let i1 = 0;
-let speed = 20;
+let speed = 25;
 
 function aparecerTexto() {
     if (i1 < text1Lydia.length) {
@@ -207,7 +207,7 @@ function ler() {
     }
 
     if (n4 < assinado.length) {
-        setTimeout(ler, 20);
+        setTimeout(ler, 60);
     }
 }
 
