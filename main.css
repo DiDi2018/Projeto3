@@ -286,6 +286,7 @@ img {
     margin-left: 15%;
     margin-top: -0.5%;
     z-index: 2;
+    cursor: pointer;
 }
 
 .win div {
