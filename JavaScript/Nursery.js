@@ -216,7 +216,6 @@ function aparecer() {
 function aparecerInterruptor() {
     if (document.getElementById("lydianursery").ended) {
         interrupt = true;
-        clearTimeout(timeoutSorriso);
         document.querySelector(".PopUpSorriso").style.display = "none";
         document.getElementById("Interruptor").style.display = "block";
         imageMapResize();

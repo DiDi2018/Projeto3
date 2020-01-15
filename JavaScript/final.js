@@ -24,42 +24,42 @@ setTimeout(function () {
     setTimeout(function(){
         divs[1].style.opacity = '1';
     },500);
-},3000);
+},4000);
 
 setTimeout(function () {
     divs[1].style.opacity = '0';
     setTimeout(function(){
         divs[2].style.opacity = '1';
     },500);
-},6000);
+},8000);
 
 setTimeout(function () {
     divs[2].style.opacity = '0';
     setTimeout(function(){
         divs[3].style.opacity = '1';
     },500);
-},9000);
+},11000);
 
 setTimeout(function () {
     divs[3].style.opacity = '0';
     setTimeout(function(){
         divs[4].style.opacity = '1';
     },500);
-},12000);
-
-setTimeout(function(){
-    divs[4].style.opacity = '0';
-    document.querySelector('#ruido').style.visibility = 'visible';
-    document.querySelector('#audio_ruido').play();
 },15000);
 
 setTimeout(function(){
-    document.querySelector('#ruido').style.visibility = 'hidden';
+    divs[4].style.opacity = '0';
+    document.querySelector('#ruido').style.display = 'block';
+    document.querySelector('#audio_ruido').play();
+},19000);
+
+setTimeout(function(){
+    document.querySelector('#ruido').style.display = 'none';
     document.querySelector('#audio_ruido').pause();
     document.querySelector('#texto_erro').style.display = 'block';
-},17000);
+},21000);
 
 setTimeout(function(){
     sessionStorage.clear();
     window.location = 'index.php';
-},18000);
+},22000);

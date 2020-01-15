@@ -919,6 +919,7 @@ img.sala:nth-child(7) { /*tapete*/
     left:50%;
     top: 45%;
     transform: translateX(-50%);
+    font-size: 130%;
 }
 
 #final div {
@@ -932,11 +933,13 @@ img.sala:nth-child(7) { /*tapete*/
     position: relative;
 }
 
-#final div p {
+#final div p, #final div h1 {
     position: relative;
     display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
+}
+
+#final div p {
+    font-size: 120%;
 }
 
 #ruido {
