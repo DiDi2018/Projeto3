@@ -2,9 +2,22 @@
 
 function srcImage(){
     let imagens = document.querySelectorAll('#final div img');
-    let values = Object.keys(sessionStorage);
     for(let i = 0; i < imagens.length; i++){
-        imagens[i].src = sessionStorage.getItem(values[i]);
+        if(i === 0){
+            imagens[i].src = sessionStorage.getItem('imagemAcenar');
+        }
+        else if(i === 1){
+            imagens[i].src = sessionStorage.getItem('imagemCozinha');
+        }
+        else if(i === 2){
+            imagens[i].src = sessionStorage.getItem('imagemSala');
+        }
+        else if(i === 3){
+            imagens[i].src = sessionStorage.getItem('imagemQuarto');
+        }
+        else {
+            imagens[i].src = sessionStorage.getItem('imagemCorredor');
+        }
     }
 }
 
