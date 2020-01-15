@@ -118,14 +118,6 @@ var sorriso;
 var MouthLeft0;
 var MouthRight0;
 var sorriso0;
-let timeoutSorriso;
-
-var MouthTop;
-var MouthBottom;
-var boca;
-var MouthTop0;
-var MouthBottom0;
-var boca0;
 
 function draw() {
     var positions = tracker.getCurrentPosition();
@@ -139,17 +131,6 @@ function draw() {
                 MouthLeft = createVector(positions[50][0], positions[50][1]);
                 MouthRight = createVector(positions[44][0], positions[44][1]);
                 sorriso = MouthLeft.dist(MouthRight);
-            }
-        }
-        if (fecharcarta) {
-            if (boca0 === undefined) {
-                MouthTop0 = createVector(positions[58][0], positions[58][1]);
-                MouthBottom0 = createVector(positions[59][0], positions[59][1]);
-                boca0 = MouthTop0.dist(MouthBottom0);
-            } else {
-                MouthTop = createVector(positions[58][0], positions[58][1]);
-                MouthBottom = createVector(positions[59][0], positions[59][1]);
-                boca = MouthTop.dist(MouthBottom);
             }
         }
     }
