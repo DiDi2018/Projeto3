@@ -109,6 +109,7 @@ function setup() {
     tracker = new clm.tracker();
     tracker.init();
     tracker.start(capture.elt);
+    smile();
 }
 
 var MouthLeft;
@@ -158,15 +159,29 @@ function draw() {
     } else {
         gritos.pause();
     }
+}
 
-    //SmilePopUp
+//SmilePopUp
+
+function smile(){
     if (fecharcarta && interrupt === false) {
-        timeoutSorriso = setTimeout(function () {
-            document.querySelector(".PopUpSorriso").style.display = "block";
-        }, 1000);
-        if (sorriso0 < sorriso && sorriso >= 1.3 * sorriso0) {
+        if (sorriso0 < sorriso && sorriso >= 1.3 * sorriso0 && document.querySelector(".PopUpSorriso").style.display === 'block') {
             document.querySelector(".PopUpSorriso").style.display = "none";
+            setTimeout(smile, 50);
         }
+        else if(timeoutSorriso === undefined){
+            timeoutSorriso = setTimeout(function () {
+                document.querySelector(".PopUpSorriso").style.display = "block";
+                timeoutSorriso = undefined;
+                smile();
+            }, 1000);
+        }
+        else {
+            setTimeout(smile, 50);
+        }
+    }
+    else {
+        setTimeout(smile, 500);
     }
 }
 
