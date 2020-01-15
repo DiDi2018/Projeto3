@@ -164,7 +164,7 @@ function draw() {
 //SmilePopUp
 
 function smile(){
-    if (fecharcarta && interrupt === false) {
+    if (fecharcarta && interrupt === false && positions.length > 0) {
         if (sorriso0 < sorriso && sorriso >= 1.3 * sorriso0) {
             document.querySelector(".PopUpSorriso").style.display = "none";
             setTimeout(smile, 50);
