@@ -19,6 +19,7 @@ imagens[9] = "images/nursery/zebra_ruido.png";
 
 var psi = false;
 var fecharcarta = false;
+let interrupt = false;
 
 function rodarImagem(x) {
     let nrImagem;
@@ -158,7 +159,7 @@ function draw() {
     }
 
     //SmilePopUp
-    if (fecharcarta) {
+    if (fecharcarta && interrupt === false) {
         setTimeout(function () {
             document.querySelector(".PopUpSorriso").style.display = "block";
         }, 1000);
@@ -224,6 +225,7 @@ function aparecer() {
 
 function aparecerInterruptor() {
     if (document.getElementById("lydianursery").ended) {
+        interrupt = true;
         document.querySelector(".PopUpSorriso").style.display = "none";
         document.getElementById("Interruptor").style.display = "block";
         imageMapResize();
