@@ -11,7 +11,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
 </head>
 
-<body id="body_fade" style="overflow: hidden">
+<body style="overflow: hidden">
 
 <header>
     <img class="sobre" src="images/header/sobre.png" alt=""/>

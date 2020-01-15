@@ -38,8 +38,20 @@ function aparecerTexto() {
     }
 }
 
-apresentacao.play();
-aparecerTexto();
+function begin(){
+    if(document.readyState === 'complete'){
+        setTimeout(function(){
+            apresentacao.play();
+            aparecerTexto();
+        },1000);
+    }
+    else {
+        setTimeout(begin,50);
+    }
+}
+
+begin();
+
 
 function removerText() {
     if (i1 > 0 && apresentacao.ended) {
@@ -346,7 +358,7 @@ function draw() {
 
 //FADE OUT
 function FadeOut(){
-    document.getElementById("body_fade").classList.add("fadeOut");
+    document.querySelector("body").classList.add("fadeOut");
     setTimeout(function(){
         window.location.href="Menus/LivingRoom.html";
     }, 800);

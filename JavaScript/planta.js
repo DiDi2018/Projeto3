@@ -3,7 +3,6 @@ let livingroom = document.querySelector("#livingroom");
 let bedroom = document.querySelector("#bedroom");
 let nursery = document.querySelector("#nursery");
 
-
 //Kitchen
 function hoverkitchen1() {
     kitchen.src = "../images/plantas/kitchen1.png";
@@ -63,8 +62,19 @@ let texto = p.innerHTML;
 p.innerHTML = "";
 p.removeAttribute("style");
 
-audio.play();
-typewriter();
+function begin(){
+    if(document.readyState === 'complete'){
+        setTimeout(function(){
+            audio.play();
+            typewriter();
+        },1000);
+    }
+    else {
+        setTimeout(begin,50);
+    }
+}
+
+begin();
 
 function typewriter (){
     if (i < texto.length){

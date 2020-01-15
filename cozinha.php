@@ -14,7 +14,7 @@ session_start();
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body id="body_fade">
+<body>
 
 <?php include 'headerinfo.php'?>
 

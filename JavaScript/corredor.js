@@ -165,13 +165,23 @@ function draw() {
     }
 }
 
-audio_lydia1.play();
-typewriter1();
+function begin(){
+    if(document.readyState === 'complete'){
+        setTimeout(function(){
+            audio_lydia1.play();
+            typewriter1();
+        },1000);
+    }
+    else {
+        setTimeout(begin,50);
+    }
+}
 
+begin();
 
 //FADE OUT
 function FadeOut(){
-    document.getElementById("body_fade").classList.add("fadeOut");
+    document.querySelector("body").classList.add("fadeOut");
     setTimeout(function(){
         window.location.href="codigo.php";
     }, 800);

@@ -22,7 +22,16 @@ function desafio() {
     aparecerTexto();
 }
 
-ruido();
+function begin(){
+    if(document.readyState === 'complete'){
+        ruido();
+    }
+    else {
+        setTimeout(begin,50);
+    }
+}
+
+begin();
 
 //CLICAR NAS LETRAS
 

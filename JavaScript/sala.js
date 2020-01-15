@@ -47,10 +47,19 @@ function removeText(){
     }
 }
 
-Promise.all([audios[0],audios[1]]).then(function(){
-    audios[0].play();
-    typeWriter1();
-});
+function begin(){
+    if(document.readyState === 'complete'){
+        setTimeout(function(){
+            audios[0].play();
+            typeWriter1();
+        },1000);
+    }
+    else {
+        setTimeout(begin,50);
+    }
+}
+
+begin();
 
 function typeWriter2(){
     if(i2 === 0){
@@ -177,7 +186,7 @@ function draw() {
 
 //FADE OUT
 function FadeOut(){
-    document.getElementById("body_fade").classList.add("fadeOut");
+    document.querySelector("body").classList.add("fadeOut");
     setTimeout(function(){
         window.location.href="Menus/Bedroom.html";
     }, 800);

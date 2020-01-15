@@ -34,8 +34,19 @@ function aparecerTexto() {
     }
 }
 
-audio_q1.play();
-aparecerTexto();
+function begin(){
+    if(document.readyState === 'complete'){
+        setTimeout(function(){
+            audio_q1.play();
+            aparecerTexto();
+        },1000);
+    }
+    else {
+        setTimeout(begin,50);
+    }
+}
+
+begin();
 
 //TEXTO LYDIA 2
 var audio_q2 = document.getElementById('audio_q2');
@@ -251,7 +262,7 @@ function audio_relogio_f() {
 
 //FADE OUT
 function FadeOut(){
-    document.getElementById("body_fade").classList.add("fadeOut");
+    document.querySelector("body").classList.add("fadeOut");
     setTimeout(function(){
         window.location.href="Menus/Nursery.html";
     }, 800);

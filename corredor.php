@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body id="body_fade" style="position: fixed; width: 100%;">
+<body style="position: fixed; width: 100%;">
 
 <?php include 'headerinfo.php' ?>
 
