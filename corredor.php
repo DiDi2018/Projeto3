@@ -12,10 +12,31 @@
 
 <body style="position: fixed; width: 100%;">
 
-<?php include 'headerinfo.php' ?>
+<header>
+    <img class="help" src="images/header/Help.png" alt=""/>
+    <div class="instrucoes">
+        <div class="instrucoestexto">
+            <h2>Are you lost?</h2>
+            <p>
+                <br>To go to the nursery open your mouth and travel through the hallway!
+                <br>Good luck!
+            </p>
+        </div>
+        <img class="postit" src="images/header/postit.png" alt=""/>
+        <div class="fundo"></div>
+    </div>
+
+    <img class="sobre" src="images/header/sobre.png" alt=""/>
+
+    <div class="creditos">
+        <img class="maquina" src="images/header/maquina3.png" alt=""/>
+        <div class="fundo"></div>
+    </div>
+
+</header>
 
 <main style="height: 100%;">
-    <audio id="audio_ruido" src="sons/corredor/ruido.wav"></audio>
+    <audio id="audio_ruido" src="sons/corredor/ruido.mp3"></audio>
     <audio id="grito" src="sons/corredor/ScreamingPeople.ogg"></audio>
     <audio id="audio1" src="sons/corredor/text1Lydia.mp3"></audio>
     <audio id="audio2" src="sons/corredor/text2Lydia.mp3"></audio>
