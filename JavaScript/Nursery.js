@@ -19,6 +19,7 @@ imagens[9] = "images/nursery/zebra_ruido.png";
 
 var psi = false;
 var fecharcarta = false;
+let interrupt = false;
 
 function rodarImagem(x) {
     let nrImagem;
@@ -150,7 +151,7 @@ function draw() {
             }
         }
     }
-    
+
     if (boca >= 3.5 * boca0) {
         gritos.play();
     } else {
@@ -158,11 +159,11 @@ function draw() {
     }
 
     //SmilePopUp
-    if (fecharcarta) {
+    if (fecharcarta && interrupt === false) {
         setTimeout(function () {
             document.querySelector(".PopUpSorriso").style.display = "block";
         }, 1000);
-        if (sorriso0 < sorriso && sorriso>=1.3*sorriso0) {
+        if (sorriso0 < sorriso && sorriso >= 1.3 * sorriso0) {
             document.querySelector(".PopUpSorriso").style.display = "none";
         }
     }
@@ -222,8 +223,10 @@ function aparecer() {
     }
 }
 
-function aparecerInterruptor(){
+function aparecerInterruptor() {
     if (document.getElementById("lydianursery").ended) {
+        interrupt = true;
+        document.querySelector(".PopUpSorriso").style.display = "none";
         document.getElementById("Interruptor").style.display = "block";
         imageMapResize();
     }
@@ -239,29 +242,30 @@ function sair() {
 
 let interruptores = document.querySelector("#switch");
 
-function hoverswitch1(){
-    interruptores.src= "images/nursery/Switch1.png";
+function hoverswitch1() {
+    interruptores.src = "images/nursery/Switch1.png";
 }
 
-function hoverswitch2(){
-    interruptores.src= "images/nursery/Switch2.png";
+function hoverswitch2() {
+    interruptores.src = "images/nursery/Switch2.png";
 }
 
-function hoverswitch3(){
-    interruptores.src= "images/nursery/Switch3.png";
+function hoverswitch3() {
+    interruptores.src = "images/nursery/Switch3.png";
 }
 
-function nothoverswitch(){
-    interruptores.src= "images/nursery/Switch.png";
+function nothoverswitch() {
+    interruptores.src = "images/nursery/Switch.png";
 }
 
-function clickInterruptores(){
-        document.querySelector(".PopUpSorriso").style.display = "none";
-        document.getElementById('textoCartaNursery').style.display = "none";
-        document.querySelector('a-scene').style.display = "none";
-        document.querySelector("#ruido").style.display = "block";
-        document.getElementById("audio_ruido").play();
-        setTimeout(function () {
-            window.location.href = "final.php";
-        }, 2000);
+function clickInterruptores() {
+    document.querySelector(".PopUpSorriso").style.display = "none";
+    document.getElementById('textoCartaNursery').style.display = "none";
+    document.querySelector('a-scene').style.display = "none";
+    document.querySelector("#ruido").style.display = "block";
+    document.getElementById("audio_ruido").play();
+    gritos.pause();
+    setTimeout(function () {
+        window.location.href = "final.php";
+    }, 2000);
 }
