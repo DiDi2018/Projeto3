@@ -30,7 +30,7 @@
         <form class="formParticipar" action="waiting.php" onsubmit="FadeOut()" method="POST">
             <h2>Please enter your name:</h2>
             <label>
-                <input type="text" name="name" required>
+                <input type="text" name="name" required  autocomplete="off">
             </label>
             <br>
             <label>

@@ -25,27 +25,28 @@
     <div id="final">
         <div style="opacity: 0; left: 5%; top: 5%">
             <img alt="Waving image" src="">
-            <p>Is that even an hand?</p>
+            <p>Is that even a hand?</p>
         </div>
 
         <div style="opacity: 0; left: 35%; top: 20%">
             <img alt="Kitchen image" src="">
-            <p>Look at that fake smile</p>
+            <p> And look at that fake smile!</p>
         </div>
 
         <div style="opacity: 0; right: 10%; top: 40%">
             <img alt="Living-room image" src="">
-            <p>Something</p>
+            <p>And all of this for what?</p>
         </div>
 
         <div style="opacity: 0; left: 10%; top: 40%">
             <img alt="Bedroom image" src="">
-            <p>Something</p>
+            <p>A Machine?!</p>
         </div>
 
         <div style="opacity: 0; right: 10%; top: 15%">
             <img alt="Hallway image" src="">
-            <p>Something</p>
+            <p>Don't act so surprised!</p>
+            <h1>It's your fault!</h1>
         </div>
     </div>
 
