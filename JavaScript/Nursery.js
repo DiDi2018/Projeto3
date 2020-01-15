@@ -117,6 +117,7 @@ var sorriso;
 var MouthLeft0;
 var MouthRight0;
 var sorriso0;
+let timeoutSorriso;
 
 var MouthTop;
 var MouthBottom;
@@ -160,7 +161,7 @@ function draw() {
 
     //SmilePopUp
     if (fecharcarta && interrupt === false) {
-        setTimeout(function () {
+        timeoutSorriso = setTimeout(function () {
             document.querySelector(".PopUpSorriso").style.display = "block";
         }, 1000);
         if (sorriso0 < sorriso && sorriso >= 1.3 * sorriso0) {
@@ -226,11 +227,11 @@ function aparecer() {
 function aparecerInterruptor() {
     if (document.getElementById("lydianursery").ended) {
         interrupt = true;
+        clearTimeout(timeoutSorriso);
         document.querySelector(".PopUpSorriso").style.display = "none";
         document.getElementById("Interruptor").style.display = "block";
         imageMapResize();
     }
-
 }
 
 function sair() {
