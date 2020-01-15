@@ -153,7 +153,7 @@ function draw() {
         }
     }
 
-    if (boca >= 3.5 * boca0) {
+    if (sorriso0 < sorriso && sorriso >= 1.3 * sorriso0) {
         gritos.play();
     } else {
         gritos.pause();
