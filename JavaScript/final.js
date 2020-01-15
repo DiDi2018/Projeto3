@@ -1,24 +1,12 @@
 //pôr src nas imagens
 
-function srcImage(){
+function srcImage() {
     let imagens = document.querySelectorAll('#final div img');
-    for(let i = 0; i < imagens.length; i++){
-        if(i === 0){
-            imagens[i].src = sessionStorage.getItem('imagemAcenar');
-        }
-        else if(i === 1){
-            imagens[i].src = sessionStorage.getItem('imagemCozinha');
-        }
-        else if(i === 2){
-            imagens[i].src = sessionStorage.getItem('imagemSala');
-        }
-        else if(i === 3){
-            imagens[i].src = sessionStorage.getItem('imagemQuarto');
-        }
-        else {
-            imagens[i].src = sessionStorage.getItem('imagemCorredor');
-        }
-    }
+    imagens[0].src = sessionStorage.getItem('imagemAcenar');
+    imagens[1].src = sessionStorage.getItem('imagemCozinha');
+    imagens[2].src = sessionStorage.getItem('imagemSala');
+    imagens[3].src = sessionStorage.getItem('imagemQuarto');
+    imagens[4].src = sessionStorage.getItem('imagemCorredor');
 }
 
 srcImage();
