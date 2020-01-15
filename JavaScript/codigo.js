@@ -60,7 +60,7 @@ function click(x){
 //LYDIA
 
 let i =0;
-let texto = "To unlock the room guess the code by clicking on the letters you received and find the missing one.";
+let texto = "To unlock the room guess the code by clicking on the letters you received and finding the missing one.";
 let speed = 40;
 let audioLydia = document.getElementById("audio_lydia");
 
