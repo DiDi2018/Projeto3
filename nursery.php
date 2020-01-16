@@ -6,7 +6,7 @@ session_start();
 <html lang="en" style="background-color: yellow" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Nursery</title>
+    <title>Happy Life Home</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
     <script src="https://aframe.io/releases/1.0.2/aframe.min.js"></script>

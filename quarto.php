@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bedroom</title>
+    <title>Happy Life Home</title>
     <script src="JavaScript/imageMapResizer.min.js"></script>
     <script src="JavaScript/p5.min.js"></script>
     <script src="JavaScript/clmtrackr.min.js"></script>

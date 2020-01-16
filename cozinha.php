@@ -6,7 +6,7 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Kitchen</title>
+    <title>Happy Life Home</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700,700i&display=swap" rel="stylesheet">
     <script src="JavaScript/imageMapResizer.min.js"></script>
     <script src="JavaScript/p5.min.js"></script>
