@@ -122,7 +122,7 @@ function draw() {
             open = sobrancelha.dist(olho);
         }
 
-        if (open0 < open && open >= 1.2 * open0 && i1 === text1Lydia.length && audio_q1.ended && correr === 0) {
+        if (open0 < open && open >= 1.1 * open0 && i1 === text1Lydia.length && audio_q1.ended && correr === 0) {
             //save image
             let canvas = document.createElement('canvas');
             let context = canvas.getContext('2d');
