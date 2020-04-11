@@ -31,7 +31,7 @@ session_start();
             <h2>Are you lost?</h2>
             <p>
                 <br>This room is really special and different from the others. To explore it click and drag, to move press
-            the arrows of your keyboard.
+                the arrows of your keyboard.
                 <br>Don't forget to follow the instructions from the letter.
                 <br>Good luck!
             </p>
@@ -153,14 +153,14 @@ session_start();
 </div>
 <div id="Interruptor">
     <div class='fundo'></div>
-    <img id='switch' src='images/nursery/Switch.png' alt="interruptor" usemap="#interruptor">
+    <img id='switch' src='images/nursery/interruptor.png' alt="interruptor" usemap="#interruptor">
     <map name="interruptor">
         <area shape="poly" alt="image" onmouseover="hoverswitch1()" onmouseout="nothoverswitch()" onclick="clickInterruptores()"
-              coords="91,206,120,208,119,139,84,136,81,152,93,166" >
+              coords="190,379,189,333,190,293,190,265,227,265,229,288,228,379" >
         <area shape="poly" alt="image" onmouseover="hoverswitch2()" onmouseout="nothoverswitch()" onclick="clickInterruptores()"
-              coords="220,206,245,207,247,140,219,140">
+              coords="413,265,452,265,452,380,412,380" >
         <area shape="poly" alt="image" onmouseover="hoverswitch3()" onmouseout="nothoverswitch()" onclick="clickInterruptores()"
-              coords="346,208,373,208,373,170,383,157,381,140,347,139" >
+              coords="630,266,671,265,670,381,629,382" >
     </map>
 
 
